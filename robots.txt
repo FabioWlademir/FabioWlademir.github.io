@@ -1,3 +1,9 @@
+# Permite que todos os robôs de busca rastreiem todo o site
 User-agent: *
-Allow: /
-Sitemap: https://fabiowlademir.github.io/sitemap.xml
+Disallow:
+
+# Sitemaps de cada projeto
+Sitemap: https://fabiowlademir.github.io/simuladosdireito/sitemap.xml
+Sitemap: https://fabiowlademir.github.io/direito-ao-esquecimento/sitemap.xml
+Sitemap: https://fabiowlademir.github.io/teoriadodireito/sitemap.xml
+Sitemap: https://fabiowlademir.github.io/unicarona/sitemap.xml
