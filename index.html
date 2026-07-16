@@ -169,6 +169,7 @@
         <li><a href="#certifications">Certificações</a></li>
         <li><a href="#books">Obras</a></li>
         <li><a href="#contact">Contato</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
         <li class="nav-socials">
           <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="https://github.com/FabioWlademir" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
@@ -188,13 +189,16 @@
         <p>🛡️ Segurança da Informação, Soluções LegalTech, Infraestrutura Crítica & DevSecOps</p>
         
         <!-- Contador Histórico Preservado de Visitas -->
-        <div class="counter-container">
-          <i class="fas fa-eye"></i> Visualizações: <span>5.014 visitas</span>
-        </div>
+        <div class="visitor-counter" title="Total de visualizações de página">
+    <i class="fas fa-eye"></i>
+    <span>Visitas ao portal:</span>
+    <span id="visitCount">5.014</span>
+</div>
 
         <div class="cta-buttons">
           <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Contato Rápido</a>
           <a href="#webapps" class="btn btn-secondary"><i class="fas fa-globe"></i> Ver Portais Ativos</a>
+          <a href="sobre.html" class="btn btn-secondary"><i class="fas fa-user"></i> Sobre</a>
         </div>
       </div>
     </div>
@@ -637,6 +641,11 @@
       <p class="footer-quote">"Transformando gargalos de infraestrutura e conformidade jurídica em valor estratégico através da tecnologia."</p>
       <p class="footer-copyright">&copy; 2026 Fábio Wlademir. Todos os direitos reservados.</p>
     </div>
+    <div class="footer-counter" title="Total de visualizações de página">
+    <i class="fas fa-eye"></i>
+    <span>Visitas ao portal:</span>
+    <img src="https://hits.dwyl.com/fabiowlademir/fabiowlademir.github.io.svg" alt="Contador de Acessos">
+</div>
   </footer>
 
   <!-- Botão Voltar ao Topo -->
@@ -652,5 +661,33 @@
       }
     });
   </script>
+  <script>
+(function() {
+    // Chave para armazenar no localStorage
+    const STORAGE_KEY = 'fabiowlademir_visits';
+    // Valor inicial (5.014)
+    const INITIAL_COUNT = 5014;
+
+    // Tenta recuperar o valor salvo
+    let count = parseInt(localStorage.getItem(STORAGE_KEY), 10);
+
+    // Se não existir, usa o valor inicial
+    if (isNaN(count)) {
+        count = INITIAL_COUNT;
+    } else {
+        // Incrementa a cada visita
+        count += 1;
+    }
+
+    // Salva o novo valor
+    localStorage.setItem(STORAGE_KEY, String(count));
+
+    // Atualiza o elemento na página
+    const el = document.getElementById('visitCount');
+    if (el) {
+        el.textContent = count.toLocaleString('pt-BR');
+    }
+})();
+</script>
 </body>
 </html>
