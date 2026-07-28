@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="jsaWLvsGlflgFR5wjYHeU6Mx1zpTG_3nfCBySBHQkHE" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Fábio Wlademir" />
+  <meta name="description" content="Fábio Wlademir - Especialista em Provas Digitais, Perícia Forense e Autor da coleção 'Provas Digitais na Prática'. Conheça meus livros, projetos e serviços." />
+  <meta name="keywords" content="Fábio Wlademir, provas digitais, perícia forense, computação forense, livros, OSINT, LGPD, Direito Digital, UICLAP" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fábio Wlademir | Provas Digitais, Perícia Forense e Livros" />
+  <meta property="og:description" content="Especialista em Provas Digitais e autor da coleção 'Provas Digitais na Prática'. Conheça meus livros, projetos e serviços." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/138263067?v=4" />
+  <meta property="og:url" content="https://fabiowlademir.github.io/perfil.html" />
+  <meta property="og:type" content="website" />
+
+  <title>Fábio Wlademir | Provas Digitais, Perícia Forense e Livros</title>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fábio Wlademir",
+    "jobTitle": "Especialista em Provas Digitais e Perícia Forense",
+    "url": "https://fabiowlademir.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/fabiowlademir",
+      "https://github.com/FabioWlademir",
+      "https://www.instagram.com/fabiowlademirrs/",
+      "https://www.youtube.com/@fabiowlademirrs",
+      "https://uiclap.bio/wlademir"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Fábio Wlademir - Consultoria e Publicações"
+    }
+  }
+  </script>
+
+  <!-- ===== FONTS PREMIUM ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ============================================================
+       PREMIUM DESIGN SYSTEM
+       ============================================================ */
+
+    /* ----- ROOT VARIABLES ----- */
+    :root {
+      /* Cores principais - Paleta refinada */
+      --primary: #0b251e;
+      --primary-dark: #061612;
+      --primary-light: #1a4a3a;
+      --primary-50: rgba(11, 37, 30, 0.05);
+      --primary-100: rgba(11, 37, 30, 0.1);
+      --primary-200: rgba(11, 37, 30, 0.2);
+      --primary-400: rgba(11, 37, 30, 0.4);
+
+      /* Cores de destaque - Dourado */
+      --gold: #c5a880;
+      --gold-light: #e8d5b8;
+      --gold-dark: #a8875e;
+      --gold-gradient: linear-gradient(135deg, #c5a880 0%, #e8d5b8 50%, #c5a880 100%);
+      --gold-gradient-subtle: linear-gradient(135deg, rgba(197, 168, 128, 0.15), rgba(232, 213, 184, 0.05));
+
+      /* Cores secundárias */
+      --accent-blue: #2563eb;
+      --accent-blue-dark: #1d4ed8;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+
+      /* Tons de texto */
+      --text: #1e293b;
+      --text-light: #64748b;
+      --text-white: #ffffff;
+      --text-muted: #94a3b8;
+
+      /* Fundos */
+      --bg: #ffffff;
+      --bg-surface: #f8fafc;
+      --bg-dark: #0b251e;
+      --bg-dark-surface: #0f2a22;
+
+      /* Bordas */
+      --border: #e2e8f0;
+      --border-light: rgba(197, 168, 128, 0.2);
+      --border-gold: rgba(197, 168, 128, 0.4);
+
+      /* Sombras - Camadas de profundidade */
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10);
+      --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.14);
+      --shadow-glow: 0 0 40px rgba(197, 168, 128, 0.15);
+      --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+      /* Raios */
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+
+      /* Transições */
+      --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+      /* Tipografia */
+      --font-heading: 'Playfair Display', 'Georgia', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-dyslexic: 'OpenDyslexic', var(--font-body);
+
+      /* Espaçamento - Proporção áurea */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
+      --space-4xl: 80px;
+    }
+
+    /* ----- MODOS ----- */
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --bg-surface: #1e293b;
+      --text: #e2e8f0;
+      --text-light: #94a3b8;
+      --border: #334155;
+      --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+      --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    [data-contrast="high"] {
+      --text: #000000;
+      --text-light: #1a1a1a;
+      --bg: #ffffff;
+      --bg-surface: #f0f0f0;
+      --border: #000000;
+      --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"][data-contrast="high"] {
+      --text: #ffffff;
+      --text-light: #e0e0e0;
+      --bg: #000000;
+      --bg-surface: #1a1a1a;
+      --border: #ffffff;
+    }
+
+    /* ----- RESET & BASE ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      transition: var(--transition-base);
+      padding-top: 70px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body.dyslexic {
+      font-family: var(--font-dyslexic);
+      letter-spacing: 0.04em;
+      word-spacing: 0.08em;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-lg);
+    }
+
+    /* ----- SKIP TO CONTENT ----- */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 24px;
+      background: var(--gold);
+      color: var(--primary);
+      font-weight: 700;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+      z-index: 10000;
+      text-decoration: none;
+      transition: top 0.3s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ============================================================
+       COMPONENTES PREMIUM
+       ============================================================ */
+
+    /* ----- BOTÕES ----- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      padding: 12px 28px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-100%);
+      transition: transform 0.4s;
+    }
+    .btn:hover::after { transform: translateX(0); }
+
+    .btn-primary {
+      background: var(--gold-gradient);
+      color: var(--primary-dark);
+      box-shadow: 0 4px 20px rgba(197, 168, 128, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 30px rgba(197, 168, 128, 0.4);
+    }
+
+    .btn-secondary {
+      background: var(--primary);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-secondary:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(11, 37, 30, 0.2);
+    }
+
+    .btn-outline-gold {
+      background: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+    }
+    .btn-outline-gold:hover {
+      background: var(--gold);
+      color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+    }
+
+    .btn-lg { padding: 16px 36px; font-size: 1rem; }
+    .btn-sm { padding: 8px 18px; font-size: 0.8rem; }
+
+    /* ----- CARDS PREMIUM ----- */
+    .card-premium {
+      background: var(--bg);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-premium::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gold-gradient);
+      opacity: 0;
+      transition: var(--transition-base);
+    }
+
+    .card-premium:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-gold);
+    }
+
+    .card-premium:hover::before { opacity: 1; }
+
+    .card-premium .icon-wrapper {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: var(--gold-gradient-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-bottom: var(--space-md);
+    }
+
+    /* ----- NAVBAR PREMIUM ----- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: rgba(11, 37, 30, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 2000;
+      border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+      display: flex;
+      align-items: center;
+      transition: var(--transition-base);
+    }
+
+    .navbar.scrolled {
+      background: rgba(6, 22, 18, 0.98);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .nav-logo {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .nav-logo .main {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .nav-logo .main span { color: var(--gold); }
+    .nav-logo .sub {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--space-lg);
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold-gradient);
+      transition: var(--transition-base);
+    }
+    .nav-links a:hover { color: white; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--gold); }
+    .nav-links a.active::after { width: 100%; }
+
+    .nav-socials {
+      display: flex;
+      gap: var(--space-sm);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      padding-left: var(--space-md);
+    }
+    .nav-socials a {
+      color: #94a3b8;
+      font-size: 1rem;
+      transition: var(--transition-fast);
+    }
+    .nav-socials a:hover { color: var(--gold); }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 2001;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 25px;
+      height: 2.5px;
+      background: white;
+      border-radius: 2px;
+      transition: var(--transition-base);
+    }
+    #menu-checkbox { display: none; }
+
+    /* ----- HERO PREMIUM ----- */
+    .hero-premium {
+      position: relative;
+      background: var(--bg-dark);
+      padding: var(--space-4xl) 0 var(--space-3xl);
+      overflow: hidden;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Fundo com padrão de ondas */
+    .hero-premium::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(197, 168, 128, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(197, 168, 128, 0.05) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    .hero-premium .wave-pattern {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80'%3E%3Cpath d='M0,40 C300,80 600,0 900,40 C1100,60 1200,30 1200,30 L1200,80 L0,80 Z' fill='%23f8fafc' opacity='0.06'/%3E%3C/svg%3E") repeat-x bottom;
+      background-size: 1200px 80px;
+      animation: waveMove 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes waveMove {
+      0% { background-position-x: 0; }
+      100% { background-position-x: 1200px; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content .profile-image {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid var(--gold);
+      margin: 0 auto var(--space-lg);
+      background: url('https://avatars.githubusercontent.com/u/138263067?v=4') center/cover;
+      box-shadow: 0 0 60px rgba(197, 168, 128, 0.2);
+      transition: var(--transition-base);
+    }
+    .hero-content .profile-image:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 80px rgba(197, 168, 128, 0.3);
+    }
+
+    .hero-content .badge-gold {
+      display: inline-block;
+      padding: 4px 16px;
+      border-radius: var(--radius-full);
+      background: rgba(197, 168, 128, 0.15);
+      border: 1px solid rgba(197, 168, 128, 0.25);
+      font-size: 0.75rem;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      margin-bottom: var(--space-md);
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      margin-bottom: var(--space-sm);
+      line-height: 1.1;
+    }
+    .hero-content h1 span { color: var(--gold); }
+
+    .hero-content .subtitle {
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 0 auto var(--space-lg);
+      font-weight: 300;
+      color: #cbd5e1;
+    }
+
+    .hero-content .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      justify-content: center;
+    }
+
+    /* ----- SEÇÃO TÍTULO PREMIUM ----- */
+    .section-title-premium {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto var(--space-2xl);
+    }
+
+    .section-title-premium .label {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+
+    .section-title-premium h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: var(--space-md);
+    }
+    .section-title-premium h2 span { color: var(--gold); }
+
+    .section-title-premium p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+
+    /* ----- SEÇÃO SOBRE ----- */
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+      align-items: start;
+    }
+
+    .sobre-texto p {
+      color: var(--text);
+      margin-bottom: var(--space-md);
+      line-height: 1.8;
+    }
+    .sobre-texto .highlight {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .sobre-texto .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+    .sobre-texto .tech-badges span {
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      background: var(--gold-gradient-subtle);
+      border: 1px solid var(--border-gold);
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--gold-dark);
+    }
+
+    .sobre-cta-card {
+      background: var(--bg-dark);
+      color: white;
+      padding: var(--space-xl);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      border: 1px solid rgba(197, 168, 128, 0.2);
+    }
+    .sobre-cta-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: var(--space-md);
+    }
+    .sobre-cta-card p {
+      color: #cbd5e1;
+      margin-bottom: var(--space-lg);
+    }
+    .sobre-cta-card .btn { margin: 0 auto; }
+
+    /* ----- LIVROS GRID PREMIUM ----- */
+    .livros-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-xl);
+      margin-top: var(--space-xl);
+    }
+
+    .livro-card-premium {
+      background: var(--bg);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      transition: var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .livro-card-premium:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--border-gold);
+    }
+
+    .livro-card-premium .capa {
+      width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      margin-bottom: var(--space-md);
+      transition: var(--transition-base);
+    }
+    .livro-card-premium:hover .capa { transform: scale(1.02); }
+
+    .livro-card-premium .status {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 12px;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-sm);
+      align-self: flex-start;
+    }
+    .status-publicado {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .status-breve {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .livro-card-premium h4 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .livro-card-premium .subtitulo {
+      font-size: 0.8rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+    .livro-card-premium p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      flex: 1;
+      margin-bottom: var(--space-md);
+    }
+    .livro-card-premium .btn { align-self: flex-start; }
+
+    /* ----- PESQUISA ----- */
+    .search-section {
+      background: var(--bg-surface);
+      padding: var(--space-3xl) 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .search-box-premium {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .search-box-premium input {
+      width: 100%;
+      padding: 16px 55px 16px 24px;
+      font-size: 1rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-full);
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-sm);
+    }
+    .search-box-premium input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(197, 168, 128, 0.15), var(--shadow-md);
+    }
+
+    .search-box-premium .search-icon {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+
+    .search-stats {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: var(--space-md);
+    }
+    .search-stats strong { color: var(--text); }
+
+    .results-container {
+      max-width: 800px;
+      margin: var(--space-xl) auto 0;
+    }
+
+    .result-item-premium {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-md);
+      transition: var(--transition-base);
+      box-shadow: var(--shadow-sm);
+    }
+    .result-item-premium:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-gold);
+    }
+
+    .result-item-premium h4 a {
+      color: var(--text);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+    }
+    .result-item-premium h4 a:hover { color: var(--gold); }
+
+    .result-item-premium .url {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin: 2px 0 var(--space-sm);
+    }
+    .result-item-premium .url i { margin-right: 4px; }
+
+    .result-item-premium .snippet {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .result-item-premium .snippet mark {
+      background: rgba(197, 168, 128, 0.2);
+      color: var(--text);
+      padding: 0 4px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .result-item-premium .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-sm);
+    }
+    .result-item-premium .tags span {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 2px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--text-light);
+    }
+
+    /* ----- SITES INDEXADOS ----- */
+    .indexed-sites {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      justify-content: center;
+      margin-bottom: var(--space-lg);
+    }
+    .indexed-sites .site-badge {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.7rem;
+      color: var(--text-light);
+      transition: var(--transition-fast);
+    }
+    .indexed-sites .site-badge:hover {
+      border-color: var(--gold);
+      color: var(--text);
+    }
+    .indexed-sites .site-badge i {
+      color: var(--gold);
+      margin-right: 4px;
+      font-size: 0.6rem;
+    }
+
+    /* ----- FOOTER PREMIUM ----- */
+    footer {
+      background: var(--bg-dark);
+      color: #cbd5e1;
+      padding: var(--space-2xl) 0 var(--space-xl);
+      text-align: center;
+      border-top: 2px solid rgba(197, 168, 128, 0.15);
+    }
+
+    footer .footer-quote {
+      max-width: 600px;
+      margin: 0 auto var(--space-lg);
+      font-style: italic;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      font-family: var(--font-heading);
+    }
+    footer .footer-quote i {
+      color: var(--gold);
+      margin: 0 6px;
+    }
+
+    footer .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      justify-content: center;
+      margin-bottom: var(--space-md);
+    }
+    footer .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: var(--transition-fast);
+    }
+    footer .footer-links a:hover { color: var(--gold); }
+
+    footer .footer-copyright {
+      color: #64748b;
+      font-size: 0.75rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    /* ============================================================
+       TOOLBAR ACESSIBILIDADE
+       ============================================================ */
+    .accessibility-toolbar {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 999;
+      background: rgba(11, 37, 30, 0.92);
+      backdrop-filter: blur(12px);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 6px 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      border: 1px solid rgba(197, 168, 128, 0.15);
+      border-left: none;
+      box-shadow: 4px 0 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .accessibility-toolbar button {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 1rem;
+      transition: var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .accessibility-toolbar button:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+    }
+    .accessibility-toolbar button.active {
+      background: var(--gold);
+      color: var(--primary);
+    }
+
+    .accessibility-toolbar .tooltip {
+      position: absolute;
+      left: 110%;
+      background: var(--primary);
+      color: white;
+      padding: 3px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.65rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-fast);
+    }
+    .accessibility-toolbar button:hover .tooltip { opacity: 1; }
+
+    /* ----- PAINEL ACESSIBILIDADE ----- */
+    .accessibility-panel {
+      position: fixed;
+      left: -340px;
+      top: 0;
+      width: 320px;
+      height: 100vh;
+      background: rgba(11, 37, 30, 0.98);
+      backdrop-filter: blur(16px);
+      z-index: 9999;
+      padding: var(--space-xl);
+      transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-right: 2px solid var(--gold);
+      overflow-y: auto;
+    }
+    .accessibility-panel.open { left: 0; }
+
+    .accessibility-panel .close-panel {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .accessibility-panel h3 {
+      color: white;
+      font-family: var(--font-heading);
+      margin-bottom: var(--space-lg);
+      font-size: 1.1rem;
+    }
+    .accessibility-panel h3 span { color: var(--gold); }
+
+    .accessibility-panel .control-group {
+      margin-bottom: var(--space-md);
+    }
+    .accessibility-panel .control-group label {
+      color: #94a3b8;
+      font-size: 0.75rem;
+      display: block;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .accessibility-panel .control-group .btn-group {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .accessibility-panel .control-group .btn-group button {
+      padding: 5px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: transparent;
+      color: #cbd5e1;
+      cursor: pointer;
+      font-size: 0.75rem;
+      transition: var(--transition-fast);
+      font-family: var(--font-body);
+    }
+    .accessibility-panel .control-group .btn-group button.active {
+      background: var(--gold);
+      color: var(--primary);
+      border-color: var(--gold);
+    }
+    .accessibility-panel .control-group .btn-group button:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .accessibility-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s;
+    }
+    .accessibility-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* ----- LGPD BANNER ----- */
+    .lgpd-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(11, 37, 30, 0.96);
+      backdrop-filter: blur(12px);
+      padding: 14px 20px;
+      z-index: 10000;
+      border-top: 2px solid var(--gold);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-md);
+      transition: transform 0.5s, opacity 0.5s;
+    }
+    .lgpd-banner.hidden {
+      transform: translateY(100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .lgpd-banner p {
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      flex: 1 1 280px;
+      text-align: center;
+    }
+    .lgpd-banner a { color: var(--gold); text-decoration: underline; }
+    .lgpd-banner .btn-group { display: flex; gap: var(--space-sm); }
+    .lgpd-banner .btn-group button {
+      padding: 6px 20px;
+      border-radius: var(--radius-full);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-family: var(--font-body);
+    }
+    .lgpd-banner .btn-accept {
+      background: var(--gold);
+      color: var(--primary);
+    }
+    .lgpd-banner .btn-accept:hover { transform: scale(1.02); }
+    .lgpd-banner .btn-reject {
+      background: transparent;
+      color: #94a3b8;
+      border: 1px solid #64748b;
+    }
+    .lgpd-banner .btn-reject:hover { background: rgba(255,255,255,0.05); }
+
+    /* ----- BOTÃO OUVIR ----- */
+    .listen-button {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: var(--gold);
+      color: var(--primary);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 998;
+      box-shadow: 0 4px 20px rgba(197, 168, 128, 0.3);
+      transition: var(--transition-base);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .listen-button:hover { transform: scale(1.06); }
+    .listen-button.listening {
+      background: #dc2626;
+      color: white;
+      animation: pulse-red 1.5s infinite;
+    }
+
+    @keyframes pulse-red {
+      0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+    }
+
+    /* ----- BOTÃO VOLTAR AO TOPO ----- */
+    .back-to-top {
+      position: fixed;
+      bottom: 25px;
+      left: 20px;
+      background: var(--primary);
+      color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: var(--transition-base);
+      z-index: 997;
+      opacity: 0;
+      visibility: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      background: var(--gold);
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* ============================================================
+       RESPONSIVIDADE
+       ============================================================ */
+    @media (max-width: 992px) {
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        background: rgba(11, 37, 30, 0.98);
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 70px);
+        padding: var(--space-2xl) var(--space-lg);
+        transition: right 0.3s ease;
+        gap: var(--space-lg);
+        align-items: center;
+        border-top: 1px solid rgba(197, 168, 128, 0.1);
+      }
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 1rem; }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      #menu-checkbox:checked ~ .nav-links { right: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      .sobre-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+
+      .accessibility-toolbar {
+        left: -6px;
+        transform: translateY(-50%) scale(0.85);
+      }
+      .accessibility-panel { width: 280px; left: -300px; }
+
+      .livros-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-premium { padding: var(--space-2xl) 0; min-height: auto; }
+      .hero-content .profile-image { width: 100px; height: 100px; }
+
+      .livros-grid { grid-template-columns: 1fr; }
+
+      .section-title-premium h2 { font-size: 1.6rem; }
+
+      .lgpd-banner { padding: 12px 16px; }
+      .lgpd-banner p { font-size: 0.75rem; }
+
+      .search-box-premium input { padding: 14px 48px 14px 18px; font-size: 0.9rem; }
+    }
+
+    /* ----- DISABLE ANIMATIONS ----- */
+    .reduce-motion * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== SKIP TO CONTENT ===== -->
+  <a href="#main-content" class="skip-link">Ir para o conteúdo</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="container nav-container">
+      <a href="/" class="nav-logo">
+        <span class="main">Fábio <span>Wlademir</span></span>
+        <span class="sub">Provas Digitais · Perícia Forense</span>
+      </a>
+
+      <input type="checkbox" id="menu-checkbox" aria-label="Abrir menu">
+      <label for="menu-checkbox" class="menu-toggle" aria-label="Alternar menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#livros">Livros</a></li>
+        <li><a href="#pesquisa">Pesquisa</a></li>
+        <li><a href="#portfolio">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="sobre.html">Mais</a></li>
+        <li class="nav-socials">
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/FabioWlademir" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/fabiowlademirrs/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@fabiowlademirrs" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO PREMIUM ===== -->
+  <header class="hero-premium" id="main-content">
+    <div class="wave-pattern"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="profile-image" role="img" aria-label="Foto de Fábio Wlademir"></div>
+
+        <div class="badge-gold">
+          <i class="fas fa-gavel"></i> Especialista em Provas Digitais
+        </div>
+
+        <h1>Fábio <span>Wlademir</span></h1>
+
+        <p class="subtitle">
+          Analista SOC/NOC · Perito Forense Digital · Autor da coleção
+          <strong style="color: var(--gold);">"Provas Digitais na Prática"</strong>
+        </p>
+
+        <div class="cta-group">
+          <a href="#livros" class="btn btn-primary btn-lg">
+            <i class="fas fa-book-open"></i> Conheça os Livros
+          </a>
+          <a href="https://uiclap.bio/wlademir" target="_blank" class="btn btn-secondary btn-lg">
+            <i class="fas fa-store"></i> Loja UICLAP
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20perfil" target="_blank" class="btn btn-whatsapp btn-lg">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SOBRE ===== -->
+  <section id="sobre" style="padding: var(--space-3xl) 0;">
+    <div class="container">
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-user"></i> Quem sou</span>
+        <h2>Especialista em <span>Tecnologia</span> e <span>Direito</span></h2>
+        <p>Unindo infraestrutura crítica, cibersegurança e ciências jurídicas para proteger direitos e evidências digitais.</p>
+      </div>
+
+      <div class="sobre-grid">
+        <div class="sobre-texto">
+          <p>
+            Sou <strong class="highlight">Fábio Wlademir</strong>, profissional com mais de <strong>15 anos de experiência</strong>
+            em cibersegurança, infraestrutura de TI e desenvolvimento de sistemas. Atualmente curso
+            <strong>Direito (4º semestre - UNISINOS)</strong> e atuo como Analista SOC/NOC.
+          </p>
+          <p>
+            Ofereço <strong>suporte técnico especializado em perícia computacional</strong>, análise forense digital
+            e investigação de incidentes para processos judiciais que envolvem provas digitais, vazamento de dados
+            e crimes cibernéticos.
+          </p>
+          <p>
+            <strong>Atuação em processos judiciais:</strong><br>
+            Análise de logs, investigação de acessos indevidos, rastreamento de atividades,
+            análise de evidências digitais e ataques hackers. Experiência em sistemas como
+            <strong>PJe, eproc, e-SAJ, Projudi, SEEU, Sisbajud, Renajud, BNMP e PDPJ-Br</strong>.
+          </p>
+          <div class="tech-badges">
+            <span><i class="fas fa-shield-halved"></i> SOC/NOC</span>
+            <span><i class="fas fa-gavel"></i> LegalTech</span>
+            <span><i class="fas fa-laptop-code"></i> DevSecOps</span>
+            <span><i class="fas fa-search"></i> Forense Digital</span>
+            <span><i class="fas fa-database"></i> LGPD</span>
+          </div>
+        </div>
+
+        <div class="sobre-cta-card">
+          <h3>📚 Autor da Coleção</h3>
+          <p style="font-size: 1.1rem; font-weight: 400;">
+            "Provas Digitais na Prática"<br>
+            <span style="font-size: 0.85rem; color: #94a3b8;">10 volumes sobre computação forense</span>
+          </p>
+          <p style="font-size: 0.9rem;">
+            <i class="fas fa-check-circle" style="color: var(--gold);"></i>
+            3 volumes já publicados<br>
+            <i class="fas fa-clock" style="color: var(--gold);"></i>
+            7 volumes em produção
+          </p>
+          <a href="#livros" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> Ver coleção completa
+          </a>
+          <hr style="border-color: rgba(197,168,128,0.15); margin: var(--space-md) 0;">
+          <p style="font-size: 0.85rem; color: #94a3b8;">
+            <i class="fas fa-quote-left" style="color: var(--gold);"></i>
+            "Transformando gargalos de infraestrutura e conformidade jurídica em valor estratégico."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIVROS ===== -->
+  <section id="livros" style="padding: var(--space-3xl) 0; background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-book"></i> Coleção</span>
+        <h2>Provas Digitais na <span>Prática</span></h2>
+        <p>Uma referência completa para cidadãos, advogados, educadores e vítimas de crimes digitais.</p>
+      </div>
+
+      <div class="livros-grid">
+
+        <!-- Volume 1 -->
+        <div class="livro-card-premium">
+          <img class="capa" src="https://storage.googleapis.com/images.uiclap.com/capa/ua188450.jpg" alt="Capa do livro Provas Digitais na Prática - Volume 1" loading="lazy">
+          <span class="status status-publicado">✅ Publicado</span>
+          <h4>Volume 1 — Fundamentos</h4>
+          <div class="subtitulo">Combate a Crimes na Internet</div>
+          <p>Guia para cidadãos, advogados, educadores e vítimas. Apresenta os fundamentos das provas digitais de forma acessível.</p>
+          <a href="https://loja.uiclap.com/titulo/ua188450/" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Comprar</a>
+        </div>
+
+        <!-- Volume 2 -->
+        <div class="livro-card-premium">
+          <img class="capa" src="https://storage.googleapis.com/images.uiclap.com/capa/ua188476.jpg" alt="Capa do livro Provas Digitais na Prática - Volume 2" loading="lazy">
+          <span class="status status-publicado">✅ Publicado</span>
+          <h4>Volume 2 — Análise Forense</h4>
+          <div class="subtitulo">Apoio ao Direito Digital</div>
+          <p>Técnicas de computação forense aplicadas à investigação de incidentes e produção de provas digitais.</p>
+          <a href="https://loja.uiclap.com/titulo/ua188476/" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Comprar</a>
+        </div>
+
+        <!-- Volume 3 -->
+        <div class="livro-card-premium">
+          <img class="capa" src="https://storage.googleapis.com/images.uiclap.com/capa/ua189055.jpg" alt="Capa do livro Provas Digitais na Prática - Volume 3" loading="lazy">
+          <span class="status status-publicado">✅ Publicado</span>
+          <h4>Volume 3 — OSINT</h4>
+          <div class="subtitulo">Inteligência em Fontes Abertas</div>
+          <p>Coleta, validação e correlação de informações públicas para investigações e produção de provas digitais.</p>
+          <a href="https://loja.uiclap.com/titulo/ua189055/" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Comprar</a>
+        </div>
+
+        <!-- Volume 4 -->
+        <div class="livro-card-premium">
+          <span class="status status-breve">📝 Em breve</span>
+          <h4>Volume 4 — Smartphones</h4>
+          <div class="subtitulo">Android · iPhone · Aplicativos</div>
+          <p>Aquisição, preservação e análise forense de smartphones, aplicativos de mensagens, geolocalização e metadados.</p>
+        </div>
+
+        <!-- Volume 5 -->
+        <div class="livro-card-premium">
+          <span class="status status-breve">📝 Em breve</span>
+          <h4>Volume 5 — Imagens e Deepfakes</h4>
+          <div class="subtitulo">Autenticação e manipulações</div>
+          <p>Técnicas de autenticação de arquivos multimídia, análise de metadados e reconhecimento de deepfakes.</p>
+        </div>
+
+        <!-- Volume 6 -->
+        <div class="livro-card-premium">
+          <span class="status status-breve">📝 Em breve</span>
+          <h4>Volume 6 — Documentos Digitais</h4>
+          <div class="subtitulo">PDF · Assinaturas · Blockchain</div>
+          <p>Perícia em documentos eletrônicos, assinaturas eletrônicas, metadados e blockchain aplicada à preservação.</p>
+        </div>
+
+        <!-- Volume 7 -->
+        <div class="livro-card-premium">
+          <span class="status status-breve">📝 Em breve</span>
+          <h4>Volume 7 — Investigação Avançada</h4>
+          <div class="subtitulo">Google Dorks · Shodan · Maltego</div>
+          <p>Técnicas avançadas com mecanismos de busca especializados e ferramentas de inteligência cibernética.</p>
+        </div>
+
+        <!-- Volume 8 -->
+        <div class="livro-card-premium">
+          <span class="status status-breve">📝 Em breve</span>
+          <h4>Volume 8 — IA na Forense</h4>
+          <div class="subtitulo">Inteligência Artificial aplicada</div>
+          <p>Automação da análise forense, classificação de evidências, reconhecimento de padrões e detecção de fraudes.</p>
+        </div>
+
+        <!-- Volume 9 -->
+        <div class="livro-card-premium">
+          <span class="status status-breve">📝 Em breve</span>
+          <h4>Volume 9 — Laboratório Prático</h4>
+          <div class="subtitulo">Exercícios e estudos de caso</div>
+          <p>Laboratórios guiados e desafios práticos para aplicação dos conhecimentos apresentados.</p>
+        </div>
+
+        <!-- Volume 10 -->
+        <div class="livro-card-premium">
+          <span class="status status-breve">📝 Em breve</span>
+          <h4>Volume 10 — Casos Reais</h4>
+          <div class="subtitulo">Estudos de caso comentados</div>
+          <p>Casos reais envolvendo provas digitais, análise forense, crimes cibernéticos e cadeia de custódia.</p>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-2xl);">
+        <a href="https://uiclap.bio/wlademir" target="_blank" class="btn btn-primary btn-lg">
+          <i class="fas fa-store"></i> Ver todos na UICLAP
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PESQUISA ===== -->
+  <section id="pesquisa" class="search-section">
+    <div class="container">
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-search"></i> Busca</span>
+        <h2>Encontre <span>conteúdo</span> no ecossistema</h2>
+        <p>Pesquise em todos os meus sites, projetos e publicações</p>
+      </div>
+
+      <!-- Sites Indexados -->
+      <div class="indexed-sites">
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Portfólio</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Vera Catarina</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Direito ao Esquecimento</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Simulados</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> UniCarona</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Teoria do Direito</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> F2 Suporte</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> F2 TI</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Advocacia Sapucaia</span>
+      </div>
+
+      <div class="search-box-premium">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="O que você procura? Ex: provas digitais, LGPD, livros..."
+          aria-label="Campo de busca"
+          autofocus
+        >
+        <span class="search-icon" aria-hidden="true"><i class="fas fa-search"></i></span>
+      </div>
+
+      <div class="search-stats">
+        <span id="resultsCount">0</span> resultados para "<strong id="searchTerm">...</strong>"
+      </div>
+
+      <div id="resultsContainer" class="results-container">
+        <div style="text-align:center; padding:40px 20px; color: var(--text-light);">
+          <i class="fas fa-search" style="font-size:2.5rem; display:block; margin-bottom:12px; color: var(--gold);"></i>
+          <p style="font-size:1.05rem;">Digite um termo para buscar em todo o ecossistema</p>
+          <p style="font-size:0.85rem; margin-top:4px;">Ex: direito, perícia, livros, lgpd, forense</p>
+        </div>
+      </div>
+
+      <!-- Google Fallback -->
+      <div id="googleFallback" style="text-align:center; padding:20px; display:none;">
+        <p style="color: var(--text-light);"><i class="fas fa-info-circle"></i> Não encontrou o que procurava?</p>
+        <a href="#" id="googleSearchLink" class="btn btn-secondary" target="_blank">
+          <i class="fab fa-google"></i> Pesquisar no Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFÓLIO ===== -->
+  <section id="portfolio" style="padding: var(--space-3xl) 0;">
+    <div class="container">
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-laptop-code"></i> Projetos</span>
+        <h2>Meu <span>Ecossistema</span> Digital</h2>
+        <p>Conheça os sites, portais e blogs que desenvolvi e mantenho</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-md);">
+        <a href="https://veracatarina.github.io/" target="_blank" class="card-premium" style="text-decoration:none; text-align:center; padding: var(--space-lg);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;">⚖️</div>
+          <h4 style="font-family:var(--font-heading); font-size:0.95rem; color:var(--text);">Vera Catarina</h4>
+          <p style="font-size:0.75rem; color:var(--text-light);">Advocacia Especializada</p>
+        </a>
+
+        <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/" target="_blank" class="card-premium" style="text-decoration:none; text-align:center; padding: var(--space-lg);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;">📘</div>
+          <h4 style="font-family:var(--font-heading); font-size:0.95rem; color:var(--text);">Direito ao Esquecimento</h4>
+          <p style="font-size:0.75rem; color:var(--text-light);">Privacidade e STF</p>
+        </a>
+
+        <a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank" class="card-premium" style="text-decoration:none; text-align:center; padding: var(--space-lg);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;">📝</div>
+          <h4 style="font-family:var(--font-heading); font-size:0.95rem; color:var(--text);">Simulados de Direito</h4>
+          <p style="font-size:0.75rem; color:var(--text-light);">Testes para OAB</p>
+        </a>
+
+        <a href="https://fabiowlademir.github.io/unicarona/" target="_blank" class="card-premium" style="text-decoration:none; text-align:center; padding: var(--space-lg);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;">🚗</div>
+          <h4 style="font-family:var(--font-heading); font-size:0.95rem; color:var(--text);">UniCarona</h4>
+          <p style="font-size:0.75rem; color:var(--text-light);">Mobilidade universitária</p>
+        </a>
+
+        <a href="https://fabiowlademir.github.io/teoriadodireito/" target="_blank" class="card-premium" style="text-decoration:none; text-align:center; padding: var(--space-lg);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;">📖</div>
+          <h4 style="font-family:var(--font-heading); font-size:0.95rem; color:var(--text);">Teoria do Direito</h4>
+          <p style="font-size:0.75rem; color:var(--text-light);">Acervo doutrinário</p>
+        </a>
+
+        <a href="https://f2suporte.blogspot.com/" target="_blank" class="card-premium" style="text-decoration:none; text-align:center; padding: var(--space-lg);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;">🔧</div>
+          <h4 style="font-family:var(--font-heading); font-size:0.95rem; color:var(--text);">F2 Suporte</h4>
+          <p style="font-size:0.75rem; color:var(--text-light);">Blog de TI</p>
+        </a>
+
+        <a href="https://f2ti.blogspot.com/" target="_blank" class="card-premium" style="text-decoration:none; text-align:center; padding: var(--space-lg);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;">💻</div>
+          <h4 style="font-family:var(--font-heading); font-size:0.95rem; color:var(--text);">F2 TI</h4>
+          <p style="font-size:0.75rem; color:var(--text-light);">Tecnologia da Informação</p>
+        </a>
+
+        <a href="https://advocaciasapucaia.blogspot.com/" target="_blank" class="card-premium" style="text-decoration:none; text-align:center; padding: var(--space-lg);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;">📰</div>
+          <h4 style="font-family:var(--font-heading); font-size:0.95rem; color:var(--text);">Advocacia Sapucaia</h4>
+          <p style="font-size:0.75rem; color:var(--text-light);">Blog jurídico</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contato" style="padding: var(--space-3xl) 0; background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-phone"></i> Contato</span>
+        <h2>Vamos <span>conversar</span>?</h2>
+        <p>Entre em contato para consultorias, palestras, parcerias ou adquirir meus livros.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); max-width: 900px; margin: 0 auto;">
+        <div class="card-premium" style="text-align:center; padding: var(--space-xl);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;"><i class="fas fa-envelope"></i></div>
+          <h4 style="font-family:var(--font-heading);">E-mail</h4>
+          <a href="mailto:fabiowlademirrs@gmail.com" style="color:var(--text-light); text-decoration:none;">fabiowlademirrs@gmail.com</a>
+        </div>
+
+        <div class="card-premium" style="text-align:center; padding: var(--space-xl);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;"><i class="fab fa-whatsapp"></i></div>
+          <h4 style="font-family:var(--font-heading);">WhatsApp</h4>
+          <a href="https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20perfil" target="_blank" style="color:var(--text-light); text-decoration:none;">(51) 99888-3187</a>
+        </div>
+
+        <div class="card-premium" style="text-align:center; padding: var(--space-xl);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;"><i class="fab fa-linkedin-in"></i></div>
+          <h4 style="font-family:var(--font-heading);">LinkedIn</h4>
+          <a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank" style="color:var(--text-light); text-decoration:none;">/in/fabiowlademir</a>
+        </div>
+
+        <div class="card-premium" style="text-align:center; padding: var(--space-xl);">
+          <div style="font-size:2rem; color:var(--gold); margin-bottom:8px;"><i class="fab fa-instagram"></i></div>
+          <h4 style="font-family:var(--font-heading);">Instagram</h4>
+          <a href="https://www.instagram.com/fabiowlademirrs/" target="_blank" style="color:var(--text-light); text-decoration:none;">@fabiowlademirrs</a>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top: var(--space-2xl);">
+        <a href="https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20perfil" target="_blank" class="btn btn-whatsapp btn-lg">
+          <i class="fab fa-whatsapp"></i> Fale diretamente comigo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <p class="footer-quote">
+        <i class="fas fa-quote-left"></i>
+        "Transformando gargalos de infraestrutura e conformidade jurídica em valor estratégico através da tecnologia."
+        <i class="fas fa-quote-right"></i>
+      </p>
+
+      <div class="footer-links">
+        <a href="/">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#livros">Livros</a>
+        <a href="#pesquisa">Pesquisa</a>
+        <a href="https://uiclap.bio/wlademir" target="_blank">Loja</a>
+        <a href="sobre.html">Sobre (completo)</a>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Fábio Wlademir. Todos os direitos reservados.
+        <br style="display:block; margin-top:4px;">
+        <span style="font-size:0.7rem; color:#64748b;">
+          <i class="fas fa-code"></i> Desenvolvido com <i class="fas fa-heart" style="color: var(--gold);"></i>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+    TOOLBAR ACESSIBILIDADE
+    ============================================================ -->
+  <div class="accessibility-toolbar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+    <button id="accessibilityToggle" aria-label="Abrir painel de acessibilidade" title="Acessibilidade">
+      ♿
+      <span class="tooltip">Acessibilidade</span>
+    </button>
+    <button id="listenToggle" aria-label="Ouvir página" title="Ouvir página">
+      <i class="fas fa-volume-up"></i>
+      <span class="tooltip">Ouvir página</span>
+    </button>
+  </div>
+
+  <!-- ===== PAINEL ACESSIBILIDADE ===== -->
+  <div class="accessibility-overlay" id="accessibilityOverlay"></div>
+
+  <div class="accessibility-panel" id="accessibilityPanel" role="dialog" aria-label="Painel de acessibilidade">
+    <button class="close-panel" id="closePanel" aria-label="Fechar painel">✕</button>
+
+    <h3>♿ <span>Acessibilidade</span></h3>
+
+    <div class="control-group">
+      <label>Modo de cores</label>
+      <div class="btn-group">
+        <button data-theme="light" class="active">☀️ Claro</button>
+        <button data-theme="dark">🌙 Escuro</button>
+        <button data-contrast="high">🔆 Alto Contraste</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Tamanho da fonte</label>
+      <div class="btn-group">
+        <button id="fontDecrease">A-</button>
+        <button id="fontReset" class="active">A</button>
+        <button id="fontIncrease">A+</button>
+        <button id="fontIncrease2">A++</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Fonte para dislexia</label>
+      <div class="btn-group">
+        <button id="dyslexicToggle">🧩 OpenDyslexic</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Animações</label>
+      <div class="btn-group">
+        <button id="motionToggle" class="active">▶️ Ativas</button>
+      </div>
+    </div>
+
+    <div style="margin-top:20px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.05);">
+      <p style="color:#64748b; font-size:0.7rem;">
+        <i class="fas fa-save"></i> Preferências salvas automaticamente
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== BOTÃO OUVIR ===== -->
+  <button class="listen-button" id="listenButton" aria-label="Ouvir página em voz alta" title="Ouvir página">
+    <i class="fas fa-volume-up"></i>
+  </button>
+
+  <!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- ===== LGPD BANNER ===== -->
+  <div id="lgpdBanner" class="lgpd-banner" role="alert">
+    <p>
+      <i class="fas fa-shield-alt" style="color: var(--gold);"></i>
+      Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência.
+      <a href="/legal.html#privacidade">Política de Privacidade</a>
+    </p>
+    <div class="btn-group">
+      <button class="btn-reject" id="lgpdReject">Recusar</button>
+      <button class="btn-accept" id="lgpdAccept">Aceitar</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+    SCRIPT - TODAS AS FUNCIONALIDADES
+    ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // ===== NAVBAR SCROLL =====
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      // ===== BACK TO TOP =====
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        backToTop.classList.toggle('visible', window.scrollY > 400);
+      });
+      backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ===== FECHAR MENU MOBILE =====
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          document.getElementById('menu-checkbox').checked = false;
+        });
+      });
+
+      // ============================================================
+      // ACESSIBILIDADE
+      // ============================================================
+
+      // Painel
+      const panel = document.getElementById('accessibilityPanel');
+      const overlay = document.getElementById('accessibilityOverlay');
+      const toggleBtn = document.getElementById('accessibilityToggle');
+      const closeBtn = document.getElementById('closePanel');
+
+      function openPanel() {
+        panel.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closePanelFn() {
+        panel.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      toggleBtn.addEventListener('click', function() {
+        panel.classList.contains('open') ? closePanelFn() : openPanel();
+      });
+      closeBtn.addEventListener('click', closePanelFn);
+      overlay.addEventListener('click', closePanelFn);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('open')) closePanelFn();
+      });
+
+      // ----- Temas -----
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        document.querySelectorAll('[data-theme]').forEach(function(btn) {
+          btn.classList.toggle('active', btn.dataset.theme === theme);
+        });
+      }
+
+      function setContrast(contrast) {
+        if (contrast === 'high') {
+          document.documentElement.setAttribute('data-contrast', 'high');
+          localStorage.setItem('contrast', 'high');
+        } else {
+          document.documentElement.removeAttribute('data-contrast');
+          localStorage.setItem('contrast', 'normal');
+        }
+        document.querySelectorAll('[data-contrast]').forEach(function(btn) {
+          btn.classList.toggle('active', btn.dataset.contrast === 'high');
+        });
+      }
+
+      // Carregar preferências
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      const savedContrast = localStorage.getItem('contrast') || 'normal';
+      setTheme(savedTheme);
+      if (savedContrast === 'high') setContrast('high');
+
+      document.querySelectorAll('[data-theme]').forEach(function(btn) {
+        btn.addEventListener('click', function() { setTheme(btn.dataset.theme); });
+      });
+
+      document.querySelectorAll('[data-contrast]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          setContrast(btn.dataset.contrast === 'high' ? 'high' : 'normal');
+        });
+      });
+
+      // ----- Tamanho fonte -----
+      let fontSizeLevel = parseInt(localStorage.getItem('fontSize') || '1');
+
+      function setFontSize(level) {
+        fontSizeLevel = Math.max(0, Math.min(3, level));
+        var sizes = ['0.9rem', '1rem', '1.15rem', '1.3rem'];
+        document.documentElement.style.fontSize = sizes[fontSizeLevel];
+        localStorage.setItem('fontSize', fontSizeLevel);
+        document.querySelectorAll('#fontDecrease, #fontReset, #fontIncrease, #fontIncrease2').forEach(function(btn, i) {
+          btn.classList.toggle('active', i === fontSizeLevel);
+        });
+      }
+
+      setFontSize(fontSizeLevel);
+
+      document.getElementById('fontDecrease').addEventListener('click', function() { setFontSize(fontSizeLevel - 1); });
+      document.getElementById('fontReset').addEventListener('click', function() { setFontSize(1); });
+      document.getElementById('fontIncrease').addEventListener('click', function() { setFontSize(fontSizeLevel + 1); });
+      document.getElementById('fontIncrease2').addEventListener('click', function() { setFontSize(fontSizeLevel + 2); });
+
+      // ----- Dislexia -----
+      const dyslexicBtn = document.getElementById('dyslexicToggle');
+      if (localStorage.getItem('dyslexic') === 'true') {
+        document.body.classList.add('dyslexic');
+        dyslexicBtn.classList.add('active');
+      }
+
+      dyslexicBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dyslexic');
+        var active = document.body.classList.contains('dyslexic');
+        dyslexicBtn.classList.toggle('active', active);
+        localStorage.setItem('dyslexic', active);
+      });
+
+      // ----- Animações -----
+      const motionBtn = document.getElementById('motionToggle');
+      if (localStorage.getItem('motion') === 'reduced') {
+        document.documentElement.classList.add('reduce-motion');
+        motionBtn.classList.remove('active');
+        motionBtn.textContent = '⏸️ Reduzidas';
+      }
+
+      motionBtn.addEventListener('click', function() {
+        var reduced = document.documentElement.classList.toggle('reduce-motion');
+        motionBtn.classList.toggle('active', !reduced);
+        motionBtn.textContent = reduced ? '⏸️ Reduzidas' : '▶️ Ativas';
+        localStorage.setItem('motion', reduced ? 'reduced' : 'active');
+      });
+
+      // ============================================================
+      // OUVIR PÁGINA (Síntese de Voz)
+      // ============================================================
+      const listenBtn = document.getElementById('listenButton');
+      let isListening = false;
+      let utterance = null;
+      const synth = window.speechSynthesis;
+
+      function getPageText() {
+        var content = document.querySelector('#main-content') || document.body;
+        var text = content.textContent
+          .replace(/\s+/g, ' ')
+          .replace(/\[.*?\]/g, '')
+          .replace(/\d+\.\d+\.\d+\.\d+/g, '')
+          .trim();
+        return text;
+      }
+
+      function toggleListen() {
+        if (isListening) {
+          synth.cancel();
+          isListening = false;
+          listenBtn.classList.remove('listening');
+          listenBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+          return;
+        }
+
+        var text = getPageText();
+        if (!text) return;
+
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 0.85;
+
+        utterance.onend = function() {
+          isListening = false;
+          listenBtn.classList.remove('listening');
+          listenBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+        };
+
+        utterance.onerror = function() {
+          isListening = false;
+          listenBtn.classList.remove('listening');
+          listenBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+        };
+
+        synth.speak(utterance);
+        isListening = true;
+        listenBtn.classList.add('listening');
+        listenBtn.innerHTML = '<i class="fas fa-stop"></i>';
+      }
+
+      listenBtn.addEventListener('click', toggleListen);
+
+      // ============================================================
+      // PESQUISA
+      // ============================================================
+
+      // Dados de busca (expandido com todos os sites)
+      const searchData = [
+        // Portfólio Principal
+        {
+          title: "Fábio Wlademir - Portfólio",
+          url: "https://fabiowlademir.github.io/",
+          snippet: "Especialista em Segurança da Informação, Soluções LegalTech, Infraestrutura Crítica e DevSecOps.",
+          tags: ["portfólio", "segurança", "devsecops", "legaltech", "cibersegurança"],
+          site: "Portfólio"
+        },
+        // Vera Catarina
+        {
+          title: "Advocacia Vera Catarina",
+          url: "https://veracatarina.github.io/",
+          snippet: "Atuação sólida nas áreas cível, previdenciária, trabalhista, criminal, de família, do consumidor e direito digital.",
+          tags: ["advocacia", "direito", "veracatarina", "oab", "cível", "criminal"],
+          site: "Vera Catarina"
+        },
+        // Direito ao Esquecimento
+        {
+          title: "Direito ao Esquecimento - STF",
+          url: "https://fabiowlademir.github.io/direito-ao-esquecimento/",
+          snippet: "Plataforma de análise e debate acadêmico sobre o RE 1.010.606/STF e privacidade na era dos dados.",
+          tags: ["direito", "stf", "privacidade", "lgpd", "direito digital"],
+          site: "Direito ao Esquecimento"
+        },
+        // Simulados de Direito
+        {
+          title: "Simulados de Direito - OAB",
+          url: "https://fabiowlademir.github.io/simuladosdireito/",
+          snippet: "A Fonte Completa do Direito Brasileiro. Aplicação interativa para testes lógicos e simulados focados no exame de ordem.",
+          tags: ["direito", "oab", "simulados", "estudos", "exame"],
+          site: "Simulados de Direito"
+        },
+        // UniCarona
+        {
+          title: "UniCarona - Mobilidade Universitária",
+          url: "https://fabiowlademir.github.io/unicarona/",
+          snippet: "Interface experimental de caronas acadêmicas validando conformidade rígida às diretrizes protetivas da LGPD.",
+          tags: ["mobilidade", "lgpd", "unisinos", "caronas", "universidade"],
+          site: "UniCarona"
+        },
+        // Teoria do Direito
+        {
+          title: "Teoria do Direito - Acervo",
+          url: "https://fabiowlademir.github.io/teoriadodireito/",
+          snippet: "Matriz do ambiente transmídia estruturado para documentação de correntes doutrinárias e evolução jurídica.",
+          tags: ["direito", "teoria", "acadêmico", "doutrina", "filosofia"],
+          site: "Teoria do Direito"
+        },
+        // F2 Suporte
+        {
+          title: "F2 Suporte - Blog de TI",
+          url: "https://f2suporte.blogspot.com/",
+          snippet: "Dicas, tutoriais e soluções para suporte técnico, infraestrutura de TI e automação.",
+          tags: ["suporte", "ti", "infraestrutura", "windows", "linux", "tutoriais"],
+          site: "F2 Suporte"
+        },
+        // F2 TI
+        {
+          title: "F2 TI - Tecnologia da Informação",
+          url: "https://f2ti.blogspot.com/",
+          snippet: "Conteúdo sobre desenvolvimento web, programação, segurança da informação e redes.",
+          tags: ["programação", "desenvolvimento", "segurança", "redes", "web"],
+          site: "F2 TI"
+        },
+        // Advocacia Sapucaia
+        {
+          title: "Advocacia Sapucaia - Blog Jurídico",
+          url: "https://advocaciasapucaia.blogspot.com/",
+          snippet: "Artigos, análises e informações sobre direito digital, LGPD e temas jurídicos atuais.",
+          tags: ["direito", "blog", "jurídico", "lgpd", "digital"],
+          site: "Advocacia Sapucaia"
+        },
+        // Livros - Volume 1
+        {
+          title: "Provas Digitais na Prática - Volume 1",
+          url: "https://loja.uiclap.com/titulo/ua188450/",
+          snippet: "Fundamentos das Provas Digitais. Combate a Crimes na Internet e Inclusão Digital. Guia para cidadãos, advogados e vítimas.",
+          tags: ["livro", "provas digitais", "forense", "computação forense", "fundamentos"],
+          site: "Livros"
+        },
+        // Livros - Volume 2
+        {
+          title: "Provas Digitais na Prática - Volume 2",
+          url: "https://loja.uiclap.com/titulo/ua188476/",
+          snippet: "Análise Forense Computacional em Apoio ao Direito Digital. Técnicas de aquisição, preservação e análise de evidências.",
+          tags: ["livro", "provas digitais", "forense", "computação forense", "análise"],
+          site: "Livros"
+        },
+        // Livros - Volume 3
+        {
+          title: "Provas Digitais na Prática - Volume 3",
+          url: "https://loja.uiclap.com/titulo/ua189055/",
+          snippet: "OSINT e Inteligência em Fontes Abertas. Coleta, validação e correlação de informações públicas para investigações.",
+          tags: ["livro", "provas digitais", "osint", "investigação", "inteligência"],
+          site: "Livros"
+        }
+      ];
+
+      const searchInput = document.getElementById('searchInput');
+      const resultsContainer = document.getElementById('resultsContainer');
+      const resultsCount = document.getElementById('resultsCount');
+      const searchTerm = document.getElementById('searchTerm');
+      const googleFallback = document.getElementById('googleFallback');
+      const googleSearchLink = document.getElementById('googleSearchLink');
+
+      function highlightText(text, query) {
+        var words = query.split(/\s+/).filter(function(w) { return w.length > 2; });
+        var highlighted = text;
+        words.forEach(function(word) {
+          var regex = new RegExp('(' + word + ')', 'gi');
+          highlighted = highlighted.replace(regex, '<mark>$1</mark>');
+        });
+        return highlighted;
+      }
+
+      function performSearch(query) {
+        var q = query.toLowerCase().trim();
+        searchTerm.textContent = q || '...';
+
+        if (!q) {
+          resultsContainer.innerHTML =
+            '<div style="text-align:center; padding:40px 20px; color: var(--text-light);">' +
+            '<i class="fas fa-search" style="font-size:2.5rem; display:block; margin-bottom:12px; color: var(--gold);"></i>' +
+            '<p style="font-size:1.05rem;">Digite um termo para buscar em todo o ecossistema</p>' +
+            '<p style="font-size:0.85rem; margin-top:4px;">Ex: direito, perícia, livros, lgpd, forense</p>' +
+            '</div>';
+          resultsCount.textContent = '0';
+          googleFallback.style.display = 'none';
+          return;
+        }
+
+        var results = searchData.filter(function(item) {
+          var searchable = (item.title + ' ' + item.snippet + ' ' + item.tags.join(' ')).toLowerCase();
+          return searchable.includes(q);
+        });
+
+        resultsCount.textContent = results.length;
+
+        if (results.length > 0) {
+          resultsContainer.innerHTML = results.map(function(item, index) {
+            return (
+              '<div class="result-item-premium" style="animation: fadeUp 0.4s ease forwards; animation-delay: ' +
+              (index * 0.05) + 's; opacity: 0;">' +
+              '<h4><a href="' + item.url + '" target="_blank">' + highlightText(item.title, q) + '</a></h4>' +
+              '<div class="url"><i class="fas fa-link"></i> ' + item.site + '</div>' +
+              '<p class="snippet">' + highlightText(item.snippet, q) + '</p>' +
+              '<div class="tags">' + item.tags.map(function(tag) {
+                return '<span>#' + tag + '</span>';
+              }).join('') + '</div>' +
+              '</div>'
+            );
+          }).join('');
+
+          googleFallback.style.display = 'none';
+        } else {
+          resultsContainer.innerHTML =
+            '<div style="text-align:center; padding:50px 20px;">' +
+            '<i class="fas fa-search" style="font-size:3rem; color: var(--text-light); margin-bottom:16px; display:block;"></i>' +
+            '<h3 style="font-family: var(--font-heading); font-size:1.3rem; color: var(--text);">Nenhum resultado encontrado</h3>' +
+            '<p style="color: var(--text-light); max-width:400px; margin:8px auto 20px;">Não encontramos conteúdo relacionado a "<strong>' + q + '</strong>" no ecossistema.</p>' +
+            '<div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">' +
+            '<a href="#livros" class="btn btn-outline-gold btn-sm"><i class="fas fa-book"></i> Ver Livros</a>' +
+            '<a href="#portfolio" class="btn btn-outline-gold btn-sm"><i class="fas fa-laptop-code"></i> Ver Projetos</a>' +
+            '<a href="https://uiclap.bio/wlademir" target="_blank" class="btn btn-outline-gold btn-sm"><i class="fas fa-store"></i> Loja UICLAP</a>' +
+            '</div>' +
+            '</div>';
+
+          var googleUrl =
+            'https://www.google.com/search?q=site:fabiowlademir.github.io OR site:veracatarina.github.io OR site:f2suporte.blogspot.com OR site:f2ti.blogspot.com OR site:advocaciasapucaia.blogspot.com ' +
+            encodeURIComponent(q);
+          googleSearchLink.href = googleUrl;
+          googleFallback.style.display = 'block';
+        }
+      }
+
+      searchInput.addEventListener('input', function() {
+        performSearch(this.value);
+      });
+
+      // Carregar termo da URL (?q=termo)
+      var urlParams = new URLSearchParams(window.location.search);
+      var queryParam = urlParams.get('q');
+      if (queryParam) {
+        searchInput.value = queryParam;
+        performSearch(queryParam);
+      }
+
+      // ============================================================
+      // LGPD
+      // ============================================================
+      var lgpdBanner = document.getElementById('lgpdBanner');
+      var lgpdAccept = document.getElementById('lgpdAccept');
+      var lgpdReject = document.getElementById('lgpdReject');
+
+      if (localStorage.getItem('lgpdConsent')) {
+        lgpdBanner.classList.add('hidden');
+      }
+
+      function setLgpdConsent(choice) {
+        localStorage.setItem('lgpdConsent', choice);
+        lgpdBanner.classList.add('hidden');
+        if (choice === 'accepted') {
+          console.log('📊 Cookies de análise ativados.');
+        } else {
+          console.log('❌ Cookies de análise recusados.');
+        }
+      }
+
+      lgpdAccept.addEventListener('click', function() { setLgpdConsent('accepted'); });
+      lgpdReject.addEventListener('click', function() { setLgpdConsent('rejected'); });
+
+      // ============================================================
+      // VLIBRAS
+      // ============================================================
+      var vwScript = document.createElement('script');
+      vwScript.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+      vwScript.onload = function() {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      };
+      document.body.appendChild(vwScript);
+
+    });
+  </script>
+
+  <!-- ===== VLIBRAS ESTRUTURA ===== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+</body>
+</html>
