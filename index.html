@@ -3,7 +3,7 @@
 <head>
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="jsaWLvsGlflgFR5wjYHeU6Mx1zpTG_3nfCBySBHQkHE" />
-   <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Fábio Wlademir" />
   <meta name="description" content="Especialista em Segurança da Informação, Soluções LegalTech, Infraestrutura Crítica e DevSecOps. Conectando engenharia de tecnologia e ciências jurídicas." />
@@ -37,131 +37,697 @@
   }
   </script>
 
+  <!-- FONTS PREMIUM -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
+    /* ============================================================
+       PREMIUM DESIGN SYSTEM
+       ============================================================ */
+
     :root {
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-      --secondary: #0f172a;
-      --accent: #f59e0b;
-      --text: #334155;
+      /* Cores principais */
+      --primary: #0b251e;
+      --primary-dark: #061612;
+      --primary-light: #1a4a3a;
+      --primary-50: rgba(11, 37, 30, 0.05);
+      --primary-100: rgba(11, 37, 30, 0.1);
+      --primary-200: rgba(11, 37, 30, 0.2);
+      --primary-400: rgba(11, 37, 30, 0.4);
+
+      /* Cores de destaque - Dourado */
+      --gold: #c5a880;
+      --gold-light: #e8d5b8;
+      --gold-dark: #a8875e;
+      --gold-gradient: linear-gradient(135deg, #c5a880 0%, #e8d5b8 50%, #c5a880 100%);
+      --gold-gradient-subtle: linear-gradient(135deg, rgba(197, 168, 128, 0.15), rgba(232, 213, 184, 0.05));
+
+      /* Cores secundárias */
+      --accent-blue: #2563eb;
+      --accent-blue-dark: #1d4ed8;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+
+      /* Tons de texto */
+      --text: #1e293b;
       --text-light: #64748b;
-      --background: #ffffff;
-      --surface: #f8fafc;
+      --text-white: #ffffff;
+      --text-muted: #94a3b8;
+
+      /* Fundos */
+      --bg: #ffffff;
+      --bg-surface: #f8fafc;
+      --bg-dark: #0b251e;
+      --bg-dark-surface: #0f2a22;
+
+      /* Bordas */
       --border: #e2e8f0;
-      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-      --gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --border-light: rgba(197, 168, 128, 0.2);
+      --border-gold: rgba(197, 168, 128, 0.4);
+
+      /* Sombras */
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10);
+      --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.14);
+      --shadow-glow: 0 0 40px rgba(197, 168, 128, 0.15);
+      --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+      /* Raios */
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+
+      /* Transições */
+      --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+      /* Tipografia */
+      --font-heading: 'Playfair Display', 'Georgia', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-dyslexic: 'OpenDyslexic', var(--font-body);
+
+      /* Espaçamento */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
+      --space-4xl: 80px;
+    }
+
+    /* ----- MODOS ----- */
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --bg-surface: #1e293b;
+      --text: #e2e8f0;
+      --text-light: #94a3b8;
+      --border: #334155;
+      --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+      --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    [data-contrast="high"] {
+      --text: #000000;
+      --text-light: #1a1a1a;
+      --bg: #ffffff;
+      --bg-surface: #f0f0f0;
+      --border: #000000;
+      --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"][data-contrast="high"] {
+      --text: #ffffff;
+      --text-light: #e0e0e0;
+      --bg: #000000;
+      --bg-surface: #1a1a1a;
+      --border: #ffffff;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; transition: background-color 0.3s, color 0.3s; }
     body {
-      font-family: 'Inter', system-ui, sans-serif;
-      line-height: 1.6;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
       color: var(--text);
-      background: var(--background);
-      overflow-x: hidden;
+      background: var(--bg);
+      transition: var(--transition-base);
       padding-top: 70px;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.dyslexic {
+      font-family: var(--font-dyslexic);
+      letter-spacing: 0.04em;
+      word-spacing: 0.08em;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-lg); }
+
+    /* Skip Link */
+    .skip-link {
+      position: absolute; top: -100%; left: 50%; transform: translateX(-50%);
+      padding: 12px 24px; background: var(--gold); color: var(--primary);
+      font-weight: 700; border-radius: 0 0 var(--radius-md) var(--radius-md);
+      z-index: 10000; text-decoration: none; transition: top 0.3s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ----- BOTÕES ----- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: var(--space-sm); padding: 12px 28px;
+      font-family: var(--font-body); font-weight: 600; font-size: 0.9rem;
+      border: none; border-radius: var(--radius-full); cursor: pointer;
+      text-decoration: none; transition: var(--transition-base);
+      position: relative; overflow: hidden;
+    }
+    .btn::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(255,255,255,0.1); transform: translateX(-100%);
+      transition: transform 0.4s;
+    }
+    .btn:hover::after { transform: translateX(0); }
+    .btn-primary {
+      background: var(--gold-gradient); color: var(--primary-dark);
+      box-shadow: 0 4px 20px rgba(197, 168, 128, 0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 30px rgba(197, 168, 128, 0.4); }
+    .btn-secondary {
+      background: var(--primary); color: white; border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-secondary:hover { background: var(--primary-light); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent; color: var(--gold); border: 2px solid var(--gold);
+    }
+    .btn-outline:hover { background: var(--gold); color: var(--primary-dark); transform: translateY(-2px); }
+    .btn-whatsapp {
+      background: #25d366; color: white; box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+    .btn-whatsapp:hover { transform: translateY(-2px) scale(1.02); }
+    .btn-lg { padding: 16px 36px; font-size: 1rem; }
+    .btn-sm { padding: 8px 18px; font-size: 0.8rem; }
+
+    /* ----- CARDS ----- */
+    .card-premium {
+      background: var(--bg); border-radius: var(--radius-lg);
+      padding: var(--space-xl); border: 1px solid var(--border);
+      box-shadow: var(--shadow-card); transition: var(--transition-base);
+      position: relative; overflow: hidden;
+    }
+    .card-premium::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--gold-gradient); opacity: 0;
+      transition: var(--transition-base);
+    }
+    .card-premium:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-gold); }
+    .card-premium:hover::before { opacity: 1; }
+    .card-premium .icon-wrapper {
+      width: 52px; height: 52px; border-radius: var(--radius-md);
+      background: var(--gold-gradient-subtle); display: flex;
+      align-items: center; justify-content: center; font-size: 1.4rem;
+      color: var(--gold); margin-bottom: var(--space-md);
     }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-    /* Navbar Fixa */
+    /* ----- NAVBAR ----- */
     .navbar {
       position: fixed; top: 0; left: 0; right: 0; height: 70px;
-      background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px);
-      z-index: 2000; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      display: flex; align-items: center;
+      background: rgba(11, 37, 30, 0.95); backdrop-filter: blur(16px);
+      z-index: 2000; border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+      display: flex; align-items: center; transition: var(--transition-base);
     }
+    .navbar.scrolled { background: rgba(6, 22, 18, 0.98); box-shadow: 0 4px 30px rgba(0,0,0,0.2); }
     .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-    .nav-logo { color: white; font-weight: 800; text-decoration: none; font-size: 1.1rem; }
-    .nav-links { display: flex; gap: 18px; list-style: none; align-items: center; }
-    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: white; }
-    .nav-socials { display: flex; gap: 12px; border-left: 1px solid rgba(255, 255, 255, 0.2); padding-left: 15px; }
-    .nav-socials a { color: #94a3b8; font-size: 1.05rem; transition: color 0.2s; }
-    .nav-socials a:hover { color: var(--accent); }
-
-    /* Hero */
-    .hero { background: var(--gradient); color: white; padding: 75px 0; text-align: center; }
-    .hero-content { max-width: 850px; margin: 0 auto; }
-    .profile-image {
-      width: 120px; height: 120px; border-radius: 50%;
-      border: 4px solid rgba(255, 255, 255, 0.15); margin: 0 auto 15px;
-      background: url('https://avatars.githubusercontent.com/u/138263067?v=4') center/cover;
+    .nav-logo {
+      color: white; text-decoration: none; display: flex; flex-direction: column; line-height: 1.2;
     }
-    .hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; margin-bottom: 10px; letter-spacing: -0.02em; }
-    .hero p { font-size: clamp(1rem, 2vw, 1.25rem); opacity: 0.9; margin-bottom: 20px; }
-    .counter-container { margin-bottom: 25px; display: inline-flex; align-items: center; background: rgba(255,255,255,0.07); padding: 6px 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; font-weight: 600; color: #cbd5e1; }
-    .counter-container span { color: #50fa7b; margin-left: 6px; }
-    
-    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn { padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; font-size: 0.88rem; cursor: pointer; border: none; }
-    .btn-primary { background: var(--primary); color: white; }
-    .btn-primary:hover { background: var(--primary-dark); }
-    .btn-secondary { background: rgba(255, 255, 255, 0.08); color: white; border: 1px solid rgba(255, 255, 255, 0.15); }
-    .btn-secondary:hover { background: rgba(255, 255, 255, 0.15); }
-    .btn-outline { background: transparent; color: var(--primary); border: 1px solid var(--primary); padding: 6px 14px; font-size: 0.8rem; border-radius: 4px; }
-    .btn-outline:hover { background: var(--primary); color: white; }
-    .btn:hover { transform: translateY(-2px); }
+    .nav-logo .main { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; letter-spacing: 0.5px; }
+    .nav-logo .main span { color: var(--gold); }
+    .nav-logo .sub { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-light); font-weight: 400; }
+    .nav-links {
+      display: flex; gap: var(--space-lg); list-style: none; align-items: center;
+    }
+    .nav-links a {
+      color: #cbd5e1; text-decoration: none; font-size: 0.8rem; font-weight: 500;
+      transition: var(--transition-fast); position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px; background: var(--gold-gradient);
+      transition: var(--transition-base);
+    }
+    .nav-links a:hover { color: white; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--gold); }
+    .nav-links a.active::after { width: 100%; }
+    .nav-socials {
+      display: flex; gap: var(--space-sm);
+      border-left: 1px solid rgba(255,255,255,0.1); padding-left: var(--space-md);
+    }
+    .nav-socials a { color: #94a3b8; font-size: 1rem; transition: var(--transition-fast); }
+    .nav-socials a:hover { color: var(--gold); }
 
-    /* Seções */
-    section { padding: 80px 0; border-bottom: 1px solid var(--border); }
-    .bg-surface { background: var(--surface); }
-    .section-title { text-align: center; font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 800; color: var(--secondary); margin-bottom: 8px; }
-    .section-subtitle { text-align: center; color: var(--text-light); margin-bottom: 40px; font-size: 1rem; }
-    .back-to-menu-section { text-align: right; margin-top: 30px; }
-    .back-to-menu-section a { color: var(--text-light); text-decoration: none; font-size: 0.82rem; font-weight: 500; }
-    .back-to-menu-section a:hover { color: var(--primary); }
+    .menu-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      background: transparent; border: none; cursor: pointer; padding: 4px; z-index: 2001;
+    }
+    .menu-toggle span { display: block; width: 25px; height: 2.5px; background: white; border-radius: 2px; transition: var(--transition-base); }
+    #menu-checkbox { display: none; }
 
-    /* Grids */
-    .grid-4, .grid-3, .grid-2 { display: grid; gap: 20px; }
-    .grid-4 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+    /* ----- HERO ----- */
+    .hero-premium {
+      position: relative; background: var(--bg-dark);
+      padding: var(--space-4xl) 0 var(--space-3xl);
+      overflow: hidden; min-height: 480px; display: flex; align-items: center;
+    }
+    .hero-premium::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(197, 168, 128, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(197, 168, 128, 0.05) 0%, transparent 50%);
+      z-index: 0;
+    }
+    .hero-premium .wave-pattern {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 80'%3E%3Cpath d='M0,40 C300,80 600,0 900,40 C1100,60 1200,30 1200,30 L1200,80 L0,80 Z' fill='%23f8fafc' opacity='0.06'/%3E%3C/svg%3E") repeat-x bottom;
+      background-size: 1200px 80px; animation: waveMove 20s linear infinite; z-index: 0;
+    }
+    @keyframes waveMove { 0% { background-position-x: 0; } 100% { background-position-x: 1200px; } }
+    .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; text-align: center; color: white; }
+    .hero-content .profile-image {
+      width: 140px; height: 140px; border-radius: 50%;
+      border: 4px solid var(--gold); margin: 0 auto var(--space-lg);
+      background: url('https://avatars.githubusercontent.com/u/138263067?v=4') center/cover;
+      box-shadow: 0 0 60px rgba(197, 168, 128, 0.2);
+      transition: var(--transition-base);
+    }
+    .hero-content .profile-image:hover { transform: scale(1.04); box-shadow: 0 0 80px rgba(197, 168, 128, 0.3); }
+    .hero-content .badge-gold {
+      display: inline-block; padding: 4px 16px; border-radius: var(--radius-full);
+      background: rgba(197, 168, 128, 0.15); border: 1px solid rgba(197, 168, 128, 0.25);
+      font-size: 0.75rem; color: var(--gold-light); text-transform: uppercase;
+      letter-spacing: 1.5px; font-weight: 600; margin-bottom: var(--space-md);
+    }
+    .hero-content h1 {
+      font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700; margin-bottom: var(--space-sm); line-height: 1.1;
+    }
+    .hero-content h1 span { color: var(--gold); }
+    .hero-content .subtitle {
+      font-size: clamp(1rem, 1.5vw, 1.2rem); opacity: 0.85;
+      max-width: 600px; margin: 0 auto var(--space-lg); font-weight: 300;
+      color: #cbd5e1;
+    }
+    .hero-content .counter-container {
+      display: inline-flex; align-items: center;
+      background: rgba(255,255,255,0.07); padding: 6px 15px;
+      border-radius: var(--radius-full); border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.85rem; font-weight: 600; color: #cbd5e1;
+      margin-bottom: var(--space-lg);
+    }
+    .hero-content .counter-container span { color: #50fa7b; margin-left: 6px; }
+    .hero-content .cta-group {
+      display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: center;
+    }
 
-    /* Cards */
-    .card { background: white; padding: 22px; border-radius: 10px; box-shadow: var(--shadow); border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s; }
-    .card:hover { transform: translateY(-3px); }
-    .card h3, .card h4 { font-size: 1.1rem; color: var(--secondary); margin-bottom: 10px; font-weight: 700; }
-    .card p { color: var(--text); font-size: 0.9rem; line-height: 1.5; margin-bottom: 15px; }
+    /* ----- SEÇÃO TÍTULO ----- */
+    .section-title-premium {
+      text-align: center; max-width: 700px; margin: 0 auto var(--space-2xl);
+    }
+    .section-title-premium .label {
+      display: inline-block; font-size: 0.7rem; text-transform: uppercase;
+      letter-spacing: 3px; color: var(--gold); font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+    .section-title-premium h2 {
+      font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: var(--space-md);
+    }
+    .section-title-premium h2 span { color: var(--gold); }
+    .section-title-premium p { color: var(--text-light); font-size: 1.05rem; }
 
-    .category-title { font-size: 1.2rem; color: var(--secondary); margin: 35px 0 15px; padding-bottom: 5px; border-bottom: 2px solid var(--border); font-weight: 700; }
-    .project-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 15px; }
-    .tag { background: var(--surface); color: var(--primary); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; border: 1px solid var(--border); }
+    /* ----- GRIDS ----- */
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-lg); }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg); }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: var(--space-lg); }
 
-    /* Timeline */
+    /* ----- TAGS ----- */
+    .project-tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); margin-bottom: var(--space-md); }
+    .tag {
+      background: var(--gold-gradient-subtle); color: var(--gold-dark);
+      padding: 2px 12px; border-radius: var(--radius-full);
+      font-size: 0.65rem; font-weight: 600; border: 1px solid var(--border-gold);
+    }
+
+    /* ----- TIMELINE ----- */
     .timeline { max-width: 850px; margin: 0 auto; }
-    .timeline-item { background: white; padding: 22px; margin-bottom: 15px; border-radius: 10px; box-shadow: var(--shadow); border-left: 4px solid var(--primary); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .timeline-date { color: var(--primary); font-weight: 700; font-size: 0.8rem; margin-bottom: 4px; text-transform: uppercase; }
-    .timeline-item h3 { font-size: 1.15rem; color: var(--secondary); margin-bottom: 2px; }
-    .timeline-company { font-weight: 600; color: var(--text); margin-bottom: 8px; font-size: 0.9rem; }
+    .timeline-item {
+      background: var(--bg); padding: var(--space-lg); margin-bottom: var(--space-md);
+      border-radius: var(--radius-md); box-shadow: var(--shadow-card);
+      border-left: 4px solid var(--gold); border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      transition: var(--transition-base);
+    }
+    .timeline-item:hover { transform: translateX(4px); box-shadow: var(--shadow-md); }
+    .timeline-date { color: var(--gold); font-weight: 700; font-size: 0.8rem; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .timeline-item h3 { font-size: 1.15rem; color: var(--text); margin-bottom: 2px; }
+    .timeline-company { font-weight: 600; color: var(--text-light); margin-bottom: 8px; font-size: 0.9rem; }
 
-    /* Contact */
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .contact-card { background: white; padding: 22px; border-radius: 10px; text-align: center; box-shadow: var(--shadow); border: 1px solid var(--border); }
-    .contact-card i { font-size: 1.6rem; color: var(--primary); margin-bottom: 10px; }
-    .contact-card h3 { font-size: 1rem; margin-bottom: 4px; }
-    .contact-card a { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.88rem; }
+    /* ----- CATEGORY TITLE ----- */
+    .category-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem; color: var(--text);
+      margin: var(--space-2xl) 0 var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 2px solid var(--border-gold);
+      font-weight: 700;
+    }
+    .category-title i { color: var(--gold); margin-right: var(--space-sm); }
 
-    footer { background: var(--secondary); color: white; padding: 40px 0 30px; text-align: center; }
-    .footer-quote { max-width: 600px; margin: 0 auto 15px; font-style: italic; color: #94a3b8; font-size: 0.9rem; }
-    .footer-copyright { color: #64748b; font-size: 0.8rem; margin-top: 15px; border-top: 1px solid #1e293b; padding-top: 12px; }
+    /* ----- BACK TO MENU ----- */
+    .back-to-menu-section { text-align: right; margin-top: var(--space-xl); }
+    .back-to-menu-section a {
+      color: var(--text-light); text-decoration: none;
+      font-size: 0.82rem; font-weight: 500;
+      transition: var(--transition-fast);
+    }
+    .back-to-menu-section a:hover { color: var(--gold); }
 
-    .back-to-top { position: fixed; bottom: 25px; right: 25px; background: var(--primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: all 0.2s; z-index: 1000; opacity: 0; visibility: hidden; }
+    /* ----- PESQUISA (seção) ----- */
+    .search-section {
+      background: var(--bg-surface); padding: var(--space-3xl) 0;
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .search-box-premium {
+      max-width: 700px; margin: 0 auto; position: relative;
+    }
+    .search-box-premium input {
+      width: 100%; padding: 16px 55px 16px 24px; font-size: 1rem;
+      border: 2px solid var(--border); border-radius: var(--radius-full);
+      background: var(--bg); color: var(--text); font-family: var(--font-body);
+      transition: var(--transition-base); box-shadow: var(--shadow-sm);
+    }
+    .search-box-premium input:focus {
+      outline: none; border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(197, 168, 128, 0.15), var(--shadow-md);
+    }
+    .search-box-premium .search-icon {
+      position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+      color: var(--text-light); font-size: 1.1rem;
+    }
+    .search-stats { text-align: center; font-size: 0.85rem; color: var(--text-light); margin-top: var(--space-md); }
+    .search-stats strong { color: var(--text); }
+
+    .results-container { max-width: 800px; margin: var(--space-xl) auto 0; }
+    .result-item-premium {
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: var(--space-lg);
+      margin-bottom: var(--space-md); transition: var(--transition-base);
+      box-shadow: var(--shadow-sm);
+    }
+    .result-item-premium:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--border-gold); }
+    .result-item-premium h4 a { color: var(--text); text-decoration: none; font-family: var(--font-heading); font-size: 1.1rem; }
+    .result-item-premium h4 a:hover { color: var(--gold); }
+    .result-item-premium .url { font-size: 0.75rem; color: var(--text-light); margin: 2px 0 var(--space-sm); }
+    .result-item-premium .snippet { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+    .result-item-premium .snippet mark { background: rgba(197, 168, 128, 0.2); color: var(--text); padding: 0 4px; border-radius: 3px; font-weight: 600; }
+    .result-item-premium .tags { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-sm); }
+    .result-item-premium .tags span { background: var(--bg-surface); border: 1px solid var(--border); padding: 2px 12px; border-radius: var(--radius-full); font-size: 0.65rem; font-weight: 500; color: var(--text-light); }
+
+    .indexed-sites {
+      display: flex; flex-wrap: wrap; gap: var(--space-sm); justify-content: center; margin-bottom: var(--space-lg);
+    }
+    .indexed-sites .site-badge {
+      background: var(--bg); border: 1px solid var(--border); padding: 4px 14px;
+      border-radius: var(--radius-full); font-size: 0.7rem; color: var(--text-light);
+      transition: var(--transition-fast);
+    }
+    .indexed-sites .site-badge:hover { border-color: var(--gold); color: var(--text); }
+    .indexed-sites .site-badge i { color: var(--gold); margin-right: 4px; font-size: 0.6rem; }
+
+    /* ----- CONTATO ----- */
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); }
+    .contact-card {
+      background: var(--bg); padding: var(--space-xl); border-radius: var(--radius-lg);
+      text-align: center; box-shadow: var(--shadow-card); border: 1px solid var(--border);
+      transition: var(--transition-base);
+    }
+    .contact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-gold); }
+    .contact-card i { font-size: 2rem; color: var(--gold); margin-bottom: var(--space-md); }
+    .contact-card h3 { font-size: 1rem; margin-bottom: 4px; color: var(--text); }
+    .contact-card a { color: var(--text-light); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: var(--transition-fast); }
+    .contact-card a:hover { color: var(--gold); }
+
+    /* ----- CTA SECTION ----- */
+    .cta-section {
+      background: var(--bg-dark); color: white; padding: var(--space-2xl) 0;
+      text-align: center; border-top: 2px solid rgba(197, 168, 128, 0.15);
+      border-bottom: 2px solid rgba(197, 168, 128, 0.15);
+    }
+    .cta-section h3 { font-family: var(--font-heading); font-size: 1.6rem; color: var(--gold); margin-bottom: var(--space-md); }
+    .cta-section p { color: #cbd5e1; max-width: 600px; margin: 0 auto var(--space-lg); }
+    .cta-section .btn-group { display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: center; }
+
+    /* ----- FOOTER ----- */
+    footer {
+      background: var(--bg-dark); color: #cbd5e1; padding: var(--space-2xl) 0 var(--space-xl);
+      text-align: center; border-top: 2px solid rgba(197, 168, 128, 0.15);
+    }
+    footer .footer-quote {
+      max-width: 600px; margin: 0 auto var(--space-lg);
+      font-style: italic; color: #94a3b8; font-size: 0.9rem; font-family: var(--font-heading);
+    }
+    footer .footer-quote i { color: var(--gold); margin: 0 6px; }
+    footer .footer-links {
+      display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: center; margin-bottom: var(--space-md);
+    }
+    footer .footer-links a { color: #94a3b8; text-decoration: none; font-size: 0.8rem; transition: var(--transition-fast); }
+    footer .footer-links a:hover { color: var(--gold); }
+    footer .footer-copyright {
+      color: #64748b; font-size: 0.75rem;
+      border-top: 1px solid rgba(255,255,255,0.05); padding-top: var(--space-md); margin-top: var(--space-md);
+    }
+    footer .visitor-counter {
+      display: inline-flex; align-items: center; gap: var(--space-sm);
+      margin-top: var(--space-md); font-size: 0.75rem; color: #94a3b8;
+      background: rgba(255,255,255,0.03); padding: 6px 16px; border-radius: var(--radius-full);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    footer .visitor-counter i { color: var(--gold); }
+    footer .visitor-counter img { height: 18px; vertical-align: middle; border-radius: 2px; }
+
+    /* ============================================================
+       TOOLBAR ACESSIBILIDADE
+       ============================================================ */
+    .accessibility-toolbar {
+      position: fixed; left: 0; top: 50%; transform: translateY(-50%);
+      z-index: 999; background: rgba(11, 37, 30, 0.92); backdrop-filter: blur(12px);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 6px 4px;
+      display: flex; flex-direction: column; gap: 2px;
+      border: 1px solid rgba(197, 168, 128, 0.15); border-left: none;
+      box-shadow: 4px 0 30px rgba(0, 0, 0, 0.2);
+    }
+    .accessibility-toolbar button {
+      background: transparent; border: none; color: #94a3b8;
+      width: 38px; height: 38px; border-radius: var(--radius-sm);
+      cursor: pointer; font-size: 1rem; transition: var(--transition-fast);
+      display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .accessibility-toolbar button:hover { background: rgba(255,255,255,0.05); color: white; }
+    .accessibility-toolbar button.active { background: var(--gold); color: var(--primary); }
+    .accessibility-toolbar .tooltip {
+      position: absolute; left: 110%; background: var(--primary);
+      color: white; padding: 3px 12px; border-radius: var(--radius-sm);
+      font-size: 0.65rem; white-space: nowrap; opacity: 0; pointer-events: none;
+      transition: var(--transition-fast);
+    }
+    .accessibility-toolbar button:hover .tooltip { opacity: 1; }
+
+    /* ----- PAINEL ACESSIBILIDADE ----- */
+    .accessibility-panel {
+      position: fixed; left: -340px; top: 0; width: 320px; height: 100vh;
+      background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(16px);
+      z-index: 9999; padding: var(--space-xl); transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border-right: 2px solid var(--gold); overflow-y: auto;
+    }
+    .accessibility-panel.open { left: 0; }
+    .accessibility-panel .close-panel {
+      position: absolute; top: 12px; right: 16px;
+      background: transparent; border: none; color: white; font-size: 1.4rem; cursor: pointer;
+    }
+    .accessibility-panel h3 { color: white; font-family: var(--font-heading); margin-bottom: var(--space-lg); font-size: 1.1rem; }
+    .accessibility-panel h3 span { color: var(--gold); }
+    .accessibility-panel .control-group { margin-bottom: var(--space-md); }
+    .accessibility-panel .control-group label { color: #94a3b8; font-size: 0.75rem; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .accessibility-panel .control-group .btn-group { display: flex; gap: 4px; flex-wrap: wrap; }
+    .accessibility-panel .control-group .btn-group button {
+      padding: 5px 14px; border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,0.1); background: transparent;
+      color: #cbd5e1; cursor: pointer; font-size: 0.75rem;
+      transition: var(--transition-fast); font-family: var(--font-body);
+    }
+    .accessibility-panel .control-group .btn-group button.active { background: var(--gold); color: var(--primary); border-color: var(--gold); }
+    .accessibility-panel .control-group .btn-group button:hover:not(.active) { background: rgba(255,255,255,0.05); }
+
+    .accessibility-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+      z-index: 9998; opacity: 0; pointer-events: none; transition: opacity 0.4s;
+    }
+    .accessibility-overlay.open { opacity: 1; pointer-events: all; }
+
+    /* ----- BOTÃO COMANDO DE VOZ (Microfone) ----- */
+    .voice-command-btn {
+      position: fixed; bottom: 90px; right: 80px;
+      background: var(--gold); color: var(--primary);
+      width: 48px; height: 48px; border-radius: 50%;
+      border: none; font-size: 1.2rem; cursor: pointer;
+      z-index: 998; box-shadow: 0 4px 20px rgba(197, 168, 128, 0.3);
+      transition: var(--transition-base); display: flex;
+      align-items: center; justify-content: center;
+    }
+    .voice-command-btn:hover { transform: scale(1.06); }
+    .voice-command-btn.listening {
+      background: #dc2626; color: white;
+      animation: pulse-red 1.5s infinite;
+    }
+    .voice-command-btn .tooltip {
+      position: absolute; right: 110%; background: var(--primary);
+      color: white; padding: 4px 12px; border-radius: var(--radius-sm);
+      font-size: 0.65rem; white-space: nowrap; opacity: 0;
+      pointer-events: none; transition: var(--transition-fast);
+    }
+    .voice-command-btn:hover .tooltip { opacity: 1; }
+
+    @keyframes pulse-red {
+      0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+    }
+
+    /* ----- BOTÃO OUVIR (Toolbar) ----- */
+    .listen-btn {
+      background: transparent; border: none; color: #94a3b8;
+      width: 38px; height: 38px; border-radius: var(--radius-sm);
+      cursor: pointer; font-size: 1rem; transition: var(--transition-fast);
+      display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .listen-btn:hover { background: rgba(255,255,255,0.05); color: white; }
+    .listen-btn.listening { background: #dc2626; color: white; animation: pulse-red 1.5s infinite; }
+    .listen-btn .tooltip {
+      position: absolute; left: 110%; background: var(--primary);
+      color: white; padding: 3px 12px; border-radius: var(--radius-sm);
+      font-size: 0.65rem; white-space: nowrap; opacity: 0;
+      pointer-events: none; transition: var(--transition-fast);
+    }
+    .listen-btn:hover .tooltip { opacity: 1; }
+
+    /* ----- WHATSAPP FLUTUANTE ----- */
+    .whatsapp-float {
+      position: fixed; bottom: 25px; right: 25px;
+      background: #25d366; color: white;
+      padding: 14px 22px; border-radius: var(--radius-full);
+      text-decoration: none; font-weight: 700; font-size: 0.9rem;
+      display: flex; align-items: center; gap: var(--space-sm);
+      box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
+      z-index: 999; animation: pulse-green 2s infinite;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      transition: var(--transition-base);
+    }
+    .whatsapp-float:hover { transform: scale(1.04); box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6); }
+    .whatsapp-float i { font-size: 1.4rem; }
+
+    @keyframes pulse-green {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ----- BOTÃO VOLTAR AO TOPO ----- */
+    .back-to-top {
+      position: fixed; bottom: 90px; left: 20px;
+      background: var(--primary); color: white;
+      width: 42px; height: 42px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transition: var(--transition-base); z-index: 997;
+      opacity: 0; visibility: hidden; border: 1px solid rgba(255,255,255,0.05);
+    }
     .back-to-top.visible { opacity: 1; visibility: visible; }
+    .back-to-top:hover { background: var(--gold); color: var(--primary); transform: translateY(-3px); }
 
-    @media (max-width: 992px) { .nav-links { display: none; } }
-    @media (max-width: 768px) { .cta-buttons { flex-direction: column; align-items: center; } .btn { width: 100%; max-width: 280px; justify-content: center; } }
+    /* ----- LGPD BANNER ----- */
+    .lgpd-banner {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: rgba(11, 37, 30, 0.96); backdrop-filter: blur(12px);
+      padding: 14px 20px; z-index: 10000; border-top: 2px solid var(--gold);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: var(--space-md); transition: transform 0.5s, opacity 0.5s;
+    }
+    .lgpd-banner.hidden { transform: translateY(100%); opacity: 0; pointer-events: none; }
+    .lgpd-banner p { color: #cbd5e1; font-size: 0.85rem; flex: 1 1 280px; text-align: center; }
+    .lgpd-banner a { color: var(--gold); text-decoration: underline; }
+    .lgpd-banner .btn-group { display: flex; gap: var(--space-sm); }
+    .lgpd-banner .btn-group button {
+      padding: 6px 20px; border-radius: var(--radius-full);
+      border: none; font-weight: 600; cursor: pointer;
+      transition: var(--transition-fast); font-family: var(--font-body);
+    }
+    .lgpd-banner .btn-accept { background: var(--gold); color: var(--primary); }
+    .lgpd-banner .btn-accept:hover { transform: scale(1.02); }
+    .lgpd-banner .btn-reject { background: transparent; color: #94a3b8; border: 1px solid #64748b; }
+    .lgpd-banner .btn-reject:hover { background: rgba(255,255,255,0.05); }
+
+    /* ============================================================
+       RESPONSIVIDADE
+       ============================================================ */
+    @media (max-width: 992px) {
+      .nav-links {
+        position: fixed; top: 70px; right: -100%;
+        background: rgba(11, 37, 30, 0.98); backdrop-filter: blur(16px);
+        flex-direction: column; width: 100%; height: calc(100vh - 70px);
+        padding: var(--space-2xl) var(--space-lg); transition: right 0.3s ease;
+        gap: var(--space-lg); align-items: center;
+        border-top: 1px solid rgba(197, 168, 128, 0.1);
+      }
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 1rem; }
+      .menu-toggle { display: flex; }
+      #menu-checkbox:checked ~ .nav-links { right: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(2) { opacity: 0; }
+      #menu-checkbox:checked ~ .menu-toggle span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+      .accessibility-toolbar { left: -6px; transform: translateY(-50%) scale(0.85); }
+      .accessibility-panel { width: 280px; left: -300px; }
+      .voice-command-btn { right: 20px; bottom: 80px; }
+      .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-premium { padding: var(--space-2xl) 0; min-height: auto; }
+      .hero-content .profile-image { width: 100px; height: 100px; }
+      .section-title-premium h2 { font-size: 1.6rem; }
+      .lgpd-banner { padding: 12px 16px; }
+      .lgpd-banner p { font-size: 0.75rem; }
+      .search-box-premium input { padding: 14px 48px 14px 18px; font-size: 0.9rem; }
+      .voice-command-btn { width: 42px; height: 42px; font-size: 1rem; right: 15px; bottom: 70px; }
+      .whatsapp-float { padding: 10px 16px; font-size: 0.75rem; bottom: 15px; right: 15px; }
+      .whatsapp-float span { display: none; }
+      .back-to-top { bottom: 75px; left: 15px; width: 36px; height: 36px; }
+    }
+
+    .reduce-motion * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
+  <!-- ===== SKIP TO CONTENT ===== -->
+  <a href="#main-content" class="skip-link">Ir para o conteúdo</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
     <div class="container nav-container">
-      <a href="#" class="nav-logo">Fábio Wlademir</a>
-      <ul class="nav-links">
+      <a href="#" class="nav-logo">
+        <span class="main">Fábio <span>Wlademir</span></span>
+        <span class="sub">Segurança · Infraestrutura · LegalTech</span>
+      </a>
+
+      <input type="checkbox" id="menu-checkbox" aria-label="Abrir menu">
+      <label for="menu-checkbox" class="menu-toggle" aria-label="Alternar menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="#skills">Habilidades</a></li>
         <li><a href="#webapps">Web Apps</a></li>
         <li><a href="#projects">Repositórios</a></li>
@@ -170,8 +736,9 @@
         <li><a href="#books">Obras</a></li>
         <li><a href="#contact">Contato</a></li>
         <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
         <li class="nav-socials">
-          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://github.com/FabioWlademir" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://f2suporte.blogspot.com" target="_blank" rel="noopener" title="Blog F2 Suporte"><i class="fas fa-cubes"></i></a>
           <a href="https://www.youtube.com/@fabiowlademirrs" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -180,340 +747,452 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero" id="home">
+  <!-- ===== WHATSAPP FLUTUANTE ===== -->
+  <a href="https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20site" class="whatsapp-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+    <span>Fale comigo</span>
+  </a>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero-premium" id="main-content">
+    <div class="wave-pattern"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="profile-image"></div>
-        <h1>Fábio Wlademir</h1>
-        <p>🛡️ Segurança da Informação, Soluções LegalTech, Infraestrutura Crítica & DevSecOps</p>
-        
-        <!-- Contador Histórico Preservado de Visitas -->
-        <div class="visitor-counter" title="Total de visualizações de página">
-    <i class="fas fa-eye"></i>
-    <span>Visitas ao portal:</span>
-    <span id="visitCount">5.014</span>
-</div>
+        <div class="profile-image" role="img" aria-label="Foto de Fábio Wlademir"></div>
 
-        <div class="cta-buttons">
-          <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Contato Rápido</a>
-          <a href="#webapps" class="btn btn-secondary"><i class="fas fa-globe"></i> Ver Portais Ativos</a>
-          <a href="sobre.html" class="btn btn-secondary"><i class="fas fa-user"></i> Sobre</a>
+        <div class="badge-gold">
+          <i class="fas fa-shield-halved"></i> Especialista em Segurança da Informação
+        </div>
+
+        <h1>Fábio <span>Wlademir</span></h1>
+
+        <p class="subtitle">
+          🛡️ Segurança da Informação, Soluções LegalTech, Infraestrutura Crítica & DevSecOps
+        </p>
+
+        <!-- Contador Histórico Preservado de Visitas -->
+        <div class="counter-container">
+          <i class="fas fa-eye"></i> Visualizações: <span>5.014 visitas</span>
+        </div>
+
+        <div class="cta-group">
+          <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> Contato Rápido</a>
+          <a href="#webapps" class="btn btn-secondary btn-lg"><i class="fas fa-globe"></i> Ver Portais Ativos</a>
+          <a href="sobre.html" class="btn btn-outline btn-lg"><i class="fas fa-user"></i> Sobre Mim</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Habilidades -->
-  <section id="skills">
+  <!-- ===== HABILIDADES ===== -->
+  <section id="skills" style="padding: var(--space-3xl) 0;">
     <div class="container">
-      <h2 class="section-title">🛠️ Habilidades de Engenharia & Conformidade</h2>
-      <p class="section-subtitle">A junção estratégica entre operação crítica tecnológica e ciências jurídicas</p>
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-tools"></i> Competências</span>
+        <h2>🛠️ Habilidades de Engenharia &amp; <span>Conformidade</span></h2>
+        <p>A junção estratégica entre operação crítica tecnológica e ciências jurídicas</p>
+      </div>
+
       <div class="grid-4">
-        <div class="card">
-          <h3>Segurança & Monitoramento</h3>
-          <p>Análise SOC/NOC, SIEM (Splunk, QRadar, ELK Stack), Zabbix, mitigação ativa de riscos e resposta a incidentes.</p>
+        <div class="card-premium">
+          <div class="icon-wrapper"><i class="fas fa-shield-halved"></i></div>
+          <h3 style="font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm); font-weight:700;">Segurança &amp; Monitoramento</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Análise SOC/NOC, SIEM (Splunk, QRadar, ELK Stack), Zabbix, mitigação ativa de riscos e resposta a incidentes.</p>
         </div>
-        <div class="card">
-          <h3>Cloud & DevSecOps</h3>
-          <p>Docker, AWS, Azure, Linux (Kali/Debian), automação de infraestrutura segura e esteiras de alta disponibilidade.</p>
+
+        <div class="card-premium">
+          <div class="icon-wrapper"><i class="fas fa-cloud"></i></div>
+          <h3 style="font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm); font-weight:700;">Cloud &amp; DevSecOps</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Docker, AWS, Azure, Linux (Kali/Debian), automação de infraestrutura segura e esteiras de alta disponibilidade.</p>
         </div>
-        <div class="card">
-          <h3>Automação & IA</h3>
-          <p>Python, JavaScript, Bash, PowerShell e Engenharia de Prompt para ganho de escala operacional.</p>
+
+        <div class="card-premium">
+          <div class="icon-wrapper"><i class="fas fa-robot"></i></div>
+          <h3 style="font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm); font-weight:700;">Automação &amp; IA</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Python, JavaScript, Bash, PowerShell e Engenharia de Prompt para ganho de escala operacional.</p>
         </div>
-        <div class="card">
-          <h3>LegalTech & LGPD</h3>
-          <p>Adequação à LGPD, gerenciamento de sistemas de tribunais eletrônicos, pesquisa jurisprudencial e PLD-FT.</p>
+
+        <div class="card-premium">
+          <div class="icon-wrapper"><i class="fas fa-gavel"></i></div>
+          <h3 style="font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm); font-weight:700;">LegalTech &amp; LGPD</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Adequação à LGPD, gerenciamento de sistemas de tribunais eletrônicos, pesquisa jurisprudencial e PLD-FT.</p>
         </div>
       </div>
+
+      <!-- CTA -->
+      <div style="text-align:center; margin-top: var(--space-2xl);">
+        <a href="#contact" class="btn btn-primary"><i class="fas fa-handshake"></i> Precisa de consultoria especializada?</a>
+      </div>
+
       <div class="back-to-menu-section"><a href="#home"><i class="fas fa-arrow-up"></i> Voltar ao Menu</a></div>
     </div>
   </section>
 
-  <!-- Ecossistema de Web Apps & Portais -->
-  <section id="webapps" class="bg-surface">
+  <!-- ===== ECOSSISTEMA DE WEB APPS & PORTAIS ===== -->
+  <section id="webapps" style="padding: var(--space-3xl) 0; background: var(--bg-surface);">
     <div class="container">
-      <h2 class="section-title">🌐 Ecossistema de Web Apps & Portais</h2>
-      <p class="section-subtitle">Sistemas ativos publicados em produção e portfólios web</p>
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-globe"></i> Portfólio</span>
+        <h2>🌐 Ecossistema de Web Apps &amp; <span>Portais</span></h2>
+        <p>Sistemas ativos publicados em produção e portfólios web</p>
+      </div>
+
       <div class="grid-3">
-        
-        <div class="card">
+        <!-- CAED UNISINOS -->
+        <div class="card-premium">
           <div>
-            <h4>CAED UNISINOS Portal</h4>
-            <p>Plataforma institucional ativa com estrutura otimizada focado no ecossistema e demandas do Centro Acadêmico.</p>
-            <div class="project-tags"><span class="tag">Domínio Próprio</span><span class="tag">Produção</span><span class="tag">Web Portal</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">CAED UNISINOS Portal</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Plataforma institucional ativa com estrutura otimizada focado no ecossistema e demandas do Centro Acadêmico.</p>
+            <div class="project-tags">
+              <span class="tag">Domínio Próprio</span>
+              <span class="tag">Produção</span>
+              <span class="tag">Web Portal</span>
+            </div>
           </div>
-          <a href="https://caedunisinos.com.br/" class="btn btn-outline" target="_blank" rel="noopener">Acessar Portal</a>
+          <a href="https://caedunisinos.com.br/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Portal</a>
         </div>
 
-        <div class="card">
+        <!-- Portfólio Profissional -->
+        <div class="card-premium">
           <div>
-            <h4>Portfólio Profissional</h4>
-            <p>Landing page pessoal otimizada para SEO e indexação no Google Search Console, rodando em infraestrutura estável serverless.</p>
-            <div class="project-tags"><span class="tag">GitHub Pages</span><span class="tag">SPA Layout</span><span class="tag">SEO Otimizado</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Portfólio Profissional</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Landing page pessoal otimizada para SEO e indexação no Google Search Console, rodando em infraestrutura estável serverless.</p>
+            <div class="project-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">SPA Layout</span>
+              <span class="tag">SEO Otimizado</span>
+            </div>
           </div>
-          <a href="https://fabiowlademir.github.io/" class="btn btn-outline" target="_blank" rel="noopener">Acessar Link</a>
+          <a href="https://fabiowlademir.github.io/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Link</a>
         </div>
 
-        <div class="card">
+        <!-- Simulados de Direito -->
+        <div class="card-premium">
           <div>
-            <h4>Simulados de Direito</h4>
-            <p>A Fonte Completa do Direito Brasileiro. Aplicação interativa para testes lógicos e simulados focados no exame de ordem.</p>
-            <div class="project-tags"><span class="tag">GitHub Pages</span><span class="tag">LegalTech</span><span class="tag">OAB</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Simulados de Direito</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">A Fonte Completa do Direito Brasileiro. Aplicação interativa para testes lógicos e simulados focados no exame de ordem.</p>
+            <div class="project-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">LegalTech</span>
+              <span class="tag">OAB</span>
+            </div>
           </div>
-          <a href="https://fabiowlademir.github.io/simuladosdireito/" class="btn btn-outline" target="_blank" rel="noopener">Acessar Portal</a>
+          <a href="https://fabiowlademir.github.io/simuladosdireito/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Portal</a>
         </div>
 
         <!-- Teoria do Direito - Versão 1 -->
-        <div class="card">
+        <div class="card-premium">
           <div>
-            <h4>Teoria do Direito - Versão 1</h4>
-            <p>Matriz inicial do ambiente transmídia estruturado para documentação de correntes doutrinárias e evolução jurídica.</p>
-            <div class="project-tags"><span class="tag">GitHub Pages</span><span class="tag">Acadêmico</span><span class="tag">V1 Base</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Teoria do Direito - Versão 1</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Matriz inicial do ambiente transmídia estruturado para documentação de correntes doutrinárias e evolução jurídica.</p>
+            <div class="project-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Acadêmico</span>
+              <span class="tag">V1 Base</span>
+            </div>
           </div>
-          <a href="https://fabiowlademir.github.io/teoriadodireito/" class="btn btn-outline" target="_blank" rel="noopener">Acessar Versão 1</a>
+          <a href="https://fabiowlademir.github.io/teoriadodireito/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Versão 1</a>
         </div>
 
         <!-- Teoria do Direito - Versão 2 -->
-        <div class="card">
+        <div class="card-premium">
           <div>
-            <h4>Teoria do Direito - Versão 2</h4>
-            <p>Segunda variante adaptada da plataforma, trazendo refinamentos lógicos de interface e navegabilidade do pensamento jurídico.</p>
-            <div class="project-tags"><span class="tag">GitHub Pages</span><span class="tag">Evolução</span><span class="tag">V2 UI</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Teoria do Direito - Versão 2</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Segunda variante adaptada da plataforma, trazendo refinamentos lógicos de interface e navegabilidade do pensamento jurídico.</p>
+            <div class="project-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Evolução</span>
+              <span class="tag">V2 UI</span>
+            </div>
           </div>
-          <a href="https://fabiowlademir.github.io/teoriadodireito/site2.html" class="btn btn-outline" target="_blank" rel="noopener">Acessar Versão 2</a>
+          <a href="https://fabiowlademir.github.io/teoriadodireito/site2.html" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Versão 2</a>
         </div>
 
         <!-- Teoria do Direito - Versão 3 -->
-        <div class="card">
+        <div class="card-premium">
           <div>
-            <h4>Teoria do Direito - Versão 3</h4>
-            <p>Terceira vertente com foco em interatividade acadêmica expandida e melhorias de renderização serverless.</p>
-            <div class="project-tags"><span class="tag">GitHub Pages</span><span class="tag">Avançado</span><span class="tag">V3 Final</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Teoria do Direito - Versão 3</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Terceira vertente com foco em interatividade acadêmica expandida e melhorias de renderização serverless.</p>
+            <div class="project-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Avançado</span>
+              <span class="tag">V3 Final</span>
+            </div>
           </div>
-          <a href="https://fabiowlademir.github.io/teoriadodireito/site3.html" class="btn btn-outline" target="_blank" rel="noopener">Acessar Versão 3</a>
+          <a href="https://fabiowlademir.github.io/teoriadodireito/site3.html" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Versão 3</a>
         </div>
 
         <!-- Teoria do Direito - Versão 4 -->
-        <div class="card">
+        <div class="card-premium">
           <div>
-            <h4>Teoria do Direito - Versão 4</h4>
-            <p>Terceira vertente com foco em interatividade acadêmica expandida e melhorias de renderização serverless.</p>
-            <div class="project-tags"><span class="tag">GitHub Pages</span><span class="tag">Avançado</span><span class="tag">V3 Final</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Teoria do Direito - Versão 4</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Quarta vertente com foco em interatividade acadêmica expandida e melhorias de renderização serverless.</p>
+            <div class="project-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Avançado</span>
+              <span class="tag">V4 Final</span>
+            </div>
           </div>
-          <a href="https://fabiowlademir.github.io/teoriadodireito/site4.html" class="btn btn-outline" target="_blank" rel="noopener">Acessar Versão 4</a>
-        </div>
-        
-        <div class="card">
-          <div>
-            <h4>Direito ao Esquecimento</h4>
-            <p>Plataforma de análise e debate acadêmico sobre o RE 1.010.606/STF e privacidade na era dos dados.</p>
-            <div class="project-tags"><span class="tag">GitHub Pages</span><span class="tag">Direito Digital</span><span class="tag">STF</span></div>
-          </div>
-          <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/" class="btn btn-outline" target="_blank" rel="noopener">Acessar Portal</a>
+          <a href="https://fabiowlademir.github.io/teoriadodireito/site4.html" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Versão 4</a>
         </div>
 
-        <div class="card">
+        <!-- Direito ao Esquecimento -->
+        <div class="card-premium">
           <div>
-            <h4>UniCarona - Mobilidade</h4>
-            <p>Interface experimental de caronas acadêmicas validando conformidade rígida às diretrizes protetivas da LGPD.</p>
-            <div class="project-tags"><span class="tag">GitHub Pages</span><span class="tag">LGPD</span><span class="tag">UNISINOS</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Direito ao Esquecimento</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Plataforma de análise e debate acadêmico sobre o RE 1.010.606/STF e privacidade na era dos dados.</p>
+            <div class="project-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">Direito Digital</span>
+              <span class="tag">STF</span>
+            </div>
           </div>
-          <a href="https://fabiowlademir.github.io/unicarona/" class="btn btn-outline" target="_blank" rel="noopener">Acessar Portal</a>
+          <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Portal</a>
         </div>
 
-        <div class="card">
+        <!-- UniCarona -->
+        <div class="card-premium">
           <div>
-            <h4>Advocacia Sapucaia Blog</h4>
-            <p>Espaço de divulgação informativa jurídica corporativa e análises de direito digital aplicado.</p>
-            <div class="project-tags"><span class="tag">Blogger</span><span class="tag">Legal Info</span><span class="tag">Corporativo</span></div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">UniCarona - Mobilidade</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Interface experimental de caronas acadêmicas validando conformidade rígida às diretrizes protetivas da LGPD.</p>
+            <div class="project-tags">
+              <span class="tag">GitHub Pages</span>
+              <span class="tag">LGPD</span>
+              <span class="tag">UNISINOS</span>
+            </div>
           </div>
-          <a href="https://advocaciasapucaia.blogspot.com/" class="btn btn-outline" target="_blank" rel="noopener">Acessar Blog</a>
+          <a href="https://fabiowlademir.github.io/unicarona/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Portal</a>
         </div>
-        
-<div class="card">
-          <div>
-            <h4>Advocacia Vera Catarina</h4>
-            <p>Atuação sólida nas áreas cível, previdenciária, trabalhista, criminal, de família, do consumidor e direito digital, a Dra. Vera Catarina dedica-se a oferecer um atendimento jurídico de excelência.</p>
-            <div class="project-tags"><span class="tag">Blogger</span><span class="tag">Legal Info</span><span class="tag">Corporativo</span></div>
-          </div>
-          <a href="https://veracatarina.github.io" class="btn btn-outline" target="_blank" rel="noopener">Acessar Site</a>
-        </div>
-            
-<div class="card">
-          <div>
-            <h4>Sobre Fábio Wlademir</h4>
-            <p>Profissional com mais de 15 anos de experiência em criação de sites, desenvolvimento web, cibersegurança e infraestrutura de TI.</p>
-            <div class="project-tags"><span class="tag">Blogger</span><span class="tag">Legal Info</span><span class="tag">Corporativo</span></div>
-          </div>
-          <a href="https://fabiowladmemir.github.io/sobre.html" class="btn btn-outline" target="_blank" rel="noopener">Sobre Wlademir</a>
-        </div>
-            
-      <div class="back-to-menu-section"><a href="#home"><i class="fas fa-arrow-up"></i> Voltar ao Menu</a></div>
-    </div>
-  </section>
 
-  <!-- Repositórios & Projetos em Destaque -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">🚀 Repositórios & Projetos em Destaque</h2>
-      <p class="section-subtitle">Códigos-fonte abertos e laboratórios práticos disponíveis em meu ecossistema GitHub</p>
+        <!-- Advocacia Sapucaia -->
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Advocacia Sapucaia Blog</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Espaço de divulgação informativa jurídica corporativa e análises de direito digital aplicado.</p>
+            <div class="project-tags">
+              <span class="tag">Blogger</span>
+              <span class="tag">Legal Info</span>
+              <span class="tag">Corporativo</span>
+            </div>
+          </div>
+          <a href="https://advocaciasapucaia.blogspot.com/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Blog</a>
+        </div>
 
-      <h3 class="category-title">⚖️ Soluções Avançadas LegalTech & Acadêmicos</h3>
-      <div class="grid-3">
-        <div class="card">
+        <!-- Advocacia Vera Catarina -->
+        <div class="card-premium">
           <div>
-            <h4>unicarona</h4>
-            <p>Repositório de backend e regras de conformidade LGPD aplicadas à mobilidade universitária na UNISINOS.</p>
+            <h4 style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text); margin-bottom:var(--space-sm);">Advocacia Vera Catarina</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Atuação sólida nas áreas cível, previdenciária, trabalhista, criminal, de família, do consumidor e direito digital, a Dra. Vera Catarina dedica-se a oferecer um atendimento jurídico de excelência.</p>
+            <div class="project-tags">
+              <span class="tag">Blogger</span>
+              <span class="tag">Legal Info</span>
+              <span class="tag">Corporativo</span>
+            </div>
           </div>
-          <a href="https://github.com/FabioWlademir/unicarona" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>direito-ao-esquecimento</h4>
-            <p>Código-fonte e estrutura de arquivos da plataforma de debate sobre privacidade e decisões do STF.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/direito-ao-esquecimento" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>teoriadodireito</h4>
-            <p>Versionamento e códigos estruturais das três matrizes da aplicação Teoria do Direito.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/teoriadodireito" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>ia-fabiana-fabricia</h4>
-            <p>Modelos estruturados de agentes inteligentes simulados focados em automação e rotinas de escritórios de advocacia.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/ia-fabiana-fabricia" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>caed</h4>
-            <p>Código base e desenvolvimento ágil da arquitetura do portal institucional CAED Unisinos.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/caed" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>miniguia-engenharia-prompt</h4>
-            <p>Repositório com roteiros práticos, templates e diretrizes de prompts eficientes para o setor jurídico e tecnológico.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/miniguia-engenharia-prompt" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>simuladosdireito</h4>
-            <p>Arquivos do motor lógico e bancos de questões do simulador web interativo para exames jurídicos.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/simuladosdireito" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>for-attorney-legal-software</h4>
-            <p>Software experimental voltado ao gerenciamento inteligente de fluxos de trabalho processuais corporativos.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/for-attorney-legal-software" class="btn btn-outline" target="_blank">Ver Repositório</a>
+          <a href="https://veracatarina.github.io" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Acessar Site</a>
         </div>
       </div>
 
-      <h3 class="category-title">🛡️ Cibersegurança & Defesa Ativa</h3>
-      <div class="grid-3">
-        <div class="card">
-          <div>
-            <h4>siem-inteligente</h4>
-            <p>Mecanismo experimental para monitoramento automatizado, correlação inteligente de logs e respostas a incidentes.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/siem-inteligente" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>network-security-audit</h4>
-            <p>Ferramenta de varredura automatizada para identificação pragmática de vulnerabilidades e auditorias de segurança lógica.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/network-security-audit" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>investigacao-incidente-rede-domestica</h4>
-            <p>Manual operacional e guia forense simulando análises de intrusões em perímetros residenciais.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/investigacao-incidente-rede-domestica" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>Auditoria-BruteForce-Kali-Medusa</h4>
-            <p>Script estruturado e documentação detalhada de validações de senhas via Medusa no ecossistema Kali Linux.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/Auditoria-BruteForce-Kali-Medusa" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>Simulando-Um-Malware-De-Captura-De-Dados...</h4>
-            <p>Laboratório puramente educacional em Python demonstrando o comportamento e engenharia reversa de capturas indevidas.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/Simulando-Um-Malware-De-Captura-De-Dados-Simples-Em-Python-Projeto-Educacional" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-      </div>
-
-      <h3 class="category-title">⚙️ Infraestrutura, Automação & Core</h3>
-      <div class="grid-3">
-        <div class="card">
-          <div>
-            <h4>zabbix-monitoring-lab</h4>
-            <p>Ambiente completo isolado em Docker para monitoramento pró-ativo de ativos de redes e servidores.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/zabbix-monitoring-lab" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>enterprise-web-infra-security</h4>
-            <p>Topologias robustas corporativas de servidores estáveis Apache/Nginx blindados contra falhas lógicas comuns.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/enterprise-web-infra-security" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>scripts-suporte</h4>
-            <p>Coleção modular de rotinas e scripts voltada à automação de triagens básicas de suporte nível N1 a N3.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/scripts-suporte" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>eliminador-de-sujeira</h4>
-            <p>Script automatizado em lote (.bat) otimizado para manutenção limpa de temporários e logs do ecossistema Windows.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/eliminador-de-sujeira" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>FabioWlademir.github.io</h4>
-            <p>Código-fonte master que compõe e serve as automações, tags de SEO e indexações do site portfólio oficial.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/FabioWlademir.github.io" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
-        <div class="card">
-          <div>
-            <h4>Templates-Fabio-Wlademir</h4>
-            <p>Coleção de matrizes e estruturas reutilizáveis de códigos lógicos limpos, estilos e esquemas operacionais.</p>
-          </div>
-          <a href="https://github.com/FabioWlademir/Templates-Fabio-Wlademir" class="btn btn-outline" target="_blank">Ver Repositório</a>
-        </div>
+      <!-- CTA -->
+      <div style="text-align:center; margin-top: var(--space-2xl);">
+        <a href="https://api.whatsapp.com/send?phone=5551998883187&text=Gostaria%20de%20saber%20mais%20sobre%20seus%20projetos%20web" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Quer um site profissional como esses?</a>
       </div>
 
       <div class="back-to-menu-section"><a href="#home"><i class="fas fa-arrow-up"></i> Voltar ao Menu</a></div>
     </div>
   </section>
 
-  <!-- Experiência -->
-  <section id="experience" class="bg-surface">
+  <!-- ===== REPOSITÓRIOS & PROJETOS ===== -->
+  <section id="projects" style="padding: var(--space-3xl) 0;">
     <div class="container">
-      <h2 class="section-title">💼 Experiência Profissional</h2>
-      <p class="section-subtitle">Atuações estratégicas em missões críticas de cibersegurança e fluxos judiciais</p>
+      <div class="section-title-premium">
+        <span class="label"><i class="fab fa-github"></i> Código Aberto</span>
+        <h2>🚀 Repositórios &amp; Projetos em <span>Destaque</span></h2>
+        <p>Códigos-fonte abertos e laboratórios práticos disponíveis em meu ecossistema GitHub</p>
+      </div>
+
+      <!-- Soluções LegalTech -->
+      <h3 class="category-title"><i class="fas fa-gavel"></i> Soluções Avançadas LegalTech &amp; Acadêmicos</h3>
+      <div class="grid-3">
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">unicarona</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Repositório de backend e regras de conformidade LGPD aplicadas à mobilidade universitária na UNISINOS.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/unicarona" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">direito-ao-esquecimento</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Código-fonte e estrutura de arquivos da plataforma de debate sobre privacidade e decisões do STF.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/direito-ao-esquecimento" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">teoriadodireito</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Versionamento e códigos estruturais das três matrizes da aplicação Teoria do Direito.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/teoriadodireito" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">ia-fabiana-fabricia</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Modelos estruturados de agentes inteligentes simulados focados em automação e rotinas de escritórios de advocacia.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/ia-fabiana-fabricia" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">caed</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Código base e desenvolvimento ágil da arquitetura do portal institucional CAED Unisinos.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/caed" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">miniguia-engenharia-prompt</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Repositório com roteiros práticos, templates e diretrizes de prompts eficientes para o setor jurídico e tecnológico.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/miniguia-engenharia-prompt" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">simuladosdireito</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Arquivos do motor lógico e bancos de questões do simulador web interativo para exames jurídicos.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/simuladosdireito" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">for-attorney-legal-software</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Software experimental voltado ao gerenciamento inteligente de fluxos de trabalho processuais corporativos.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/for-attorney-legal-software" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+      </div>
+
+      <!-- Cibersegurança -->
+      <h3 class="category-title"><i class="fas fa-shield-halved"></i> Cibersegurança &amp; Defesa Ativa</h3>
+      <div class="grid-3">
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">siem-inteligente</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Mecanismo experimental para monitoramento automatizado, correlação inteligente de logs e respostas a incidentes.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/siem-inteligente" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">network-security-audit</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Ferramenta de varredura automatizada para identificação pragmática de vulnerabilidades e auditorias de segurança lógica.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/network-security-audit" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">investigacao-incidente-rede-domestica</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Manual operacional e guia forense simulando análises de intrusões em perímetros residenciais.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/investigacao-incidente-rede-domestica" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Auditoria-BruteForce-Kali-Medusa</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Script estruturado e documentação detalhada de validações de senhas via Medusa no ecossistema Kali Linux.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/Auditoria-BruteForce-Kali-Medusa" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Simulando-Um-Malware-De-Captura-De-Dados...</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Laboratório puramente educacional em Python demonstrando o comportamento e engenharia reversa de capturas indevidas.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/Simulando-Um-Malware-De-Captura-De-Dados-Simples-Em-Python-Projeto-Educacional" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+      </div>
+
+      <!-- Infraestrutura -->
+      <h3 class="category-title"><i class="fas fa-server"></i> Infraestrutura, Automação &amp; Core</h3>
+      <div class="grid-3">
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">zabbix-monitoring-lab</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Ambiente completo isolado em Docker para monitoramento pró-ativo de ativos de redes e servidores.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/zabbix-monitoring-lab" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">enterprise-web-infra-security</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Topologias robustas corporativas de servidores estáveis Apache/Nginx blindados contra falhas lógicas comuns.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/enterprise-web-infra-security" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">scripts-suporte</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Coleção modular de rotinas e scripts voltada à automação de triagens básicas de suporte nível N1 a N3.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/scripts-suporte" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">eliminador-de-sujeira</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Script automatizado em lote (.bat) otimizado para manutenção limpa de temporários e logs do ecossistema Windows.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/eliminador-de-sujeira" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">FabioWlademir.github.io</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Código-fonte master que compõe e serve as automações, tags de SEO e indexações do site portfólio oficial.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/FabioWlademir.github.io" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Templates-Fabio-Wlademir</h4>
+            <p style="color:var(--text-light); font-size:0.9rem;">Coleção de matrizes e estruturas reutilizáveis de códigos lógicos limpos, estilos e esquemas operacionais.</p>
+          </div>
+          <a href="https://github.com/FabioWlademir/Templates-Fabio-Wlademir" class="btn btn-primary btn-sm" target="_blank">Ver Repositório</a>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align:center; margin-top: var(--space-2xl);">
+        <a href="https://github.com/FabioWlademir" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> Ver todos os repositórios no GitHub</a>
+      </div>
+
+      <div class="back-to-menu-section"><a href="#home"><i class="fas fa-arrow-up"></i> Voltar ao Menu</a></div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIÊNCIA ===== -->
+  <section id="experience" style="padding: var(--space-3xl) 0; background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-briefcase"></i> Trajetória</span>
+        <h2>💼 Experiência <span>Profissional</span></h2>
+        <p>Atuações estratégicas em missões críticas de cibersegurança e fluxos judiciais</p>
+      </div>
+
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-date">Dezembro 2024 – Junho 2025</div>
@@ -521,18 +1200,21 @@
           <div class="timeline-company">F5 Tecnologia</div>
           <p>Operação focada em triagem ágil de alertas e resposta ativa em ecossistemas SIEM (Splunk, QRadar, ELK Stack). Garantia de alta disponibilidade e governança técnica contínua.</p>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-date">Maio 2010 – Abril 2025</div>
-          <h3>Consultor Técnico & Auxiliar Jurídico</h3>
+          <h3>Consultor Técnico &amp; Auxiliar Jurídico</h3>
           <div class="timeline-company">F5 Tecnologia / Advocacia Vera Catarina</div>
           <p>Gerenciamento especializado de sistemas de peticionamento eletrônico (e-Proc, PJe). Implementação de modelos generativos estruturados com inteligência artificial, conformidade LGPD e auditoria de dados jurídicos.</p>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-date">Março 2024 – Outubro 2024</div>
           <h3>Analista NOC</h3>
           <div class="timeline-company">Scherer Informática / Stihl Ferramentas</div>
           <p>Monitoramento ativo através do Nagios, gerenciamento de privilégios de acesso no Active Directory, suporte em ambientes SAP corporativos e intermediação com equipes de TI globais.</p>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-date">Março 2021 – Outubro 2023</div>
           <h3>Analista de Suporte e Sustentação</h3>
@@ -540,65 +1222,128 @@
           <p>Sustentação proativa e monitoramento técnico rigoroso do ecossistema central bancário TOPAZ/CRK. Atuação com Centreon, Zabbix e fluxos rígidos de autenticação 2FA/SSO via plataforma Azion.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Certificações -->
-  <section id="certifications">
-    <div class="container">
-      <h2 class="section-title">🎓 Cursos & Certificações</h2>
-      <p class="section-subtitle">Evolução acadêmica contínua em ciberdefesa e ciências jurídicas</p>
-      <div class="grid-4">
-        <div class="card"><h3>IBSEC</h3><p>Analista SOC (2025)<br>Boas Práticas de Cibersegurança (2025)</p></div>
-        <div class="card"><h3>Gran Faculdade</h3><p>Responsabilidade Jurídica nos Ambientes Digitais (Agosto 2025)</p></div>
-        <div class="card"><h3>Microsoft Learn</h3><p>Diversos cursos de Windows e Infraestrutura (2025)</p></div>
-        <div class="card"><h3>IFSUL</h3><p>Programação Web (2024)<br>Programação de Sistemas (2024)</p></div>
-        <div class="card"><h3>Fundación Bradesco</h3><p>Segurança da informação + LGPD (2024)</p></div>
-        <div class="card"><h3>Mentoria Jurídica</h3><p>Grupo de Estudos Jurídicos - Adv. Luiz Felipe (2024 – Atual)</p></div>
-        <div class="card"><h3>LetsDefend</h3><p>Fundamentos do SOC (2023) - Incident Response, Threat Intelligence</p></div>
-        <div class="card"><h3>Ágama Business Training</h3><p>PLD-FT - Prevenção à Lavagem de Dinheiro (2023)</p></div>
-        <div class="card"><h3>VMware</h3><p>Webcast Técnico (2023)</p></div>
-        <div class="card"><h3>LPIC-1</h3><p>Curso LPIC-1 (LPI 101/102) - certificacaolinux.com.br (2022)</p></div>
-        <div class="card"><h3>UNIASSELVI</h3><p>Lei Geral de Proteção de Dados - LGPD (2021)</p></div>
+      <!-- CTA -->
+      <div style="text-align:center; margin-top: var(--space-2xl);">
+        <a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank" class="btn btn-primary"><i class="fab fa-linkedin"></i> Ver trajetória completa no LinkedIn</a>
       </div>
+
       <div class="back-to-menu-section"><a href="#home"><i class="fas fa-arrow-up"></i> Voltar ao Menu</a></div>
     </div>
   </section>
 
-  <!-- Obras Técnicas Publicadas -->
-  <section id="books" class="bg-surface">
+  <!-- ===== CERTIFICAÇÕES ===== -->
+  <section id="certifications" style="padding: var(--space-3xl) 0;">
     <div class="container">
-      <h2 class="section-title">📚 Obras Técnicas Publicadas</h2>
-      <p class="section-subtitle">Manuais operacionais focados na difusão de conhecimento técnico e educacional</p>
-      
-      <div class="grid-3" style="margin-bottom: 30px;">
-        <div class="card">
-          <div>
-            <h4>Guia Prático do Chrome OS para Escolas Públicas</h4>
-            <p>Manual operacional voltado à implantação estável de sistemas Chrome OS como vetor de inclusão tecnológica no ambiente educacional público.</p>
-          </div>
-          <a href="https://uiclap.bio/wlademir" class="btn btn-outline" target="_blank" rel="noopener">Ver na UIClap</a>
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-graduation-cap"></i> Formação</span>
+        <h2>🎓 Cursos &amp; <span>Certificações</span></h2>
+        <p>Evolução acadêmica contínua em ciberdefesa e ciências jurídicas</p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">IBSEC</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Analista SOC (2025)<br>Boas Práticas de Cibersegurança (2025)</p>
         </div>
 
-        <div class="card">
-          <div>
-            <h4>Domine o Windows 11</h4>
-            <p>Guia profundo de boas práticas corporativas, otimização interna de hardware e hardening do mais recente sistema operacional corporativo.</p>
-          </div>
-          <a href="https://uiclap.bio/wlademir" class="btn btn-outline" target="_blank" rel="noopener">Ver na UIClap</a>
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Gran Faculdade</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Responsabilidade Jurídica nos Ambientes Digitais (Agosto 2025)</p>
         </div>
 
-        <div class="card">
-          <div>
-            <h4>Windows 10: Acelerar, Proteger e Resolver Erros</h4>
-            <p>Abordagem metódica e prática focada em técnicas de troubleshooting estrutural N1 a N3, automações e segurança interna ativa.</p>
-          </div>
-          <a href="https://uiclap.bio/wlademir" class="btn btn-outline" target="_blank" rel="noopener">Ver na UIClap</a>
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Microsoft Learn</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Diversos cursos de Windows e Infraestrutura (2025)</p>
+        </div>
+
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">IFSUL</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Programação Web (2024)<br>Programação de Sistemas (2024)</p>
+        </div>
+
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Fundación Bradesco</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Segurança da informação + LGPD (2024)</p>
+        </div>
+
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Mentoria Jurídica</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Grupo de Estudos Jurídicos - Adv. Luiz Felipe (2024 – Atual)</p>
+        </div>
+
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">LetsDefend</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Fundamentos do SOC (2023) - Incident Response, Threat Intelligence</p>
+        </div>
+
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Ágama Business Training</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">PLD-FT - Prevenção à Lavagem de Dinheiro (2023)</p>
+        </div>
+
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">VMware</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Webcast Técnico (2023)</p>
+        </div>
+
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">LPIC-1</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Curso LPIC-1 (LPI 101/102) - certificacaolinux.com.br (2022)</p>
+        </div>
+
+        <div class="card-premium">
+          <h3 style="font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">UNIASSELVI</h3>
+          <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Lei Geral de Proteção de Dados - LGPD (2021)</p>
         </div>
       </div>
 
-      <div style="text-align: center;">
-        <a href="https://uiclap.bio/wlademir" class="btn btn-primary" target="_blank" rel="noopener">
+      <!-- CTA -->
+      <div style="text-align:center; margin-top: var(--space-2xl);">
+        <a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank" class="btn btn-primary"><i class="fab fa-linkedin"></i> Ver certificações no LinkedIn</a>
+      </div>
+
+      <div class="back-to-menu-section"><a href="#home"><i class="fas fa-arrow-up"></i> Voltar ao Menu</a></div>
+    </div>
+  </section>
+
+  <!-- ===== OBRAS TÉCNICAS ===== -->
+  <section id="books" style="padding: var(--space-3xl) 0; background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-book"></i> Publicações</span>
+        <h2>📚 Obras Técnicas <span>Publicadas</span></h2>
+        <p>Manuais operacionais focados na difusão de conhecimento técnico e educacional</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Guia Prático do Chrome OS para Escolas Públicas</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Manual operacional voltado à implantação estável de sistemas Chrome OS como vetor de inclusão tecnológica no ambiente educacional público.</p>
+          </div>
+          <a href="https://uiclap.bio/wlademir" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Ver na UIClap</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Domine o Windows 11</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Guia profundo de boas práticas corporativas, otimização interna de hardware e hardening do mais recente sistema operacional corporativo.</p>
+          </div>
+          <a href="https://uiclap.bio/wlademir" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Ver na UIClap</a>
+        </div>
+
+        <div class="card-premium">
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.05rem; color:var(--text); margin-bottom:var(--space-sm);">Windows 10: Acelerar, Proteger e Resolver Erros</h4>
+            <p style="color:var(--text-light); font-size:0.9rem; line-height:1.6;">Abordagem metódica e prática focada em técnicas de troubleshooting estrutural N1 a N3, automações e segurança interna ativa.</p>
+          </div>
+          <a href="https://uiclap.bio/wlademir" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Ver na UIClap</a>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top: var(--space-xl);">
+        <a href="https://uiclap.bio/wlademir" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
           <i class="fas fa-book"></i> Ver Loja UICLAP Completa
         </a>
       </div>
@@ -607,85 +1352,658 @@
     </div>
   </section>
 
-  <!-- Contato -->
-  <section id="contact">
+  <!-- ===== PESQUISA ===== -->
+  <section id="pesquisa" class="search-section" style="padding: var(--space-3xl) 0;">
     <div class="container">
-      <h2 class="section-title">📞 Contato & Conexões Profissionais</h2>
-      <p class="section-subtitle">Entre em contato para parcerias lógicas e auditorias em conformidade técnica</p>
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-search"></i> Busca</span>
+        <h2>Encontre <span>conteúdo</span> no ecossistema</h2>
+        <p>Pesquise em todos os meus sites, projetos e publicações</p>
+      </div>
+
+      <div class="indexed-sites">
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Portfólio</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Vera Catarina</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Direito ao Esquecimento</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Simulados</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> UniCarona</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Teoria do Direito</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> F2 Suporte</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> F2 TI</span>
+        <span class="site-badge"><i class="fas fa-check-circle"></i> Advocacia Sapucaia</span>
+      </div>
+
+      <div class="search-box-premium">
+        <input type="text" id="searchInput" placeholder="O que você procura? Ex: provas digitais, LGPD, livros..." aria-label="Campo de busca" autofocus>
+        <span class="search-icon" aria-hidden="true"><i class="fas fa-search"></i></span>
+      </div>
+
+      <div class="search-stats">
+        <span id="resultsCount">0</span> resultados para "<strong id="searchTerm">...</strong>"
+      </div>
+
+      <div id="resultsContainer" class="results-container">
+        <div style="text-align:center; padding:40px 20px; color: var(--text-light);">
+          <i class="fas fa-search" style="font-size:2.5rem; display:block; margin-bottom:12px; color: var(--gold);"></i>
+          <p style="font-size:1.05rem;">Digite um termo para buscar em todo o ecossistema</p>
+          <p style="font-size:0.85rem; margin-top:4px;">Ex: direito, perícia, livros, lgpd, forense</p>
+        </div>
+      </div>
+
+      <div id="googleFallback" style="text-align:center; padding:20px; display:none;">
+        <p style="color: var(--text-light);"><i class="fas fa-info-circle"></i> Não encontrou o que procurava?</p>
+        <a href="#" id="googleSearchLink" class="btn btn-secondary" target="_blank"><i class="fab fa-google"></i> Pesquisar no Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section id="contact" style="padding: var(--space-3xl) 0; background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-title-premium">
+        <span class="label"><i class="fas fa-phone"></i> Contato</span>
+        <h2>📞 Contato &amp; Conexões <span>Profissionais</span></h2>
+        <p>Entre em contato para parcerias lógicas e auditorias em conformidade técnica</p>
+      </div>
+
       <div class="contact-grid">
         <div class="contact-card">
           <i class="fas fa-envelope"></i>
           <h3>E-mail</h3>
           <p><a href="mailto:fabiowlademirrs@gmail.com">fabiowlademirrs@gmail.com</a></p>
         </div>
+
         <div class="contact-card">
           <i class="fab fa-whatsapp"></i>
           <h3>WhatsApp</h3>
-          <p><a href="https://wa.me/5551998883187" target="_blank" rel="noopener">+55 51 99888-3187</a></p>
+          <p><a href="https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20site" target="_blank" rel="noopener">+55 51 99888-3187</a></p>
         </div>
+
         <div class="contact-card">
           <i class="fas fa-cubes"></i>
           <h3>Blog F2 Suporte</h3>
           <p><a href="https://f2suporte.blogspot.com" target="_blank" rel="noopener">f2suporte.blogspot.com</a></p>
         </div>
       </div>
+
+      <!-- CTA -->
+      <div style="text-align:center; margin-top: var(--space-2xl);">
+        <a href="https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20site" target="_blank" class="btn btn-whatsapp btn-lg"><i class="fab fa-whatsapp"></i> Fale diretamente comigo</a>
+      </div>
+
       <div class="back-to-menu-section"><a href="#home"><i class="fas fa-arrow-up"></i> Voltar ao Menu</a></div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
-      <p class="footer-quote">"Transformando gargalos de infraestrutura e conformidade jurídica em valor estratégico através da tecnologia."</p>
-      <p class="footer-copyright">&copy; 2026 Fábio Wlademir. Todos os direitos reservados.</p>
+      <p class="footer-quote">
+        <i class="fas fa-quote-left"></i>
+        "Transformando gargalos de infraestrutura e conformidade jurídica em valor estratégico através da tecnologia."
+        <i class="fas fa-quote-right"></i>
+      </p>
+
+      <div class="footer-links">
+        <a href="#home">Início</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#webapps">Web Apps</a>
+        <a href="#projects">Repositórios</a>
+        <a href="#experience">Experiência</a>
+        <a href="#certifications">Certificações</a>
+        <a href="#books">Obras</a>
+        <a href="#contact">Contato</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="https://uiclap.bio/wlademir" target="_blank">Loja</a>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Fábio Wlademir. Todos os direitos reservados.
+        <br style="display:block; margin-top:4px;">
+        <span style="font-size:0.7rem; color:#64748b;">
+          <i class="fas fa-code"></i> Desenvolvido com <i class="fas fa-heart" style="color: var(--gold);"></i>
+        </span>
+      </p>
+
+      <div class="visitor-counter" title="Total de visualizações de página">
+        <i class="fas fa-eye"></i>
+        <span>Visitas ao portal:</span>
+        <img src="https://hits.dwyl.com/fabiowlademir/fabiowlademir.github.io.svg" alt="Contador de Acessos">
+      </div>
     </div>
-    <div class="footer-counter" title="Total de visualizações de página">
-    <i class="fas fa-eye"></i>
-    <span>Visitas ao portal:</span>
-    <img src="https://hits.dwyl.com/fabiowlademir/fabiowlademir.github.io.svg" alt="Contador de Acessos">
-</div>
   </footer>
 
-  <!-- Botão Voltar ao Topo -->
-  <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+  <!-- ============================================================
+    TOOLBAR ACESSIBILIDADE
+    ============================================================ -->
+  <div class="accessibility-toolbar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+    <button id="accessibilityToggle" aria-label="Abrir painel de acessibilidade" title="Acessibilidade">
+      ♿
+      <span class="tooltip">Acessibilidade</span>
+    </button>
+    <button id="listenToggle" class="listen-btn" aria-label="Ouvir página em voz alta" title="Ouvir página">
+      <i class="fas fa-volume-up"></i>
+      <span class="tooltip">Ouvir página</span>
+    </button>
+  </div>
 
+  <!-- ===== BOTÃO COMANDO DE VOZ (Microfone) ===== -->
+  <button id="voiceCommandBtn" class="voice-command-btn" aria-label="Comando de voz" title="Comando de voz">
+    <i class="fas fa-microphone"></i>
+    <span class="tooltip">Comando de voz</span>
+  </button>
+
+  <!-- ===== PAINEL ACESSIBILIDADE ===== -->
+  <div class="accessibility-overlay" id="accessibilityOverlay"></div>
+  <div class="accessibility-panel" id="accessibilityPanel" role="dialog" aria-label="Painel de acessibilidade">
+    <button class="close-panel" id="closePanel" aria-label="Fechar painel">✕</button>
+    <h3>♿ <span>Acessibilidade</span></h3>
+
+    <div class="control-group">
+      <label>Modo de cores</label>
+      <div class="btn-group">
+        <button data-theme="light" class="active">☀️ Claro</button>
+        <button data-theme="dark">🌙 Escuro</button>
+        <button data-contrast="high">🔆 Alto Contraste</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Tamanho da fonte</label>
+      <div class="btn-group">
+        <button id="fontDecrease">A-</button>
+        <button id="fontReset" class="active">A</button>
+        <button id="fontIncrease">A+</button>
+        <button id="fontIncrease2">A++</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Fonte para dislexia</label>
+      <div class="btn-group">
+        <button id="dyslexicToggle">🧩 OpenDyslexic</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Animações</label>
+      <div class="btn-group">
+        <button id="motionToggle" class="active">▶️ Ativas</button>
+      </div>
+    </div>
+
+    <div style="margin-top:20px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.05);">
+      <p style="color:#64748b; font-size:0.7rem;">
+        <i class="fas fa-save"></i> Preferências salvas automaticamente
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- ===== LGPD BANNER ===== -->
+  <div id="lgpdBanner" class="lgpd-banner" role="alert">
+    <p>
+      <i class="fas fa-shield-alt" style="color: var(--gold);"></i>
+      Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência.
+      <a href="/legal.html#privacidade">Política de Privacidade</a>
+    </p>
+    <div class="btn-group">
+      <button class="btn-reject" id="lgpdReject">Recusar</button>
+      <button class="btn-accept" id="lgpdAccept">Aceitar</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+    SCRIPT
+    ============================================================ -->
   <script>
-    const backToTopButton = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTopButton.classList.add('visible');
-      } else {
-        backToTopButton.classList.remove('visible');
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // ===== NAVBAR SCROLL =====
+      var navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      // ===== BACK TO TOP =====
+      var backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        backToTop.classList.toggle('visible', window.scrollY > 400);
+      });
+      backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ===== FECHAR MENU MOBILE =====
+      document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          document.getElementById('menu-checkbox').checked = false;
+        });
+      });
+
+      // ============================================================
+      // ACESSIBILIDADE
+      // ============================================================
+
+      var panel = document.getElementById('accessibilityPanel');
+      var overlay = document.getElementById('accessibilityOverlay');
+      var toggleBtn = document.getElementById('accessibilityToggle');
+      var closeBtn = document.getElementById('closePanel');
+
+      function openPanel() {
+        panel.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
       }
+
+      function closePanelFn() {
+        panel.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      toggleBtn.addEventListener('click', function() {
+        panel.classList.contains('open') ? closePanelFn() : openPanel();
+      });
+      closeBtn.addEventListener('click', closePanelFn);
+      overlay.addEventListener('click', closePanelFn);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('open')) closePanelFn();
+      });
+
+      // ----- Temas -----
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        document.querySelectorAll('[data-theme]').forEach(function(btn) {
+          btn.classList.toggle('active', btn.dataset.theme === theme);
+        });
+      }
+
+      function setContrast(contrast) {
+        if (contrast === 'high') {
+          document.documentElement.setAttribute('data-contrast', 'high');
+          localStorage.setItem('contrast', 'high');
+        } else {
+          document.documentElement.removeAttribute('data-contrast');
+          localStorage.setItem('contrast', 'normal');
+        }
+        document.querySelectorAll('[data-contrast]').forEach(function(btn) {
+          btn.classList.toggle('active', btn.dataset.contrast === 'high');
+        });
+      }
+
+      var savedTheme = localStorage.getItem('theme') || 'light';
+      var savedContrast = localStorage.getItem('contrast') || 'normal';
+      setTheme(savedTheme);
+      if (savedContrast === 'high') setContrast('high');
+
+      document.querySelectorAll('[data-theme]').forEach(function(btn) {
+        btn.addEventListener('click', function() { setTheme(btn.dataset.theme); });
+      });
+
+      document.querySelectorAll('[data-contrast]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          setContrast(btn.dataset.contrast === 'high' ? 'high' : 'normal');
+        });
+      });
+
+      // ----- Tamanho fonte -----
+      var fontSizeLevel = parseInt(localStorage.getItem('fontSize') || '1');
+      var fontSizes = ['0.9rem', '1rem', '1.15rem', '1.3rem'];
+
+      function setFontSize(level) {
+        fontSizeLevel = Math.max(0, Math.min(3, level));
+        document.documentElement.style.fontSize = fontSizes[fontSizeLevel];
+        localStorage.setItem('fontSize', fontSizeLevel);
+        document.querySelectorAll('#fontDecrease, #fontReset, #fontIncrease, #fontIncrease2').forEach(function(btn, i) {
+          btn.classList.toggle('active', i === fontSizeLevel);
+        });
+      }
+
+      setFontSize(fontSizeLevel);
+
+      document.getElementById('fontDecrease').addEventListener('click', function() { setFontSize(fontSizeLevel - 1); });
+      document.getElementById('fontReset').addEventListener('click', function() { setFontSize(1); });
+      document.getElementById('fontIncrease').addEventListener('click', function() { setFontSize(fontSizeLevel + 1); });
+      document.getElementById('fontIncrease2').addEventListener('click', function() { setFontSize(fontSizeLevel + 2); });
+
+      // ----- Dislexia -----
+      var dyslexicBtn = document.getElementById('dyslexicToggle');
+      if (localStorage.getItem('dyslexic') === 'true') {
+        document.body.classList.add('dyslexic');
+        dyslexicBtn.classList.add('active');
+      }
+
+      dyslexicBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dyslexic');
+        var active = document.body.classList.contains('dyslexic');
+        dyslexicBtn.classList.toggle('active', active);
+        localStorage.setItem('dyslexic', active);
+      });
+
+      // ----- Animações -----
+      var motionBtn = document.getElementById('motionToggle');
+      if (localStorage.getItem('motion') === 'reduced') {
+        document.documentElement.classList.add('reduce-motion');
+        motionBtn.classList.remove('active');
+        motionBtn.textContent = '⏸️ Reduzidas';
+      }
+
+      motionBtn.addEventListener('click', function() {
+        var reduced = document.documentElement.classList.toggle('reduce-motion');
+        motionBtn.classList.toggle('active', !reduced);
+        motionBtn.textContent = reduced ? '⏸️ Reduzidas' : '▶️ Ativas';
+        localStorage.setItem('motion', reduced ? 'reduced' : 'active');
+      });
+
+      // ============================================================
+      // OUVIR PÁGINA (Toolbar)
+      // ============================================================
+      var listenBtn = document.getElementById('listenToggle');
+      var isListening = false;
+      var utterance = null;
+      var synth = window.speechSynthesis;
+
+      function getPageText() {
+        var content = document.querySelector('#main-content') || document.body;
+        var text = content.textContent
+          .replace(/\s+/g, ' ')
+          .replace(/\[.*?\]/g, '')
+          .replace(/\d+\.\d+\.\d+\.\d+/g, '')
+          .trim();
+        return text;
+      }
+
+      function toggleListen() {
+        if (isListening) {
+          synth.cancel();
+          isListening = false;
+          listenBtn.classList.remove('listening');
+          listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+          return;
+        }
+
+        var text = getPageText();
+        if (!text) return;
+
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 0.85;
+
+        utterance.onend = function() {
+          isListening = false;
+          listenBtn.classList.remove('listening');
+          listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+        };
+
+        utterance.onerror = function() {
+          isListening = false;
+          listenBtn.classList.remove('listening');
+          listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+        };
+
+        synth.speak(utterance);
+        isListening = true;
+        listenBtn.classList.add('listening');
+        listenBtn.innerHTML = '<i class="fas fa-stop"></i><span class="tooltip">Parar</span>';
+      }
+
+      listenBtn.addEventListener('click', toggleListen);
+
+      // ============================================================
+      // COMANDO DE VOZ (Microfone)
+      // ============================================================
+      var voiceBtn = document.getElementById('voiceCommandBtn');
+      var isVoiceListening = false;
+      var recognition = null;
+
+      if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+        var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRecognition();
+        recognition.lang = 'pt-BR';
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        recognition.onresult = function(event) {
+          var transcript = event.results[0][0].transcript.toLowerCase();
+          voiceBtn.classList.remove('listening');
+          voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+          isVoiceListening = false;
+
+          if (transcript.includes('habilidade') || transcript.includes('competências')) {
+            document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+            speakText('Abrindo seção de habilidades');
+          } else if (transcript.includes('web') || transcript.includes('portais') || transcript.includes('projetos')) {
+            document.getElementById('webapps').scrollIntoView({ behavior: 'smooth' });
+            speakText('Abrindo web apps');
+          } else if (transcript.includes('repositório') || transcript.includes('github')) {
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+            speakText('Abrindo repositórios');
+          } else if (transcript.includes('experiência') || transcript.includes('carreira')) {
+            document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+            speakText('Abrindo experiência profissional');
+          } else if (transcript.includes('certificação') || transcript.includes('cursos')) {
+            document.getElementById('certifications').scrollIntoView({ behavior: 'smooth' });
+            speakText('Abrindo certificações');
+          } else if (transcript.includes('livro') || transcript.includes('obras')) {
+            document.getElementById('books').scrollIntoView({ behavior: 'smooth' });
+            speakText('Abrindo obras publicadas');
+          } else if (transcript.includes('pesquisa') || transcript.includes('busca')) {
+            document.getElementById('pesquisa').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('searchInput').focus();
+            speakText('Abrindo pesquisa');
+          } else if (transcript.includes('contato') || transcript.includes('falar')) {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            speakText('Abrindo contato');
+          } else if (transcript.includes('topo') || transcript.includes('início')) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            speakText('Voltando ao topo');
+          } else if (transcript.includes('whatsapp') || transcript.includes('whats')) {
+            window.open('https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20comando%20de%20voz', '_blank');
+            speakText('Abrindo WhatsApp');
+          } else if (transcript.includes('ouvir') || transcript.includes('ler')) {
+            toggleListen();
+          } else {
+            speakText('Comando não reconhecido. Tente: habilidades, web, repositórios, experiência, certificações, livros, pesquisa, contato, topo, whatsapp ou ouvir.');
+          }
+        };
+
+        recognition.onerror = function() {
+          voiceBtn.classList.remove('listening');
+          voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+          isVoiceListening = false;
+        };
+
+        recognition.onend = function() {
+          voiceBtn.classList.remove('listening');
+          voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+          isVoiceListening = false;
+        };
+
+        voiceBtn.addEventListener('click', function() {
+          if (isVoiceListening) {
+            recognition.stop();
+            voiceBtn.classList.remove('listening');
+            voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+            isVoiceListening = false;
+            return;
+          }
+
+          try {
+            recognition.start();
+            voiceBtn.classList.add('listening');
+            voiceBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i><span class="tooltip">Ouvindo...</span>';
+            isVoiceListening = true;
+          } catch (e) {
+            console.log('Erro ao iniciar reconhecimento de voz:', e);
+          }
+        });
+
+      } else {
+        voiceBtn.style.display = 'none';
+      }
+
+      function speakText(text) {
+        var speech = new SpeechSynthesisUtterance(text);
+        speech.lang = 'pt-BR';
+        speech.rate = 0.85;
+        window.speechSynthesis.speak(speech);
+      }
+
+      // ============================================================
+      // PESQUISA
+      // ============================================================
+
+      var searchData = [
+        { title: "Fábio Wlademir - Portfólio", url: "https://fabiowlademir.github.io/", snippet: "Especialista em Segurança da Informação, Soluções LegalTech, Infraestrutura Crítica e DevSecOps.", tags: ["portfólio", "segurança", "devsecops", "legaltech", "cibersegurança"], site: "Portfólio" },
+        { title: "Advocacia Vera Catarina", url: "https://veracatarina.github.io/", snippet: "Atuação sólida nas áreas cível, previdenciária, trabalhista, criminal, de família, do consumidor e direito digital.", tags: ["advocacia", "direito", "veracatarina", "oab", "cível", "criminal"], site: "Vera Catarina" },
+        { title: "Direito ao Esquecimento - STF", url: "https://fabiowlademir.github.io/direito-ao-esquecimento/", snippet: "Plataforma de análise e debate acadêmico sobre o RE 1.010.606/STF e privacidade na era dos dados.", tags: ["direito", "stf", "privacidade", "lgpd", "direito digital"], site: "Direito ao Esquecimento" },
+        { title: "Simulados de Direito - OAB", url: "https://fabiowlademir.github.io/simuladosdireito/", snippet: "A Fonte Completa do Direito Brasileiro. Aplicação interativa para testes lógicos e simulados focados no exame de ordem.", tags: ["direito", "oab", "simulados", "estudos", "exame"], site: "Simulados de Direito" },
+        { title: "UniCarona - Mobilidade Universitária", url: "https://fabiowlademir.github.io/unicarona/", snippet: "Interface experimental de caronas acadêmicas validando conformidade rígida às diretrizes protetivas da LGPD.", tags: ["mobilidade", "lgpd", "unisinos", "caronas", "universidade"], site: "UniCarona" },
+        { title: "Teoria do Direito - Acervo", url: "https://fabiowlademir.github.io/teoriadodireito/", snippet: "Matriz do ambiente transmídia estruturado para documentação de correntes doutrinárias e evolução jurídica.", tags: ["direito", "teoria", "acadêmico", "doutrina", "filosofia"], site: "Teoria do Direito" },
+        { title: "F2 Suporte - Blog de TI", url: "https://f2suporte.blogspot.com/", snippet: "Dicas, tutoriais e soluções para suporte técnico, infraestrutura de TI e automação.", tags: ["suporte", "ti", "infraestrutura", "windows", "linux", "tutoriais"], site: "F2 Suporte" },
+        { title: "F2 TI - Tecnologia da Informação", url: "https://f2ti.blogspot.com/", snippet: "Conteúdo sobre desenvolvimento web, programação, segurança da informação e redes.", tags: ["programação", "desenvolvimento", "segurança", "redes", "web"], site: "F2 TI" },
+        { title: "Advocacia Sapucaia - Blog Jurídico", url: "https://advocaciasapucaia.blogspot.com/", snippet: "Artigos, análises e informações sobre direito digital, LGPD e temas jurídicos atuais.", tags: ["direito", "blog", "jurídico", "lgpd", "digital"], site: "Advocacia Sapucaia" },
+        { title: "Provas Digitais na Prática - Volume 1", url: "https://loja.uiclap.com/titulo/ua188450/", snippet: "Fundamentos das Provas Digitais. Combate a Crimes na Internet e Inclusão Digital.", tags: ["livro", "provas digitais", "forense", "computação forense"], site: "Livros" },
+        { title: "Provas Digitais na Prática - Volume 2", url: "https://loja.uiclap.com/titulo/ua188476/", snippet: "Análise Forense Computacional em Apoio ao Direito Digital. Técnicas de aquisição, preservação e análise.", tags: ["livro", "provas digitais", "forense", "computação forense"], site: "Livros" },
+        { title: "Provas Digitais na Prática - Volume 3", url: "https://loja.uiclap.com/titulo/ua189055/", snippet: "OSINT e Inteligência em Fontes Abertas. Coleta, validação e correlação de informações públicas.", tags: ["livro", "provas digitais", "osint", "investigação"], site: "Livros" }
+      ];
+
+      var searchInput = document.getElementById('searchInput');
+      var resultsContainer = document.getElementById('resultsContainer');
+      var resultsCount = document.getElementById('resultsCount');
+      var searchTerm = document.getElementById('searchTerm');
+      var googleFallback = document.getElementById('googleFallback');
+      var googleSearchLink = document.getElementById('googleSearchLink');
+
+      function highlightText(text, query) {
+        var words = query.split(/\s+/).filter(function(w) { return w.length > 2; });
+        var highlighted = text;
+        words.forEach(function(word) {
+          var regex = new RegExp('(' + word + ')', 'gi');
+          highlighted = highlighted.replace(regex, '<mark>$1</mark>');
+        });
+        return highlighted;
+      }
+
+      function performSearch(query) {
+        var q = query.toLowerCase().trim();
+        searchTerm.textContent = q || '...';
+
+        if (!q) {
+          resultsContainer.innerHTML =
+            '<div style="text-align:center; padding:40px 20px; color: var(--text-light);">' +
+            '<i class="fas fa-search" style="font-size:2.5rem; display:block; margin-bottom:12px; color: var(--gold);"></i>' +
+            '<p style="font-size:1.05rem;">Digite um termo para buscar em todo o ecossistema</p>' +
+            '<p style="font-size:0.85rem; margin-top:4px;">Ex: direito, perícia, livros, lgpd, forense</p>' +
+            '</div>';
+          resultsCount.textContent = '0';
+          googleFallback.style.display = 'none';
+          return;
+        }
+
+        var results = searchData.filter(function(item) {
+          var searchable = (item.title + ' ' + item.snippet + ' ' + item.tags.join(' ')).toLowerCase();
+          return searchable.includes(q);
+        });
+
+        resultsCount.textContent = results.length;
+
+        if (results.length > 0) {
+          resultsContainer.innerHTML = results.map(function(item, index) {
+            return (
+              '<div class="result-item-premium" style="animation: fadeUp 0.4s ease forwards; animation-delay: ' +
+              (index * 0.05) + 's; opacity: 0;">' +
+              '<h4><a href="' + item.url + '" target="_blank">' + highlightText(item.title, q) + '</a></h4>' +
+              '<div class="url"><i class="fas fa-link"></i> ' + item.site + '</div>' +
+              '<p class="snippet">' + highlightText(item.snippet, q) + '</p>' +
+              '<div class="tags">' + item.tags.map(function(tag) {
+                return '<span>#' + tag + '</span>';
+              }).join('') + '</div>' +
+              '</div>'
+            );
+          }).join('');
+
+          googleFallback.style.display = 'none';
+        } else {
+          resultsContainer.innerHTML =
+            '<div style="text-align:center; padding:50px 20px;">' +
+            '<i class="fas fa-search" style="font-size:3rem; color: var(--text-light); margin-bottom:16px; display:block;"></i>' +
+            '<h3 style="font-family: var(--font-heading); font-size:1.3rem; color: var(--text);">Nenhum resultado encontrado</h3>' +
+            '<p style="color: var(--text-light); max-width:400px; margin:8px auto 20px;">Não encontramos conteúdo relacionado a "<strong>' + q + '</strong>" no ecossistema.</p>' +
+            '<div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">' +
+            '<a href="#books" class="btn btn-outline btn-sm"><i class="fas fa-book"></i> Ver Livros</a>' +
+            '<a href="#webapps" class="btn btn-outline btn-sm"><i class="fas fa-laptop-code"></i> Ver Projetos</a>' +
+            '<a href="https://uiclap.bio/wlademir" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-store"></i> Loja UICLAP</a>' +
+            '</div>' +
+            '</div>';
+
+          var googleUrl =
+            'https://www.google.com/search?q=site:fabiowlademir.github.io OR site:veracatarina.github.io OR site:f2suporte.blogspot.com OR site:f2ti.blogspot.com OR site:advocaciasapucaia.blogspot.com ' +
+            encodeURIComponent(q);
+          googleSearchLink.href = googleUrl;
+          googleFallback.style.display = 'block';
+        }
+      }
+
+      searchInput.addEventListener('input', function() {
+        performSearch(this.value);
+      });
+
+      var urlParams = new URLSearchParams(window.location.search);
+      var queryParam = urlParams.get('q');
+      if (queryParam) {
+        searchInput.value = queryParam;
+        performSearch(queryParam);
+      }
+
+      // ============================================================
+      // LGPD
+      // ============================================================
+      var lgpdBanner = document.getElementById('lgpdBanner');
+      var lgpdAccept = document.getElementById('lgpdAccept');
+      var lgpdReject = document.getElementById('lgpdReject');
+
+      if (localStorage.getItem('lgpdConsent')) {
+        lgpdBanner.classList.add('hidden');
+      }
+
+      function setLgpdConsent(choice) {
+        localStorage.setItem('lgpdConsent', choice);
+        lgpdBanner.classList.add('hidden');
+      }
+
+      lgpdAccept.addEventListener('click', function() { setLgpdConsent('accepted'); });
+      lgpdReject.addEventListener('click', function() { setLgpdConsent('rejected'); });
+
+      // ============================================================
+      // VLIBRAS
+      // ============================================================
+      var vwScript = document.createElement('script');
+      vwScript.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+      vwScript.onload = function() {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      };
+      document.body.appendChild(vwScript);
+
     });
   </script>
-  <script>
-(function() {
-    // Chave para armazenar no localStorage
-    const STORAGE_KEY = 'fabiowlademir_visits';
-    // Valor inicial (5.014)
-    const INITIAL_COUNT = 5014;
 
-    // Tenta recuperar o valor salvo
-    let count = parseInt(localStorage.getItem(STORAGE_KEY), 10);
+  <!-- ===== VLIBRAS ===== -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
 
-    // Se não existir, usa o valor inicial
-    if (isNaN(count)) {
-        count = INITIAL_COUNT;
-    } else {
-        // Incrementa a cada visita
-        count += 1;
-    }
-
-    // Salva o novo valor
-    localStorage.setItem(STORAGE_KEY, String(count));
-
-    // Atualiza o elemento na página
-    const el = document.getElementById('visitCount');
-    if (el) {
-        el.textContent = count.toLocaleString('pt-BR');
-    }
-})();
-</script>
 </body>
 </html>
