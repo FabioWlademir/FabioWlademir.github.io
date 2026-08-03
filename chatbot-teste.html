@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🤖 Teste Chatbot IA - Fábio Wlademir</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      border: 1px solid #334155;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #c5a880;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #94a3b8;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+    
+    .status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0f172a;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .status-bar .online {
+      color: #4ade80;
+      font-weight: 600;
+    }
+    
+    .status-bar .offline {
+      color: #f87171;
+      font-weight: 600;
+    }
+    
+    .chat-messages {
+      background: #0f172a;
+      border-radius: 10px;
+      padding: 16px;
+      height: 350px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+      border: 1px solid #334155;
+    }
+    
+    .message {
+      max-width: 85%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .message.user {
+      background: #2563eb;
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+    
+    .message.bot {
+      background: #334155;
+      color: #e2e8f0;
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+    
+    .message.bot .typing {
+      display: inline-flex;
+      gap: 4px;
+    }
+    
+    .message.bot .typing span {
+      width: 6px;
+      height: 6px;
+      background: #94a3b8;
+      border-radius: 50%;
+      animation: typing 1.2s infinite;
+    }
+    
+    .message.bot .typing span:nth-child(2) { animation-delay: 0.2s; }
+    .message.bot .typing span:nth-child(3) { animation-delay: 0.4s; }
+    
+    @keyframes typing {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-6px); opacity: 1; }
+    }
+    
+    .input-area {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .input-area input {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    
+    .input-area input:focus {
+      border-color: #2563eb;
+    }
+    
+    .input-area input::placeholder {
+      color: #64748b;
+    }
+    
+    .input-area button {
+      padding: 12px 24px;
+      border-radius: 10px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    
+    .input-area button:hover {
+      background: #1d4ed8;
+      transform: scale(1.02);
+    }
+    
+    .input-area button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .test-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    
+    .test-buttons button {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #334155;
+      background: transparent;
+      color: #94a3b8;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .test-buttons button:hover {
+      background: #334155;
+      color: white;
+      border-color: #2563eb;
+    }
+    
+    .footer-info {
+      margin-top: 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.75rem;
+    }
+    
+    .footer-info a {
+      color: #c5a880;
+      text-decoration: none;
+    }
+    
+    .footer-info a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Scrollbar */
+    .chat-messages::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .chat-messages::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    
+    .chat-messages::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 10px;
+    }
+    
+    .chat-messages::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🤖 Assistente IA de Teste</h1>
+  <p class="subtitle">Chatbot com Google Gemini — <span style="color: #4ade80;">▲</span> teste gratuito</p>
+  
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <span><span id="statusDot" class="online">●</span> <span id="statusText">Conectado</span></span>
+    <span><span id="messageCount">0</span> mensagens nesta sessão</span>
+  </div>
+  
+  <!-- Chat Messages -->
+  <div class="chat-messages" id="chatMessages">
+    <div class="message bot">
+      👋 Olá! Sou o assistente de teste do Fábio Wlademir.<br>
+      Pergunte sobre criação de sites, tecnologia, direito ou o que quiser!
+    </div>
+  </div>
+  
+  <!-- Input Area -->
+  <div class="input-area">
+    <input 
+      type="text" 
+      id="userInput" 
+      placeholder="Digite sua pergunta..." 
+      onkeypress="if(event.key === 'Enter') sendMessage()"
+    />
+    <button id="sendBtn" onclick="sendMessage()">Enviar</button>
+  </div>
+  
+  <!-- Botões de Teste Rápido -->
+  <div class="test-buttons">
+    <button onclick="quickQuestion('Quem desenvolveu este chat?')">🧑‍💻 Quem criou?</button>
+    <button onclick="quickQuestion('O que é LegalTech?')">⚖️ LegalTech</button>
+    <button onclick="quickQuestion('Quero um site profissional')">🌐 Criação de sites</button>
+    <button onclick="quickQuestion('Fale sobre acessibilidade digital')">♿ Acessibilidade</button>
+    <button onclick="quickQuestion('O que é DevSecOps?')">🛡️ DevSecOps</button>
+    <button onclick="clearChat()">🗑️ Limpar</button>
+  </div>
+</div>
+
+<div class="footer-info">
+  ⚡ Teste do Chatbot IA para <a href="https://fabiowlademir.github.io" target="_blank">Fábio Wlademir</a> · 
+  Desenvolvido com ❤️ · 
+  <a href="#" onclick="toggleApiStatus()">Status da API</a>
+</div>
+
+<script>
+  // ⚠️ IMPORTANTE: Substitua pela URL real do backend na Vercel
+  // Depois que fizer o deploy, coloque a URL aqui
+  const API_URL = "https://caed-bot-backend.vercel.app/api/chat";
+  
+  let messageCount = 0;
+  let chatHistory = [];
+  let isApiOnline = false;
+  
+  // Elementos
+  const messagesContainer = document.getElementById('chatMessages');
+  const userInput = document.getElementById('userInput');
+  const sendBtn = document.getElementById('sendBtn');
+  const statusDot = document.getElementById('statusDot');
+  const statusText = document.getElementById('statusText');
+  const messageCountEl = document.getElementById('messageCount');
+  
+  // Verificar status da API ao carregar
+  async function checkApiStatus() {
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: 'ping' })
+      });
+      isApiOnline = response.ok;
+    } catch (e) {
+      isApiOnline = false;
+    }
+    updateStatus();
+  }
+  
+  function updateStatus() {
+    if (isApiOnline) {
+      statusDot.className = 'online';
+      statusText.textContent = 'Conectado';
+    } else {
+      statusDot.className = 'offline';
+      statusText.textContent = 'Desconectado — verifique a URL da API';
+    }
+  }
+  
+  function toggleApiStatus() {
+    checkApiStatus();
+    alert(`Status da API: ${isApiOnline ? '✅ Online' : '❌ Offline'}\n\nURL configurada:\n${API_URL}\n\nSe estiver offline, verifique:\n1. Deploy do backend na Vercel\n2. URL correta\n3. Chave GEMINI_API_KEY configurada`);
+  }
+  
+  // Função para adicionar mensagem
+  function appendMessage(role, text, isHtml = false) {
+    const div = document.createElement('div');
+    div.className = `message ${role}`;
+    if (isHtml) {
+      div.innerHTML = text;
+    } else {
+      div.textContent = text;
+    }
+    messagesContainer.appendChild(div);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    
+    if (role === 'user' || role === 'bot') {
+      messageCount++;
+      messageCountEl.textContent = messageCount;
+    }
+    return div;
+  }
+  
+  // Mensagem de "digitando"
+  function showTyping() {
+    const div = document.createElement('div');
+    div.className = 'message bot';
+    div.id = 'typingIndicator';
+    div.innerHTML = `
+      <div class="typing">
+        <span></span><span></span><span></span>
+      </div>
+    `;
+    messagesContainer.appendChild(div);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+  
+  function removeTyping() {
+    const typing = document.getElementById('typingIndicator');
+    if (typing) typing.remove();
+  }
+  
+  // Enviar mensagem
+  async function sendMessage() {
+    const text = userInput.value.trim();
+    if (!text) return;
+    
+    // Limpar input e desabilitar botão
+    userInput.value = '';
+    sendBtn.disabled = true;
+    sendBtn.textContent = '⏳';
+    
+    // Adicionar mensagem do usuário
+    appendMessage('user', text);
+    chatHistory.push({ role: 'user', text: text });
+    
+    // Mostrar indicador de digitação
+    showTyping();
+    
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          message: text, 
+          history: chatHistory.slice(0, -1) // Envia histórico sem a última mensagem
+        })
+      });
+      
+      const data = await response.json();
+      
+      // Remover indicador de digitação
+      removeTyping();
+      
+      // Se a resposta for um objeto com 'reply', usa ele
+      const reply = data.reply || data.error || 'Desculpe, não entendi. Tente novamente.';
+      
+      // Verifica se é um erro de rate limit (429)
+      if (response.status === 429) {
+        appendMessage('bot', '⏳ ' + reply);
+      } else {
+        appendMessage('bot', reply);
+        chatHistory.push({ role: 'model', text: reply });
+      }
+      
+      isApiOnline = true;
+      
+    } catch (error) {
+      removeTyping();
+      appendMessage('bot', '❌ Erro de conexão. Verifique se o backend está rodando.');
+      isApiOnline = false;
+    }
+    
+    // Reativar botão
+    sendBtn.disabled = false;
+    sendBtn.textContent = 'Enviar';
+    updateStatus();
+    userInput.focus();
+  }
+  
+  // Pergunta rápida (botões de teste)
+  function quickQuestion(text) {
+    userInput.value = text;
+    sendMessage();
+  }
+  
+  // Limpar chat
+  function clearChat() {
+    // Remove todas as mensagens exceto a primeira (mensagem de boas-vindas)
+    while (messagesContainer.children.length > 1) {
+      messagesContainer.removeChild(messagesContainer.lastChild);
+    }
+    messageCount = 0;
+    messageCountEl.textContent = '0';
+    chatHistory = [];
+  }
+  
+  // Verificar status ao carregar
+  checkApiStatus();
+  
+  // Foco no input ao carregar
+  userInput.focus();
+</script>
+
+</body>
+</html>
