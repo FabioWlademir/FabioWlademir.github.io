@@ -50,7 +50,12 @@
         }
       },
       "educationalUse": "Trabalho acadêmico para a disciplina Cidades Criativas, Inteligentes e Sustentáveis",
-      "inLanguage": "pt-BR"
+      "inLanguage": "pt-BR",
+      "image": [
+        "https://fabiowlademir.github.io/imagens/Horta%20F%C3%A1bio.jpeg",
+        "https://fabiowlademir.github.io/imagens/Cl%C3%A1udia%20Horta.jpeg",
+        "https://fabiowlademir.github.io/imagens/Augusto.jpeg"
+      ]
     }
     </script>
 
@@ -248,6 +253,46 @@
         }
         .highlight-box strong { color: #1a4018; }
 
+        /* ===== GALERIA DE HORTAS ===== */
+        .hortas-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .horta-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            border: 1px solid #ddecd9;
+            transition: 0.3s;
+        }
+        .horta-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+        .horta-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .horta-card .info {
+            padding: 12px 16px 16px;
+        }
+        .horta-card .info h4 {
+            font-size: 1rem;
+            color: #1a3f18;
+            margin-bottom: 2px;
+        }
+        .horta-card .info .local {
+            font-size: 0.8rem;
+            color: #3d613a;
+        }
+        .horta-card .info .desc {
+            font-size: 0.85rem;
+            color: #3d5f3a;
+            margin-top: 4px;
+        }
+
         /* ===== MAPA ===== */
         .map-wrapper {
             background: white;
@@ -381,6 +426,62 @@
             padding-left: 10px;
             line-height: 26px;
             font-weight: 600;
+        }
+
+        /* ===== RECURSOS INTERATIVOS ===== */
+        .recursos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .recurso-card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            border: 1px solid #ddecd9;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+            transition: 0.3s;
+        }
+        .recurso-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); }
+        .recurso-card h4 {
+            font-size: 1.1rem;
+            color: #1a3f18;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .recurso-card h4 i { color: #2f792b; }
+        .recurso-card .btn-recurso {
+            display: inline-block;
+            background: #1b3a19;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-top: 12px;
+            transition: 0.2s;
+        }
+        .recurso-card .btn-recurso:hover { background: #2a5528; transform: scale(1.02); }
+        .recurso-card iframe {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid #e2efe0;
+            margin-top: 8px;
+        }
+        .podcast-placeholder {
+            background: #eaf3e7;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 2px dashed #a6c89e;
+            margin-top: 8px;
+        }
+        .podcast-placeholder i {
+            font-size: 2.5rem;
+            color: #2f792b;
+            opacity: 0.5;
         }
 
         /* ===== GOVERNANÇA ===== */
@@ -655,6 +756,7 @@
             .hero-grid { grid-template-columns: 1fr; }
             .ibge-grid { grid-template-columns: 1fr; }
             .timeline { grid-template-columns: 1fr 1fr; }
+            .recursos-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
             .header .container { flex-direction: column; align-items: flex-start; gap: 10px; }
@@ -667,6 +769,7 @@
             .whatsapp-float { padding: 10px 16px; font-size: 0.75rem; bottom: 15px; right: 15px; }
             .whatsapp-float span { display: none; }
             .back-to-top { bottom: 75px; left: 15px; width: 36px; height: 36px; }
+            .hortas-gallery { grid-template-columns: 1fr; }
         }
         .text-center { text-align: center; }
         .mt-16 { margin-top: 16px; }
@@ -694,6 +797,7 @@
             <a href="#cenario">Cenário</a>
             <a href="#macroacoes">Macroações</a>
             <a href="#dados">Dados</a>
+            <a href="#recursos">Recursos</a>
             <a href="#referencias">Referências</a>
         </nav>
     </div>
@@ -748,20 +852,38 @@
             <div class="card"><i class="fas fa-bolt"></i><h4>Potências</h4><p>Espaços, habilidades, equipamentos, iniciativas.</p></div>
         </div>
 
+        <!-- GALERIA DE HORTAS -->
         <div class="highlight-box">
-    <strong><i class="fas fa-seedling"></i> Não começamos do zero.</strong>
-    <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; align-items: center;">
-        <img src="https://fabiowlademir.github.io/imagens/Horta%20F%C3%A1bio.jpeg" 
-             alt="Horta suspensa de Fábio no bairro São José" 
-             style="max-width: 200px; border-radius: 12px; border: 2px solid #a6c89e;">
-        <div>
-            <strong>Fábio</strong> — horta suspensa em espaço reduzido, com estrutura vertical e compartilhamento de excedentes com vizinhos.<br>
-            <strong>Sr. Adão</strong> — espaço residencial em preparação para receber uma nova horta suspensa.<br>
-            <strong>Gerson e colaboradores</strong> — potencial de articulação entre moradores.
+            <strong><i class="fas fa-seedling"></i> Não começamos do zero.</strong>
+            <p style="margin-top:8px;">Conheça as iniciativas que já existem no território e inspiram o projeto:</p>
+            <div class="hortas-gallery">
+                <div class="horta-card">
+                    <img src="https://fabiowlademir.github.io/imagens/Horta%20F%C3%A1bio.jpeg" alt="Horta suspensa de Fábio no bairro São José" loading="lazy">
+                    <div class="info">
+                        <h4>Fábio</h4>
+                        <div class="local"><i class="fas fa-map-pin"></i> São José</div>
+                        <p class="desc">Horta suspensa em espaço reduzido, com estrutura vertical e compartilhamento de excedentes com vizinhos.</p>
+                    </div>
+                </div>
+                <div class="horta-card">
+                    <img src="https://fabiowlademir.github.io/imagens/Cl%C3%A1udia%20Horta.jpeg" alt="Horta da Cláudia no bairro Piratini" loading="lazy">
+                    <div class="info">
+                        <h4>Cláudia</h4>
+                        <div class="local"><i class="fas fa-map-pin"></i> Piratini</div>
+                        <p class="desc">Horta comunitária que já produz alimentos e gera excedente para doação, mesmo sem políticas públicas estruturadas.</p>
+                    </div>
+                </div>
+                <div class="horta-card">
+                    <img src="https://fabiowlademir.github.io/imagens/Augusto.jpeg" alt="Horta do Sr. Augusto na Lomba da Palmeira" loading="lazy">
+                    <div class="info">
+                        <h4>Sr. Augusto</h4>
+                        <div class="local"><i class="fas fa-map-pin"></i> Lomba da Palmeira</div>
+                        <p class="desc">Espaço residencial produtivo que demonstra como pequenos quintais podem se tornar centros de produção e troca de saberes.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 8px; font-style: italic; color: #3d613a;">Começamos de algo que já existe — e imaginamos até onde essa lógica pode chegar em dez anos.</p>
         </div>
-    </div>
-    <p style="margin-top: 8px; font-style: italic; color: #3d613a;">Começamos de algo que já existe — e imaginamos até onde essa lógica pode chegar em dez anos.</p>
-</div>
 
         <!-- MAPA -->
         <div class="map-wrapper">
@@ -894,6 +1016,41 @@
                 <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>💰 Econômicos</strong><br><span style="font-size:0.85rem;">Produção, feiras</span></div>
             </div>
             <p class="text-center" style="margin-top:12px; font-weight:600; color:#1d401b;">O projeto não deve ser medido apenas pelo número de hortas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== RECURSOS INTERATIVOS ===== -->
+<section id="recursos" style="background:#edf5ea;">
+    <div class="container">
+        <div class="section-title"><i class="fas fa-cubes"></i> Recursos Interativos</div>
+        <p class="section-sub">Explore o território, a apresentação e os materiais complementares do projeto.</p>
+
+        <div class="recursos-grid">
+            <!-- Mapa Interativo -->
+            <div class="recurso-card">
+                <h4><i class="fas fa-map-marked-alt"></i> Mapa do Território</h4>
+                <p style="font-size:0.9rem; color:#3d613a;">Visualize o bairro São José no Google Maps e explore as áreas onde as iniciativas estão localizadas.</p>
+                <a href="https://www.google.com/maps/place/S%C3%A3o+Jos%C3%A9,+Sapucaia+do+Sul+-+RS/@-29.8116996,-51.1444351,2758m/data=!3m1!1e3!4m6!3m5!1s0x951968d1619372a7:0x1e3a8f8ef8510e93!8m2!3d-29.8134168!4d-51.1422048!16s%2Fg%2F1ymv5940q?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-recurso"><i class="fas fa-external-link-alt"></i> Abrir no Google Maps</a>
+            </div>
+
+            <!-- Apresentação de Slides -->
+            <div class="recurso-card">
+                <h4><i class="fas fa-slideshare"></i> Apresentação Completa</h4>
+                <p style="font-size:0.9rem; color:#3d613a;">Acesse a apresentação de slides do projeto com todas as etapas, imagens e dados.</p>
+                <a href="https://docs.google.com/presentation/d/1wykhzGWaQEE6qO5dT7sGSVqUfN28lurb/edit?usp=sharing&ouid=109358442497425548617&rtpof=true&sd=true" target="_blank" class="btn-recurso"><i class="fas fa-external-link-alt"></i> Ver apresentação</a>
+            </div>
+
+            <!-- Podcast -->
+            <div class="recurso-card">
+                <h4><i class="fas fa-podcast"></i> Podcast do Projeto</h4>
+                <p style="font-size:0.9rem; color:#3d613a;">Ouça o podcast com a narrativa do projeto, entrevistas e reflexões sobre o futuro do bairro.</p>
+                <div class="podcast-placeholder">
+                    <i class="fas fa-microphone-alt"></i>
+                    <p style="margin-top:8px; font-weight:500;">Espaço para o Podcast</p>
+                    <p style="font-size:0.8rem; color:#3d613a;">Em breve, o episódio completo será disponibilizado aqui.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1271,6 +1428,9 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (transcript.includes('dados') || transcript.includes('ibge')) {
                 document.getElementById('dados').scrollIntoView({ behavior: 'smooth' });
                 speakText('Abrindo dados');
+            } else if (transcript.includes('recursos') || transcript.includes('interativo')) {
+                document.getElementById('recursos').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo recursos interativos');
             } else if (transcript.includes('contato') || transcript.includes('falar')) {
                 document.querySelector('.whatsapp-float').scrollIntoView({ behavior: 'smooth' });
                 speakText('Abrindo contato');
@@ -1286,7 +1446,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (transcript.includes('ouvir') || transcript.includes('ler')) {
                 toggleListen();
             } else {
-                speakText('Comando não reconhecido. Tente: cartografia, cenário, macroações, dados, referências, topo, whatsapp ou ouvir.');
+                speakText('Comando não reconhecido. Tente: cartografia, cenário, macroações, dados, recursos, referências, topo, whatsapp ou ouvir.');
             }
         };
 
