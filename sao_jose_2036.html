@@ -1,208 +1,222 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="jsaWLvsGlflgFR5wjYHeU6Mx1zpTG_3nfCBySBHQkHE" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>São José 2036 · Do quintal à rede</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- SEO - Título e Descrição -->
+    <title>São José 2036 · Do quintal à rede | Projeto de Agricultura Urbana</title>
+    <meta name="description" content="Projeto São José 2036: como pequenas iniciativas de agricultura urbana podem transformar o bairro São José, em Sapucaia do Sul/RS, em uma rede criativa, inteligente e sustentável em 10 anos. Trabalho acadêmico UNISINOS." />
+    <meta name="keywords" content="agricultura urbana, horta suspensa, São José, Sapucaia do Sul, cidade inteligente, sustentabilidade, cartografia, projeto comunitário, UNISINOS, Fábio Wlademir" />
+    <meta name="author" content="Fábio Wlademir Rodrigues Da Silva" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabiowlademir.github.io/sao_jose_2036.html" />
+    <meta property="og:title" content="São José 2036 · Do quintal à rede" />
+    <meta property="og:description" content="Projeto de agricultura urbana para transformar o bairro São José em um território criativo, inteligente e sustentável." />
+    <meta property="og:image" content="https://fabiowlademir.github.io/imagens/Mapa%203%20Captura%20de%20tela%202026-08-22%20010047.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://fabiowlademir.github.io/sao_jose_2036.html" />
+    <meta property="twitter:title" content="São José 2036 · Do quintal à rede" />
+    <meta property="twitter:description" content="Projeto de agricultura urbana para transformar o bairro São José em um território criativo, inteligente e sustentável." />
+    <meta property="twitter:image" content="https://fabiowlademir.github.io/imagens/Mapa%203%20Captura%20de%20tela%202026-08-22%20010047.jpg" />
+
+    <!-- JSON-LD Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "São José 2036 - Do quintal à rede",
+      "description": "Projeto de agricultura urbana para transformar o bairro São José, em Sapucaia do Sul/RS, em uma rede criativa, inteligente e sustentável.",
+      "author": {
+        "@type": "Person",
+        "name": "Fábio Wlademir Rodrigues Da Silva",
+        "url": "https://fabiowlademir.github.io"
+      },
+      "about": {
+        "@type": "Place",
+        "name": "Bairro São José, Sapucaia do Sul, Rio Grande do Sul, Brasil",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sapucaia do Sul",
+          "addressRegion": "RS",
+          "addressCountry": "BR"
+        }
+      },
+      "educationalUse": "Trabalho acadêmico para a disciplina Cidades Criativas, Inteligentes e Sustentáveis",
+      "inLanguage": "pt-BR"
+    }
+    </script>
+
+    <!-- FONTS PREMIUM -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         /* ===== RESET & BASE ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
             background: #f4f8f2;
             color: #1a2e19;
             line-height: 1.6;
             scroll-behavior: smooth;
+            padding-top: 70px;
         }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         /* ===== HEADER ===== */
         .header {
             background: #1b3a19;
             color: #ecf6ea;
-            padding: 20px 0 16px;
-            position: sticky;
+            padding: 16px 0;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 100;
             box-shadow: 0 6px 20px rgba(0, 20, 0, 0.15);
         }
-
         .header .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo h1 {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             font-weight: 800;
             letter-spacing: -0.5px;
         }
-
         .logo span {
             font-weight: 400;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: #bedbb7;
             display: block;
         }
-
         .nav a {
             color: #e3f0df;
             font-weight: 600;
-            font-size: 0.9rem;
-            margin-left: 28px;
+            font-size: 0.85rem;
+            margin-left: 24px;
             border-bottom: 2px solid transparent;
             transition: 0.2s;
             padding-bottom: 4px;
         }
-
-        .nav a:hover {
-            border-bottom-color: #8fc087;
-        }
+        .nav a:hover { border-bottom-color: #8fc087; }
 
         /* ===== HERO ===== */
         .hero {
             background: #e8f2e4;
-            padding: 56px 0 40px;
+            padding: 48px 0 32px;
             border-bottom: 1px solid #cddec7;
         }
-
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            gap: 40px;
             align-items: center;
         }
-
         .hero-badge {
             display: inline-block;
             background: #1b3a19;
             color: white;
             padding: 4px 18px;
             border-radius: 40px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 0.3px;
             margin-bottom: 12px;
         }
-
         .hero h2 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 800;
             color: #143012;
             line-height: 1.15;
         }
-
         .hero .sub {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #2b4f28;
-            margin: 12px 0 6px;
+            margin: 8px 0 4px;
         }
-
         .hero-meta {
             color: #3d5f3a;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-top: 6px;
         }
-
-        .hero-meta i {
-            width: 20px;
-            color: #2c6b28;
-        }
-
+        .hero-meta i { width: 20px; color: #2c6b28; }
         .hero-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 18px;
+            margin-top: 16px;
         }
-
         .hero-tags span {
             background: #1b3a19;
             color: white;
             padding: 4px 18px;
             border-radius: 40px;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.3px;
         }
-
         .hero-image-box {
             background: #d3e4cd;
             border-radius: 28px;
-            padding: 32px 20px;
+            padding: 28px 20px;
             text-align: center;
             box-shadow: 0 6px 20px rgba(0, 20, 0, 0.04);
         }
-
-        .hero-image-box i {
-            font-size: 4.2rem;
-            color: #2a6b27;
-            opacity: 0.7;
+        .hero-image-box .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2a6b27;
+            margin-bottom: 12px;
         }
-
         .hero-image-box p {
             font-weight: 600;
             color: #1e3f1c;
-            margin-top: 12px;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
-
         .hero-image-box small {
             display: block;
             font-weight: 400;
             color: #3d613a;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             margin-top: 4px;
         }
 
         /* ===== SEÇÕES ===== */
-        section {
-            padding: 64px 0;
-            border-bottom: 1px solid #ddecd9;
-        }
-
+        section { padding: 56px 0; border-bottom: 1px solid #ddecd9; }
         .section-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: #173315;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             display: flex;
             align-items: center;
             gap: 14px;
         }
-
-        .section-title i {
-            color: #347a30;
-            font-size: 1.9rem;
-        }
-
+        .section-title i { color: #347a30; font-size: 1.7rem; }
         .section-sub {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #2f502c;
             max-width: 780px;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
 
         /* ===== CARDS ===== */
@@ -211,7 +225,6 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 24px;
         }
-
         .card {
             background: white;
             padding: 24px 20px;
@@ -220,29 +233,10 @@
             border: 1px solid #e2efe0;
             transition: 0.2s;
         }
-
-        .card:hover {
-            transform: translateY(-3px);
-            border-color: #a6c89e;
-        }
-
-        .card i {
-            font-size: 2rem;
-            color: #2f792b;
-            margin-bottom: 12px;
-        }
-
-        .card h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #1c3d1a;
-            margin-bottom: 6px;
-        }
-
-        .card p {
-            color: #3a5a37;
-            font-size: 0.9rem;
-        }
+        .card:hover { transform: translateY(-3px); border-color: #a6c89e; }
+        .card i { font-size: 2rem; color: #2f792b; margin-bottom: 12px; }
+        .card h4 { font-size: 1.1rem; font-weight: 700; color: #1c3d1a; margin-bottom: 6px; }
+        .card p { color: #3a5a37; font-size: 0.9rem; }
 
         /* ===== HIGHLIGHT ===== */
         .highlight-box {
@@ -252,10 +246,7 @@
             border-radius: 16px;
             margin: 24px 0;
         }
-
-        .highlight-box strong {
-            color: #1a4018;
-        }
+        .highlight-box strong { color: #1a4018; }
 
         /* ===== MAPA ===== */
         .map-wrapper {
@@ -265,21 +256,11 @@
             border: 1px solid #ddecd9;
             margin-top: 12px;
         }
-
-        .map-placeholder {
-            background: #d4e4cf;
+        .map-image {
+            width: 100%;
             border-radius: 16px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #1b3f19;
+            display: block;
         }
-
-        .map-placeholder i {
-            font-size: 3.2rem;
-            opacity: 0.5;
-            margin-bottom: 8px;
-        }
-
         .legend {
             display: flex;
             flex-wrap: wrap;
@@ -287,21 +268,18 @@
             justify-content: center;
             margin: 18px 0 10px;
         }
-
         .legend-item {
             display: flex;
             align-items: center;
             gap: 8px;
             font-size: 0.9rem;
         }
-
         .dot {
             width: 16px;
             height: 16px;
             border-radius: 50%;
             display: inline-block;
         }
-
         .dot.green { background: #278327; }
         .dot.yellow { background: #c4a12b; }
         .dot.gray { background: #7a8f77; }
@@ -312,7 +290,6 @@
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 28px;
         }
-
         .macro-card {
             background: white;
             padding: 24px;
@@ -320,7 +297,6 @@
             border: 1px solid #e4efe2;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
         }
-
         .macro-card .num {
             font-size: 1.6rem;
             font-weight: 800;
@@ -328,13 +304,7 @@
             opacity: 0.3;
             margin-bottom: 2px;
         }
-
-        .macro-card h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #1a3f18;
-        }
-
+        .macro-card h4 { font-size: 1.1rem; font-weight: 700; color: #1a3f18; }
         .macro-card .tag {
             display: inline-block;
             background: #e2f0df;
@@ -345,11 +315,7 @@
             color: #1d4f1b;
             margin: 4px 0 8px;
         }
-
-        .macro-card p {
-            color: #345f31;
-            font-size: 0.9rem;
-        }
+        .macro-card p { color: #345f31; font-size: 0.9rem; }
 
         /* ===== TIMELINE ===== */
         .timeline {
@@ -357,7 +323,6 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
         }
-
         .timeline-item {
             background: white;
             padding: 20px 16px;
@@ -365,26 +330,14 @@
             border-top: 6px solid #2f792b;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
         }
-
-        .timeline-item .year {
-            font-weight: 800;
-            font-size: 1.1rem;
-            color: #143012;
-        }
-
-        .timeline-item .phase {
-            font-weight: 600;
-            color: #2c6b28;
-            margin: 2px 0 6px;
-        }
-
+        .timeline-item .year { font-weight: 800; font-size: 1.1rem; color: #143012; }
+        .timeline-item .phase { font-weight: 600; color: #2c6b28; margin: 2px 0 6px; }
         .timeline-item ul {
             list-style: none;
             padding: 0;
             font-size: 0.85rem;
             color: #2f502c;
         }
-
         .timeline-item ul li::before {
             content: "•";
             color: #2f792b;
@@ -398,13 +351,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 36px;
         }
-
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
         }
-
         .stat-item {
             background: white;
             padding: 16px 12px;
@@ -412,18 +363,8 @@
             text-align: center;
             border: 1px solid #dfecdd;
         }
-
-        .stat-item .number {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: #1a4018;
-        }
-
-        .stat-item .label {
-            font-size: 0.75rem;
-            color: #3e613b;
-        }
-
+        .stat-item .number { font-size: 1.7rem; font-weight: 800; color: #1a4018; }
+        .stat-item .label { font-size: 0.75rem; color: #3e613b; }
         .chart-bar {
             background: #ddecd9;
             border-radius: 40px;
@@ -431,7 +372,6 @@
             margin: 4px 0;
             overflow: hidden;
         }
-
         .chart-bar .fill {
             height: 100%;
             background: #2a7a27;
@@ -449,7 +389,6 @@
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 20px;
         }
-
         .gov-card {
             background: white;
             padding: 20px 16px;
@@ -457,22 +396,9 @@
             text-align: center;
             border: 1px solid #e2efe0;
         }
-
-        .gov-card i {
-            font-size: 2rem;
-            color: #2f792b;
-        }
-
-        .gov-card h4 {
-            font-size: 1rem;
-            margin: 6px 0 2px;
-            color: #1a3f18;
-        }
-
-        .gov-card p {
-            font-size: 0.8rem;
-            color: #3d613a;
-        }
+        .gov-card i { font-size: 2rem; color: #2f792b; }
+        .gov-card h4 { font-size: 1rem; margin: 6px 0 2px; color: #1a3f18; }
+        .gov-card p { font-size: 0.8rem; color: #3d613a; }
 
         /* ===== REFERÊNCIAS ===== */
         .ref-box {
@@ -482,15 +408,8 @@
             font-size: 0.85rem;
             color: #1e3f1c;
         }
-
-        .ref-box p {
-            margin-bottom: 4px;
-        }
-
-        .ref-box i {
-            color: #2f792b;
-            width: 22px;
-        }
+        .ref-box p { margin-bottom: 4px; }
+        .ref-box i { color: #2f792b; width: 22px; }
 
         /* ===== FOOTER ===== */
         .footer {
@@ -500,75 +419,268 @@
             text-align: center;
             font-size: 0.9rem;
         }
-
-        .footer strong {
-            color: #b5d9ad;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 900px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-            }
-            .ibge-grid {
-                grid-template-columns: 1fr;
-            }
-            .timeline {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .header .container {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-            .nav a {
-                margin-left: 0;
-                margin-right: 18px;
-                font-size: 0.8rem;
-            }
-            .timeline {
-                grid-template-columns: 1fr;
-            }
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero h2 {
-                font-size: 2rem;
-            }
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
-
-        .text-center {
-            text-align: center;
-        }
-        .mt-16 {
-            margin-top: 16px;
-        }
-        .mb-8 {
-            margin-bottom: 8px;
-        }
-        .fw-600 {
-            font-weight: 600;
-        }
-        .gap-8 {
+        .footer strong { color: #b5d9ad; }
+        .visitor-counter {
+            display: inline-flex;
+            align-items: center;
             gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 16px 4px 12px;
+            border-radius: 40px;
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-top: 8px;
         }
-        .flex {
+        .visitor-counter i { color: #b5d9ad; font-size: 0.8rem; }
+        .visitor-counter .count { font-weight: 700; color: #d4e8cf; }
+
+        /* ===== ACESSIBILIDADE TOOLBAR ===== */
+        .accessibility-toolbar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            background: rgba(11, 37, 30, 0.92);
+            backdrop-filter: blur(12px);
+            border-radius: 0 12px 12px 0;
+            padding: 6px 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid rgba(197, 168, 128, 0.15);
+            border-left: none;
+            box-shadow: 4px 0 30px rgba(0, 0, 0, 0.2);
+        }
+        .accessibility-toolbar button {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            width: 38px;
+            height: 38px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .accessibility-toolbar button:hover { background: rgba(255,255,255,0.05); color: white; }
+        .accessibility-toolbar .tooltip {
+            position: absolute;
+            left: 110%;
+            background: #1b3a19;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 6px;
+            font-size: 0.65rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.2s;
+        }
+        .accessibility-toolbar button:hover .tooltip { opacity: 1; }
+
+        .accessibility-panel {
+            position: fixed;
+            left: -340px;
+            top: 0;
+            width: 320px;
+            height: 100vh;
+            background: rgba(11, 37, 30, 0.98);
+            backdrop-filter: blur(16px);
+            z-index: 9999;
+            padding: 32px;
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-right: 2px solid #c5a880;
+            overflow-y: auto;
+        }
+        .accessibility-panel.open { left: 0; }
+        .accessibility-panel .close-panel {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+        .accessibility-panel h3 { color: white; font-family: 'Playfair Display', serif; margin-bottom: 24px; font-size: 1.1rem; }
+        .accessibility-panel h3 span { color: #c5a880; }
+        .accessibility-panel .control-group { margin-bottom: 16px; }
+        .accessibility-panel .control-group label { color: #94a3b8; font-size: 0.75rem; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .accessibility-panel .control-group .btn-group { display: flex; gap: 4px; flex-wrap: wrap; }
+        .accessibility-panel .control-group .btn-group button {
+            padding: 5px 14px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: transparent;
+            color: #cbd5e1;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .accessibility-panel .control-group .btn-group button.active { background: #c5a880; color: #1b3a19; border-color: #c5a880; }
+        .accessibility-panel .control-group .btn-group button:hover:not(.active) { background: rgba(255,255,255,0.05); }
+        .accessibility-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 9998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s;
+        }
+        .accessibility-overlay.open { opacity: 1; pointer-events: all; }
+
+        /* ===== VOICE COMMAND ===== */
+        .voice-command-btn {
+            position: fixed;
+            bottom: 90px;
+            right: 80px;
+            background: #c5a880;
+            color: #1b3a19;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 998;
+            box-shadow: 0 4px 20px rgba(197, 168, 128, 0.3);
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .voice-command-btn:hover { transform: scale(1.06); }
+        .voice-command-btn.listening {
+            background: #dc2626;
+            color: white;
+            animation: pulse-red 1.5s infinite;
+        }
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+
+        .lgpd-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(11, 37, 30, 0.96);
+            backdrop-filter: blur(12px);
+            padding: 14px 20px;
+            z-index: 10000;
+            border-top: 2px solid #c5a880;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            justify-content: center;
+            gap: 16px;
+            transition: transform 0.5s, opacity 0.5s;
         }
-        .bg-light {
-            background: #f0f7ed;
+        .lgpd-banner.hidden { transform: translateY(100%); opacity: 0; pointer-events: none; }
+        .lgpd-banner p { color: #cbd5e1; font-size: 0.85rem; flex: 1 1 280px; text-align: center; }
+        .lgpd-banner a { color: #c5a880; text-decoration: underline; }
+        .lgpd-banner .btn-group { display: flex; gap: 8px; }
+        .lgpd-banner .btn-group button {
+            padding: 6px 20px;
+            border-radius: 40px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: 'Inter', sans-serif;
         }
+        .lgpd-banner .btn-accept { background: #c5a880; color: #1b3a19; }
+        .lgpd-banner .btn-accept:hover { transform: scale(1.02); }
+        .lgpd-banner .btn-reject { background: transparent; color: #94a3b8; border: 1px solid #64748b; }
+        .lgpd-banner .btn-reject:hover { background: rgba(255,255,255,0.05); }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5);
+            z-index: 999;
+            transition: 0.2s;
+        }
+        .whatsapp-float:hover { transform: scale(1.04); }
+        .whatsapp-float i { font-size: 1.2rem; }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            background: #1b3a19;
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: 0.2s;
+            z-index: 997;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: #c5a880; color: #1b3a19; transform: translateY(-3px); }
+
+        .reduce-motion * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .ibge-grid { grid-template-columns: 1fr; }
+            .timeline { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .header .container { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .nav a { margin-left: 0; margin-right: 18px; font-size: 0.8rem; }
+            .timeline { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 2rem; }
+            .section-title { font-size: 1.5rem; }
+            .voice-command-btn { right: 20px; bottom: 80px; width: 42px; height: 42px; font-size: 1rem; }
+            .whatsapp-float { padding: 10px 16px; font-size: 0.75rem; bottom: 15px; right: 15px; }
+            .whatsapp-float span { display: none; }
+            .back-to-top { bottom: 75px; left: 15px; width: 36px; height: 36px; }
+        }
+        .text-center { text-align: center; }
+        .mt-16 { margin-top: 16px; }
+        .mb-8 { margin-bottom: 8px; }
+        .fw-600 { font-weight: 600; }
+        .gap-8 { gap: 8px; }
+        .flex { display: flex; flex-wrap: wrap; align-items: center; }
+        .bg-light { background: #f0f7ed; }
     </style>
 </head>
 <body>
+
+<!-- ===== SKIP TO CONTENT ===== -->
+<a href="#main-content" class="skip-link" style="position:absolute;top:-100%;left:50%;transform:translateX(-50%);padding:12px 24px;background:#c5a880;color:#1b3a19;font-weight:700;border-radius:0 0 12px 12px;z-index:10000;text-decoration:none;transition:top 0.3s;">Ir para o conteúdo</a>
 
 <!-- ===== HEADER ===== -->
 <header class="header">
@@ -587,26 +699,36 @@
     </div>
 </header>
 
+<!-- ===== WHATSAPP FLUTUANTE ===== -->
+<a href="https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20site" class="whatsapp-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+    <span>Fale comigo</span>
+</a>
+
 <!-- ===== HERO ===== -->
-<section class="hero">
+<section class="hero" id="main-content">
     <div class="container hero-grid">
         <div>
             <span class="hero-badge"><i class="fas fa-seedling"></i> Projeto 2026–2036</span>
             <h2>Como pequenas iniciativas de agricultura urbana podem transformar um território</h2>
             <p class="sub">Sapucaia do Sul — RS · Bairro São José</p>
             <div class="hero-meta">
-                <p><i class="fas fa-user"></i> Fábio Wlademir Rodrigues Da Silva &nbsp;|&nbsp; <i class="fas fa-id-card"></i> RA 1982628</p>
+                <p><i class="fas fa-user"></i> <strong>Fábio Wlademir Rodrigues Da Silva</strong> &nbsp;|&nbsp; <i class="fas fa-id-card"></i> RA 1982628</p>
                 <p><i class="fas fa-envelope"></i> fabiosilva12@edu.unisinos.br</p>
-                <p><i class="fas fa-calendar-alt"></i> UNISINOS · 2026/2 · Profa. Vanessa de Souza Batisti</p>
+                <p><i class="fas fa-university"></i> UNISINOS · 2026/2 · <i class="fas fa-chalkboard-teacher"></i> Profa. Vanessa de Souza Batisti</p>
+                <p><i class="fas fa-book-open"></i> Disciplina: Cidades Criativas, Inteligentes e Sustentáveis</p>
             </div>
             <div class="hero-tags">
                 <span><i class="fas fa-leaf"></i> Criativo</span>
                 <span><i class="fas fa-microchip"></i> Inteligente</span>
                 <span><i class="fas fa-recycle"></i> Sustentável</span>
             </div>
+            <div style="margin-top:16px;">
+                <a href="https://fabiowlademir.github.io/" target="_blank" style="color:#1b3a19;font-weight:600;border-bottom:2px solid #2a6b27;padding-bottom:2px;"><i class="fas fa-external-link-alt"></i> Sobre Fábio Wlademir</a>
+            </div>
         </div>
         <div class="hero-image-box">
-            <i class="fas fa-plant-wilt"></i>
+            <img src="https://avatars.githubusercontent.com/u/138263067?v=4" alt="Foto de Fábio Wlademir" class="profile-pic">
             <p>“E se uma horta fosse mais do que uma horta?”</p>
             <small>Alimentos · Biodiversidade · Conhecimento · Pertencimento</small>
         </div>
@@ -633,16 +755,10 @@
         <!-- MAPA -->
         <div class="map-wrapper">
             <h4 style="margin-bottom:12px;"><i class="fas fa-location-dot"></i> Mapa esquemático — Bairro São José</h4>
-            <div class="map-placeholder">
-                <i class="fas fa-map-location-dot"></i>
-                <p><strong>Print do Google Maps com marcações</strong><br />(área do bairro São José, Sapucaia do Sul)</p>
-                <div style="background:#c2d8bd; padding:12px; border-radius:12px; margin-top:8px; font-size:0.9rem;">
-                    ★ Horta ativa (Fábio) &nbsp;·&nbsp; ☆ Horta em preparação (Sr. Adão) &nbsp;·&nbsp; ● Espaços potenciais
-                </div>
-            </div>
+            <img src="https://fabiowlademir.github.io/imagens/Mapa%203%20Captura%20de%20tela%202026-08-22%20010047.jpg" alt="Mapa esquemático do bairro São José com marcação das hortas ativas, em preparação e potenciais." class="map-image" loading="lazy">
             <div class="legend">
-                <span class="legend-item"><span class="dot green"></span> Horta ativa</span>
-                <span class="legend-item"><span class="dot yellow"></span> Em preparação</span>
+                <span class="legend-item"><span class="dot green"></span> Horta ativa (Fábio)</span>
+                <span class="legend-item"><span class="dot yellow"></span> Em preparação (Sr. Adão)</span>
                 <span class="legend-item"><span class="dot gray"></span> Potencial comunitário</span>
                 <span class="legend-item"><i class="fas fa-circle" style="color:#4f7a4b; font-size:0.7rem;"></i> Iniciativas vizinhas</span>
             </div>
@@ -660,6 +776,12 @@
         <p style="font-size:1.3rem; font-weight:700; color:#1a4018;">São José 2036: um território que aprende, produz e se reinventa</p>
         <p class="section-sub">Em 2036, o São José possui uma rede de pequenas infraestruturas distribuídas: hortas suspensas, quintais produtivos, sacadas verdes, compostagem, captação de chuva, energia limpa, tecnologia reaproveitada, IA, cultura e economia local.</p>
 
+        <!-- Espaço para imagem do cenário futuro (slide 10) -->
+        <div style="background:white; border-radius:20px; padding:20px; text-align:center; border:1px dashed #a6c89e; margin-bottom:20px;">
+            <i class="fas fa-image" style="font-size:2rem; color:#a6c89e;"></i>
+            <p style="color:#3d613a; font-size:0.9rem;">Imagem do cenário futuro — "Um dia em São José, 2036" (slide 10)</p>
+        </div>
+
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:14px; margin:24px 0;">
             <div style="background:white; border-radius:16px; padding:14px; text-align:center; border:1px solid #cde0c9;"><i class="fas fa-clock" style="color:#2a6b27;"></i> 7h30 · Irrigação</div>
             <div style="background:white; border-radius:16px; padding:14px; text-align:center; border:1px solid #cde0c9;"><i class="fas fa-apple-alt" style="color:#2a6b27;"></i> 10h · Produção</div>
@@ -671,6 +793,17 @@
         <div class="highlight-box">
             <i class="fas fa-lightbulb" style="margin-right:10px;"></i>
             <strong>Um bairro inteligente não é aquele que possui mais tecnologia — é aquele que utiliza melhor seus recursos.</strong>
+        </div>
+
+        <!-- Visão Geral do Sistema (slide 12) -->
+        <div style="background:white; border-radius:20px; padding:24px; border:1px solid #ddecd9; margin-top:20px;">
+            <h4 style="font-size:1.1rem; color:#1a3f18; margin-bottom:16px; text-align:center;"><i class="fas fa-project-diagram"></i> Visão Geral — Sistema São José 2036</h4>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap:16px; text-align:center;">
+                <div><i class="fas fa-leaf" style="color:#2f792b; font-size:1.5rem;"></i><br><strong>Sustentabilidade</strong><br><span style="font-size:0.8rem; color:#3d613a;">Hortas · Água · Compostagem</span></div>
+                <div><i class="fas fa-microchip" style="color:#2f792b; font-size:1.5rem;"></i><br><strong>Inteligência</strong><br><span style="font-size:0.8rem; color:#3d613a;">Sensores · IA · Dados</span></div>
+                <div><i class="fas fa-palette" style="color:#2f792b; font-size:1.5rem;"></i><br><strong>Criatividade</strong><br><span style="font-size:0.8rem; color:#3d613a;">Cultura · Arte · Educação</span></div>
+                <div><i class="fas fa-users" style="color:#2f792b; font-size:1.5rem;"></i><br><strong>Participação</strong><br><span style="font-size:0.8rem; color:#3d613a;">Comunidade · Território</span></div>
+            </div>
         </div>
     </div>
 </section>
@@ -693,7 +826,8 @@
         </div>
 
         <div style="margin-top:32px; background:#e3efe0; border-radius:20px; padding:20px 24px;">
-            <p><i class="fas fa-shield-alt" style="color:#1f4a1d;"></i> <strong>Um cuidado necessário:</strong> Tecnologia com responsabilidade, transparência e respeito à privacidade. Não vigilância, mas segurança comunitária.</p>
+            <p><i class="fas fa-shield-alt" style="color:#1f4a1d;"></i> <strong>Um cuidado necessário:</strong> Tecnologia com responsabilidade, transparência e respeito à privacidade. Não vigilância, mas segurança comunitária.
+            <span style="display:block; font-size:0.85rem; color:#2f502c; margin-top:4px;"><i class="fas fa-lightbulb"></i> Iluminação inteligente · Sensores e alertas · Comunicação comunitária</span></p>
         </div>
     </div>
 </section>
@@ -714,18 +848,18 @@
 <!-- ===== DADOS IBGE ===== -->
 <section id="dados">
     <div class="container">
-        <div class="section-title"><i class="fas fa-chart-bar"></i> Sapucaia do Sul em números</div>
+        <div class="section-title"><i class="fas fa-chart-bar"></i> Dados oficiais · IBGE</div>
         <div class="ibge-grid">
             <div>
                 <div class="stats-grid">
                     <div class="stat-item"><div class="number">132.107</div><div class="label">População (Censo 2022)</div></div>
                     <div class="stat-item"><div class="number">136.572</div><div class="label">Estimativa 2025</div></div>
                     <div class="stat-item"><div class="number">58 km²</div><div class="label">Área territorial</div></div>
+                    <div class="stat-item"><div class="number">2.268</div><div class="label">Densidade (hab/km²)</div></div>
                     <div class="stat-item"><div class="number">0,726</div><div class="label">IDHM (alto)</div></div>
                     <div class="stat-item"><div class="number">R$ 31.883</div><div class="label">PIB per capita (2021)</div></div>
-                    <div class="stat-item"><div class="number">97,4%</div><div class="label">Taxa de alfabetização</div></div>
                 </div>
-                <p style="font-size:0.8rem; color:#3a5f38; margin-top:12px;">Fonte: IBGE (Censo 1991/2000/2010/2022; Estimativa 2025)</p>
+                <p style="font-size:0.8rem; color:#3a5f38; margin-top:12px;">Fonte: IBGE (Censo 1991/2000/2010/2022; Estimativa 2025; PIB 2021; PNUD)</p>
             </div>
             <div>
                 <h4 style="font-weight:700; margin-bottom:8px;">Crescimento populacional (1991–2025)</h4>
@@ -738,15 +872,18 @@
             </div>
         </div>
 
-        <!-- Indicadores -->
-        <div style="margin-top:40px; display:grid; grid-template-columns: repeat(auto-fit, minmax(170px,1fr)); gap:14px;">
-            <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>🌱 Ambientais</strong><br><span style="font-size:0.85rem;">Hortas, água, resíduos</span></div>
-            <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>👥 Sociais</strong><br><span style="font-size:0.85rem;">Participantes, oficinas</span></div>
-            <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>💻 Tecnológicos</strong><br><span style="font-size:0.85rem;">Equipamentos, sensores</span></div>
-            <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>🎨 Culturais</strong><br><span style="font-size:0.85rem;">Eventos, iniciativas</span></div>
-            <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>💰 Econômicos</strong><br><span style="font-size:0.85rem;">Produção, feiras</span></div>
+        <!-- Indicadores de sucesso (slide 23) -->
+        <div style="margin-top:40px;">
+            <h4 style="font-weight:700; color:#1a3f18; margin-bottom:16px; text-align:center;"><i class="fas fa-check-circle"></i> Indicadores de sucesso</h4>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:14px;">
+                <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>🌱 Ambientais</strong><br><span style="font-size:0.85rem;">Hortas, água, resíduos</span></div>
+                <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>👥 Sociais</strong><br><span style="font-size:0.85rem;">Participantes, oficinas</span></div>
+                <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>💻 Tecnológicos</strong><br><span style="font-size:0.85rem;">Equipamentos, sensores</span></div>
+                <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>🎨 Culturais</strong><br><span style="font-size:0.85rem;">Eventos, iniciativas</span></div>
+                <div style="background:white; border-radius:16px; padding:14px; border:1px solid #ddecd9; text-align:center;"><strong>💰 Econômicos</strong><br><span style="font-size:0.85rem;">Produção, feiras</span></div>
+            </div>
+            <p class="text-center" style="margin-top:12px; font-weight:600; color:#1d401b;">O projeto não deve ser medido apenas pelo número de hortas.</p>
         </div>
-        <p class="text-center" style="margin-top:12px; font-weight:600; color:#1d401b;">O projeto não deve ser medido apenas pelo número de hortas.</p>
     </div>
 </section>
 
@@ -786,9 +923,443 @@
     <div class="container">
         <p><strong>São José 2036</strong> · Do quintal à rede</p>
         <p style="font-size:0.8rem; margin-top:4px; opacity:0.8;">Uma cidade criativa imagina. Uma cidade sustentável cuida. Uma cidade inteligente aprende. Uma comunidade transforma.</p>
-        <p style="font-size:0.75rem; margin-top:10px; opacity:0.6;">Fábio Wlademir · Cidades Criativas, Inteligentes e Sustentáveis · UNISINOS · 2026</p>
+        <div class="visitor-counter">
+            <i class="fas fa-eye"></i>
+            <span>Visitas:</span>
+            <span class="count" id="visitorCount">0</span>
+        </div>
+        <p style="font-size:0.75rem; margin-top:10px; opacity:0.6;">
+            <a href="https://fabiowlademir.github.io/" target="_blank" style="color:#b5d9ad;text-decoration:underline;">Fábio Wlademir</a>
+            · Cidades Criativas, Inteligentes e Sustentáveis · UNISINOS · 2026
+        </p>
+        <p style="font-size:0.7rem; margin-top:6px; opacity:0.4;">
+            <i class="fas fa-code"></i> Desenvolvido com <i class="fas fa-heart" style="color:#b5d9ad;"></i> por Fábio Wlademir
+        </p>
     </div>
 </footer>
+
+<!-- ============================================================
+    ACESSIBILIDADE TOOLBAR
+    ============================================================ -->
+<div class="accessibility-toolbar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+    <button id="accessibilityToggle" aria-label="Abrir painel de acessibilidade" title="Acessibilidade">
+        ♿
+        <span class="tooltip">Acessibilidade</span>
+    </button>
+    <button id="listenToggle" class="listen-btn" aria-label="Ouvir página em voz alta" title="Ouvir página">
+        <i class="fas fa-volume-up"></i>
+        <span class="tooltip">Ouvir página</span>
+    </button>
+</div>
+
+<!-- ===== BOTÃO COMANDO DE VOZ ===== -->
+<button id="voiceCommandBtn" class="voice-command-btn" aria-label="Comando de voz" title="Comando de voz">
+    <i class="fas fa-microphone"></i>
+    <span class="tooltip" style="position:absolute;right:110%;background:#1b3a19;color:white;padding:3px 12px;border-radius:6px;font-size:0.65rem;white-space:nowrap;opacity:0;pointer-events:none;transition:0.2s;">Comando de voz</span>
+</button>
+
+<!-- ===== PAINEL ACESSIBILIDADE ===== -->
+<div class="accessibility-overlay" id="accessibilityOverlay"></div>
+<div class="accessibility-panel" id="accessibilityPanel" role="dialog" aria-label="Painel de acessibilidade">
+    <button class="close-panel" id="closePanel" aria-label="Fechar painel">✕</button>
+    <h3>♿ <span>Acessibilidade</span></h3>
+
+    <div class="control-group">
+        <label>Modo de cores</label>
+        <div class="btn-group">
+            <button data-theme="light" class="active">☀️ Claro</button>
+            <button data-theme="dark">🌙 Escuro</button>
+            <button data-contrast="high">🔆 Alto Contraste</button>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label>Tamanho da fonte</label>
+        <div class="btn-group">
+            <button id="fontDecrease">A-</button>
+            <button id="fontReset" class="active">A</button>
+            <button id="fontIncrease">A+</button>
+            <button id="fontIncrease2">A++</button>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label>Fonte para dislexia</label>
+        <div class="btn-group">
+            <button id="dyslexicToggle">🧩 OpenDyslexic</button>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label>Animações</label>
+        <div class="btn-group">
+            <button id="motionToggle" class="active">▶️ Ativas</button>
+        </div>
+    </div>
+
+    <div style="margin-top:20px; padding-top:15px; border-top:1px solid rgba(255,255,255,0.05);">
+        <p style="color:#64748b; font-size:0.7rem;">
+            <i class="fas fa-save"></i> Preferências salvas automaticamente
+        </p>
+    </div>
+</div>
+
+<!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
+<a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- ===== LGPD BANNER ===== -->
+<div id="lgpdBanner" class="lgpd-banner" role="alert">
+    <p>
+        <i class="fas fa-shield-alt" style="color: #c5a880;"></i>
+        Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência.
+        <a href="#privacidade">Política de Privacidade</a>
+    </p>
+    <div class="btn-group">
+        <button class="btn-reject" id="lgpdReject">Recusar</button>
+        <button class="btn-accept" id="lgpdAccept">Aceitar</button>
+    </div>
+</div>
+
+<!-- ============================================================
+    SCRIPT
+    ============================================================ -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // ===== CONTADOR DE ACESSOS =====
+    (function() {
+        const counterEl = document.getElementById('visitorCount');
+        let count = parseInt(localStorage.getItem('visitorCount_saojose') || '0');
+        if (!sessionStorage.getItem('visited_saojose')) {
+            count++;
+            localStorage.setItem('visitorCount_saojose', count);
+            sessionStorage.setItem('visited_saojose', 'true');
+        }
+        counterEl.textContent = count;
+    })();
+
+    // ===== BACK TO TOP =====
+    var backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== FECHAR MENU MOBILE =====
+    document.querySelectorAll('.nav a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            // mobile menu fechado por padrão
+        });
+    });
+
+    // ============================================================
+    // ACESSIBILIDADE
+    // ============================================================
+
+    var panel = document.getElementById('accessibilityPanel');
+    var overlay = document.getElementById('accessibilityOverlay');
+    var toggleBtn = document.getElementById('accessibilityToggle');
+    var closeBtn = document.getElementById('closePanel');
+
+    function openPanel() {
+        panel.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePanelFn() {
+        panel.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    toggleBtn.addEventListener('click', function() {
+        panel.classList.contains('open') ? closePanelFn() : openPanel();
+    });
+    closeBtn.addEventListener('click', closePanelFn);
+    overlay.addEventListener('click', closePanelFn);
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('open')) closePanelFn();
+    });
+
+    // ----- Temas -----
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        document.querySelectorAll('[data-theme]').forEach(function(btn) {
+            btn.classList.toggle('active', btn.dataset.theme === theme);
+        });
+    }
+
+    function setContrast(contrast) {
+        if (contrast === 'high') {
+            document.documentElement.setAttribute('data-contrast', 'high');
+            localStorage.setItem('contrast', 'high');
+        } else {
+            document.documentElement.removeAttribute('data-contrast');
+            localStorage.setItem('contrast', 'normal');
+        }
+        document.querySelectorAll('[data-contrast]').forEach(function(btn) {
+            btn.classList.toggle('active', btn.dataset.contrast === 'high');
+        });
+    }
+
+    var savedTheme = localStorage.getItem('theme') || 'light';
+    var savedContrast = localStorage.getItem('contrast') || 'normal';
+    setTheme(savedTheme);
+    if (savedContrast === 'high') setContrast('high');
+
+    document.querySelectorAll('[data-theme]').forEach(function(btn) {
+        btn.addEventListener('click', function() { setTheme(btn.dataset.theme); });
+    });
+
+    document.querySelectorAll('[data-contrast]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            setContrast(btn.dataset.contrast === 'high' ? 'high' : 'normal');
+        });
+    });
+
+    // ----- Tamanho fonte -----
+    var fontSizeLevel = parseInt(localStorage.getItem('fontSize') || '1');
+    var fontSizes = ['0.9rem', '1rem', '1.15rem', '1.3rem'];
+
+    function setFontSize(level) {
+        fontSizeLevel = Math.max(0, Math.min(3, level));
+        document.documentElement.style.fontSize = fontSizes[fontSizeLevel];
+        localStorage.setItem('fontSize', fontSizeLevel);
+        document.querySelectorAll('#fontDecrease, #fontReset, #fontIncrease, #fontIncrease2').forEach(function(btn, i) {
+            btn.classList.toggle('active', i === fontSizeLevel);
+        });
+    }
+
+    setFontSize(fontSizeLevel);
+
+    document.getElementById('fontDecrease').addEventListener('click', function() { setFontSize(fontSizeLevel - 1); });
+    document.getElementById('fontReset').addEventListener('click', function() { setFontSize(1); });
+    document.getElementById('fontIncrease').addEventListener('click', function() { setFontSize(fontSizeLevel + 1); });
+    document.getElementById('fontIncrease2').addEventListener('click', function() { setFontSize(fontSizeLevel + 2); });
+
+    // ----- Dislexia -----
+    var dyslexicBtn = document.getElementById('dyslexicToggle');
+    if (localStorage.getItem('dyslexic') === 'true') {
+        document.body.classList.add('dyslexic');
+        dyslexicBtn.classList.add('active');
+    }
+
+    dyslexicBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dyslexic');
+        var active = document.body.classList.contains('dyslexic');
+        dyslexicBtn.classList.toggle('active', active);
+        localStorage.setItem('dyslexic', active);
+    });
+
+    // ----- Animações -----
+    var motionBtn = document.getElementById('motionToggle');
+    if (localStorage.getItem('motion') === 'reduced') {
+        document.documentElement.classList.add('reduce-motion');
+        motionBtn.classList.remove('active');
+        motionBtn.textContent = '⏸️ Reduzidas';
+    }
+
+    motionBtn.addEventListener('click', function() {
+        var reduced = document.documentElement.classList.toggle('reduce-motion');
+        motionBtn.classList.toggle('active', !reduced);
+        motionBtn.textContent = reduced ? '⏸️ Reduzidas' : '▶️ Ativas';
+        localStorage.setItem('motion', reduced ? 'reduced' : 'active');
+    });
+
+    // ============================================================
+    // OUVIR PÁGINA
+    // ============================================================
+    var listenBtn = document.getElementById('listenToggle');
+    var isListening = false;
+    var utterance = null;
+    var synth = window.speechSynthesis;
+
+    function getPageText() {
+        var content = document.querySelector('#main-content') || document.body;
+        var text = content.textContent
+            .replace(/\s+/g, ' ')
+            .replace(/\[.*?\]/g, '')
+            .replace(/\d+\.\d+\.\d+\.\d+/g, '')
+            .trim();
+        return text;
+    }
+
+    function toggleListen() {
+        if (isListening) {
+            synth.cancel();
+            isListening = false;
+            listenBtn.classList.remove('listening');
+            listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+            return;
+        }
+
+        var text = getPageText();
+        if (!text) return;
+
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 0.85;
+
+        utterance.onend = function() {
+            isListening = false;
+            listenBtn.classList.remove('listening');
+            listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+        };
+
+        utterance.onerror = function() {
+            isListening = false;
+            listenBtn.classList.remove('listening');
+            listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+        };
+
+        synth.speak(utterance);
+        isListening = true;
+        listenBtn.classList.add('listening');
+        listenBtn.innerHTML = '<i class="fas fa-stop"></i><span class="tooltip">Parar</span>';
+    }
+
+    listenBtn.addEventListener('click', toggleListen);
+
+    // ============================================================
+    // COMANDO DE VOZ
+    // ============================================================
+    var voiceBtn = document.getElementById('voiceCommandBtn');
+    var isVoiceListening = false;
+    var recognition = null;
+
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+        var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRecognition();
+        recognition.lang = 'pt-BR';
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        recognition.onresult = function(event) {
+            var transcript = event.results[0][0].transcript.toLowerCase();
+            voiceBtn.classList.remove('listening');
+            voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+            isVoiceListening = false;
+
+            if (transcript.includes('cartografia') || transcript.includes('mapa')) {
+                document.getElementById('cartografia').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo cartografia');
+            } else if (transcript.includes('cenário') || transcript.includes('futuro')) {
+                document.getElementById('cenario').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo cenário futuro');
+            } else if (transcript.includes('macroação') || transcript.includes('ações')) {
+                document.getElementById('macroacoes').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo macroações');
+            } else if (transcript.includes('dados') || transcript.includes('ibge')) {
+                document.getElementById('dados').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo dados');
+            } else if (transcript.includes('contato') || transcript.includes('falar')) {
+                document.querySelector('.whatsapp-float').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo contato');
+            } else if (transcript.includes('referências') || transcript.includes('fontes')) {
+                document.getElementById('referencias').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo referências');
+            } else if (transcript.includes('topo') || transcript.includes('início')) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                speakText('Voltando ao topo');
+            } else if (transcript.includes('whatsapp') || transcript.includes('whats')) {
+                window.open('https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20comando%20de%20voz', '_blank');
+                speakText('Abrindo WhatsApp');
+            } else if (transcript.includes('ouvir') || transcript.includes('ler')) {
+                toggleListen();
+            } else {
+                speakText('Comando não reconhecido. Tente: cartografia, cenário, macroações, dados, referências, topo, whatsapp ou ouvir.');
+            }
+        };
+
+        recognition.onerror = function() {
+            voiceBtn.classList.remove('listening');
+            voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+            isVoiceListening = false;
+        };
+
+        recognition.onend = function() {
+            voiceBtn.classList.remove('listening');
+            voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+            isVoiceListening = false;
+        };
+
+        voiceBtn.addEventListener('click', function() {
+            if (isVoiceListening) {
+                recognition.stop();
+                voiceBtn.classList.remove('listening');
+                voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+                isVoiceListening = false;
+                return;
+            }
+
+            try {
+                recognition.start();
+                voiceBtn.classList.add('listening');
+                voiceBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i><span class="tooltip">Ouvindo...</span>';
+                isVoiceListening = true;
+            } catch (e) {
+                console.log('Erro ao iniciar reconhecimento de voz:', e);
+            }
+        });
+
+    } else {
+        voiceBtn.style.display = 'none';
+    }
+
+    function speakText(text) {
+        var speech = new SpeechSynthesisUtterance(text);
+        speech.lang = 'pt-BR';
+        speech.rate = 0.85;
+        window.speechSynthesis.speak(speech);
+    }
+
+    // ============================================================
+    // LGPD
+    // ============================================================
+    var lgpdBanner = document.getElementById('lgpdBanner');
+    var lgpdAccept = document.getElementById('lgpdAccept');
+    var lgpdReject = document.getElementById('lgpdReject');
+
+    if (localStorage.getItem('lgpdConsent')) {
+        lgpdBanner.classList.add('hidden');
+    }
+
+    function setLgpdConsent(choice) {
+        localStorage.setItem('lgpdConsent', choice);
+        lgpdBanner.classList.add('hidden');
+    }
+
+    lgpdAccept.addEventListener('click', function() { setLgpdConsent('accepted'); });
+    lgpdReject.addEventListener('click', function() { setLgpdConsent('rejected'); });
+
+    // ============================================================
+    // VLIBRAS
+    // ============================================================
+    var vwScript = document.createElement('script');
+    vwScript.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+    vwScript.onload = function() {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    };
+    document.body.appendChild(vwScript);
+
+});
+</script>
+
+<!-- ===== VLIBRAS ===== -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
 
 </body>
 </html>
