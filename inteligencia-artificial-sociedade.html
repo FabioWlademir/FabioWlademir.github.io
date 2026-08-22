@@ -1,1 +1,1646 @@
-.
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="jsaWLvsGlflgFR5wjYHeU6Mx1zpTG_3nfCBySBHQkHE" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO - Título e Descrição -->
+    <title>IA e Sociedade · Impactos da Inteligência Artificial | Fábio Wlademir</title>
+    <meta name="description" content="Trabalho acadêmico sobre os impactos positivos e negativos da Inteligência Artificial na sociedade, com foco no setor jurídico. Pesquisa comparativa entre Internet e ChatGPT." />
+    <meta name="keywords" content="Inteligência Artificial, IA, sociedade, impactos, alucinações, ChatGPT, Direito, tecnologia, ética, Fábio Wlademir, UNISINOS" />
+    <meta name="author" content="Fábio Wlademir Rodrigues Da Silva" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabiowlademir.github.io/inteligencia-artificial-sociedade.html" />
+    <meta property="og:title" content="IA e Sociedade · Impactos da Inteligência Artificial" />
+    <meta property="og:description" content="Trabalho acadêmico sobre os impactos da IA na sociedade, com pesquisa comparativa entre Internet e ChatGPT." />
+    <meta property="og:image" content="https://fabiowlademir.github.io/imagens/IA-Sociedade-OG.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://fabiowlademir.github.io/inteligencia-artificial-sociedade.html" />
+    <meta property="twitter:title" content="IA e Sociedade · Impactos da Inteligência Artificial" />
+    <meta property="twitter:description" content="Trabalho acadêmico sobre os impactos da IA na sociedade, com pesquisa comparativa entre Internet e ChatGPT." />
+    <meta property="twitter:image" content="https://fabiowlademir.github.io/imagens/IA-Sociedade-OG.jpg" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "IA e Sociedade - Impactos da Inteligência Artificial no Setor Jurídico",
+      "description": "Trabalho acadêmico sobre os impactos positivos e negativos da Inteligência Artificial na sociedade, com foco no setor jurídico e comparação entre pesquisa na Internet e ChatGPT.",
+      "author": {
+        "@type": "Person",
+        "name": "Fábio Wlademir Rodrigues Da Silva",
+        "url": "https://fabiowlademir.github.io"
+      },
+      "educationalUse": "Trabalho acadêmico para a disciplina Inteligência Artificial e Sociedade",
+      "inLanguage": "pt-BR",
+      "datePublished": "2026",
+      "url": "https://fabiowlademir.github.io/inteligencia-artificial-sociedade.html"
+    }
+    </script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ============================================================
+           DESIGN SYSTEM - IA e Sociedade
+           Tema: Tecnológico, com tons de azul profundo e acentos neon
+           ============================================================ */
+
+        :root {
+            --primary: #0a0e1a;
+            --primary-dark: #050810;
+            --primary-light: #1a2340;
+            --primary-50: rgba(10, 14, 26, 0.05);
+            --primary-100: rgba(10, 14, 26, 0.1);
+            --primary-200: rgba(10, 14, 26, 0.2);
+            --primary-400: rgba(10, 14, 26, 0.4);
+
+            --accent: #00d4ff;
+            --accent-dark: #0099cc;
+            --accent-light: #66e5ff;
+            --accent-gradient: linear-gradient(135deg, #00d4ff 0%, #0077be 50%, #00d4ff 100%);
+            --accent-gradient-subtle: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(0, 119, 190, 0.05));
+
+            --neon-glow: 0 0 30px rgba(0, 212, 255, 0.15);
+            --neon-glow-strong: 0 0 50px rgba(0, 212, 255, 0.25);
+
+            --text: #e2e8f0;
+            --text-light: #94a3b8;
+            --text-white: #ffffff;
+            --text-muted: #64748b;
+
+            --bg: #0a0e1a;
+            --bg-surface: #121828;
+            --bg-card: rgba(18, 24, 40, 0.85);
+            --bg-dark: #050810;
+
+            --border: #1e2a4a;
+            --border-light: rgba(0, 212, 255, 0.15);
+            --border-accent: rgba(0, 212, 255, 0.3);
+
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+            --shadow-xl: 0 16px 60px rgba(0, 0, 0, 0.6);
+            --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.08);
+            --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --radius-full: 9999px;
+
+            --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+            --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-dyslexic: 'OpenDyslexic', var(--font-body);
+        }
+
+        /* ===== RESET & BASE ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding-top: 70px;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        body.dyslexic {
+            font-family: var(--font-dyslexic);
+            letter-spacing: 0.04em;
+            word-spacing: 0.08em;
+        }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== ANIMAÇÃO DE FUNDO ===== */
+        .bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .bg-particles .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(0, 212, 255, 0.3);
+            border-radius: 50%;
+            animation: float-particle linear infinite;
+        }
+        .bg-particles .particle:nth-child(1) { left: 10%; animation-duration: 25s; animation-delay: 0s; width: 3px; height: 3px; }
+        .bg-particles .particle:nth-child(2) { left: 20%; animation-duration: 30s; animation-delay: 2s; }
+        .bg-particles .particle:nth-child(3) { left: 30%; animation-duration: 22s; animation-delay: 4s; width: 4px; height: 4px; }
+        .bg-particles .particle:nth-child(4) { left: 40%; animation-duration: 28s; animation-delay: 1s; }
+        .bg-particles .particle:nth-child(5) { left: 50%; animation-duration: 20s; animation-delay: 3s; width: 3px; height: 3px; }
+        .bg-particles .particle:nth-child(6) { left: 60%; animation-duration: 32s; animation-delay: 5s; }
+        .bg-particles .particle:nth-child(7) { left: 70%; animation-duration: 24s; animation-delay: 2s; width: 4px; height: 4px; }
+        .bg-particles .particle:nth-child(8) { left: 80%; animation-duration: 26s; animation-delay: 4s; }
+        .bg-particles .particle:nth-child(9) { left: 90%; animation-duration: 29s; animation-delay: 1s; width: 3px; height: 3px; }
+        .bg-particles .particle:nth-child(10) { left: 15%; animation-duration: 35s; animation-delay: 6s; }
+        .bg-particles .particle:nth-child(11) { left: 45%; animation-duration: 21s; animation-delay: 3s; width: 4px; height: 4px; }
+        .bg-particles .particle:nth-child(12) { left: 75%; animation-duration: 27s; animation-delay: 5s; }
+
+        @keyframes float-particle {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: rgba(10, 14, 26, 0.92);
+            backdrop-filter: blur(16px);
+            padding: 14px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+            transition: var(--transition-base);
+        }
+        .header.scrolled {
+            background: rgba(5, 8, 16, 0.98);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+        .header .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo h1 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .logo span {
+            font-weight: 400;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            display: block;
+            -webkit-text-fill-color: var(--text-muted);
+        }
+        .nav a {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.85rem;
+            margin-left: 28px;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition-fast);
+            padding-bottom: 4px;
+        }
+        .nav a:hover { color: var(--text-white); border-bottom-color: var(--accent); }
+        .nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+            padding: 60px 0 48px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.06);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.12);
+            color: var(--accent);
+            padding: 4px 18px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid rgba(0, 212, 255, 0.15);
+            margin-bottom: 16px;
+        }
+        .hero h2 {
+            font-family: var(--font-heading);
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--text-white);
+            line-height: 1.15;
+        }
+        .hero h2 .highlight {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero .sub {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--text-light);
+            margin: 12px 0 8px;
+        }
+        .hero-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+        .hero-meta i { width: 20px; color: var(--accent); opacity: 0.6; }
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+        .hero-tags span {
+            background: rgba(0, 212, 255, 0.08);
+            color: var(--accent-light);
+            padding: 4px 18px;
+            border-radius: var(--radius-full);
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(0, 212, 255, 0.08);
+        }
+        .hero-image-box {
+            background: rgba(0, 212, 255, 0.03);
+            border-radius: var(--radius-xl);
+            padding: 32px 20px;
+            text-align: center;
+            border: 1px solid rgba(0, 212, 255, 0.06);
+            backdrop-filter: blur(8px);
+        }
+        .hero-image-box .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: var(--neon-glow);
+            margin-bottom: 12px;
+        }
+        .hero-image-box .ai-icon {
+            font-size: 3.5rem;
+            color: var(--accent);
+            opacity: 0.6;
+            margin-bottom: 8px;
+        }
+        .hero-image-box p {
+            font-weight: 500;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        .hero-image-box small {
+            display: block;
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
+
+        /* ===== SEÇÕES ===== */
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 56px 0;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.04);
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .section-title i { color: var(--accent); font-size: 1.7rem; }
+        .section-sub {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 780px;
+            margin-bottom: 24px;
+        }
+
+        /* ===== CARDS ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: var(--bg-card);
+            padding: 24px 20px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(8px);
+            transition: var(--transition-base);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-accent);
+            box-shadow: var(--shadow-glow);
+        }
+        .card i { font-size: 2rem; color: var(--accent); margin-bottom: 12px; }
+        .card h4 { font-size: 1.1rem; font-weight: 700; color: var(--text-white); margin-bottom: 6px; }
+        .card p { color: var(--text-light); font-size: 0.9rem; }
+
+        /* ===== HIGHLIGHT ===== */
+        .highlight-box {
+            background: rgba(0, 212, 255, 0.04);
+            border-left: 4px solid var(--accent);
+            padding: 20px 28px;
+            border-radius: var(--radius-md);
+            margin: 24px 0;
+            border: 1px solid rgba(0, 212, 255, 0.06);
+        }
+        .highlight-box strong { color: var(--accent-light); }
+
+        /* ===== QUADRO COMPARATIVO ===== */
+        .comparativo-wrapper {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            border: 1px solid var(--border);
+            overflow-x: auto;
+            margin-top: 12px;
+        }
+        .comparativo-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 700px;
+        }
+        .comparativo-table th {
+            background: rgba(0, 212, 255, 0.06);
+            color: var(--accent-light);
+            font-weight: 600;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 2px solid var(--border-accent);
+        }
+        .comparativo-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-light);
+        }
+        .comparativo-table tr:hover td { background: rgba(0, 212, 255, 0.02); }
+        .comparativo-table .internet { color: var(--accent-light); }
+        .comparativo-table .chatgpt { color: #8b5cf6; }
+        .comparativo-table .badge-ok { color: #34d399; }
+        .comparativo-table .badge-fail { color: #f87171; }
+
+        /* ===== CASOS ===== */
+        .casos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .caso-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            transition: var(--transition-base);
+        }
+        .caso-card:hover { border-color: var(--border-accent); }
+        .caso-card .ano {
+            font-size: 0.7rem;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .caso-card h4 { color: var(--text-white); font-size: 1rem; margin: 4px 0; }
+        .caso-card .desc { color: var(--text-light); font-size: 0.85rem; }
+        .caso-card .sanction {
+            display: inline-block;
+            background: rgba(248, 113, 113, 0.12);
+            color: #f87171;
+            padding: 2px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 8px;
+            border: 1px solid rgba(248, 113, 113, 0.15);
+        }
+
+        /* ===== TAXAS DE ERRO ===== */
+        .taxas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 16px 0;
+        }
+        .taxa-item {
+            background: var(--bg-card);
+            padding: 16px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .taxa-item .valor {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .taxa-item .ferramenta { color: var(--text-light); font-size: 0.9rem; }
+        .taxa-item .tipo { color: var(--text-muted); font-size: 0.7rem; }
+
+        /* ===== REFERÊNCIAS ===== */
+        .ref-box {
+            background: var(--bg-card);
+            padding: 28px 32px;
+            border-radius: var(--radius-lg);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border: 1px solid var(--border);
+        }
+        .ref-box p { margin-bottom: 4px; }
+        .ref-box i { color: var(--accent); width: 22px; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-dark);
+            color: var(--text-muted);
+            padding: 32px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0, 212, 255, 0.04);
+            position: relative;
+            z-index: 1;
+        }
+        .footer strong { color: var(--text-light); }
+        .visitor-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 4px 16px 4px 12px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(0, 212, 255, 0.06);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        .visitor-counter i { color: var(--accent); font-size: 0.8rem; }
+        .visitor-counter .count { font-weight: 700; color: var(--text-light); }
+
+        /* ===== ACESSIBILIDADE ===== */
+        .accessibility-toolbar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            background: rgba(10, 14, 26, 0.92);
+            backdrop-filter: blur(12px);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 6px 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid rgba(0, 212, 255, 0.08);
+            border-left: none;
+            box-shadow: 4px 0 30px rgba(0, 0, 0, 0.3);
+        }
+        .accessibility-toolbar button {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            width: 38px;
+            height: 38px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .accessibility-toolbar button:hover { background: rgba(255,255,255,0.05); color: var(--text-white); }
+        .accessibility-toolbar .tooltip {
+            position: absolute;
+            left: 110%;
+            background: var(--primary);
+            color: var(--text-white);
+            padding: 3px 12px;
+            border-radius: var(--radius-sm);
+            font-size: 0.65rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-fast);
+            border: 1px solid var(--border);
+        }
+        .accessibility-toolbar button:hover .tooltip { opacity: 1; }
+
+        .accessibility-panel {
+            position: fixed;
+            left: -340px;
+            top: 0;
+            width: 320px;
+            height: 100vh;
+            background: rgba(10, 14, 26, 0.98);
+            backdrop-filter: blur(16px);
+            z-index: 9999;
+            padding: 32px;
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-right: 2px solid var(--accent);
+            overflow-y: auto;
+        }
+        .accessibility-panel.open { left: 0; }
+        .accessibility-panel .close-panel {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            color: var(--text-white);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+        .accessibility-panel h3 { color: var(--text-white); font-family: var(--font-heading); margin-bottom: 24px; font-size: 1.1rem; }
+        .accessibility-panel h3 span { color: var(--accent); }
+        .accessibility-panel .control-group { margin-bottom: 16px; }
+        .accessibility-panel .control-group label { color: var(--text-muted); font-size: 0.75rem; display: block; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .accessibility-panel .control-group .btn-group { display: flex; gap: 4px; flex-wrap: wrap; }
+        .accessibility-panel .control-group .btn-group button {
+            padding: 5px 14px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: var(--transition-fast);
+            font-family: var(--font-body);
+        }
+        .accessibility-panel .control-group .btn-group button.active { background: var(--accent); color: var(--primary-dark); border-color: var(--accent); }
+        .accessibility-panel .control-group .btn-group button:hover:not(.active) { background: rgba(255,255,255,0.05); }
+        .accessibility-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 9998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s;
+        }
+        .accessibility-overlay.open { opacity: 1; pointer-events: all; }
+
+        /* ===== VOICE COMMAND ===== */
+        .voice-command-btn {
+            position: fixed;
+            bottom: 90px;
+            right: 80px;
+            background: var(--accent);
+            color: var(--primary-dark);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 998;
+            box-shadow: var(--neon-glow-strong);
+            transition: var(--transition-base);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .voice-command-btn:hover { transform: scale(1.06); }
+        .voice-command-btn.listening {
+            background: #dc2626;
+            color: white;
+            animation: pulse-red 1.5s infinite;
+        }
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+
+        .lgpd-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 14, 26, 0.96);
+            backdrop-filter: blur(12px);
+            padding: 14px 20px;
+            z-index: 10000;
+            border-top: 2px solid var(--accent);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        .lgpd-banner.hidden { transform: translateY(100%); opacity: 0; pointer-events: none; }
+        .lgpd-banner p { color: var(--text-light); font-size: 0.85rem; flex: 1 1 280px; text-align: center; }
+        .lgpd-banner a { color: var(--accent); text-decoration: underline; }
+        .lgpd-banner .btn-group { display: flex; gap: 8px; }
+        .lgpd-banner .btn-group button {
+            padding: 6px 20px;
+            border-radius: var(--radius-full);
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            font-family: var(--font-body);
+        }
+        .lgpd-banner .btn-accept { background: var(--accent); color: var(--primary-dark); }
+        .lgpd-banner .btn-accept:hover { transform: scale(1.02); }
+        .lgpd-banner .btn-reject { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+        .lgpd-banner .btn-reject:hover { background: rgba(255,255,255,0.05); }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition-base);
+        }
+        .whatsapp-float:hover { transform: scale(1.04); }
+        .whatsapp-float i { font-size: 1.2rem; }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            background: var(--bg-card);
+            color: var(--text-white);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            transition: var(--transition-base);
+            z-index: 997;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--accent); color: var(--primary-dark); transform: translateY(-3px); }
+
+        .reduce-motion * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+
+        /* ===== BOTÃO INCORPORAR ===== */
+        .btn-incorporar {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary-dark);
+            padding: 12px 32px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition-base);
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-body);
+        }
+        .btn-incorporar:hover { transform: scale(1.04); box-shadow: var(--neon-glow-strong); }
+        .btn-incorporar i { margin-right: 8px; }
+
+        .btn-outline-accent {
+            display: inline-block;
+            background: transparent;
+            color: var(--accent);
+            padding: 10px 28px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition-base);
+            border: 1px solid var(--accent);
+            cursor: pointer;
+            font-family: var(--font-body);
+        }
+        .btn-outline-accent:hover { background: var(--accent); color: var(--primary-dark); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 2rem; }
+            section { padding: 40px 0; }
+            .section-title { font-size: 1.5rem; }
+        }
+        @media (max-width: 600px) {
+            .header .container { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .nav a { margin-left: 0; margin-right: 18px; font-size: 0.75rem; }
+            .hero h2 { font-size: 1.6rem; }
+            .section-title { font-size: 1.3rem; flex-wrap: wrap; }
+            .voice-command-btn { right: 20px; bottom: 80px; width: 42px; height: 42px; font-size: 1rem; }
+            .whatsapp-float { padding: 10px 16px; font-size: 0.75rem; bottom: 15px; right: 15px; }
+            .whatsapp-float span { display: none; }
+            .back-to-top { bottom: 75px; left: 15px; width: 36px; height: 36px; }
+            .accessibility-toolbar { transform: translateY(-50%) scale(0.85); left: -4px; }
+            .comparativo-wrapper { padding: 12px; }
+            .comparativo-table { font-size: 0.75rem; min-width: 500px; }
+            .comparativo-table th, .comparativo-table td { padding: 8px 10px; }
+        }
+
+        .text-center { text-align: center; }
+        .mt-16 { margin-top: 16px; }
+        .mb-8 { margin-bottom: 8px; }
+        .gap-8 { gap: 8px; }
+        .flex { display: flex; flex-wrap: wrap; align-items: center; }
+        .text-accent { color: var(--accent); }
+        .text-muted { color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+<!-- ===== BACKGROUND PARTICLES ===== -->
+<div class="bg-particles" aria-hidden="true">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
+
+<!-- ===== SKIP TO CONTENT ===== -->
+<a href="#main-content" class="skip-link" style="position:absolute;top:-100%;left:50%;transform:translateX(-50%);padding:12px 24px;background:var(--accent);color:var(--primary-dark);font-weight:700;border-radius:0 0 var(--radius-md) var(--radius-md);z-index:10000;text-decoration:none;transition:top 0.3s;">Ir para o conteúdo</a>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="logo">
+            <h1>IA e Sociedade</h1>
+            <span>Impactos da Inteligência Artificial · Fábio Wlademir</span>
+        </div>
+        <nav class="nav">
+            <a href="#introducao">Introdução</a>
+            <a href="#pesquisa">Pesquisa</a>
+            <a href="#comparativo">Comparativo</a>
+            <a href="#conclusao">Conclusão</a>
+            <a href="#referencias">Referências</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== WHATSAPP FLUTUANTE ===== -->
+<a href="https://api.whatsapp.com/send?phone=5551998883187&text=Contato%20via%20site" class="whatsapp-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+    <span>Fale comigo</span>
+</a>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="main-content">
+    <div class="container hero-grid">
+        <div>
+            <span class="hero-badge"><i class="fas fa-brain"></i> Trabalho Acadêmico · 2026/2</span>
+            <h2>Inteligência Artificial <br><span class="highlight">e Sociedade</span></h2>
+            <p class="sub">Impactos positivos e negativos da IA no setor jurídico</p>
+            <div class="hero-meta">
+                <p><i class="fas fa-user"></i> <strong>Fábio Wlademir Rodrigues Da Silva</strong></p>
+                <p><i class="fas fa-university"></i> UNISINOS · 2026/2 · <i class="fas fa-chalkboard-teacher"></i> Profa. Marcia Rosane Junges</p>
+                <p><i class="fas fa-book-open"></i> Disciplina: Inteligência Artificial e Sociedade</p>
+                <p><i class="fas fa-calendar-alt"></i> Vencimento: 20 de setembro de 2026</p>
+            </div>
+            <div class="hero-tags">
+                <span><i class="fas fa-robot"></i> IA Generativa</span>
+                <span><i class="fas fa-gavel"></i> Direito</span>
+                <span><i class="fas fa-exclamation-triangle"></i> Alucinações</span>
+                <span><i class="fas fa-balance-scale"></i> Ética</span>
+            </div>
+            <div style="margin-top:16px;">
+                <a href="https://fabiowlademir.github.io/perfil.html" target="_blank" style="color:var(--accent);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:2px;"><i class="fas fa-external-link-alt"></i> Sobre Fábio Wlademir</a>
+            </div>
+        </div>
+        <div class="hero-image-box">
+            <div class="ai-icon"><i class="fas fa-robot"></i></div>
+            <img src="https://avatars.githubusercontent.com/u/138263067?v=4" alt="Foto de Fábio Wlademir" class="profile-pic">
+            <p>“A IA não substitui o julgamento humano.”</p>
+            <small>Suprema Corte da Índia, 2026</small>
+        </div>
+    </div>
+</section>
+
+<!-- ===== INTRODUÇÃO ===== -->
+<section id="introducao">
+    <div class="container">
+        <div class="section-title"><i class="fas fa-lightbulb"></i> 1. Introdução</div>
+        <p class="section-sub">Uma inquietação genuína sobre o uso da Inteligência Artificial no Direito</p>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+                Quando recebi o convite para este desafio, confesso que fiquei pensando bastante sobre qual caminho seguir. Como estudante de Direito, analista de TI e alguém que também desenvolve projetos de Inteligência Artificial, senti-me na obrigação de trazer um olhar que fosse além do superficial.
+            </p>
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+                Desenvolvo soluções de IA com propósito público: o <strong style="color: var(--accent);">Projeto Irmãs AI</strong> (Fabiana & Fabrícia), que leva IA 100% offline a comunidades sem internet, rodando em hardware reciclado; e a <strong style="color: var(--accent);">Miniguia de Engenharia de Prompt</strong>, na qual documentei testes, erros e boas práticas de uso de IA. Ou seja: <strong style="color: var(--text-white);">eu construo, eu uso e eu ensino a usar IA</strong> — e por isso vejo com clareza tanto o potencial quanto os riscos.
+            </p>
+            <div class="highlight-box">
+                <i class="fas fa-quote-left" style="color: var(--accent); margin-right: 8px;"></i>
+                <strong>A pergunta que me guiou foi simples e direta:</strong> a IA no Direito realmente ajuda, ou está criando uma armadilha perigosa que estamos ignorando?
+            </div>
+            <p style="color: var(--text-light); line-height: 1.8; margin-top: 16px;">
+                Para responder, mergulhei em notícias, relatórios e decisões judiciais dos últimos meses. O que encontrei me surpreendeu — e me preocupou.
+            </p>
+        </div>
+
+        <!-- Declaração de uso de IA -->
+        <div style="margin-top: 32px; background: rgba(0, 212, 255, 0.03); border-radius: var(--radius-md); padding: 16px 20px; border: 1px solid rgba(0, 212, 255, 0.06);">
+            <p style="font-size: 0.8rem; color: var(--text-muted);">
+                <i class="fas fa-info-circle" style="color: var(--accent);"></i>
+                <strong style="color: var(--text-light);">Declaração de uso de Inteligência Artificial:</strong> O autor declara que ferramentas de Inteligência Artificial Generativa (IAG) — especificamente o modelo Claude (Anthropic) — foram utilizadas como auxílio nas seguintes etapas deste trabalho: (a) correção ortográfica e gramatical; (b) padronização de referências bibliográficas conforme a ABNT NBR 6023:2023; (c) organização e formatação do texto. Todo o conteúdo intelectual, as análises jurídicas, os argumentos e as conclusões são de exclusiva autoria do pesquisador, que assume inteira responsabilidade pelo trabalho.
+            </p>
+        </div>
+
+        <!-- Botão para incorporar PDF -->
+        <div style="text-align: center; margin-top: 24px;">
+            <a href="https://drive.google.com/file/d/1uNo10WHhIN0DrDuBcqzqfe4ExM0Ulzb-/view?usp=sharing" target="_blank" class="btn-incorporar">
+                <i class="fas fa-file-pdf"></i> Ver trabalho completo (PDF)
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PESQUISA ===== -->
+<section id="pesquisa" style="background: rgba(0, 212, 255, 0.01);">
+    <div class="container">
+        <div class="section-title"><i class="fas fa-search"></i> 2. Pesquisa na Internet</div>
+
+        <!-- Impactos Positivos -->
+        <h3 style="font-family: var(--font-heading); color: var(--text-white); font-size: 1.3rem; margin-bottom: 12px;">
+            <i class="fas fa-check-circle" style="color: #34d399;"></i> 2.1 Impactos Positivos
+        </h3>
+        <p style="color: var(--text-light); margin-bottom: 16px;">
+            A adoção de IA no setor jurídico cresceu de forma impressionante: de 11% em 2023 para 30% em 2024, com quase metade dos advogados já utilizando ferramentas de IA em suas pesquisas diárias.
+        </p>
+        <div class="card-grid" style="margin-bottom: 32px;">
+            <div class="card">
+                <i class="fas fa-rocket"></i>
+                <h4>Velocidade</h4>
+                <p>Petições elaboradas em 2,5 horas em vez de 8 horas.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-file-contract"></i>
+                <h4>Revisão de Contratos</h4>
+                <p>Análise de contratos em minutos, não em dias.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Previsão de Litígios</h4>
+                <p>Análise de milhões de decisões em segundos.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h4>Due Diligence</h4>
+                <p>Processos que levavam semanas agora são feitos em dias.</p>
+            </div>
+        </div>
+
+        <!-- Impactos Negativos -->
+        <h3 style="font-family: var(--font-heading); color: var(--text-white); font-size: 1.3rem; margin-bottom: 12px; margin-top: 32px;">
+            <i class="fas fa-exclamation-triangle" style="color: #f87171;"></i> 2.2 Impactos Negativos
+        </h3>
+
+        <!-- Alucinações -->
+        <h4 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 8px;">O problema das “alucinações” jurídicas</h4>
+        <p style="color: var(--text-light); margin-bottom: 16px;">
+            O maior risco identificado é que a IA <strong style="color: #f87171;">inventa jurisprudência</strong>. Ela cria casos, leis e precedentes que simplesmente não existem. O pesquisador Damien Charlotin documentou mais de <strong style="color: var(--text-white);">1.350 casos de alucinações jurídicas</strong> em tribunais de todo o mundo, número registrado em maio de 2026.
+        </p>
+
+        <!-- Casos emblemáticos -->
+        <div class="casos-grid" style="margin-bottom: 24px;">
+            <div class="caso-card">
+                <div class="ano">2023</div>
+                <h4>Mata v. Avianca (EUA)</h4>
+                <p class="desc">Advogados usaram IA e citaram 6 casos totalmente inventados.</p>
+                <span class="sanction">Multa de US$ 5.000</span>
+            </div>
+            <div class="caso-card">
+                <div class="ano">2026</div>
+                <h4>Whiting v. City of Athens (6º Circuito, EUA)</h4>
+                <p class="desc">Mais de 24 citações falsas em recursos; trechos citados não existiam.</p>
+                <span class="sanction">Multa de US$ 15.000 por advogado + custos</span>
+            </div>
+            <div class="caso-card">
+                <div class="ano">2026</div>
+                <h4>Payne v. State (Supremo da Geórgia, EUA)</h4>
+                <p class="desc">Promotora apresentou dezenas de citações inventadas por IA em processo criminal.</p>
+                <span class="sanction">Suspensão de 6 meses</span>
+            </div>
+            <div class="caso-card">
+                <div class="ano">2026</div>
+                <h4>Pooja Ramesh Singh v. J&K Bank (Suprema Corte da Índia)</h4>
+                <p class="desc">Tribunais inferiores basearam decisão em precedentes inventados.</p>
+                <span class="sanction">Decisões integralmente anuladas</span>
+            </div>
+            <div class="caso-card">
+                <div class="ano">2026</div>
+                <h4>In re Prince Global Holdings (Sullivan & Cromwell, EUA)</h4>
+                <p class="desc">Uma das firmas mais prestigiadas do mundo apresentou petição com múltiplas citações inexistentes.</p>
+                <span class="sanction">Carta de desculpas pública</span>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <i class="fas fa-shield-alt" style="color: var(--accent); margin-right: 8px;"></i>
+            <strong>Sabe o que mais assusta?</strong> Não são advogados despreparados. A firma Sullivan & Cromwell, uma das mais caras e respeitadas do planeta, arquivou uma petição com citações inventadas por IA. Eles tinham políticas, treinamento e supervisão. <strong style="color: var(--text-white);">Nada funcionou.</strong>
+        </div>
+
+        <!-- Taxas de erro -->
+        <h4 style="color: var(--accent); font-size: 1.1rem; margin-top: 24px;">Taxas de erro documentadas</h4>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Estudo Stanford HAI, maio de 2024</p>
+        <div class="taxas-grid">
+            <div class="taxa-item">
+                <div class="valor">58% – 88%</div>
+                <div class="ferramenta">ChatGPT</div>
+                <div class="tipo">Modelo genérico</div>
+            </div>
+            <div class="taxa-item">
+                <div class="valor">34%</div>
+                <div class="ferramenta">Westlaw AI-Assisted</div>
+                <div class="tipo">Especializada</div>
+            </div>
+            <div class="taxa-item">
+                <div class="valor">17%</div>
+                <div class="ferramenta">Lexis+ AI</div>
+                <div class="tipo">Especializada</div>
+            </div>
+        </div>
+
+        <!-- Os 5 tipos de erro -->
+        <div style="background: var(--bg-card); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border); margin-top: 16px;">
+            <h4 style="color: var(--text-white); font-size: 1rem; margin-bottom: 8px;">Os 5 tipos de erro que a IA comete no Direito</h4>
+            <ol style="color: var(--text-light); padding-left: 20px; font-size: 0.9rem; line-height: 1.8;">
+                <li><strong style="color: var(--text-white);">Citação de caso fictício:</strong> o caso nunca existiu.</li>
+                <li><strong style="color: #f87171;">Citação real para fundamento errado:</strong> o caso existe, mas diz o oposto do que a IA afirma — o mais perigoso.</li>
+                <li><strong style="color: var(--text-white);">Lei inexistente:</strong> como o Interest on Debts (Scotland) Act 1985, que nunca foi promulgado.</li>
+                <li><strong style="color: var(--text-white);">Lei real aplicada a situação errada:</strong> a norma existe, mas não regula aquele tema.</li>
+                <li><strong style="color: var(--text-white);">Atribuição incorreta:</strong> decisão atribuída a tribunal ou relator que não a proferiu.</li>
+            </ol>
+        </div>
+
+        <!-- Paradoxo da produtividade -->
+        <h3 style="font-family: var(--font-heading); color: var(--text-white); font-size: 1.2rem; margin-top: 32px;">
+            <i class="fas fa-clock" style="color: #fbbf24;"></i> O paradoxo da produtividade
+        </h3>
+        <p style="color: var(--text-light);">
+            Pesquisadores da UC-Berkeley, publicados na Harvard Business Review em fevereiro de 2026, identificaram três fenômenos: <strong style="color: var(--text-white);">expansão de tarefas</strong>, <strong style="color: var(--text-white);">dissolução de fronteiras</strong> (trabalho se espalha para noites e fins de semana) e <strong style="color: var(--text-white);">multitarefa generalizada</strong>. Resultado: as horas trabalhadas não diminuíram — <strong style="color: #f87171;">elas aumentaram</strong>.
+        </p>
+    </div>
+</section>
+
+<!-- ===== COMPARATIVO ===== -->
+<section id="comparativo">
+    <div class="container">
+        <div class="section-title"><i class="fas fa-table"></i> 3. Quadro Comparativo</div>
+        <p class="section-sub">O que a Internet revelou e o que o ChatGPT escondeu</p>
+
+        <div class="comparativo-wrapper">
+            <table class="comparativo-table">
+                <thead>
+                    <tr>
+                        <th>Aspecto</th>
+                        <th style="color: var(--accent);">Pesquisa na Internet</th>
+                        <th style="color: #8b5cf6;">ChatGPT</th>
+                        <th>Análise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Alucinações jurídicas</strong></td>
+                        <td class="internet">+1.350 casos documentados</td>
+                        <td class="chatgpt">Não menciona</td>
+                        <td><span class="badge-fail">Falta crítica</span> — o problema central é ignorado</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sanções reais</strong></td>
+                        <td class="internet">US$ 5.000 a US$ 45.000; suspensão de 6 meses</td>
+                        <td class="chatgpt">Não menciona</td>
+                        <td><span class="badge-ok">Internet</span> mostra consequências concretas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Responsabilidade profissional</strong></td>
+                        <td class="internet">Advogado é integralmente responsável (ABA)</td>
+                        <td class="chatgpt">Riscos éticos vagos</td>
+                        <td><span class="badge-ok">Internet</span> é específica e vinculante</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Taxas de erro por ferramenta</strong></td>
+                        <td class="internet">Westlaw 34% / Lexis 17% / GPT 58–88%</td>
+                        <td class="chatgpt">Não menciona</td>
+                        <td><span class="badge-ok">Internet</span> permite escolha consciente</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Paradoxo da produtividade</strong></td>
+                        <td class="internet">Horas aumentaram, não diminuíram</td>
+                        <td class="chatgpt">Aborda apenas "economia de tempo"</td>
+                        <td><span class="badge-ok">Internet</span> revela contradição fundamental</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Verificação obrigatória</strong></td>
+                        <td class="internet">Cada citação deve ser conferida em bases oficiais</td>
+                        <td class="chatgpt">Não menciona trabalho extra</td>
+                        <td><span class="badge-fail">ChatGPT</span> ignora o custo oculto</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Atualidade</strong></td>
+                        <td class="internet">Eventos de 2025–2026</td>
+                        <td class="chatgpt">Conhecimento consolidado, pré-2024</td>
+                        <td><span class="badge-fail">ChatGPT</span> está desatualizado</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tipos de erro</strong></td>
+                        <td class="internet">5 padrões identificados</td>
+                        <td class="chatgpt">Não menciona</td>
+                        <td><span class="badge-ok">Internet</span> oferece taxonomia para detecção</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="highlight-box" style="margin-top: 20px;">
+            <i class="fas fa-robot" style="color: var(--accent); margin-right: 8px;"></i>
+            <strong>O ChatGPT apresentou um resumo de manual,</strong> sem capturar a urgência, a gravidade e a especificidade do que está acontecendo agora. Se eu confiasse apenas nele, estaria completamente desinformado sobre o problema central: as alucinações e suas consequências disciplinares.
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONCLUSÃO ===== -->
+<section id="conclusao" style="background: rgba(0, 212, 255, 0.01);">
+    <div class="container">
+        <div class="section-title"><i class="fas fa-flag-checkered"></i> 5. Conclusão</div>
+
+        <div style="max-width: 850px; margin: 0 auto;">
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+                <strong style="color: var(--text-white);">Entre a promessa e o perigo:</strong> o que fica para quem vive o Direito e constrói IA.
+            </p>
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+                Quando comecei esta pesquisa, imaginei que encontraria um debate equilibrado: "IA boa / IA ruim". O que encontrei foi um alerta. E, como alguém que desenvolve soluções de IA, vejo isso com ainda mais clareza: <strong style="color: var(--text-white);">a tecnologia é poderosa, mas não sabe o que não sabe.</strong>
+            </p>
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+                A IA realmente acelera, revisa, pesquisa. Isso é fato. Mas o tempo economizado não vira descanso — vira verificação, correção, medo de errar. <strong style="color: #f87171;">Trabalha-se mais, não menos.</strong>
+            </p>
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+                Os tribunais já deixaram claro: a IA não é desculpa. Você assina, você verifica, você responde. Apresentar citação inventada sem conferir deixou de ser "erro inocente" e passou a ser <strong style="color: #f87171;">conduta punível</strong>: multa, suspensão, anulação de processo.
+            </p>
+
+            <div class="highlight-box" style="border-left-color: var(--accent);">
+                <i class="fas fa-quote-left" style="color: var(--accent); margin-right: 8px;"></i>
+                <strong style="color: var(--text-white);">Concluo:</strong> a IA traz velocidade e redução de custos, mas também traz riscos graves que não podem ser ignorados. Alucinações generalizadas, sanções severas e o paradoxo de trabalhar mais em vez de menos mostram que a tecnologia não substitui o julgamento humano.
+            </div>
+
+            <p style="color: var(--text-light); line-height: 1.8; margin-top: 16px; font-style: italic; text-align: center; font-size: 1.1rem; border-top: 1px solid var(--border); padding-top: 20px;">
+                “A tecnologia deve permanecer uma ajuda à adjudicação, não um substituto para o julgamento humano.”<br>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">— Suprema Corte da Índia, 2026</span>
+            </p>
+
+            <div style="background: rgba(0, 212, 255, 0.04); border-radius: var(--radius-md); padding: 16px 20px; margin-top: 24px; border: 1px solid rgba(0, 212, 255, 0.06);">
+                <p style="color: var(--text-light); font-size: 0.9rem;">
+                    <i class="fas fa-check-circle" style="color: var(--accent);"></i>
+                    <strong style="color: var(--text-white);">Nunca assinarei algo que não verifiquei.</strong> Nunca citarei uma fonte que não confirmei. Nunca deixarei a máquina pensar por mim. Porque, no Direito, não há espaço para "parece certo". <strong style="color: var(--text-white);">Tem que ser certo.</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REFERÊNCIAS ===== -->
+<section id="referencias">
+    <div class="container">
+        <div class="section-title"><i class="fas fa-book-open"></i> 6. Referências</div>
+        <div class="ref-box">
+            <p><i class="fas fa-book"></i> AMERICAN BAR ASSOCIATION. <strong>Formal Opinion 512: Generative Artificial Intelligence Tools.</strong> Chicago: ABA, jul. 2024. Disponível em: https://www.americanbar.org. Acesso em: 21 ago. 2026.</p>
+            <p><i class="fas fa-book"></i> BRIEFCATCH. <strong>Hallucinated Case Law: Risks and Checks for Law Firms.</strong> Disponível em: https://www.briefcatch.com/blog/hallucinated-case-law. Acesso em: 21 ago. 2026.</p>
+            <p><i class="fas fa-book"></i> KORN FERRY. <strong>The Productivity Paradox.</strong> mar. 2026. Disponível em: https://www.kornferry.com. Acesso em: 21 ago. 2026.</p>
+            <p><i class="fas fa-book"></i> LEGAL FUTURES. <strong>AI Will Hallucinate: The Question Is Whether You Let It Speak for You in Court.</strong> mai. 2026. Disponível em: https://www.legalfutures.co.uk. Acesso em: 21 ago. 2026.</p>
+            <p><i class="fas fa-book"></i> RESULTSENSE / BBC. <strong>Scottish Judge Warns of Contempt Proceedings After Landlord Uses AI-Invented Law.</strong> mar. 2026. Disponível em: https://www.resultsense.com. Acesso em: 21 ago. 2026.</p>
+            <p><i class="fas fa-book"></i> STANFORD HAI. <strong>AI on Trial: Legal Models Hallucinate.</strong> mai. 2024. Disponível em: https://hai.stanford.edu. Acesso em: 21 ago. 2026.</p>
+            <p><i class="fas fa-book"></i> THE BAR BULLETIN / SUPREMA CORTE DA ÍNDIA. <strong>A Decision Based on AI-Hallucinated Cases Is No Decision in Law.</strong> jul. 2026. Disponível em: https://thebarbulletin.com. Acesso em: 21 ago. 2026.</p>
+            <p><i class="fas fa-book"></i> UC BERKELEY HAAS. <strong>AI Promised to Free Up Workers' Time. Researchers Found the Opposite.</strong> fev. 2026. Disponível em: https://www.universityofcalifornia.edu. Acesso em: 21 ago. 2026.</p>
+        </div>
+
+        <!-- Projetos relacionados -->
+        <div style="margin-top: 24px; background: var(--bg-card); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border);">
+            <h4 style="color: var(--text-white); font-size: 1rem; margin-bottom: 8px;"><i class="fas fa-project-diagram" style="color: var(--accent);"></i> Projetos relacionados do autor</h4>
+            <p style="color: var(--text-light); font-size: 0.85rem;">
+                <strong style="color: var(--accent);">Projeto Irmãs AI</strong> (Fabiana & Fabrícia) — IA 100% offline em hardware reciclado, levando inclusão digital a comunidades sem internet.<br>
+                <span style="color: var(--text-muted);">github.com/FabioWlademir/ia-fabiana-fabricia</span>
+            </p>
+            <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 4px;">
+                <strong style="color: var(--accent);">Miniguia de Engenharia de Prompt</strong> — caderno temático com testes, erros e boas práticas de instruções para IA.<br>
+                <span style="color: var(--text-muted);">github.com/FabioWlademir/miniguia-engenharia-prompt</span>
+            </p>
+        </div>
+
+        <!-- Botão incorporar -->
+        <div style="text-align: center; margin-top: 24px;">
+            <a href="https://drive.google.com/file/d/1uNo10WHhIN0DrDuBcqzqfe4ExM0Ulzb-/view?usp=sharing" target="_blank" class="btn-outline-accent">
+                <i class="fas fa-file-pdf"></i> Download do trabalho completo (PDF)
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <p><strong style="color: var(--text-light);">IA e Sociedade</strong> · Impactos da Inteligência Artificial</p>
+        <p style="font-size:0.8rem; margin-top:4px; opacity:0.6;">
+            Fábio Wlademir · UNISINOS · 2026/2 · Profa. Marcia Rosane Junges
+        </p>
+        <div class="visitor-counter">
+            <i class="fas fa-eye"></i>
+            <span>Visitas:</span>
+            <span class="count" id="visitorCount">0</span>
+        </div>
+        <p style="font-size:0.7rem; margin-top:8px; opacity:0.4;">
+            <i class="fas fa-code"></i> Desenvolvido com <i class="fas fa-heart" style="color: var(--accent);"></i> por Fábio Wlademir
+        </p>
+    </div>
+</footer>
+
+<!-- ============================================================
+    ACESSIBILIDADE TOOLBAR
+    ============================================================ -->
+<div class="accessibility-toolbar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+    <button id="accessibilityToggle" aria-label="Abrir painel de acessibilidade" title="Acessibilidade">
+        ♿
+        <span class="tooltip">Acessibilidade</span>
+    </button>
+    <button id="listenToggle" class="listen-btn" aria-label="Ouvir página em voz alta" title="Ouvir página">
+        <i class="fas fa-volume-up"></i>
+        <span class="tooltip">Ouvir página</span>
+    </button>
+</div>
+
+<!-- ===== BOTÃO COMANDO DE VOZ ===== -->
+<button id="voiceCommandBtn" class="voice-command-btn" aria-label="Comando de voz" title="Comando de voz">
+    <i class="fas fa-microphone"></i>
+    <span class="tooltip" style="position:absolute;right:110%;background:var(--primary);color:var(--text-white);padding:3px 12px;border-radius:var(--radius-sm);font-size:0.65rem;white-space:nowrap;opacity:0;pointer-events:none;transition:var(--transition-fast);border:1px solid var(--border);">Comando de voz</span>
+</button>
+
+<!-- ===== PAINEL ACESSIBILIDADE ===== -->
+<div class="accessibility-overlay" id="accessibilityOverlay"></div>
+<div class="accessibility-panel" id="accessibilityPanel" role="dialog" aria-label="Painel de acessibilidade">
+    <button class="close-panel" id="closePanel" aria-label="Fechar painel">✕</button>
+    <h3>♿ <span>Acessibilidade</span></h3>
+
+    <div class="control-group">
+        <label>Modo de cores</label>
+        <div class="btn-group">
+            <button data-theme="dark" class="active">🌙 Escuro</button>
+            <button data-theme="light">☀️ Claro</button>
+            <button data-contrast="high">🔆 Alto Contraste</button>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label>Tamanho da fonte</label>
+        <div class="btn-group">
+            <button id="fontDecrease">A-</button>
+            <button id="fontReset" class="active">A</button>
+            <button id="fontIncrease">A+</button>
+            <button id="fontIncrease2">A++</button>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label>Fonte para dislexia</label>
+        <div class="btn-group">
+            <button id="dyslexicToggle">🧩 OpenDyslexic</button>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label>Animações</label>
+        <div class="btn-group">
+            <button id="motionToggle" class="active">▶️ Ativas</button>
+        </div>
+    </div>
+
+    <div style="margin-top:20px; padding-top:15px; border-top:1px solid var(--border);">
+        <p style="color:var(--text-muted); font-size:0.7rem;">
+            <i class="fas fa-save"></i> Preferências salvas automaticamente
+        </p>
+    </div>
+</div>
+
+<!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
+<a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- ===== LGPD BANNER ===== -->
+<div id="lgpdBanner" class="lgpd-banner" role="alert">
+    <p>
+        <i class="fas fa-shield-alt" style="color: var(--accent);"></i>
+        Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência.
+        <a href="#privacidade">Política de Privacidade</a>
+    </p>
+    <div class="btn-group">
+        <button class="btn-reject" id="lgpdReject">Recusar</button>
+        <button class="btn-accept" id="lgpdAccept">Aceitar</button>
+    </div>
+</div>
+
+<!-- ============================================================
+    SCRIPT
+    ============================================================ -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ===== CONTADOR DE ACESSOS =====
+    (function() {
+        const counterEl = document.getElementById('visitorCount');
+        let count = parseInt(localStorage.getItem('visitorCount_ia_sociedade') || '0');
+        if (!sessionStorage.getItem('visited_ia_sociedade')) {
+            count++;
+            localStorage.setItem('visitorCount_ia_sociedade', count);
+            sessionStorage.setItem('visited_ia_sociedade', 'true');
+        }
+        counterEl.textContent = count;
+    })();
+
+    // ===== BACK TO TOP =====
+    var backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+        backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ============================================================
+    // ACESSIBILIDADE
+    // ============================================================
+
+    var panel = document.getElementById('accessibilityPanel');
+    var overlay = document.getElementById('accessibilityOverlay');
+    var toggleBtn = document.getElementById('accessibilityToggle');
+    var closeBtn = document.getElementById('closePanel');
+
+    function openPanel() {
+        panel.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closePanelFn() {
+        panel.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    toggleBtn.addEventListener('click', function() {
+        panel.classList.contains('open') ? closePanelFn() : openPanel();
+    });
+    closeBtn.addEventListener('click', closePanelFn);
+    overlay.addEventListener('click', closePanelFn);
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('open')) closePanelFn();
+    });
+
+    // ----- Temas -----
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme_ia', theme);
+        document.querySelectorAll('[data-theme]').forEach(function(btn) {
+            btn.classList.toggle('active', btn.dataset.theme === theme);
+        });
+    }
+
+    function setContrast(contrast) {
+        if (contrast === 'high') {
+            document.documentElement.setAttribute('data-contrast', 'high');
+            localStorage.setItem('contrast_ia', 'high');
+        } else {
+            document.documentElement.removeAttribute('data-contrast');
+            localStorage.setItem('contrast_ia', 'normal');
+        }
+        document.querySelectorAll('[data-contrast]').forEach(function(btn) {
+            btn.classList.toggle('active', btn.dataset.contrast === 'high');
+        });
+    }
+
+    var savedTheme = localStorage.getItem('theme_ia') || 'dark';
+    var savedContrast = localStorage.getItem('contrast_ia') || 'normal';
+    setTheme(savedTheme);
+    if (savedContrast === 'high') setContrast('high');
+
+    document.querySelectorAll('[data-theme]').forEach(function(btn) {
+        btn.addEventListener('click', function() { setTheme(btn.dataset.theme); });
+    });
+
+    document.querySelectorAll('[data-contrast]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            setContrast(btn.dataset.contrast === 'high' ? 'high' : 'normal');
+        });
+    });
+
+    // ----- Tamanho fonte -----
+    var fontSizeLevel = parseInt(localStorage.getItem('fontSize_ia') || '1');
+    var fontSizes = ['0.9rem', '1rem', '1.15rem', '1.3rem'];
+
+    function setFontSize(level) {
+        fontSizeLevel = Math.max(0, Math.min(3, level));
+        document.documentElement.style.fontSize = fontSizes[fontSizeLevel];
+        localStorage.setItem('fontSize_ia', fontSizeLevel);
+        document.querySelectorAll('#fontDecrease, #fontReset, #fontIncrease, #fontIncrease2').forEach(function(btn, i) {
+            btn.classList.toggle('active', i === fontSizeLevel);
+        });
+    }
+
+    setFontSize(fontSizeLevel);
+
+    document.getElementById('fontDecrease').addEventListener('click', function() { setFontSize(fontSizeLevel - 1); });
+    document.getElementById('fontReset').addEventListener('click', function() { setFontSize(1); });
+    document.getElementById('fontIncrease').addEventListener('click', function() { setFontSize(fontSizeLevel + 1); });
+    document.getElementById('fontIncrease2').addEventListener('click', function() { setFontSize(fontSizeLevel + 2); });
+
+    // ----- Dislexia -----
+    var dyslexicBtn = document.getElementById('dyslexicToggle');
+    if (localStorage.getItem('dyslexic_ia') === 'true') {
+        document.body.classList.add('dyslexic');
+        dyslexicBtn.classList.add('active');
+    }
+
+    dyslexicBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dyslexic');
+        var active = document.body.classList.contains('dyslexic');
+        dyslexicBtn.classList.toggle('active', active);
+        localStorage.setItem('dyslexic_ia', active);
+    });
+
+    // ----- Animações -----
+    var motionBtn = document.getElementById('motionToggle');
+    if (localStorage.getItem('motion_ia') === 'reduced') {
+        document.documentElement.classList.add('reduce-motion');
+        motionBtn.classList.remove('active');
+        motionBtn.textContent = '⏸️ Reduzidas';
+    }
+
+    motionBtn.addEventListener('click', function() {
+        var reduced = document.documentElement.classList.toggle('reduce-motion');
+        motionBtn.classList.toggle('active', !reduced);
+        motionBtn.textContent = reduced ? '⏸️ Reduzidas' : '▶️ Ativas';
+        localStorage.setItem('motion_ia', reduced ? 'reduced' : 'active');
+    });
+
+    // ============================================================
+    // OUVIR PÁGINA
+    // ============================================================
+    var listenBtn = document.getElementById('listenToggle');
+    var isListening = false;
+    var utterance = null;
+    var synth = window.speechSynthesis;
+
+    function getPageText() {
+        var content = document.querySelector('#main-content') || document.body;
+        var text = content.textContent
+            .replace(/\s+/g, ' ')
+            .replace(/\[.*?\]/g, '')
+            .replace(/\d+\.\d+\.\d+\.\d+/g, '')
+            .trim();
+        return text;
+    }
+
+    function toggleListen() {
+        if (isListening) {
+            synth.cancel();
+            isListening = false;
+            listenBtn.classList.remove('listening');
+            listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+            return;
+        }
+
+        var text = getPageText();
+        if (!text) return;
+
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'pt-BR';
+        utterance.rate = 0.85;
+
+        utterance.onend = function() {
+            isListening = false;
+            listenBtn.classList.remove('listening');
+            listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+        };
+
+        utterance.onerror = function() {
+            isListening = false;
+            listenBtn.classList.remove('listening');
+            listenBtn.innerHTML = '<i class="fas fa-volume-up"></i><span class="tooltip">Ouvir página</span>';
+        };
+
+        synth.speak(utterance);
+        isListening = true;
+        listenBtn.classList.add('listening');
+        listenBtn.innerHTML = '<i class="fas fa-stop"></i><span class="tooltip">Parar</span>';
+    }
+
+    listenBtn.addEventListener('click', toggleListen);
+
+    // ============================================================
+    // COMANDO DE VOZ
+    // ============================================================
+    var voiceBtn = document.getElementById('voiceCommandBtn');
+    var isVoiceListening = false;
+    var recognition = null;
+
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+        var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRecognition();
+        recognition.lang = 'pt-BR';
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        recognition.onresult = function(event) {
+            var transcript = event.results[0][0].transcript.toLowerCase();
+            voiceBtn.classList.remove('listening');
+            voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+            isVoiceListening = false;
+
+            if (transcript.includes('introdução') || transcript.includes('introducao')) {
+                document.getElementById('introducao').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo introdução');
+            } else if (transcript.includes('pesquisa') || transcript.includes('impactos')) {
+                document.getElementById('pesquisa').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo pesquisa');
+            } else if (transcript.includes('comparativo') || transcript.includes('quadro')) {
+                document.getElementById('comparativo').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo quadro comparativo');
+            } else if (transcript.includes('conclusão') || transcript.includes('conclusao')) {
+                document.getElementById('conclusao').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo conclusão');
+            } else if (transcript.includes('referências') || transcript.includes('fontes')) {
+                document.getElementById('referencias').scrollIntoView({ behavior: 'smooth' });
+                speakText('Abrindo referências');
+            } else if (transcript.includes('topo') || transcript.includes('início')) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                speakText('Voltando ao topo');
+            } else if (transcript.includes('ouvir') || transcript.includes('ler')) {
+                toggleListen();
+            } else {
+                speakText('Comando não reconhecido. Tente: introdução, pesquisa, comparativo, conclusão, referências, topo ou ouvir.');
+            }
+        };
+
+        recognition.onerror = function() {
+            voiceBtn.classList.remove('listening');
+            voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+            isVoiceListening = false;
+        };
+
+        recognition.onend = function() {
+            voiceBtn.classList.remove('listening');
+            voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+            isVoiceListening = false;
+        };
+
+        voiceBtn.addEventListener('click', function() {
+            if (isVoiceListening) {
+                recognition.stop();
+                voiceBtn.classList.remove('listening');
+                voiceBtn.innerHTML = '<i class="fas fa-microphone"></i><span class="tooltip">Comando de voz</span>';
+                isVoiceListening = false;
+                return;
+            }
+
+            try {
+                recognition.start();
+                voiceBtn.classList.add('listening');
+                voiceBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i><span class="tooltip">Ouvindo...</span>';
+                isVoiceListening = true;
+            } catch (e) {
+                console.log('Erro ao iniciar reconhecimento de voz:', e);
+            }
+        });
+
+    } else {
+        voiceBtn.style.display = 'none';
+    }
+
+    function speakText(text) {
+        var speech = new SpeechSynthesisUtterance(text);
+        speech.lang = 'pt-BR';
+        speech.rate = 0.85;
+        window.speechSynthesis.speak(speech);
+    }
+
+    // ============================================================
+    // LGPD
+    // ============================================================
+    var lgpdBanner = document.getElementById('lgpdBanner');
+    var lgpdAccept = document.getElementById('lgpdAccept');
+    var lgpdReject = document.getElementById('lgpdReject');
+
+    if (localStorage.getItem('lgpdConsent_ia')) {
+        lgpdBanner.classList.add('hidden');
+    }
+
+    function setLgpdConsent(choice) {
+        localStorage.setItem('lgpdConsent_ia', choice);
+        lgpdBanner.classList.add('hidden');
+    }
+
+    lgpdAccept.addEventListener('click', function() { setLgpdConsent('accepted'); });
+    lgpdReject.addEventListener('click', function() { setLgpdConsent('rejected'); });
+
+    // ============================================================
+    // VLIBRAS
+    // ============================================================
+    var vwScript = document.createElement('script');
+    vwScript.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+    vwScript.onload = function() {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    };
+    document.body.appendChild(vwScript);
+
+});
+</script>
+
+<!-- ===== VLIBRAS ===== -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+</body>
+</html>
