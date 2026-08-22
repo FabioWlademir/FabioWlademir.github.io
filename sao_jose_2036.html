@@ -428,62 +428,76 @@
             font-weight: 600;
         }
 
-        /* ===== RECURSOS INTERATIVOS ===== */
-        .recursos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .recurso-card {
-            background: white;
-            border-radius: 20px;
-            padding: 24px;
-            border: 1px solid #ddecd9;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
-            transition: 0.3s;
-        }
-        .recurso-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); }
-        .recurso-card h4 {
-            font-size: 1.1rem;
-            color: #1a3f18;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .recurso-card h4 i { color: #2f792b; }
-        .recurso-card .btn-recurso {
-            display: inline-block;
-            background: #1b3a19;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            margin-top: 12px;
-            transition: 0.2s;
-        }
-        .recurso-card .btn-recurso:hover { background: #2a5528; transform: scale(1.02); }
-        .recurso-card iframe {
-            width: 100%;
-            border-radius: 12px;
-            border: 1px solid #e2efe0;
-            margin-top: 8px;
-        }
-        .podcast-placeholder {
-            background: #eaf3e7;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            border: 2px dashed #a6c89e;
-            margin-top: 8px;
-        }
-        .podcast-placeholder i {
-            font-size: 2.5rem;
-            color: #2f792b;
-            opacity: 0.5;
-        }
+ <!-- ===== RECURSOS INTERATIVOS ===== -->
+<section id="recursos" style="background:#edf5ea;">
+    <div class="container">
+        <div class="section-title"><i class="fas fa-cubes"></i> Recursos Interativos</div>
+        <p class="section-sub">Explore o território, a apresentação e os materiais complementares do projeto.</p>
 
+        <div class="recursos-grid">
+            <!-- Mapa Interativo Incorporado -->
+            <div class="recurso-card">
+                <h4><i class="fas fa-map-marked-alt"></i> Mapa do Território</h4>
+                <p style="font-size:0.9rem; color:#3d613a;">Visualize o bairro São José no Google Maps e explore as áreas onde as iniciativas estão localizadas.</p>
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; margin-top:8px; border:1px solid #ddecd9;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27605.89328455047!2d-51.1444351!3d-29.8116996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951968d1619372a7%3A0x1e3a8f8ef8510e93!2zU8OjbyBKb3PDqSwgU2FwdWNhaWEgZG8gU3VsIC0gUlM!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr" 
+                        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa do bairro São José em Sapucaia do Sul">
+                    </iframe>
+                </div>
+                <div style="margin-top:10px; text-align:right;">
+                    <a href="https://www.google.com/maps/place/S%C3%A3o+Jos%C3%A9,+Sapucaia+do+Sul+-+RS/@-29.8116996,-51.1444351,2758m/data=!3m1!1e3!4m6!3m5!1s0x951968d1619372a7:0x1e3a8f8ef8510e93!8m2!3d-29.8134168!4d-51.1422048!16s%2Fg%2F1ymv5940q?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-recurso" style="font-size:0.75rem; padding:4px 14px;">
+                        <i class="fas fa-external-link-alt"></i> Abrir em tela cheia
+                    </a>
+                </div>
+            </div>
+
+            <!-- Apresentação Incorporada -->
+            <div class="recurso-card">
+                <h4><i class="fas fa-slideshare"></i> Apresentação Completa</h4>
+                <p style="font-size:0.9rem; color:#3d613a;">Navegue pelos slides do projeto com todas as etapas, imagens e dados.</p>
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; margin-top:8px; border:1px solid #ddecd9;">
+                    <iframe 
+                        src="https://docs.google.com/presentation/d/1wykhzGWaQEE6qO5dT7sGSVqUfN28lurb/embed?start=false&loop=false&delayms=5000" 
+                        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" 
+                        allowfullscreen="true" 
+                        loading="lazy"
+                        title="Apresentação São José 2036">
+                    </iframe>
+                </div>
+                <div style="margin-top:10px; text-align:right;">
+                    <a href="https://docs.google.com/presentation/d/1wykhzGWaQEE6qO5dT7sGSVqUfN28lurb/edit?usp=sharing&ouid=109358442497425548617&rtpof=true&sd=true" target="_blank" class="btn-recurso" style="font-size:0.75rem; padding:4px 14px;">
+                        <i class="fas fa-external-link-alt"></i> Abrir no Google Slides
+                    </a>
+                </div>
+            </div>
+
+            <!-- Podcast (espaço reservado) -->
+            <div class="recurso-card">
+                <h4><i class="fas fa-podcast"></i> Podcast do Projeto</h4>
+                <p style="font-size:0.9rem; color:#3d613a;">Ouça o podcast com a narrativa do projeto, entrevistas e reflexões sobre o futuro do bairro.</p>
+                <div class="podcast-placeholder" style="margin-top:8px;">
+                    <i class="fas fa-microphone-alt"></i>
+                    <p style="margin-top:8px; font-weight:500;">Espaço para o Podcast</p>
+                    <p style="font-size:0.8rem; color:#3d613a;">Em breve, o episódio completo será disponibilizado aqui.</p>
+                    <!-- Quando tiver o link do áudio, substitua o placeholder por: -->
+                    <!-- 
+                    <audio controls style="width:100%; margin-top:8px;">
+                        <source src="URL_DO_SEU_PODCAST.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
         /* ===== GOVERNANÇA ===== */
         .gov-grid {
             display: grid;
