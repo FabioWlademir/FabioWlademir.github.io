@@ -314,7 +314,7 @@
             gap: 24px;
         }
 
-        /* ===== NOVO CARD ===== */
+        /* ===== CARD PADRÃO ===== */
         .card-disciplina {
             background: var(--bg-card);
             border-radius: var(--radius);
@@ -867,7 +867,7 @@
             </div>
         </section>
 
-                <!-- ===== ÁREA 3: DIREITO PRIVADO ===== -->
+        <!-- ===== ÁREA 3: DIREITO PRIVADO ===== -->
         <section class="area">
             <div class="area-header">
                 <span class="icon">🏛️</span>
@@ -876,19 +876,29 @@
             </div>
             <div class="area-grid">
 
-                <!-- ===== FUNDAMENTOS DO DIREITO PRIVADO ===== -->
+                <!-- ===== FUNDAMENTOS DO DIREITO PRIVADO (PADRÃO CORRIGIDO) ===== -->
                 <div class="card-disciplina" itemscope itemtype="https://schema.org/Course">
-                    <span class="disciplina-nome" itemprop="name">Fundamentos do Direito Privado</span>
-                    <span class="professor" itemprop="provider">Prof. José Rodrigo Rodriguez</span>
-                    <div class="projetos">
-                        <a href="/fundamentos-do-direito-privado.html" target="_blank">🔗 Apelação de Shylock · Direitos da Personalidade · Relações Jurídicas</a>
+                    <div class="card-header">
+                        <span class="disciplina-icon">📘</span>
+                        <h4 itemprop="name">Fundamentos do Direito Privado</h4>
+                        <span class="professor" itemprop="provider">Prof. José Rodrigo Rodriguez</span>
                     </div>
-                    <div class="tags">
-                        <span>Direito Civil</span>
-                        <span>Direitos da Personalidade</span>
-                        <span>Shylock</span>
-                        <span>Contratos</span>
-                        <span>Relações Jurídicas</span>
+                    <div class="card-body">
+                        <p class="disciplina-desc" itemprop="description">
+                            <strong>Ementa:</strong> Estudo dos fundamentos do direito privado, incluindo teoria geral das obrigações, contratos, responsabilidade civil e direitos da personalidade. Análise de casos concretos e da constitucionalização do direito civil, com aplicação prática em trabalhos como a <strong>Apelação de Shylock</strong>, os <strong>Direitos da Personalidade</strong> e as <strong>Relações Jurídicas</strong>.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#DireitoCivil</span>
+                            <span>#DireitosDaPersonalidade</span>
+                            <span>#Shylock</span>
+                            <span>#Contratos</span>
+                            <span>#RelaçõesJurídicas</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/fundamentos-do-direito-privado.html" class="btn-ver-mais" itemprop="url">
+                                Ver página completa →
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -1089,7 +1099,7 @@
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // ===== VLIBRAS =====
+        // ===== VLIBRAS (CORRIGIDO COM FALLBACK) =====
         let vlibrasWidget = null;
 
         function initVLibras() {
@@ -1104,27 +1114,38 @@
 
         function toggleVLibras() {
             initVLibras();
-            // Tenta abrir/fechar o widget clicando no botão do VLibras
+
+            // Tenta 1: Shadow DOM do componente
             const widget = document.querySelector('vlibras-widget');
             if (widget) {
-                const shadow = widget.shadowRoot;
-                if (shadow) {
-                    const button = shadow.querySelector('.vlibras-button');
-                    if (button) {
-                        button.click();
-                    } else {
-                        // Fallback: tenta encontrar qualquer botão dentro do shadow
-                        const anyButton = shadow.querySelector('button');
-                        if (anyButton) anyButton.click();
+                try {
+                    const shadow = widget.shadowRoot;
+                    if (shadow) {
+                        const button = shadow.querySelector('.vlibras-button');
+                        if (button) {
+                            button.click();
+                            return;
+                        }
                     }
+                } catch (e) {
+                    console.warn('Erro ao acessar shadow DOM:', e);
                 }
             }
+
+            // Tenta 2: Botão flutuante alternativo
+            const fallbackBtn = document.querySelector('.vlibras-button');
+            if (fallbackBtn) {
+                fallbackBtn.click();
+                return;
+            }
+
+            // Tenta 3: Mensagem amigável
+            alert('Clique no ícone azul do VLibras que aparece no canto inferior direito da tela para ativar a tradução em Libras.');
         }
 
-        // Inicializa VLibras ao carregar a página
+        // Inicializa VLibras ao carregar
         document.addEventListener('DOMContentLoaded', function() {
             initVLibras();
-            // Aplica preferências salvas
             applySavedPreferences();
         });
 
@@ -1183,7 +1204,6 @@
             const newMotion = current === 'reduced' ? '' : 'reduced';
             html.setAttribute('data-motion', newMotion);
             localStorage.setItem('motion', newMotion);
-            // Aplica a classe no body para desativar transições
             if (newMotion === 'reduced') {
                 document.body.classList.add('reduce-motion');
             } else {
@@ -1215,7 +1235,7 @@
             }
         }
 
-        // ===== LEITURA EM VOZ ALTA (OUVIR PÁGINA) =====
+        // ===== LEITURA EM VOZ ALTA =====
         let isSpeaking = false;
         let currentUtterance = null;
 
@@ -1274,10 +1294,7 @@
             }
 
             if (isListening) {
-                // Se já estiver ouvindo, para
-                if (recognition) {
-                    recognition.stop();
-                }
+                if (recognition) recognition.stop();
                 isListening = false;
                 btn.innerHTML = '🎤 Comando';
                 btn.classList.remove('active');
@@ -1323,7 +1340,6 @@
         }
 
         function processVoiceCommand(transcript) {
-            // Mapeamento de comandos para URLs
             const commands = {
                 'início': '/',
                 'inicio': '/',
@@ -1359,10 +1375,8 @@
             }
 
             if (!found) {
-                // Tenta interpretar como "ir para X"
                 if (transcript.startsWith('ir para ')) {
                     const target = transcript.replace('ir para ', '').trim();
-                    // Busca links com texto contendo o alvo
                     const links = document.querySelectorAll('a');
                     for (const link of links) {
                         if (link.textContent.toLowerCase().includes(target)) {
@@ -1372,21 +1386,16 @@
                         }
                     }
                 }
-
                 if (!found) {
                     alert('Comando não reconhecido. Tente: "início", "acadêmico", "sobre", "perfil", "contato" ou "ir para [nome da página]".');
                 }
             }
         }
 
-        // ===== CONTADOR DE VISITAS (hits.dwyl) =====
-        // O contador é inserido via HTML com a tag <img src="https://hits.dwyl.com/...">
-        // Não é necessário JavaScript para isso.
-
         console.log('Site acadêmico com acessibilidade e comandos de voz carregado!');
     </script>
 
-    <!-- ===== CONTADOR DE VISITAS ===== -->
+    <!-- ===== CONTADOR DE VISITAS (MANTIDO) ===== -->
     <div class="visitor-counter" style="text-align:center; margin-top:20px; font-size:0.85rem; color:var(--text-secondary);">
         <i class="fas fa-eye"></i>
         <span>Visitas ao portal:</span>
