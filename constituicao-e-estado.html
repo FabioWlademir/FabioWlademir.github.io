@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constituição e Estado – Fábio Wlademir | UNISINOS</title>
+    <meta name="description" content="Página da disciplina Constituição e Estado (Prof. José Rodrigo Rodriguez) – UNISINOS. Análise das provas, reflexões autorais, menção a Rui Barbosa e criatividade na aplicação de conceitos de Weber, Marx, Faoro e Gramsci." />
+    <meta name="keywords" content="Constituição e Estado, UNISINOS, Fábio Wlademir, José Rodrigo Rodriguez, Weber, Faoro, Rui Barbosa, Gramsci, Marx, Nazismo, Estado Moderno, Democracia, Redemocratização" />
+    <meta name="author" content="Fábio Wlademir Rodrigues da Silva" />
+    <meta property="og:title" content="Constituição e Estado – Fábio Wlademir | UNISINOS" />
+    <meta property="og:description" content="Percurso completo na disciplina Constituição e Estado: provas comentadas, trechos autorais, criatividade acadêmica e reflexões sobre o Estado Democrático de Direito." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabiowlademir.github.io/constituicao-e-estado.html" />
+    <meta property="og:image" content="https://fabiowlademir.github.io/imagens/eu%2007%2006%202026.png" />
+    <link rel="canonical" href="https://fabiowlademir.github.io/constituicao-e-estado.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <style>
+        /* ===== RESET E VARIÁVEIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f4f7fc;
+            --bg-card: #ffffff;
+            --bg-soft: #eef2f8;
+            --text: #1e2a41;
+            --text-secondary: #4a5b7a;
+            --primary: #0a1c3a;
+            --accent: #b31b1b;
+            --accent-hover: #8f1515;
+            --gold: #c9a84c;
+            --gold-light: #e8d5a3;
+            --border: #dee5ef;
+            --shadow: 0 8px 30px rgba(10, 28, 58, 0.06);
+            --radius: 16px;
+            --transition: 0.3s ease;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Merriweather', serif;
+            --whatsapp: #25d366;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f1724;
+            --bg-card: #1a253a;
+            --bg-soft: #25324a;
+            --text: #e8edf5;
+            --text-secondary: #a0b3cc;
+            --primary: #dce4f0;
+            --border: #2a3a55;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        [data-font="dyslexic"] {
+            --font: 'OpenDyslexic', 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 20px;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== BARRA DE ACESSIBILIDADE ===== */
+        .accessibility-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            align-items: center;
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-bottom: 30px;
+            font-size: 0.8rem;
+        }
+
+        .accessibility-bar button {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.2s;
+            font-family: var(--font);
+        }
+
+        .accessibility-bar button:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .accessibility-bar .vlibras-btn {
+            background: #0057a3;
+            border-color: #0057a3;
+            font-weight: 600;
+        }
+
+        .accessibility-bar .vlibras-btn:hover {
+            background: #003f77;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-avatar img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+        }
+
+        .header-title h1 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .header-title h1 small {
+            font-family: var(--font);
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ===== CONTEÚDO PRINCIPAL ===== */
+        .main-content {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 40px 48px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .main-content h2 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--primary);
+            border-left: 6px solid var(--gold);
+            padding-left: 16px;
+            margin-bottom: 8px;
+        }
+
+        .main-content .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            padding-left: 22px;
+        }
+
+        /* ===== SEÇÕES ===== */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h3 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        /* ===== BLOCO DE QUESTÃO ===== */
+        .questao-box {
+            background: var(--bg-soft);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            border-left: 6px solid var(--accent);
+        }
+
+        .questao-box .pergunta {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .questao-box .resposta {
+            color: var(--text-secondary);
+        }
+
+        /* ===== CITAÇÃO AUTORAL ===== */
+        .citacao-autoral {
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 12px 0;
+            position: relative;
+        }
+
+        .citacao-autoral::before {
+            content: "✍️ Trecho autoral";
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            background: var(--bg-card);
+            padding: 0 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .citacao-autoral p {
+            margin-top: 6px;
+            font-style: italic;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .citacao-autoral .fonte {
+            font-style: normal;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* ===== CRIATIVIDADE ===== */
+        .criatividade-box {
+            background: #e8f0fe;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 12px 0;
+            border-left: 4px solid #1a73e8;
+        }
+
+        .criatividade-box strong {
+            color: #1a3a6a;
+        }
+
+        /* ===== TAGS ===== */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            padding: 8px 0;
+        }
+
+        .tags-container span {
+            background: var(--bg-soft);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* ===== RODAPÉ ===== */
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer .social a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer .social a:hover {
+            color: var(--accent);
+        }
+
+        /* ===== WHATSAPP FLUTUANTE ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--whatsapp);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
+            text-decoration: none;
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(-4deg);
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-left {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                gap: 14px;
+            }
+            .main-content {
+                padding: 24px 20px;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer .social a {
+                margin: 0 10px;
+            }
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 1.8rem;
+                bottom: 18px;
+                right: 18px;
+            }
+            .accessibility-bar {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+                gap: 4px 10px;
+            }
+            .accessibility-bar button {
+                font-size: 0.65rem;
+                padding: 2px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 18px 14px;
+            }
+            body {
+                padding: 12px;
+            }
+            .questao-box {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== BARRA DE ACESSIBILIDADE ===== -->
+        <div class="accessibility-bar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+            <span style="opacity:0.6;">♿ Acessibilidade</span>
+            <button onclick="toggleTheme()" id="themeToggle" aria-label="Alternar tema claro/escuro">🌓 Tema</button>
+            <button onclick="toggleFont()" id="fontToggle" aria-label="Alternar fonte para dislexia">🔤 Dislexia</button>
+            <button onclick="increaseFont()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="decreaseFont()" aria-label="Diminuir fonte">A−</button>
+            <button onclick="resetFont()" aria-label="Resetar fonte">A</button>
+            <button onclick="startVoice()" aria-label="Ler página em voz alta">🔊 Ouvir</button>
+            <button class="vlibras-btn" onclick="toggleVLibras()" aria-label="Abrir tradutor de Libras">🤟 Libras</button>
+        </div>
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="header-left">
+                <div class="header-avatar">
+                    <img src="imagens/eu%2007%2006%202026.png" alt="Fábio Wlademir" />
+                </div>
+                <div class="header-title">
+                    <h1>📜 Constituição e Estado <small>Fábio Wlademir · UNISINOS</small></h1>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Início</a>
+                <a href="/academico.html">Acadêmico</a>
+                <a href="/constitucional.html" class="active">Constitucional</a>
+                <a href="/sobre.html">Sobre</a>
+                <a href="https://github.com/FabioWlademir" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+        <main class="main-content">
+
+            <h2>🏛️ Constituição e Estado</h2>
+            <p class="subtitle"><strong>Professor:</strong> Dr. José Rodrigo Rodrigues · <strong>1º Semestre</strong> · UNISINOS</p>
+
+            <!-- ===== APRESENTAÇÃO ===== -->
+            <section class="section">
+                <h3>📖 Sobre a disciplina</h3>
+                <p>
+                    A disciplina <strong>Constituição e Estado</strong> foi o meu primeiro contato formal com a Teoria Geral do Estado e o constitucionalismo. Sob a orientação do Prof. José Rodrigo Rodrigues, mergulhei nos fundamentos do Estado Moderno (Weber), nas diferentes concepções de Constituição (Lassalle, Schmitt, Kelsen, Hesse), no Poder Constituinte, na redemocratização brasileira e nos desafios contemporâneos do Estado Democrático de Direito.
+                </p>
+                <p>
+                    O que tornou a experiência única foi a oportunidade de <strong>aplicar criatividade</strong> na articulação de autores clássicos (Weber, Marx, Faoro, Rui Barbosa) com problemas concretos, como as milícias no Rio de Janeiro e o nazismo, desenvolvendo uma visão crítica e autoral sobre o papel do Estado.
+                </p>
+            </section>
+
+            <!-- ===== GRAU A – QUESTÃO 1 ===== -->
+            <section class="section">
+                <h3>📝 Grau A – Questão 1</h3>
+                <div class="questao-box">
+                    <div class="pergunta">❓ O que a questão perguntava?</div>
+                    <div class="resposta">
+                        A questão pedia para analisar a atuação das <strong>milícias no Rio de Janeiro</strong> à luz do conceito weberiano de Estado, que define o Estado moderno como detentor do <strong>monopólio legítimo do uso da força</strong> em um território. O desafio era identificar como as milícias desafiam esse monopólio e quais autores poderiam ajudar a compreender o fenômeno.
+                    </div>
+                </div>
+
+                <div class="questao-box" style="border-left-color: #2980b9;">
+                    <div class="pergunta">💡 Minha resposta e criatividade</div>
+                    <div class="resposta">
+                        <p>Iniciei definindo o conceito weberiano e mostrei como as milícias <strong>usurpam</strong> funções estatais — impondo ordem, cobrando "taxas" e emitindo "autorizações". Usei <strong>Raymundo Faoro</strong> para explicar o <strong>patrimonialismo</strong> histórico brasileiro, mostrando que a privatização da segurança não é uma patologia recente, mas a atualização de um padrão estrutural.</p>
+                        <p>Fui além da doutrina básica e trouxe <strong>Antonio Gramsci</strong> (conceito de <strong>Estado Ampliado</strong>) para mostrar que as milícias disputam a <strong>hegemonia</strong> nas comunidades, não apenas pela coerção, mas buscando consentimento passivo. Também conectei com <strong>Karl Marx</strong> ao descrever a violência como <strong>"acumulação primitiva"</strong> — um mecanismo de extração de riqueza nas periferias.</p>
+                    </div>
+                </div>
+
+                <!-- Menção a Rui Barbosa -->
+                <div style="background:#f0f4fa; border-radius:10px; padding:16px 20px; margin:12px 0;">
+                    <p style="font-weight:700; color:var(--primary);">⚖️ Menção a Rui Barbosa:</p>
+                    <p style="color:var(--text-secondary);">"A confusão entre público e privado representada pelas milícias contraria frontalmente os princípios defendidos por <strong>Rui Barbosa</strong>, para quem o Estado republicano deveria pautar-se pela impessoalidade da administração, pela legalidade estrita e pelo monopólio estatal da força como garantia de direitos. O jurista brasileiro, em sua defesa intransigente do Estado de Direito, veria nessas organizações a negação de todos os princípios republicanos, transformando o poder que deveria ser instrumento do bem comum em mecanismo de opressão particular."</p>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">— Trecho da minha resposta no Grau A (original e reescrita)</p>
+                </div>
+
+                <!-- Trecho autoral -->
+                <div class="citacao-autoral">
+                    <p>"A violência, longe de ser mera desordem, torna-se <strong>empreendimento econômico organizado</strong> que explora populações vulneráveis, revelando como estruturas paraestatais podem reproduzir lógicas de acumulação capitalista em contextos em que o Estado formal se mostra ausente ou conivente."</p>
+                    <div class="fonte">— Fábio Wlademir, Grau A (Reescrita)</div>
+                </div>
+
+                <div class="criatividade-box">
+                    <strong>🎯 Criatividade na resposta:</strong> A originalidade consistiu em <strong>cruzar quatro autores</strong> (Weber, Faoro, Gramsci e Marx) para explicar um fenômeno contemporâneo, mostrando que as milícias não são apenas um problema de segurança, mas uma <strong>crise multidimensional</strong> que envolve soberania, hegemonia, cultura política e economia. Também conectei o debate ao <strong>Art. 144 da CF/88</strong>, que estabelece a segurança pública como dever exclusivo do Estado, evidenciando a violação constitucional.
+                </div>
+            </section>
+
+            <!-- ===== GRAU A – QUESTÃO 2 ===== -->
+            <section class="section">
+                <h3>📝 Grau A – Questão 2</h3>
+                <div class="questao-box">
+                    <div class="pergunta">❓ O que a questão perguntava?</div>
+                    <div class="resposta">
+                        A questão pedia para contrapor a <strong>visão nazista de Estado</strong> (defendida por juristas como Reinhard Höhn) à <strong>concepção moderna de Estado</strong>, utilizando a tipologia weberiana das dominações legítimas (tradicional, carismática e racional-legal).
+                    </div>
+                </div>
+
+                <div class="questao-box" style="border-left-color: #2980b9;">
+                    <div class="pergunta">💡 Minha resposta e criatividade</div>
+                    <div class="resposta">
+                        <p>Estruturei a resposta mostrando que o nazismo era uma <strong>amálgama distorcida</strong> das dominações tradicional (apelo ao passado germânico) e carismática (culto a Hitler), mas <strong>radicalmente antirracional-legal</strong>. O <em>Führerprinzip</em> (princípio do líder) sobrepunha-se a todas as leis e instituições, destruindo a separação de poderes — princípio que Montesquieu consagrou como antídoto à tirania.</p>
+                        <p>Usei <strong>Rui Barbosa</strong> como contraponto: onde ele defendia freios e contrapesos, o nazismo instituía a vontade ilimitada do Führer; onde ele via o Judiciário independente como garantia de liberdade, os nazistas o subordinavam ao partido.</p>
+                        <p>Também utilizei <strong>Faoro</strong> para comparar: enquanto o nazismo <strong>destruiu</strong> instituições consolidadas, no Brasil elas <strong>nunca se consolidaram</strong> plenamente devido ao patrimonialismo estrutural. Ambos, por caminhos diferentes, representam alternativas à dominação racional-legal weberiana.</p>
+                        <p>Por fim, introduzi o conceito marxista de <strong>bonapartismo</strong> para mostrar que o nazismo foi uma reconfiguração autoritária do capitalismo diante da crise, preservando as relações de propriedade enquanto suprimia violentamente os conflitos de classe.</p>
+                    </div>
+                </div>
+
+                <!-- Menção a Rui Barbosa (2) -->
+                <div style="background:#f0f4fa; border-radius:10px; padding:16px 20px; margin:12px 0;">
+                    <p style="font-weight:700; color:var(--primary);">⚖️ Menção a Rui Barbosa:</p>
+                    <p style="color:var(--text-secondary);">"O modelo nazista representava para <strong>Rui Barbosa</strong> a antítese completa de seu ideal de Estado liberal. Onde ele defendia freios e contrapesos, os nazistas pregavam a vontade ilimitada do Führer; onde ele via o Judiciário independente como garantia de liberdade, os nazistas o subordinavam ao partido; onde ele concebia direitos individuais invioláveis, o nazismo os sacrificava em nome da 'comunidade do povo'. A famosa advertência de Rui de que <em>'a pior ditadura é a do Judiciário, porque contra ela não há apelação'</em> revela sua compreensão de que o perigo não está apenas em quem detém o poder, mas na ausência de controles institucionais sobre esse poder."</p>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">— Trecho da minha resposta no Grau A</p>
+                </div>
+
+                <!-- Trecho autoral -->
+                <div class="citacao-autoral">
+                    <p>"O nazismo não era apenas um desvio moral ou uma página triste da história; ele representou a <strong>negação sistemática dos princípios que sustentam o Estado de Direito</strong> — separação de poderes, legalidade impessoal, direitos fundamentais e pluralismo político. A retórica comunitária nazista, longe de ser uma alternativa libertária ao Estado moderno, constituiu a <strong>radicalização da opressão</strong> através da fusão entre Estado, partido e líder, eliminando qualquer espaço de autonomia individual ou institucional."</p>
+                    <div class="fonte">— Fábio Wlademir, Grau A</div>
+                </div>
+
+                <div class="criatividade-box">
+                    <strong>🎯 Criatividade na resposta:</strong> A originalidade foi <strong>cruzar três tradições teóricas</strong> (weberiana, liberal-ruibarbosa e marxista) para analisar o nazismo, mostrando que ele pode ser compreendido simultaneamente como uma <strong>dominação carismática desviante</strong>, uma <strong>negação do constitucionalismo liberal</strong> e um <strong>Estado bonapartista radicalizado</strong>. Essa abordagem tridimensional é rara em respostas de graduação.
+                </div>
+            </section>
+
+            <!-- ===== GRAU B – REFLEXÃO ===== -->
+            <section class="section">
+                <h3>📝 Grau B – Reflexão Final</h3>
+                <div class="questao-box" style="border-left-color: #c9a84c;">
+                    <div class="pergunta">❓ O que a questão perguntava?</div>
+                    <div class="resposta">
+                        A questão pedia para refletir sobre <strong>como minha visão do Estado e da Constituição mudou ao longo do semestre</strong>, identificando autores e conceitos responsáveis por essa transformação.
+                    </div>
+                </div>
+
+                <div class="questao-box" style="border-left-color: #2980b9;">
+                    <div class="pergunta">💡 Minha resposta e criatividade</div>
+                    <div class="resposta">
+                        <p>Comecei contando que <strong>já admirava a Constituição</strong> antes do curso — tinha exemplares em casa e lia por curiosidade, especialmente após os ataques de 8 de janeiro. Minha visão, porém, era <strong>intuitiva e emocional</strong>, quase sagrada.</p>
+                        <p>Com os estudos, minha visão se tornou <strong>crítica e sistêmica</strong>. Os conceitos que mais me marcaram foram <strong>"Constituição compromissória"</strong> e <strong>"sem vencedores"</strong>, apresentados pelo professor. Eles me fizeram entender que a CF/88 não é um monumento estático, mas um <strong>campo de batalha e negociação permanente</strong>.</p>
+                        <p>Também destaquei a <strong>separação de poderes</strong> e a <strong>função contramajoritária do STF</strong>, que passaram a significar para mim um sistema de <strong>diálogos institucionais</strong> onde nenhum poder tem a palavra final — essencial para impedir a "ditadura da maioria".</p>
+                        <p>Apliquei esses conceitos para analisar a fala do deputado <strong>Marcos Pollon</strong> (que defendia um "Estado cristão" com base na vontade da maioria) em contraste com a visão do senador <strong>Rodrigo Pacheco</strong>, que lembrava que a democracia também protege minorias. Argumentei que a CF/88 é laica e compromissória, e que o STF tem o papel de frear maiorias eventuais que violem direitos fundamentais.</p>
+                    </div>
+                </div>
+
+                <!-- Trecho autoral sobre a CF -->
+                <div class="citacao-autoral">
+                    <p>"A Constituição não é um monumento estático, mas um <strong>campo de batalha e negociação permanente</strong>. Ela não apaga os conflitos sociais — pelo contrário, os internaliza e regula. A força da Constituição está justamente em sua capacidade de <strong>abrigar contradições sem romper</strong>."</p>
+                    <div class="fonte">— Fábio Wlademir, Grau B</div>
+                </div>
+
+                <div class="citacao-autoral">
+                    <p>"Ser fiel à Constituição não é apenas defendê-la com paixão; é também <strong>entender suas tensões, contradições e seu caráter inacabado</strong> — e é exatamente isso que a mantém viva e relevante."</p>
+                    <div class="fonte">— Fábio Wlademir, Grau B</div>
+                </div>
+
+                <div class="criatividade-box">
+                    <strong>🎯 Criatividade na resposta:</strong> A originalidade foi <strong>narrar uma evolução pessoal</strong> com autenticidade, usando metáforas como <em>"do texto ao sistema"</em> e <em>"campo de batalha"</em> para descrever a CF/88. Também fui criativo ao <strong>aplicar os conceitos teóricos a um debate político contemporâneo</strong> (Pollon x Pacheco), demonstrando capacidade de análise concreta.
+                </div>
+            </section>
+
+            <!-- ===== MEU RESUMO EXPANDIDO ===== -->
+            <section class="section">
+                <h3>📚 Meu resumo expandido</h3>
+                <p>
+                    Além das provas, produzi um <strong>resumo completo da disciplina</strong>, que sistematiza os principais tópicos abordados ao longo do semestre. O material foi construído de forma autoral, com base nas aulas, leituras e debates, e inclui:
+                </p>
+                <ul style="padding-left:24px; color:var(--text-secondary); margin-bottom:12px;">
+                    <li><strong>Antecedentes do Estado:</strong> sociedades sem Estado (Clastres, "A Sociedade contra o Estado") e a emergência histórica do Estado Moderno.</li>
+                    <li><strong>Evolução do Estado:</strong> do absolutismo ao Estado Liberal, Social e Democrático de Direito.</li>
+                    <li><strong>Teorias da Constituição:</strong> Lassalle (fatores reais de poder), Schmitt (decisão política), Kelsen (norma fundamental) e Hesse (força normativa).</li>
+                    <li><strong>Poder Constituinte:</strong> originário, derivado reformador e decorrente (com referência a Canotilho e Sieyès).</li>
+                    <li><strong>CF/88:</strong> gênese, características (extensa, rígida, dirigente, cidadã) e o processo de redemocratização.</li>
+                    <li><strong>Controle de constitucionalidade:</strong> sistema misto brasileiro (difuso e concentrado), com ADI, ADC e ADPF.</li>
+                    <li><strong>Direitos fundamentais:</strong> gerações, eficácia horizontal (Drittwirkung) e jurisprudência paradigmática (ADO 26, união homoafetiva).</li>
+                    <li><strong>Desafios contemporâneos:</strong> crise de representatividade, populismo, judicialização da política, globalização, fake news e desigualdade estrutural.</li>
+                </ul>
+                <p style="color:var(--text-secondary);">
+                    O resumo foi elaborado com rigor doutrinário e incorpora referências a <strong>Bonavides, José Afonso da Silva, Canotilho, Streck, Gilmar Mendes, Barroso, Dominique Rousseau e Wendy Brown</strong>, entre outros.
+                </p>
+                <div class="criatividade-box" style="margin-top:12px;">
+                    <strong>🎯 Criatividade no resumo:</strong> Diferente de um simples apanhado de aulas, organizei o conteúdo de forma <strong>crítica e conectada</strong>, mostrando como cada conceito se relaciona com o outro e com a realidade brasileira. Isso revela uma <strong>visão integrada</strong> do Direito Constitucional, e não apenas a memorização de fragmentos.
+                </div>
+            </section>
+
+            <!-- ===== TAGS ===== -->
+            <section class="section">
+                <h3>🏷️ Temas abordados</h3>
+                <div class="tags-container">
+                    <span>🏛️ Monopólio da violência (Weber)</span>
+                    <span>⚖️ Dominação racional-legal x carismática</span>
+                    <span>📜 Constituição compromissória</span>
+                    <span>🗳️ Democracia, maioria e minorias</span>
+                    <span>🏢 Separação de poderes (Montesquieu)</span>
+                    <span>🛡️ Função contramajoritária do STF</span>
+                    <span>🧑‍⚖️ Rui Barbosa e o Estado de Direito</span>
+                    <span>🏚️ Patrimonialismo (Faoro)</span>
+                    <span>💥 Nazismo e bonapartismo (Marx)</span>
+                    <span>🔒 Cláusulas pétreas</span>
+                    <span>📊 Controle de constitucionalidade</span>
+                    <span>🌐 Globalização e soberania</span>
+                    <span>🧠 Gramsci e hegemonia</span>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== RODAPÉ ===== -->
+        <footer class="footer">
+            <span>© 2026 Fábio Wlademir · UNISINOS · Curso de Direito</span>
+            <div class="social">
+                <a href="https://linkedin.com/in/fabiowlademir" target="_blank">LinkedIn</a>
+                <a href="https://github.com/FabioWlademir" target="_blank">GitHub</a>
+                <a href="https://instagram.com/fabiowlademirrs" target="_blank">Instagram</a>
+                <a href="https://facebook.com/fabiowlademirrs" target="_blank">Facebook</a>
+                <a href="https://youtube.com/@fabiowlademirrs" target="_blank">YouTube</a>
+                <a href="https://wa.me/5551998883187" target="_blank">WhatsApp</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ===== WHATSAPP FLUTUANTE ===== -->
+    <a href="https://wa.me/5551998883187" class="whatsapp-float" target="_blank" aria-label="Fale comigo no WhatsApp">
+        💬
+    </a>
+
+    <!-- ===== JAVASCRIPT (ACESSIBILIDADE + COMANDO DE VOZ) ===== -->
+    <script>
+        // Inicializa VLibras
+        new VLibras.Widget('https://vlibras.gov.br/app');
+
+        function toggleVLibras() {
+            const widget = document.querySelector('vlibras-widget');
+            if (widget) {
+                const button = widget.shadowRoot?.querySelector('.vlibras-button');
+                if (button) button.click();
+            }
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            if (current === 'dark') {
+                html.removeAttribute('data-theme');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        function toggleFont() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-font');
+            if (current === 'dyslexic') {
+                html.removeAttribute('data-font');
+            } else {
+                html.setAttribute('data-font', 'dyslexic');
+            }
+        }
+
+        let currentFontSize = 100;
+
+        function increaseFont() {
+            currentFontSize = Math.min(currentFontSize + 10, 160);
+            document.body.style.fontSize = currentFontSize + '%';
+        }
+
+        function decreaseFont() {
+            currentFontSize = Math.max(currentFontSize - 10, 70);
+            document.body.style.fontSize = currentFontSize + '%';
+        }
+
+        function resetFont() {
+            currentFontSize = 100;
+            document.body.style.fontSize = '100%';
+        }
+
+        // ===== LEITURA EM VOZ ALTA =====
+        let isSpeaking = false;
+        let currentUtterance = null;
+
+        function startVoice() {
+            if ('speechSynthesis' in window) {
+                if (isSpeaking) {
+                    speechSynthesis.cancel();
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🔊 Ouvir';
+                    return;
+                }
+
+                const mainContent = document.querySelector('.main-content');
+                const text = mainContent ? mainContent.innerText : document.body.innerText;
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = 0.9;
+                utterance.pitch = 1;
+
+                utterance.onstart = function() {
+                    isSpeaking = true;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '⏹️ Parar';
+                };
+
+                utterance.onend = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🔊 Ouvir';
+                };
+
+                utterance.onerror = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🔊 Ouvir';
+                };
+
+                currentUtterance = utterance;
+                speechSynthesis.speak(utterance);
+            } else {
+                alert('Seu navegador não suporta leitura em voz alta.');
+            }
+        }
+    </script>
+
+</body>
+</html>
