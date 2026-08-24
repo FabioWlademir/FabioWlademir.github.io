@@ -326,29 +326,6 @@
             color: var(--text-secondary);
         }
 
-        /* ===== CONTADOR DE VISITAS ===== */
-        .visitor-counter {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--bg-soft);
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
-            margin: 12px 0;
-        }
-
-        .visitor-counter i {
-            font-size: 1rem;
-        }
-
-        .visitor-counter img {
-            height: 20px;
-            border-radius: 4px;
-        }
-
         /* ===== RODAPÉ ===== */
         .footer {
             margin-top: 40px;
@@ -373,6 +350,22 @@
 
         .footer .social a:hover {
             color: var(--accent);
+        }
+
+        .footer .visitor-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-soft);
+            padding: 4px 14px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            font-size: 0.8rem;
+        }
+
+        .footer .visitor-counter img {
+            height: 18px;
+            border-radius: 4px;
         }
 
         /* ===== WHATSAPP FLUTUANTE ===== */
@@ -502,13 +495,6 @@
 
             <h2>📚 Fundamentos do Direito Privado</h2>
             <p class="subtitle"><strong>Professor:</strong> Dr. José Rodrigo Rodriguez · <strong>1º Semestre</strong> · UNISINOS</p>
-
-            <!-- ===== CONTADOR DE VISITAS ===== -->
-            <div class="visitor-counter" title="Total de visualizações da página">
-                <span>👁️</span>
-                <span>Visitas a esta página:</span>
-                <img src="https://hits.dwyl.com/fabiowlademir/fundamentos-do-direito-privado.svg" alt="Contador de Acessos" />
-            </div>
 
             <!-- ===== APRESENTAÇÃO ===== -->
             <section class="section">
@@ -789,6 +775,11 @@ flowchart TD
                 <a href="https://facebook.com/fabiowlademirrs" target="_blank">Facebook</a>
                 <a href="https://youtube.com/@fabiowlademirrs" target="_blank">YouTube</a>
                 <a href="https://wa.me/5551998883187" target="_blank">WhatsApp</a>
+            </div>
+            <div class="visitor-counter">
+                <span>👁️</span>
+                <span>Visitas ao portal:</span>
+                <img src="https://hits.dwyl.com/fabiowlademir/fabiowlademir.github.io.svg" alt="Contador de Acessos">
             </div>
         </footer>
 
