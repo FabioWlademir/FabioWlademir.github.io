@@ -11,7 +11,7 @@
     <meta property="og:description" content="Explore projetos acadêmicos que unem Direito, Constituição e inovação tecnológica. Curso de Direito na UNISINOS." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://fabiowlademir.github.io/academico.html" />
-    <meta property="og:image" content="https://github.com/FabioWlademir/FabioWlademir.github.io/blob/main/imagens/eu%2007%2006%202026.png" />
+    <meta property="og:image" content="https://fabiowlademir.github.io/imagens/eu%2007%2006%202026.png" />
     <meta name="theme-color" content="#0a1c3a" />
     <link rel="canonical" href="https://fabiowlademir.github.io/academico.html" />
 
@@ -67,6 +67,17 @@
             --font: 'OpenDyslexic', 'Comic Sans MS', 'Chalkboard SE', sans-serif;
         }
 
+        [data-contrast="high"] {
+            --bg: #ffffff;
+            --bg-card: #ffffff;
+            --bg-soft: #f0f0f0;
+            --text: #000000;
+            --text-secondary: #1a1a1a;
+            --primary: #000000;
+            --border: #000000;
+            --shadow: none;
+        }
+
         body {
             font-family: var(--font);
             background: var(--bg);
@@ -105,6 +116,8 @@
             font-size: 0.75rem;
             transition: 0.2s;
             font-family: var(--font);
+            min-height: 44px;
+            min-width: 44px;
         }
 
         .accessibility-bar button:hover {
@@ -119,6 +132,21 @@
 
         .accessibility-bar .vlibras-btn:hover {
             background: #003f77;
+        }
+
+        .accessibility-bar .voice-btn {
+            background: #2b5797;
+            border-color: #2b5797;
+            font-weight: 600;
+        }
+
+        .accessibility-bar .voice-btn:hover {
+            background: #1a3f6a;
+        }
+
+        .accessibility-bar .voice-btn.active {
+            background: #c0392b;
+            border-color: #c0392b;
         }
 
         /* ===== HEADER ===== */
@@ -286,64 +314,115 @@
             gap: 24px;
         }
 
+        /* ===== NOVO CARD ===== */
         .card-disciplina {
             background: var(--bg-card);
             border-radius: var(--radius);
-            padding: 20px 24px;
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
         }
 
         .card-disciplina:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 36px rgba(10, 28, 58, 0.08);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(10, 28, 58, 0.12);
         }
 
-        .card-disciplina .disciplina-nome {
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 22px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            flex-wrap: wrap;
+        }
+
+        .card-header .disciplina-icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .card-header h4 {
+            font-family: var(--font-serif);
             font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary);
+            font-size: 1.2rem;
+            margin: 0;
+            flex: 1;
+            min-width: 140px;
         }
 
-        .card-disciplina .professor {
+        .card-header .professor {
             font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.85;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px 14px;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
+
+        .card-body {
+            padding: 20px 22px 22px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .disciplina-desc {
+            font-size: 0.95rem;
             color: var(--text-secondary);
-            margin: 4px 0 8px 0;
+            margin-bottom: 14px;
+            line-height: 1.6;
         }
 
-        .card-disciplina .projetos {
-            margin-top: 8px;
-            border-top: 1px solid var(--border);
-            padding-top: 10px;
-            font-size: 0.9rem;
-        }
-
-        .card-disciplina .projetos a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .card-disciplina .projetos a:hover {
-            text-decoration: underline;
-        }
-
-        .card-disciplina .tags {
+        .disciplina-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-top: 8px;
+            margin-bottom: 16px;
         }
 
-        .card-disciplina .tags span {
+        .disciplina-tags span {
             background: var(--bg-soft);
             color: var(--text-secondary);
             font-size: 0.7rem;
-            padding: 2px 12px;
+            padding: 3px 12px;
             border-radius: 30px;
+            letter-spacing: 0.3px;
+            border: 1px solid var(--border);
+        }
+
+        .card-actions {
+            margin-top: auto;
+            border-top: 1px solid var(--border);
+            padding-top: 14px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-ver-mais {
+            background: var(--accent);
+            color: #fff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-ver-mais:hover {
+            background: var(--accent-hover);
+            transform: scale(1.02);
+            text-decoration: none;
+            color: #fff;
         }
 
         .card-placeholder {
@@ -360,7 +439,7 @@
             justify-content: center;
         }
 
-        /* ===== SOBRE MIM (com foto) ===== */
+        /* ===== SOBRE MIM ===== */
         .sobre-resumo {
             background: var(--bg-card);
             border-radius: var(--radius);
@@ -548,6 +627,8 @@
             .accessibility-bar button {
                 font-size: 0.65rem;
                 padding: 2px 10px;
+                min-height: 36px;
+                min-width: 36px;
             }
         }
 
@@ -557,6 +638,22 @@
             }
             body {
                 padding: 12px;
+            }
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .card-header .professor {
+                white-space: normal;
+                align-self: flex-start;
+            }
+            .card-actions {
+                justify-content: stretch;
+            }
+            .btn-ver-mais {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -571,13 +668,19 @@
 
             <button onclick="toggleTheme()" id="themeToggle" aria-label="Alternar tema claro/escuro">🌓 Tema</button>
 
+            <button onclick="toggleContrast()" id="contrastToggle" aria-label="Alternar alto contraste">🔲 Contraste</button>
+
             <button onclick="toggleFont()" id="fontToggle" aria-label="Alternar fonte para dislexia">🔤 Dislexia</button>
 
             <button onclick="increaseFont()" aria-label="Aumentar fonte">A+</button>
             <button onclick="decreaseFont()" aria-label="Diminuir fonte">A−</button>
             <button onclick="resetFont()" aria-label="Resetar fonte">A</button>
 
-            <button onclick="startVoice()" aria-label="Ler página em voz alta">🔊 Ouvir</button>
+            <button onclick="toggleReducedMotion()" id="motionToggle" aria-label="Reduzir animações">🎬 Animação</button>
+
+            <button onclick="startSpeechRecognition()" class="voice-btn" id="voiceCommandBtn" aria-label="Comando de voz (microfone)">🎤 Comando</button>
+
+            <button onclick="startVoice()" id="voiceReadBtn" aria-label="Ler página em voz alta">🔊 Ouvir</button>
 
             <button class="vlibras-btn" onclick="toggleVLibras()" aria-label="Abrir tradutor de Libras">🤟 Libras</button>
         </div>
@@ -588,11 +691,11 @@
                 <h1>📚 Fábio Wlademir <small>Portfólio Acadêmico – Direito &amp; Tecnologia</small></h1>
             </div>
             <div class="nav-links">
-                <a href="/" class="active">Início</a>
+                <a href="/">Início</a>
+                <a href="/academico.html" class="active">Acadêmico</a>
                 <a href="/sobre.html">Sobre</a>
                 <a href="/perfil.html">Perfil</a>
-                <a href="#contato">Contato</a>
-                <a href="https://github.com/FabioWlademir" target="_blank">GitHub</a>
+                <a href="https://fabiowlademir.github.io/" target="_blank">Portfólio</a>
             </div>
         </header>
 
@@ -603,8 +706,7 @@
                 <p>Este espaço reúne meus projetos e reflexões ao longo da graduação em Direito na UNISINOS, organizados por áreas do conhecimento. Um registro da minha jornada acadêmica.</p>
             </div>
             <div class="hero-avatar">
-                <!-- Use o caminho real da sua foto na pasta imagens -->
-                <img src="imagens/EU.png" alt="Fábio Wlademir" />
+                <img src="imagens/eu%2007%2006%202026.png" alt="Fábio Wlademir" />
                 <span class="badge-unisinos">UNISINOS · Direito</span>
             </div>
         </div>
@@ -616,56 +718,65 @@
                 <h3>Fundamentos do Direito</h3>
                 <span class="professores">Prof. André Luis Olivier Silva · Prof. Leonel Severo Rocha</span>
             </div>
-            <!-- ===== CARDS DE DISCIPLINAS ===== -->
+            <div class="area-grid">
 
-<!-- Conhecendo o Direito -->
-<div class="card-disciplina" itemscope itemtype="https://schema.org/Course">
-    <div class="card-header">
-        <span class="disciplina-icon">📖</span>
-        <h4 itemprop="name">Conhecendo o Direito</h4>
-        <span class="professor" itemprop="provider">Prof. André Luis Olivier Silva</span>
-    </div>
-
-    <div class="card-body">
-        <p class="disciplina-desc" itemprop="description">
-            <strong>Ementa:</strong> Introdução aos fundamentos da ciência jurídica — evolução histórica do pensamento jurídico, distinção entre Direito e moral, estrutura da norma jurídica (justiça, validade e eficácia), fontes do Direito, hierarquia normativa, sistemas jurídicos (Civil Law e Common Law), e a dignidade da pessoa humana como princípio estruturante do ordenamento brasileiro.
-        </p>
-
-        <!-- Tags para SEO e categorização -->
-        <div class="disciplina-tags">
-            <span>#Teoria do Direito</span>
-            <span>#Jusnaturalismo</span>
-            <span>#Positivismo</span>
-            <span>#Bobbio</span>
-            <span>#Kelsen</span>
-            <span>#DireitoConstitucional</span>
-        </div>
-
-        <!-- Link para a página completa -->
-        <div class="card-actions">
-            <a href="/conhecendo-o-direito.html" class="btn-ver-mais" itemprop="url">
-                Ver trabalhos completos →
-            </a>
-        </div>
-    </div>
-</div>
+                <!-- Conhecendo o Direito -->
+                <div class="card-disciplina" itemscope itemtype="https://schema.org/Course">
+                    <div class="card-header">
+                        <span class="disciplina-icon">📖</span>
+                        <h4 itemprop="name">Conhecendo o Direito</h4>
+                        <span class="professor" itemprop="provider">Prof. André Luis Olivier Silva</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="disciplina-desc" itemprop="description">
+                            <strong>Ementa:</strong> Introdução aos fundamentos da ciência jurídica — evolução histórica do pensamento jurídico, distinção entre Direito e moral, estrutura da norma jurídica (justiça, validade e eficácia), fontes do Direito, hierarquia normativa, sistemas jurídicos (Civil Law e Common Law), e a dignidade da pessoa humana como princípio estruturante do ordenamento brasileiro.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#Teoria do Direito</span>
+                            <span>#Jusnaturalismo</span>
+                            <span>#Positivismo</span>
+                            <span>#Bobbio</span>
+                            <span>#Kelsen</span>
+                            <span>#DireitoConstitucional</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/conhecendo-o-direito.html" class="btn-ver-mais" itemprop="url">
+                                Ver trabalhos completos →
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Disciplina: Teoria do Direito -->
+
+                <!-- Teoria do Direito -->
                 <div class="card-disciplina">
-                    <span class="disciplina-nome">Teoria do Direito</span>
-                    <span class="professor">Prof. Leonel Severo Rocha</span>
-                    <div class="projetos">
-                        <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/" target="_blank">🔗 Direito ao Esquecimento</a>
+                    <div class="card-header">
+                        <span class="disciplina-icon">📜</span>
+                        <h4>Teoria do Direito</h4>
+                        <span class="professor">Prof. Leonel Severo Rocha</span>
                     </div>
-                    <div class="tags">
-                        <span>Teoria Geral</span>
-                        <span>Direitos da Personalidade</span>
+                    <div class="card-body">
+                        <p class="disciplina-desc">
+                            <strong>Ementa:</strong> Estudo aprofundado das correntes teóricas do Direito: jusnaturalismo, positivismo jurídico e realismo. Análise da norma jurídica, sua estrutura, validade e eficácia. Teoria da argumentação e da interpretação jurídica.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#TeoriaGeral</span>
+                            <span>#Jusnaturalismo</span>
+                            <span>#Positivismo</span>
+                            <span>#Hermenêutica</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://fabiowlademir.github.io/direito-ao-esquecimento/" class="btn-ver-mais" target="_blank">
+                                Ver projeto →
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- Disciplinas futuras: Sociologia, Filosofia, Pensamento Jurídico -->
+
+                <!-- Placeholder para disciplinas futuras -->
                 <div class="card-placeholder">
                     <p>📌 <strong>Sociologia Jurídica</strong> · <strong>Filosofia do Direito</strong> · <strong>Pensamento Jurídico Contemporâneo</strong><br><span style="font-size:0.9rem;">Projetos em breve</span></p>
                 </div>
+
             </div>
         </section>
 
@@ -677,38 +788,82 @@
                 <span class="professores">Prof. José Rodrigo · Prof.ª Raquel Von Hohendorff · Prof.ª Clarissa Tassinari</span>
             </div>
             <div class="area-grid">
+
                 <!-- Constituição e Estado -->
                 <div class="card-disciplina">
-                    <span class="disciplina-nome">Constituição e Estado</span>
-                    <span class="professor">Prof. José Rodrigo</span>
-                    <div class="projetos">
-                        <span style="color:var(--text-secondary);">(Aguardando projetos)</span>
+                    <div class="card-header">
+                        <span class="disciplina-icon">🏛️</span>
+                        <h4>Constituição e Estado</h4>
+                        <span class="professor">Prof. José Rodrigo</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="disciplina-desc">
+                            <strong>Ementa:</strong> Teoria Geral do Estado, formação do Estado Moderno, soberania, poder constituinte, estrutura do Estado brasileiro e fundamentos históricos e filosóficos da Constituição de 1988.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#TeoriaDoEstado</span>
+                            <span>#PoderConstituinte</span>
+                            <span>#Constituição1988</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/constituicao-e-estado.html" class="btn-ver-mais">
+                                Ver trabalhos →
+                            </a>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Constitucional I -->
                 <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito Constitucional I</span>
-                    <span class="professor">Prof.ª Raquel Von Hohendorff</span>
-                    <div class="projetos">
-                        <span style="color:var(--text-secondary);">(Aguardando projetos)</span>
+                    <div class="card-header">
+                        <span class="disciplina-icon">⚖️</span>
+                        <h4>Direito Constitucional I</h4>
+                        <span class="professor">Prof.ª Raquel Von Hohendorff</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="disciplina-desc">
+                            <strong>Ementa:</strong> Direitos e garantias fundamentais, organização do Estado (Poderes Executivo, Legislativo e Judiciário), controle de constitucionalidade e normas constitucionais programáticas.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#DireitosFundamentais</span>
+                            <span>#ControleDeConstitucionalidade</span>
+                            <span>#SeparaçãoDosPoderes</span>
+                        </div>
+                        <div class="card-actions">
+                            <span style="color:var(--text-secondary); font-size:0.85rem;">Aguardando projetos</span>
+                        </div>
                     </div>
                 </div>
+
                 <!-- Constitucional II -->
                 <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito Constitucional II</span>
-                    <span class="professor">Prof.ª Clarissa Tassinari</span>
-                    <div class="projetos">
-                        <a href="https://fabiowlademir.github.io/constitucional-ii-pl896.html" target="_blank">🔗 Criminalização da Misoginia (PL 896/2023)</a>
+                    <div class="card-header">
+                        <span class="disciplina-icon">📜</span>
+                        <h4>Direito Constitucional II</h4>
+                        <span class="professor">Prof.ª Clarissa Tassinari</span>
                     </div>
-                    <div class="tags">
-                        <span>Processo Legislativo</span>
-                        <span>Controle de Constitucionalidade</span>
+                    <div class="card-body">
+                        <p class="disciplina-desc">
+                            <strong>Ementa:</strong> Devido processo legislativo, funções do Poder Legislativo, análise de propostas legislativas sob a perspectiva da constitucionalidade material e formal. Casos concretos e temas contemporâneos.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#ProcessoLegislativo</span>
+                            <span>#ControleDeConstitucionalidade</span>
+                            <span>#PL896</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="/constitucional-ii-pl896.html" class="btn-ver-mais">
+                                Ver projeto →
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- Futuras: Prática Avançada em Constitucional -->
+
+                <!-- Placeholder -->
                 <div class="card-placeholder">
                     <p>📌 <strong>Prática Avançada em Direito Constitucional</strong> (futuro)</p>
                 </div>
+
             </div>
         </section>
 
@@ -720,35 +875,8 @@
                 <span class="professores">Obrigações · Contratos · Coisas · Família · Consumidor</span>
             </div>
             <div class="area-grid">
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Fundamentos do Direito Privado</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito das Obrigações e Responsabilidade Civil</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito dos Contratos</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito das Coisas</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito das Famílias e das Sucessões</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito do Consumidor e Responsabilidade Civil</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
+                <div class="card-placeholder">
+                    <p>📌 Projetos das disciplinas de <strong>Direito das Obrigações</strong>, <strong>Contratos</strong>, <strong>Direito das Coisas</strong>, <strong>Famílias e Sucessões</strong> e <strong>Direito do Consumidor</strong> serão adicionados aqui.</p>
                 </div>
             </div>
         </section>
@@ -761,23 +889,8 @@
                 <span class="professores">Fundamentos · Crimes em Espécie · Processo Penal</span>
             </div>
             <div class="area-grid">
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Fundamentos do Direito Penal</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Crimes em Espécie</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Processo Penal (Fundamentos e Medidas Cautelares)</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
                 <div class="card-placeholder">
-                    <p>📌 <strong>Procedimentos e Nulidades</strong> · <strong>Recursos</strong> · <strong>Prática Avançada</strong> (futuro)</p>
+                    <p>📌 Futuros trabalhos de <strong>Crimes em Espécie</strong>, <strong>Processo Penal</strong> e <strong>Execução Penal</strong> serão documentados aqui.</p>
                 </div>
             </div>
         </section>
@@ -790,23 +903,8 @@
                 <span class="professores">Administrativo · Ambiental · Tributário</span>
             </div>
             <div class="area-grid">
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito Administrativo I e II</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito Ambiental</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
-                <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito Tributário e Financeiro I e II</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
-                </div>
                 <div class="card-placeholder">
-                    <p>📌 <strong>Direito Urbanístico</strong> · <strong>Regulação</strong> (futuro)</p>
+                    <p>📌 Projetos de <strong>Direito Administrativo</strong>, <strong>Ambiental</strong>, <strong>Tributário</strong> e <strong>Urbanístico</strong> serão organizados nesta seção.</p>
                 </div>
             </div>
         </section>
@@ -819,26 +917,53 @@
                 <span class="professores">Legal Tech · IA · Novas Tecnologias</span>
             </div>
             <div class="area-grid">
+
+                <!-- IA e Sociedade -->
                 <div class="card-disciplina">
-                    <span class="disciplina-nome">Artificial Intelligence and Society</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos">
-                        <a href="https://fabiowlademir.github.io/inteligencia-artificial-sociedade.html" target="_blank">🔗 Inteligência Artificial e Sociedade</a>
+                    <div class="card-header">
+                        <span class="disciplina-icon">🧠</span>
+                        <h4>Inteligência Artificial e Sociedade</h4>
+                        <span class="professor">Complementar</span>
                     </div>
-                    <div class="tags">
-                        <span>IA</span>
-                        <span>Regulação</span>
-                        <span>Ética</span>
+                    <div class="card-body">
+                        <p class="disciplina-desc">
+                            <strong>Reflexão</strong> sobre os impactos da IA no Direito, regulação, vieses algorítmicos e responsabilidade civil. Trabalho complementar que integra tecnologia e ciências jurídicas.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#IA</span>
+                            <span>#Regulação</span>
+                            <span>#Ética</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://fabiowlademir.github.io/inteligencia-artificial-sociedade.html" class="btn-ver-mais" target="_blank">
+                                Ver projeto →
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Direito Digital -->
                 <div class="card-disciplina">
-                    <span class="disciplina-nome">Direito Digital</span>
-                    <span class="professor">(futuro)</span>
-                    <div class="projetos"><span style="color:var(--text-secondary);">Aguardando</span></div>
+                    <div class="card-header">
+                        <span class="disciplina-icon">💻</span>
+                        <h4>Direito Digital</h4>
+                        <span class="professor">(futuro)</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="disciplina-desc">
+                            <strong>Ementa futura:</strong> Proteção de dados, LGPD, governança da internet, crimes cibernéticos e propriedade intelectual digital.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#LGPD</span>
+                            <span>#Cibersegurança</span>
+                            <span>#PropriedadeIntelectual</span>
+                        </div>
+                        <div class="card-actions">
+                            <span style="color:var(--text-secondary); font-size:0.85rem;">Aguardando projetos</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-placeholder">
-                    <p>📌 <strong>Novas Tecnologias nas Práticas Jurídicas</strong> (futuro)</p>
-                </div>
+
             </div>
         </section>
 
@@ -850,38 +975,65 @@
                 <span class="professores">Prof.ª Sonia Zardenunes · Cidades Criativas</span>
             </div>
             <div class="area-grid">
+
+                <!-- UniCarona -->
                 <div class="card-disciplina">
-                    <span class="disciplina-nome">Desenvolvimento Pessoal e Profissional</span>
-                    <span class="professor">Prof.ª Sonia Aparecida Zardenunes</span>
-                    <div class="projetos">
-                        <a href="https://fabiowlademir.github.io/unicarona/" target="_blank">🔗 UniCarona</a>
+                    <div class="card-header">
+                        <span class="disciplina-icon">🚗</span>
+                        <h4>UniCarona</h4>
+                        <span class="professor">Prof.ª Sonia Aparecida Zardenunes</span>
                     </div>
-                    <div class="tags">
-                        <span>Mobilidade</span>
-                        <span>Inovação Social</span>
+                    <div class="card-body">
+                        <p class="disciplina-desc">
+                            <strong>Projeto</strong> desenvolvido na disciplina de Desenvolvimento Pessoal e Profissional, abordando mobilidade urbana e soluções colaborativas para o deslocamento acadêmico.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#Mobilidade</span>
+                            <span>#InovaçãoSocial</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://fabiowlademir.github.io/unicarona/" class="btn-ver-mais" target="_blank">
+                                Ver projeto →
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- São José 2036 -->
                 <div class="card-disciplina">
-                    <span class="disciplina-nome">Cidades Criativas, Inteligentes e Sustentáveis</span>
-                    <span class="professor">(a definir)</span>
-                    <div class="projetos">
-                        <a href="https://fabiowlademir.github.io/sao_jose_2036.html" target="_blank">🔗 São José 2036</a>
+                    <div class="card-header">
+                        <span class="disciplina-icon">🏙️</span>
+                        <h4>São José 2036</h4>
+                        <span class="professor">Cidades Criativas</span>
                     </div>
-                    <div class="tags">
-                        <span>Planejamento Urbano</span>
-                        <span>Sustentabilidade</span>
+                    <div class="card-body">
+                        <p class="disciplina-desc">
+                            <strong>Exercício</strong> de planejamento urbano e visão de futuro para a cidade de São José/RS, integrando perspectivas jurídicas, ambientais e de governança.
+                        </p>
+                        <div class="disciplina-tags">
+                            <span>#PlanejamentoUrbano</span>
+                            <span>#Sustentabilidade</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="https://fabiowlademir.github.io/sao_jose_2036.html" class="btn-ver-mais" target="_blank">
+                                Ver projeto →
+                            </a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Placeholder -->
                 <div class="card-placeholder">
                     <p>📌 <strong>Educação Financeira</strong> · <strong>Ética nas Organizações</strong> · <strong>Projeto Aplicado</strong> (futuro)</p>
                 </div>
+
             </div>
         </section>
 
-        <!-- ===== SOBRE MIM (com foto) ===== -->
+        <!-- ===== SOBRE MIM ===== -->
         <div class="sobre-resumo" id="contato">
             <div class="sobre-avatar">
-                <img src="eu%2007%2006%202026.png" alt="Fábio Wlademir" />
+                <img src="imagens/eu%2007%2006%202026.png" alt="Fábio Wlademir" />
             </div>
             <div class="sobre-texto">
                 <p><strong>👨‍🎓 Fábio Wlademir Rodrigues da Silva</strong> — 47 anos, bolsista na UNISINOS. Bacharelando em Direito, com mais de uma década de experiência em TI, NOC/SOC e infraestrutura. Pesquiso a interseção entre o Direito Constitucional, a proteção de dados e a inovação tecnológica.</p>
@@ -901,9 +1053,9 @@
             <span>© 2026 Fábio Wlademir · UNISINOS · Curso de Direito</span>
             <div class="social">
                 <a href="https://linkedin.com/in/fabiowlademir" target="_blank">LinkedIn</a>
-                <a href="https://github.com/FabioWlademir" target="_blank">GitHub</a>
+                <a href="https://fabiowlademir.github.io/" target="_blank">Portfólio</a>
                 <a href="https://instagram.com/fabiowlademirrs" target="_blank">Instagram</a>
-                <a href="https://facebook.com/fabiowlademir" target="_blank">Facebook</a>
+                <a href="https://facebook.com/fabiowlademirrs" target="_blank">Facebook</a>
                 <a href="https://youtube.com/@fabiowlademirrs" target="_blank">YouTube</a>
                 <a href="https://wa.me/5551998883187" target="_blank">WhatsApp</a>
             </div>
@@ -918,71 +1070,309 @@
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // Inicializa VLibras
-        new VLibras.Widget('https://vlibras.gov.br/app');
+        // ===== VLIBRAS =====
+        let vlibrasWidget = null;
 
-        function toggleVLibras() {
-            const widget = document.querySelector('vlibras-widget');
-            if (widget) {
-                const button = widget.shadowRoot?.querySelector('.vlibras-button');
-                if (button) button.click();
+        function initVLibras() {
+            if (!vlibrasWidget) {
+                try {
+                    vlibrasWidget = new VLibras.Widget('https://vlibras.gov.br/app');
+                } catch (e) {
+                    console.warn('VLibras não pôde ser iniciado:', e);
+                }
             }
         }
 
+        function toggleVLibras() {
+            initVLibras();
+            // Tenta abrir/fechar o widget clicando no botão do VLibras
+            const widget = document.querySelector('vlibras-widget');
+            if (widget) {
+                const shadow = widget.shadowRoot;
+                if (shadow) {
+                    const button = shadow.querySelector('.vlibras-button');
+                    if (button) {
+                        button.click();
+                    } else {
+                        // Fallback: tenta encontrar qualquer botão dentro do shadow
+                        const anyButton = shadow.querySelector('button');
+                        if (anyButton) anyButton.click();
+                    }
+                }
+            }
+        }
+
+        // Inicializa VLibras ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            initVLibras();
+            // Aplica preferências salvas
+            applySavedPreferences();
+        });
+
+        // ===== TEMA =====
         function toggleTheme() {
             const html = document.documentElement;
             const current = html.getAttribute('data-theme');
-            if (current === 'dark') {
-                html.removeAttribute('data-theme');
-            } else {
-                html.setAttribute('data-theme', 'dark');
-            }
+            const newTheme = current === 'dark' ? '' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
         }
 
+        // ===== CONTRASTE =====
+        function toggleContrast() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-contrast');
+            const newContrast = current === 'high' ? '' : 'high';
+            html.setAttribute('data-contrast', newContrast);
+            localStorage.setItem('contrast', newContrast);
+        }
+
+        // ===== FONTE DISLEXIA =====
         function toggleFont() {
             const html = document.documentElement;
             const current = html.getAttribute('data-font');
-            if (current === 'dyslexic') {
-                html.removeAttribute('data-font');
-            } else {
-                html.setAttribute('data-font', 'dyslexic');
-            }
+            const newFont = current === 'dyslexic' ? '' : 'dyslexic';
+            html.setAttribute('data-font', newFont);
+            localStorage.setItem('font', newFont);
         }
 
-        let currentFontSize = 100;
+        // ===== TAMANHO DA FONTE =====
+        let currentFontSize = parseInt(localStorage.getItem('fontSize')) || 100;
+
+        function setFontSize(size) {
+            currentFontSize = Math.min(Math.max(size, 70), 160);
+            document.body.style.fontSize = currentFontSize + '%';
+            localStorage.setItem('fontSize', currentFontSize);
+        }
 
         function increaseFont() {
-            currentFontSize = Math.min(currentFontSize + 10, 160);
-            document.body.style.fontSize = currentFontSize + '%';
+            setFontSize(currentFontSize + 10);
         }
 
         function decreaseFont() {
-            currentFontSize = Math.max(currentFontSize - 10, 70);
-            document.body.style.fontSize = currentFontSize + '%';
+            setFontSize(currentFontSize - 10);
         }
 
         function resetFont() {
-            currentFontSize = 100;
-            document.body.style.fontSize = '100%';
+            setFontSize(100);
         }
 
-        // Leitura em voz alta
+        // ===== REDUZIR ANIMAÇÕES =====
+        function toggleReducedMotion() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-motion');
+            const newMotion = current === 'reduced' ? '' : 'reduced';
+            html.setAttribute('data-motion', newMotion);
+            localStorage.setItem('motion', newMotion);
+            // Aplica a classe no body para desativar transições
+            if (newMotion === 'reduced') {
+                document.body.classList.add('reduce-motion');
+            } else {
+                document.body.classList.remove('reduce-motion');
+            }
+        }
+
+        // ===== SALVAR PREFERÊNCIAS =====
+        function applySavedPreferences() {
+            const theme = localStorage.getItem('theme');
+            if (theme) document.documentElement.setAttribute('data-theme', theme);
+
+            const contrast = localStorage.getItem('contrast');
+            if (contrast) document.documentElement.setAttribute('data-contrast', contrast);
+
+            const font = localStorage.getItem('font');
+            if (font) document.documentElement.setAttribute('data-font', font);
+
+            const fontSize = localStorage.getItem('fontSize');
+            if (fontSize) {
+                currentFontSize = parseInt(fontSize);
+                document.body.style.fontSize = currentFontSize + '%';
+            }
+
+            const motion = localStorage.getItem('motion');
+            if (motion === 'reduced') {
+                document.documentElement.setAttribute('data-motion', 'reduced');
+                document.body.classList.add('reduce-motion');
+            }
+        }
+
+        // ===== LEITURA EM VOZ ALTA (OUVIR PÁGINA) =====
+        let isSpeaking = false;
+        let currentUtterance = null;
+
         function startVoice() {
+            const btn = document.getElementById('voiceReadBtn');
             if ('speechSynthesis' in window) {
-                const text = document.body.innerText;
+                if (isSpeaking) {
+                    speechSynthesis.cancel();
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    btn.innerHTML = '🔊 Ouvir';
+                    return;
+                }
+
+                const mainContent = document.querySelector('.main-content') || document.body;
+                const text = mainContent.innerText;
+
                 const utterance = new SpeechSynthesisUtterance(text);
                 utterance.lang = 'pt-BR';
                 utterance.rate = 0.9;
+                utterance.pitch = 1;
+
+                utterance.onstart = function() {
+                    isSpeaking = true;
+                    btn.innerHTML = '⏹️ Parar';
+                };
+
+                utterance.onend = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    btn.innerHTML = '🔊 Ouvir';
+                };
+
+                utterance.onerror = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    btn.innerHTML = '🔊 Ouvir';
+                };
+
+                currentUtterance = utterance;
                 speechSynthesis.speak(utterance);
             } else {
                 alert('Seu navegador não suporta leitura em voz alta.');
             }
         }
+
+        // ===== COMANDO DE VOZ (MICROFONE) =====
+        let recognition = null;
+        let isListening = false;
+
+        function startSpeechRecognition() {
+            const btn = document.getElementById('voiceCommandBtn');
+            if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+                alert('Seu navegador não suporta reconhecimento de voz. Use o Chrome ou Edge.');
+                return;
+            }
+
+            if (isListening) {
+                // Se já estiver ouvindo, para
+                if (recognition) {
+                    recognition.stop();
+                }
+                isListening = false;
+                btn.innerHTML = '🎤 Comando';
+                btn.classList.remove('active');
+                return;
+            }
+
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.lang = 'pt-BR';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.onstart = function() {
+                isListening = true;
+                btn.innerHTML = '⏹️ Parar';
+                btn.classList.add('active');
+            };
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript.trim().toLowerCase();
+                console.log('Comando reconhecido:', transcript);
+                processVoiceCommand(transcript);
+            };
+
+            recognition.onerror = function(event) {
+                console.warn('Erro no reconhecimento:', event.error);
+                isListening = false;
+                btn.innerHTML = '🎤 Comando';
+                btn.classList.remove('active');
+                if (event.error !== 'not-allowed') {
+                    alert('Erro no reconhecimento. Tente novamente.');
+                }
+            };
+
+            recognition.onend = function() {
+                isListening = false;
+                btn.innerHTML = '🎤 Comando';
+                btn.classList.remove('active');
+            };
+
+            recognition.start();
+        }
+
+        function processVoiceCommand(transcript) {
+            // Mapeamento de comandos para URLs
+            const commands = {
+                'início': '/',
+                'inicio': '/',
+                'página inicial': '/',
+                'home': '/',
+                'acadêmico': '/academico.html',
+                'academico': '/academico.html',
+                'sobre': '/sobre.html',
+                'sobre mim': '/sobre.html',
+                'perfil': '/perfil.html',
+                'contato': '#contato',
+                'whatsapp': 'https://wa.me/5551998883187',
+                'linkedin': 'https://linkedin.com/in/fabiowlademir',
+                'github': 'https://fabiowlademir.github.io/',
+                'instagram': 'https://instagram.com/fabiowlademirrs',
+                'facebook': 'https://facebook.com/fabiowlademirrs',
+                'youtube': 'https://youtube.com/@fabiowlademirrs'
+            };
+
+            let found = false;
+            for (const [key, url] of Object.entries(commands)) {
+                if (transcript.includes(key)) {
+                    if (url.startsWith('#')) {
+                        document.querySelector(url)?.scrollIntoView({ behavior: 'smooth' });
+                    } else if (url.startsWith('http')) {
+                        window.open(url, '_blank');
+                    } else {
+                        window.location.href = url;
+                    }
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                // Tenta interpretar como "ir para X"
+                if (transcript.startsWith('ir para ')) {
+                    const target = transcript.replace('ir para ', '').trim();
+                    // Busca links com texto contendo o alvo
+                    const links = document.querySelectorAll('a');
+                    for (const link of links) {
+                        if (link.textContent.toLowerCase().includes(target)) {
+                            link.click();
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (!found) {
+                    alert('Comando não reconhecido. Tente: "início", "acadêmico", "sobre", "perfil", "contato" ou "ir para [nome da página]".');
+                }
+            }
+        }
+
+        // ===== CONTADOR DE VISITAS (hits.dwyl) =====
+        // O contador é inserido via HTML com a tag <img src="https://hits.dwyl.com/...">
+        // Não é necessário JavaScript para isso.
+
+        console.log('Site acadêmico com acessibilidade e comandos de voz carregado!');
     </script>
-<div class="visitor-counter" title="Total de visualizações de página">
+
+    <!-- ===== CONTADOR DE VISITAS ===== -->
+    <div class="visitor-counter" style="text-align:center; margin-top:20px; font-size:0.85rem; color:var(--text-secondary);">
         <i class="fas fa-eye"></i>
         <span>Visitas ao portal:</span>
-        <img src="https://hits.dwyl.com/fabiowlademir/fabiowlademir.github.io.svg" alt="Contador de Acessos">
-      </div>
+        <img src="https://hits.dwyl.com/fabiowlademir/fabiowlademir.github.io.svg" alt="Contador de Acessos" style="vertical-align:middle; margin-left:8px;" />
+    </div>
+
 </body>
 </html>
