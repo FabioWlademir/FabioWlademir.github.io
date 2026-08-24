@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentos do Direito Privado – Fábio Wlademir | UNISINOS</title>
+    <meta name="description" content="Página da disciplina Fundamentos do Direito Privado (Prof. José Rodrigo Rodriguez) – UNISINOS. Trabalhos sobre direitos da personalidade, animais como sujeitos de direito, relações jurídicas e a Apelação de Shylock." />
+    <meta name="keywords" content="Fundamentos do Direito Privado, UNISINOS, Fábio Wlademir, José Rodrigo Rodriguez, Shylock, Direitos da Personalidade, Animais, Tepedino, Fachin, Direito Civil" />
+    <meta name="author" content="Fábio Wlademir Rodrigues da Silva" />
+    <meta property="og:title" content="Fundamentos do Direito Privado – Fábio Wlademir | UNISINOS" />
+    <meta property="og:description" content="Percurso na disciplina Fundamentos do Direito Privado: trabalhos sobre direitos da personalidade, relações jurídicas e a Apelação de Shylock." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabiowlademir.github.io/fundamentos-do-direito-privado.html" />
+    <meta property="og:image" content="https://fabiowlademir.github.io/imagens/eu%2007%2006%202026.png" />
+    <link rel="canonical" href="https://fabiowlademir.github.io/fundamentos-do-direito-privado.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <!-- Mermaid para o gráfico -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+
+    <style>
+        /* ===== RESET E VARIÁVEIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f4f7fc;
+            --bg-card: #ffffff;
+            --bg-soft: #eef2f8;
+            --text: #1e2a41;
+            --text-secondary: #4a5b7a;
+            --primary: #0a1c3a;
+            --accent: #b31b1b;
+            --accent-hover: #8f1515;
+            --gold: #c9a84c;
+            --gold-light: #e8d5a3;
+            --border: #dee5ef;
+            --shadow: 0 8px 30px rgba(10, 28, 58, 0.06);
+            --radius: 16px;
+            --transition: 0.3s ease;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Merriweather', serif;
+            --whatsapp: #25d366;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f1724;
+            --bg-card: #1a253a;
+            --bg-soft: #25324a;
+            --text: #e8edf5;
+            --text-secondary: #a0b3cc;
+            --primary: #dce4f0;
+            --border: #2a3a55;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        [data-font="dyslexic"] {
+            --font: 'OpenDyslexic', 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 20px;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== BARRA DE ACESSIBILIDADE ===== */
+        .accessibility-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            align-items: center;
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-bottom: 30px;
+            font-size: 0.8rem;
+        }
+
+        .accessibility-bar button {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.2s;
+            font-family: var(--font);
+        }
+
+        .accessibility-bar button:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .accessibility-bar .vlibras-btn {
+            background: #0057a3;
+            border-color: #0057a3;
+            font-weight: 600;
+        }
+
+        .accessibility-bar .vlibras-btn:hover {
+            background: #003f77;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-avatar img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+        }
+
+        .header-title h1 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .header-title h1 small {
+            font-family: var(--font);
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ===== CONTEÚDO PRINCIPAL ===== */
+        .main-content {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 40px 48px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .main-content h2 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--primary);
+            border-left: 6px solid var(--gold);
+            padding-left: 16px;
+            margin-bottom: 8px;
+        }
+
+        .main-content .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            padding-left: 22px;
+        }
+
+        /* ===== SEÇÕES ===== */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h3 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        /* ===== GRÁFICO MERMAID ===== */
+        .mermaid-container {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            margin: 16px 0;
+            overflow: auto;
+        }
+
+        .mermaid {
+            background: var(--bg-card);
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        /* ===== DESTAQUE SHYLOCK ===== */
+        .shylock-destaque {
+            background: var(--bg-card);
+            border: 3px solid var(--gold);
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin: 16px 0;
+            position: relative;
+        }
+
+        .shylock-destaque::before {
+            content: "⭐ TRABALHO DESTAQUE";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 2px 18px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .shylock-destaque h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-top: 6px;
+        }
+
+        .shylock-destaque p {
+            color: var(--text-secondary);
+        }
+
+        /* ===== POEMA ===== */
+        .poema-box {
+            background: #fdf6f0;
+            border-radius: 12px;
+            padding: 20px 24px;
+            border: 2px solid var(--gold);
+            margin: 16px 0;
+            font-family: var(--font-serif);
+            text-align: center;
+        }
+
+        .poema-box p {
+            font-style: italic;
+            color: #4d2f1a;
+            margin-bottom: 4px;
+            line-height: 1.8;
+        }
+
+        .poema-box .autor {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 8px;
+        }
+
+        /* ===== TAGS ===== */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            padding: 8px 0;
+        }
+
+        .tags-container span {
+            background: var(--bg-soft);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* ===== CONTADOR DE VISITAS ===== */
+        .visitor-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-soft);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            margin: 12px 0;
+        }
+
+        .visitor-counter i {
+            font-size: 1rem;
+        }
+
+        .visitor-counter img {
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        /* ===== RODAPÉ ===== */
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer .social a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer .social a:hover {
+            color: var(--accent);
+        }
+
+        /* ===== WHATSAPP FLUTUANTE ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--whatsapp);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
+            text-decoration: none;
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(-4deg);
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-left {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                gap: 14px;
+            }
+            .main-content {
+                padding: 24px 20px;
+            }
+            .shylock-destaque {
+                padding: 18px 16px;
+            }
+            .shylock-destaque::before {
+                left: 12px;
+                font-size: 0.65rem;
+                padding: 2px 12px;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer .social a {
+                margin: 0 10px;
+            }
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 1.8rem;
+                bottom: 18px;
+                right: 18px;
+            }
+            .accessibility-bar {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+                gap: 4px 10px;
+            }
+            .accessibility-bar button {
+                font-size: 0.65rem;
+                padding: 2px 10px;
+            }
+            .mermaid-container {
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 18px 14px;
+            }
+            body {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== BARRA DE ACESSIBILIDADE ===== -->
+        <div class="accessibility-bar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+            <span style="opacity:0.6;">♿ Acessibilidade</span>
+            <button onclick="toggleTheme()" id="themeToggle" aria-label="Alternar tema claro/escuro">🌓 Tema</button>
+            <button onclick="toggleFont()" id="fontToggle" aria-label="Alternar fonte para dislexia">🔤 Dislexia</button>
+            <button onclick="increaseFont()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="decreaseFont()" aria-label="Diminuir fonte">A−</button>
+            <button onclick="resetFont()" aria-label="Resetar fonte">A</button>
+            <button onclick="startVoice()" aria-label="Ler página em voz alta">🎤 Ouvir</button>
+            <button onclick="startVoiceCommand()" aria-label="Comando de voz para navegação">🎤 Comando</button>
+            <button class="vlibras-btn" onclick="toggleVLibras()" aria-label="Abrir tradutor de Libras">🤟 Libras</button>
+        </div>
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="header-left">
+                <div class="header-avatar">
+                    <img src="imagens/eu%2007%2006%202026.png" alt="Fábio Wlademir" />
+                </div>
+                <div class="header-title">
+                    <h1>📜 Fundamentos do Direito Privado <small>Fábio Wlademir · UNISINOS</small></h1>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Início</a>
+                <a href="/academico.html">Acadêmico</a>
+                <a href="/constitucional.html">Constitucional</a>
+                <a href="/sobre.html">Sobre</a>
+                <a href="https://fabiowlademir.github.io/" target="_blank">Portfólio</a>
+            </div>
+        </header>
+
+        <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+        <main class="main-content">
+
+            <h2>📚 Fundamentos do Direito Privado</h2>
+            <p class="subtitle"><strong>Professor:</strong> Dr. José Rodrigo Rodriguez · <strong>1º Semestre</strong> · UNISINOS</p>
+
+            <!-- ===== CONTADOR DE VISITAS ===== -->
+            <div class="visitor-counter" title="Total de visualizações da página">
+                <span>👁️</span>
+                <span>Visitas a esta página:</span>
+                <img src="https://hits.dwyl.com/fabiowlademir/fundamentos-do-direito-privado.svg" alt="Contador de Acessos" />
+            </div>
+
+            <!-- ===== APRESENTAÇÃO ===== -->
+            <section class="section">
+                <h3>📖 Sobre a disciplina</h3>
+                <p>
+                    A disciplina <strong>Fundamentos do Direito Privado</strong>, sob a orientação do Prof. José Rodrigo Rodriguez, foi um mergulho profundo nos alicerces do direito civil contemporâneo. Exploramos desde a teoria tridimensional do Direito (Reale) até os desafios da constitucionalização do direito privado, passando pela classificação funcional dos atos jurídicos (Tepedino), a crítica à constitucionalização seletiva (Fachin), a teoria complexa da justiça (Dresch) e a hermenêutica civil-constitucional (Amaral).
+                </p>
+                <p>
+                    O ponto alto da disciplina foi a aplicação prática desses conceitos em dois trabalhos memoráveis: a análise dos <strong>direitos da personalidade</strong> e a <strong>Apelação de Shylock</strong> — esta última, uma verdadeira obra de criatividade jurídica que transcendeu a mera tarefa acadêmica.
+                </p>
+            </section>
+
+            <!-- ===== GRÁFICO DAS RELAÇÕES JURÍDICAS ===== -->
+            <section class="section">
+                <h3>📊 Representação Gráfica das Relações Jurídicas</h3>
+                <p>
+                    A atividade proposta consistiu em mapear as <strong>relações jurídicas</strong> das quais Fábio participa, identificando o fato jurídico gerador, o texto normativo aplicável, os sujeitos envolvidos e as posições jurídicas (ativas e passivas) de cada um. O gráfico abaixo representa essas relações de forma visual e sistematizada.
+                </p>
+
+                <div class="mermaid-container">
+                    <div class="mermaid">
+flowchart TD
+    CENTRO["👤 EU<br/><b>Fábio Wlademir</b>"]
+    
+    %% CATEGORIAS PRINCIPAIS
+    LIVROS["📚 DIREITOS<br/>AUTORAIS"]
+    INFORMATICA["💻 PRESTAÇÃO<br/>SERVIÇOS"]
+    UTILIDADE["🏠 SERVIÇOS<br/>PÚBLICOS"]
+    PENSAO["👨‍👧‍👦 DIREITO<br/>FAMÍLIA"]
+    COMPRAS["🛒 RELAÇÕES<br/>CONSUMO"]
+    ASSINATURAS["📱 CONTRATOS<br/>DIGITAIS"]
+    
+    %% SUBCATEGORIAS
+    L1["📖 Contrato<br/>Publicação"]
+    L2["📚 Venda<br/>Direta"]
+    I1["🔧 Serviços<br/>Técnicos"]
+    I2["🌐 Desenvolvimento<br/>Software"]
+    U1["📞 Telefonia<br/>VIVO"]
+    U2["⚡ Energia<br/>RGE"]
+    U3["💧 Saneamento<br/>CORSAN"]
+    U4["🏡 Locação<br/>Residencial"]
+    P1["👶 Pensão<br/>Alimentícia"]
+    C1["🍬 Compra<br/>Produtos"]
+    C2["🌱 Serviços<br/>Jardinagem"]
+    A1["🎬 Prime<br/>Video"]
+    A2["💼 Office<br/>365"]
+    
+    %% CONEXÕES
+    CENTRO --> LIVROS
+    CENTRO --> INFORMATICA
+    CENTRO --> UTILIDADE
+    CENTRO --> PENSAO
+    CENTRO --> COMPRAS
+    CENTRO --> ASSINATURAS
+    
+    LIVROS --> L1
+    LIVROS --> L2
+    INFORMATICA --> I1
+    INFORMATICA --> I2
+    UTILIDADE --> U1
+    UTILIDADE --> U2
+    UTILIDADE --> U3
+    UTILIDADE --> U4
+    PENSAO --> P1
+    COMPRAS --> C1
+    COMPRAS --> C2
+    ASSINATURAS --> A1
+    ASSINATURAS --> A2
+    
+    %% ESTILOS
+    classDef center fill:#667eea,stroke:#764ba2,stroke-width:3px,color:#fff;
+    classDef category fill:#74b9ff,stroke:#0984e3,stroke-width:2px,color:#fff;
+    classDef subcategory fill:#fdcb6e,stroke:#f39c12,stroke-width:2px,color:#2d3436;
+    
+    class CENTRO center;
+    class LIVROS,INFORMATICA,UTILIDADE,PENSAO,COMPRAS,ASSINATURAS category;
+    class L1,L2,I1,I2,U1,U2,U3,U4,P1,C1,C2,A1,A2 subcategory;
+                    </div>
+                </div>
+
+                <div style="background:var(--bg-soft); border-radius:10px; padding:14px 18px; margin:12px 0; border-left:4px solid var(--gold);">
+                    <p style="font-size:0.9rem; color:var(--text-secondary); margin:0;">
+                        <strong>📌 Legenda:</strong> <span style="background:#667eea; color:#fff; padding:2px 10px; border-radius:12px;">Centro</span> (Fábio Wlademir) · 
+                        <span style="background:#74b9ff; color:#fff; padding:2px 10px; border-radius:12px;">Categorias</span> · 
+                        <span style="background:#fdcb6e; color:#2d3436; padding:2px 10px; border-radius:12px;">Relações Específicas</span>
+                    </p>
+                </div>
+
+                <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; margin:12px 0; border-left:4px solid var(--accent);">
+                    <p style="font-weight:700; color:var(--primary);">📌 Relações mapeadas:</p>
+                    <ul style="padding-left:20px; color:var(--text-secondary);">
+                        <li><strong>Contrato de publicação com editora</strong> — com análise dos direitos autorais (Lei 9.610/1998) e das obrigações recíprocas entre autor e editor.</li>
+                        <li><strong>Prestação de serviços de informática</strong> — relação de consumo (CDC) e deveres do prestador.</li>
+                        <li><strong>Pensão alimentícia</strong> — filiação e obrigação alimentar (CC, art. 1.696; Lei 5.478/1968).</li>
+                        <li><strong>Contrato de locação residencial</strong> — direitos e deveres de locatário e locador (Lei 8.245/1991).</li>
+                        <li><strong>Relações de consumo</strong> — compras cotidianas e aplicação do CDC.</li>
+                        <li><strong>Serviços públicos essenciais</strong> — energia, água, telefonia e direitos do usuário (Lei 8.987/1995).</li>
+                        <li><strong>Contratos digitais</strong> — assinaturas de serviços online, proteção de dados (Marco Civil da Internet, LGPD).</li>
+                    </ul>
+                </div>
+                <div class="tags-container">
+                    <span>#RelaçõesJurídicas</span>
+                    <span>#Contratos</span>
+                    <span>#DireitoCivil</span>
+                    <span>#CDC</span>
+                    <span>#LGPD</span>
+                </div>
+            </section>
+
+            <!-- ===== TRABALHO 1: CONCEITOS JURÍDICOS EM DISPUTA ===== -->
+            <section class="section">
+                <h3>🐾 Conceitos jurídicos em disputa: Animais como sujeitos de direito</h3>
+                <p>
+                    O primeiro trabalho da disciplina propôs uma reflexão sobre o <strong>estatuto jurídico dos animais não humanos</strong> no ordenamento brasileiro. O desafio era analisar como o Direito Civil — que tradicionalmente classifica os animais como "bens móveis semoventes" (art. 82 do Código Civil) — vem sendo tensionado por movimentos sociais, avanços científicos e evoluções jurisprudenciais que reconhecem os animais como <strong>seres sencientes</strong>, portadores de valor intrínseco e integrantes de relações afetivas complexas com os humanos.
+                </p>
+                <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; margin:12px 0; border-left:4px solid var(--accent);">
+                    <p style="font-weight:700; color:var(--primary);">🧠 Abordagem criativa:</p>
+                    <p style="color:var(--text-secondary);">
+                        A resposta foi construída a partir de uma <strong>análise comparada</strong> entre o Projeto de Lei do Senador Anastasia (PLS 351/2015) e a proposta da Comissão de Reforma do Código Civil. Fábio argumentou, com base na doutrina e na jurisprudência do STF e STJ, que o PL Anastasia é <strong>insuficiente e contraditório</strong> — pois nega que os animais sejam "coisas", mas mantém a aplicação subsidiária do regime dos bens. Já a proposta da Comissão de Reforma, ao reconhecer a <strong>"natureza especial"</strong> dos animais e tutelar o <strong>vínculo afetivo</strong> entre humanos e animais, representa um avanço verdadeiramente alinhado com a evolução social e jurisprudencial.
+                    </p>
+                </div>
+                <div style="background:#f0f4fa; border-radius:10px; padding:14px 18px; margin:12px 0; border-left:4px solid var(--gold);">
+                    <p style="font-size:0.95rem; color:var(--text-secondary); font-style:italic;">
+                        "O PL Anastasia é um avanço incremental, porém insuficiente e até mesmo regressivo, pois pode cristalizar na lei uma contradição — não são coisas, mas são regidos pelo direito das coisas. A Proposta da Comissão é mais abrangente, ousada e alinhada com a evolução jurisprudencial e social."
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); text-align:right; margin-top:4px;">— Trecho do trabalho de Fábio Wlademir</p>
+                </div>
+                <div class="tags-container">
+                    <span>#Animais</span>
+                    <span>#Senciência</span>
+                    <span>#PL351</span>
+                    <span>#ReformaCC</span>
+                    <span>#STF</span>
+                    <span>#STJ</span>
+                </div>
+            </section>
+
+            <!-- ===== TRABALHO 2: DIREITOS DA PERSONALIDADE ===== -->
+            <section class="section">
+                <h3>🧑‍⚖️ Direitos da Personalidade na Perspectiva Civil-Constitucional</h3>
+                <p>
+                    O segundo trabalho aprofundou a análise dos <strong>direitos da personalidade</strong> — vida, integridade física, honra, imagem, privacidade, nome — à luz de cinco grandes autores do direito privado contemporâneo: <strong>Gustavo Tepedino</strong> (classificação funcional dos atos jurídicos), <strong>Luiz Edson Fachin</strong> (crítica à constitucionalização seletiva), <strong>Rafael de Freitas Valle Dresch</strong> (teoria complexa da justiça), <strong>Miguel Reale</strong> (teoria tridimensional) e <strong>Francisco Amaral</strong> (hermenêutica civil-constitucional).
+                </p>
+                <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; margin:12px 0; border-left:4px solid var(--accent);">
+                    <p style="font-weight:700; color:var(--primary);">🎯 Diferenciais do trabalho:</p>
+                    <ul style="padding-left:20px; color:var(--text-secondary);">
+                        <li><strong>Articulação teórica original:</strong> Fábio propôs uma <strong>síntese integradora</strong> das cinco perspectivas, demonstrando como cada autor contribui para uma visão sistemática e constitucionalmente orientada do direito privado.</li>
+                        <li><strong>Aplicação a casos concretos:</strong> O trabalho analisou situações paradigmáticas — uso não autorizado de imagem em redes sociais, direito ao esquecimento e reconhecimento da união estável homoafetiva — aplicando a síntese teórica proposta.</li>
+                        <li><strong>Reflexão sobre o uso de IA na academia:</strong> Em um movimento de <strong>transparência e vanguarda</strong>, Fábio dedicou uma seção inteira ao uso ético da Inteligência Artificial na produção acadêmica, alertando para os riscos das ferramentas de detecção e defendendo o diálogo como caminho.</li>
+                    </ul>
+                </div>
+                <div style="background:#f0f4fa; border-radius:10px; padding:14px 18px; margin:12px 0; border-left:4px solid var(--gold);">
+                    <p style="font-size:0.95rem; color:var(--text-secondary); font-style:italic;">
+                        "O uso de IA, como ferramenta de auxílio para tarefas mecânicas e de organização, pode ser um legítimo exercício da autonomia do estudante. No entanto, seu uso para gerar conteúdo nuclear do trabalho viola a natureza existencial da produção acadêmica e o princípio da dignidade da formação intelectual."
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); text-align:right; margin-top:4px;">— Trecho do trabalho de Fábio Wlademir</p>
+                </div>
+                <div class="tags-container">
+                    <span>#DireitosDaPersonalidade</span>
+                    <span>#Tepedino</span>
+                    <span>#Fachin</span>
+                    <span>#Dresch</span>
+                    <span>#Reale</span>
+                    <span>#Amaral</span>
+                    <span>#IA</span>
+                </div>
+            </section>
+
+            <!-- ===== TRABALHO 4: APELAÇÃO DE SHYLOCK (DESTAQUE) ===== -->
+            <section class="section">
+                <h3>⚖️ A Apelação de Shylock — Uma obra-prima de criatividade jurídica</h3>
+                <p>
+                    O ponto culminante da disciplina foi a elaboração de uma <strong>Apelação</strong> para defender Shylock, o controverso personagem de <em>"O Mercador de Veneza"</em> de William Shakespeare, contra a sentença do Duque de Veneza — que não apenas julgou improcedente seu pedido de execução da cláusula penal contratual, mas impôs sanções absurdas: perda do capital emprestado, conversão forçada ao cristianismo, confisco de bens e entrega de metade de seu patrimônio ao próprio devedor inadimplente.
+                </p>
+
+                <!-- Destaque do Shylock -->
+                <div class="shylock-destaque">
+                    <h4>⭐ Por que este trabalho se destacou?</h4>
+                    <p style="color:var(--text-secondary);">
+                        Fábio construiu uma <strong>peça jurídica completa, sofisticada e multifacetada</strong>, que articulou:
+                    </p>
+                    <ul style="padding-left:20px; color:var(--text-secondary);">
+                        <li><strong>Nulidade processual absoluta</strong> por falsidade ideológica (Pórcia se passou por advogado "Balthazar") e parcialidade manifesta do Duque de Veneza.</li>
+                        <li><strong>Violão da liberdade religiosa</strong> (art. 5º, VI e VIII, CF/88) e do princípio da laicidade do Estado (art. 19, I, CF/88) — com fundamentação em precedentes do STF e do STJ.</li>
+                        <li><strong>Princípios contratuais violados</strong> — autonomia da vontade, função social do contrato, pacta sunt servanda e conversão da obrigação em perdas e danos (art. 248, CC).</li>
+                        <li><strong>Discriminação religiosa e xenofobia</strong> — com uma análise histórica do antissemitismo, fundamentada na Convenção Internacional sobre a Eliminação da Discriminação Racial, na Lei 7.716/89 e na Lei 14.532/2023.</li>
+                        <li><strong>Referências artísticas e culturais</strong> — adaptações brasileiras de <em>"O Mercador de Veneza"</em> no cinema, como <em>"Ó Pai, Ó"</em> (Lázaro Ramos) e <em>"Auto da Compadecida"</em> (Ariano Suassuna), mostrando como a figura de Shylock foi caricaturada e transformada em objeto de deboche ao longo dos séculos — o que agrava o dano moral.</li>
+                        <li><strong>Medidas judiciais conexas</strong> — notícia-crime contra Pórcia, representação ao CNJ contra o Duque, ação penal privada, ação de reparação por danos morais, mandado de segurança, e comunicação a organismos internacionais (CIDH, ONU).</li>
+                    </ul>
+                </div>
+
+                <!-- Trechos autorais -->
+                <div style="background:#f0f4fa; border-radius:10px; padding:14px 18px; margin:12px 0; border-left:4px solid var(--gold);">
+                    <p style="font-size:0.95rem; color:var(--text-secondary); font-style:italic;">
+                        "A trajetória de Shylock, originalmente marcada pela dor da exclusão religiosa e étnica, foi ao longo dos séculos distorcida, caricaturada e transformada em objeto de deboche. Em vez de ser lembrado como vítima de um sistema que o desumanizou, passou a representar, em diversas culturas, o estereótipo do credor implacável — ou pior, do vilão cômico."
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); text-align:right; margin-top:4px;">— Trecho da Apelação de Shylock, Fábio Wlademir</p>
+                </div>
+
+                <div style="background:#fdf6f0; border-radius:10px; padding:14px 18px; margin:12px 0; border-left:4px solid #c9a84c;">
+                    <p style="font-size:0.95rem; color:#4d2f1a; font-style:italic;">
+                        "Negar o contexto histórico de opressão é negar a própria justiça. O Apelante não exige apenas o cumprimento de um contrato — exige que sua humanidade seja reconhecida."
+                    </p>
+                    <p style="font-size:0.85rem; color:#4d2f1a; text-align:right; margin-top:4px;">— Trecho da Apelação de Shylock, Fábio Wlademir</p>
+                </div>
+
+                <!-- POEMA COMPLETO DA AVÓ VENEZA -->
+                <div class="poema-box">
+                    <p>"Na cidade onde o juízo se desenha,</p>
+                    <p>Chama-se Veneza, palco da cena estranha.</p>
+                    <p>Mas há outra Veneza, viva e verdadeira,</p>
+                    <p>Minha avó centenária, mulher guerreira."</p>
+                    <br />
+                    <p>"Cem anos e mais, de força e memória,</p>
+                    <p>Guardando em silêncio pedaços da história.</p>
+                    <p>Se nesta peça há justiça que se almeja,</p>
+                    <p>Que também ecoe nela a nobre peleja."</p>
+                    <br />
+                    <p>"Pois carrego em mim sua sabedoria,</p>
+                    <p>Feita de luta, de fé e de poesia.</p>
+                    <p>E se aqui julgo com voz e firmeza,</p>
+                    <p>É por ela — minha própria Veneza."</p>
+                    <div class="autor">— Fábio Wlademir, em homenagem a sua avó, Veneza da Silva Rodrigues (101 anos)</div>
+                </div>
+
+                <!-- Histórico de versões -->
+                <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; margin:12px 0; border-left:4px solid var(--primary);">
+                    <p style="font-weight:700; color:var(--primary);">📜 Histórico de versões — a construção de uma obra-prima</p>
+                    <p style="color:var(--text-secondary); font-size:0.95rem;">
+                        A Apelação de Shylock não foi escrita de uma só vez. Fábio documentou <strong>9 versões</strong> ao longo de quase dois meses (agosto a outubro de 2025), registrando cada etapa do processo criativo:
+                    </p>
+                    <ul style="padding-left:20px; color:var(--text-secondary); font-size:0.9rem;">
+                        <li><strong>v0.1 a v0.5</strong> — Leitura dos livros indicados, resumos, contextualização da peça de Shakespeare e do filme.</li>
+                        <li><strong>v1.0 a v3.0</strong> — Primeira redação da peça, inserção de fundamentação legal e revisão gramatical.</li>
+                        <li><strong>v4.0 a v6.0</strong> — Pesquisa aprofundada de leis, jurisprudência (STF, STJ, TJ-SP) e aprofundamento doutrinário (Tepedino, Fachin, Dresch, Reale, Amaral).</li>
+                        <li><strong>v7.0 a v8.0</strong> — Pesquisa sobre adaptações brasileiras de <em>"O Mercador de Veneza"</em> (<em>Ó Pai, Ó</em> e <em>Auto da Compadecida</em>), criação da nota final em homenagem à avó Veneza, e ajustes no tribunal.</li>
+                        <li><strong>v9.0</strong> — Revisão final, ajustes de formatação e inclusão de referências complementares.</li>
+                    </ul>
+                    <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:8px;">
+                        <strong>Esse registro minucioso demonstra não apenas dedicação, mas uma <em>metodologia de trabalho intelectual</em> digna de um pesquisador maduro.</strong>
+                    </p>
+                </div>
+
+                <div class="tags-container">
+                    <span>#Shylock</span>
+                    <span>#Apelação</span>
+                    <span>#Shakespeare</span>
+                    <span>#DireitoCivil</span>
+                    <span>#LiberdadeReligiosa</span>
+                    <span>#Antissemitismo</span>
+                    <span>#Criatividade</span>
+                </div>
+            </section>
+
+            <!-- ===== DECLARAÇÃO DE USO DE IA ===== -->
+            <section class="section">
+                <h3>🤖 Declaração de uso ético de ferramentas de IA</h3>
+                <p>
+                    Assim como no trabalho sobre Direitos da Personalidade, Fábio declarou de forma transparente o uso de ferramentas de Inteligência Artificial para fins auxiliares — correção gramatical, sugestões de fluência textual, organização de índices e formatação. Todo o conteúdo substantivo, ideias, argumentos, pesquisa jurídica e estratégia processual são de sua autoria exclusiva.
+                </p>
+                <div style="background:var(--bg-soft); border-radius:10px; padding:14px 18px; border-left:4px solid var(--gold);">
+                    <p style="font-size:0.9rem; color:var(--text-secondary); font-style:italic;">
+                        "Ressalta-se que todo o conteúdo substantivo, as ideias principais, a pesquisa jurídica, a construção dos argumentos, a produção textual, a seleção da jurisprudência e a estratégia processual são de minha autoria exclusiva, fruto do estudo dos materiais indicados e da pesquisa complementar realizada."
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); text-align:right; margin-top:4px;">— Declaração de Fábio Wlademir</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== RODAPÉ ===== -->
+        <footer class="footer">
+            <span>© 2026 Fábio Wlademir · UNISINOS · Curso de Direito</span>
+            <div class="social">
+                <a href="https://linkedin.com/in/fabiowlademir" target="_blank">LinkedIn</a>
+                <a href="https://fabiowlademir.github.io/" target="_blank">Portfólio</a>
+                <a href="https://instagram.com/fabiowlademirrs" target="_blank">Instagram</a>
+                <a href="https://facebook.com/fabiowlademirrs" target="_blank">Facebook</a>
+                <a href="https://youtube.com/@fabiowlademirrs" target="_blank">YouTube</a>
+                <a href="https://wa.me/5551998883187" target="_blank">WhatsApp</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ===== WHATSAPP FLUTUANTE ===== -->
+    <a href="https://wa.me/5551998883187" class="whatsapp-float" target="_blank" aria-label="Fale comigo no WhatsApp">
+        💬
+    </a>
+
+    <!-- ===== JAVASCRIPT (ACESSIBILIDADE + COMANDO DE VOZ + MERMAID) ===== -->
+    <script>
+        // ============================================================
+        // 1. MERMAID - INICIALIZAÇÃO
+        // ============================================================
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose',
+            fontFamily: 'Inter, sans-serif'
+        });
+
+        // ============================================================
+        // 2. VLIBRAS - CORRIGIDO
+        // ============================================================
+        new VLibras.Widget('https://vlibras.gov.br/app');
+
+        function toggleVLibras() {
+            const widget = document.querySelector('vlibras-widget');
+            if (widget) {
+                try {
+                    const shadowRoot = widget.shadowRoot;
+                    const button = shadowRoot.querySelector('.vlibras-button');
+                    if (button) {
+                        button.click();
+                        return;
+                    }
+                } catch (e) {
+                    console.log('Erro ao acessar shadowRoot, tentando fallback.');
+                }
+            }
+            const fallbackBtn = document.querySelector('.vlibras-button');
+            if (fallbackBtn) {
+                fallbackBtn.click();
+                return;
+            }
+            alert('Clique no ícone azul do VLibras no canto inferior direito da tela.');
+        }
+
+        // ============================================================
+        // 3. TEMA (CLARO/ESCURO)
+        // ============================================================
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            if (current === 'dark') {
+                html.removeAttribute('data-theme');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        // ============================================================
+        // 4. FONTE DISLEXIA
+        // ============================================================
+        function toggleFont() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-font');
+            if (current === 'dyslexic') {
+                html.removeAttribute('data-font');
+            } else {
+                html.setAttribute('data-font', 'dyslexic');
+            }
+        }
+
+        // ============================================================
+        // 5. AUMENTAR / DIMINUIR / RESETAR FONTE
+        // ============================================================
+        let currentFontSize = 100;
+
+        function increaseFont() {
+            currentFontSize = Math.min(currentFontSize + 10, 160);
+            document.body.style.fontSize = currentFontSize + '%';
+        }
+
+        function decreaseFont() {
+            currentFontSize = Math.max(currentFontSize - 10, 70);
+            document.body.style.fontSize = currentFontSize + '%';
+        }
+
+        function resetFont() {
+            currentFontSize = 100;
+            document.body.style.fontSize = '100%';
+        }
+
+        // ============================================================
+        // 6. LEITURA EM VOZ ALTA (TEXTO-TO-SPEECH)
+        // ============================================================
+        let isSpeaking = false;
+        let currentUtterance = null;
+
+        function startVoice() {
+            if ('speechSynthesis' in window) {
+                if (isSpeaking) {
+                    speechSynthesis.cancel();
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🎤 Ouvir';
+                    return;
+                }
+
+                const mainContent = document.querySelector('.main-content');
+                const text = mainContent ? mainContent.innerText : document.body.innerText;
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = 0.9;
+                utterance.pitch = 1;
+
+                utterance.onstart = function() {
+                    isSpeaking = true;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '⏹️ Parar';
+                };
+
+                utterance.onend = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🎤 Ouvir';
+                };
+
+                utterance.onerror = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🎤 Ouvir';
+                };
+
+                currentUtterance = utterance;
+                speechSynthesis.speak(utterance);
+            } else {
+                alert('Seu navegador não suporta leitura em voz alta.');
+            }
+        }
+
+        // ============================================================
+        // 7. COMANDO DE VOZ (MICROFONE PARA NAVEGAÇÃO)
+        // ============================================================
+        let recognition = null;
+        let isListening = false;
+
+        function startVoiceCommand() {
+            const btn = document.querySelector('[onclick="startVoiceCommand()"]');
+
+            if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+                alert('Seu navegador não suporta comandos de voz. Use Chrome, Edge ou Safari.');
+                return;
+            }
+
+            if (isListening && recognition) {
+                recognition.stop();
+                if (btn) btn.innerHTML = '🎤 Comando';
+                isListening = false;
+                return;
+            }
+
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.lang = 'pt-BR';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.onstart = function() {
+                isListening = true;
+                if (btn) btn.innerHTML = '🎤 Ouvindo...';
+            };
+
+            recognition.onresult = function(event) {
+                const command = event.results[0][0].transcript.toLowerCase().trim();
+                if (btn) btn.innerHTML = '🎤 Processando...';
+
+                const routes = {
+                    'início': '/',
+                    'inicio': '/',
+                    'home': '/',
+                    'principal': '/',
+                    'sobre': '/sobre.html',
+                    'perfil': '/perfil.html',
+                    'acadêmico': '/academico.html',
+                    'academico': '/academico.html',
+                    'constitucional': '/constitucional.html',
+                    'privado': '/fundamentos-do-direito-privado.html',
+                    'direito privado': '/fundamentos-do-direito-privado.html',
+                    'fundamentos': '/fundamentos-do-direito-privado.html',
+                    'página inicial': '/',
+                    'voltar': '/'
+                };
+
+                let found = false;
+                for (const [key, url] of Object.entries(routes)) {
+                    if (command.includes(key)) {
+                        window.location.href = url;
+                        found = true;
+                        return;
+                    }
+                }
+
+                if (!found) {
+                    alert('Comando não reconhecido. Tente: Início, Sobre, Perfil, Acadêmico, Constitucional ou Privado.');
+                    if (btn) btn.innerHTML = '🎤 Comando';
+                    isListening = false;
+                }
+            };
+
+            recognition.onerror = function(event) {
+                console.error('Erro no reconhecimento de voz:', event.error);
+                if (btn) btn.innerHTML = '🎤 Comando';
+                isListening = false;
+                if (event.error === 'not-allowed') {
+                    alert('Permissão de microfone negada. Por favor, permita o acesso ao microfone no seu navegador.');
+                } else if (event.error === 'no-speech') {
+                    alert('Nenhuma fala detectada. Tente novamente.');
+                } else {
+                    alert('Erro ao reconhecer a voz. Tente novamente.');
+                }
+            };
+
+            recognition.onend = function() {
+                if (btn) btn.innerHTML = '🎤 Comando';
+                isListening = false;
+            };
+
+            recognition.start();
+        }
+    </script>
+
+</body>
+</html>
