@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PL 896/2023 – Criminalização da Misoginia | Fábio Wlademir</title>
+    <meta name="description" content="Análise constitucional do PL 896/2023, que criminaliza a misoginia. Debate sobre devido processo legislativo, controle de constitucionalidade e polarização social. Trabalho acadêmico da UNISINOS." />
+    <meta name="keywords" content="PL 896, Misoginia, Direito Constitucional, UNISINOS, Fábio Wlademir, Processo Legislativo, Controle de Constitucionalidade, ADO 26, Criminalização" />
+    <meta name="author" content="Fábio Wlademir Rodrigues da Silva" />
+    <meta property="og:title" content="PL 896/2023 – Criminalização da Misoginia | Fábio Wlademir" />
+    <meta property="og:description" content="Análise constitucional do projeto que equipara a misoginia ao racismo. Debate, votação e reflexões." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabiowlademir.github.io/constitucional-ii-pl896/" />
+    <meta property="og:image" content="https://fabiowlademir.github.io/imagens/eu%2007%2006%202026.png" />
+    <link rel="canonical" href="https://fabiowlademir.github.io/constitucional-ii-pl896/" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <style>
+        /* ===== RESET E VARIÁVEIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f4f7fc;
+            --bg-card: #ffffff;
+            --bg-soft: #eef2f8;
+            --text: #1e2a41;
+            --text-secondary: #4a5b7a;
+            --primary: #0a1c3a;
+            --accent: #b31b1b;
+            --accent-hover: #8f1515;
+            --gold: #c9a84c;
+            --gold-light: #e8d5a3;
+            --border: #dee5ef;
+            --shadow: 0 8px 30px rgba(10, 28, 58, 0.06);
+            --radius: 16px;
+            --transition: 0.3s ease;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Merriweather', serif;
+            --whatsapp: #25d366;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f1724;
+            --bg-card: #1a253a;
+            --bg-soft: #25324a;
+            --text: #e8edf5;
+            --text-secondary: #a0b3cc;
+            --primary: #dce4f0;
+            --border: #2a3a55;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        [data-font="dyslexic"] {
+            --font: 'OpenDyslexic', 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 20px;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== BARRA DE ACESSIBILIDADE ===== */
+        .accessibility-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            align-items: center;
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-bottom: 30px;
+            font-size: 0.8rem;
+        }
+
+        .accessibility-bar button {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.2s;
+            font-family: var(--font);
+        }
+
+        .accessibility-bar button:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .accessibility-bar .vlibras-btn {
+            background: #0057a3;
+            border-color: #0057a3;
+            font-weight: 600;
+        }
+
+        .accessibility-bar .vlibras-btn:hover {
+            background: #003f77;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-avatar img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+        }
+
+        .header-title h1 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .header-title h1 small {
+            font-family: var(--font);
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ===== CONTEÚDO PRINCIPAL ===== */
+        .main-content {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 40px 48px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .main-content h2 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--primary);
+            border-left: 6px solid var(--accent);
+            padding-left: 16px;
+            margin-bottom: 12px;
+        }
+
+        .main-content .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .main-content .subtitle strong {
+            color: var(--primary);
+        }
+
+        /* ===== SEÇÕES ===== */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section h3 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .destaque-box {
+            background: var(--bg-soft);
+            border-radius: 12px;
+            padding: 20px 24px;
+            border-left: 6px solid var(--accent);
+            margin: 16px 0;
+        }
+
+        .destaque-box h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .destaque-box p {
+            margin-bottom: 0;
+        }
+
+        /* ===== GRID DE TESES ===== */
+        .grid-duas-colunas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 16px 0;
+        }
+
+        .card-tese {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .card-tese.contra {
+            border-top: 6px solid #c0392b;
+        }
+
+        .card-tese.favor {
+            border-top: 6px solid #2980b9;
+        }
+
+        .card-tese h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .card-tese ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card-tese ul li {
+            margin-bottom: 4px;
+        }
+
+        .explicacao {
+            background: var(--bg-soft);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-left: 4px solid var(--gold);
+            margin-top: 8px;
+        }
+
+        .explicacao strong {
+            color: var(--primary);
+        }
+
+        /* ===== VOTAÇÃO ===== */
+        .box-votacao {
+            background: var(--primary);
+            color: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .voto-item {
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .voto-item .numero {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 900;
+            display: block;
+        }
+
+        .voto-item .label {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .voto-item .porcentagem {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .voto-divisor {
+            font-size: 1.8rem;
+            opacity: 0.3;
+            padding: 0 10px;
+        }
+
+        .reflexao {
+            background: #fdf6f0;
+            border-radius: 10px;
+            padding: 18px 22px;
+            border: 1px solid #f0d5c0;
+            color: #4d2f1a;
+            margin: 16px 0;
+        }
+
+        .reflexao p {
+            margin-bottom: 6px;
+        }
+
+        .reflexao .autor {
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* ===== CRÉDITOS ===== */
+        .creditos {
+            background: var(--bg-soft);
+            border-radius: 10px;
+            padding: 16px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 20px;
+            font-size: 0.9rem;
+            margin: 16px 0;
+        }
+
+        .creditos strong {
+            color: var(--primary);
+        }
+
+        /* ===== REFERÊNCIAS ===== */
+        .referencias {
+            font-size: 0.85rem;
+            background: var(--bg-soft);
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+
+        .referencias p {
+            margin-bottom: 4px;
+            color: var(--text-secondary);
+        }
+
+        /* ===== RODAPÉ ===== */
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer .social a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer .social a:hover {
+            color: var(--accent);
+        }
+
+        /* ===== WHATSAPP FLUTUANTE ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--whatsapp);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
+            text-decoration: none;
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(-4deg);
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-left {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                gap: 14px;
+            }
+            .main-content {
+                padding: 24px 20px;
+            }
+            .grid-duas-colunas {
+                grid-template-columns: 1fr;
+            }
+            .box-votacao {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .voto-divisor {
+                display: none;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer .social a {
+                margin: 0 10px;
+            }
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 1.8rem;
+                bottom: 18px;
+                right: 18px;
+            }
+            .accessibility-bar {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+                gap: 4px 10px;
+            }
+            .accessibility-bar button {
+                font-size: 0.65rem;
+                padding: 2px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 18px 14px;
+            }
+            body {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== BARRA DE ACESSIBILIDADE ===== -->
+        <div class="accessibility-bar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+            <span style="opacity:0.6;">♿ Acessibilidade</span>
+            <button onclick="toggleTheme()" id="themeToggle" aria-label="Alternar tema claro/escuro">🌓 Tema</button>
+            <button onclick="toggleFont()" id="fontToggle" aria-label="Alternar fonte para dislexia">🔤 Dislexia</button>
+            <button onclick="increaseFont()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="decreaseFont()" aria-label="Diminuir fonte">A−</button>
+            <button onclick="resetFont()" aria-label="Resetar fonte">A</button>
+            <button onclick="startVoice()" aria-label="Ler página em voz alta">🔊 Ouvir</button>
+            <button class="vlibras-btn" onclick="toggleVLibras()" aria-label="Abrir tradutor de Libras">🤟 Libras</button>
+        </div>
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="header-left">
+                <div class="header-avatar">
+                    <img src="../imagens/eu%2007%2006%202026.png" alt="Fábio Wlademir" />
+                </div>
+                <div class="header-title">
+                    <h1>📜 PL 896/2023 <small>Fábio Wlademir · Direito Constitucional II</small></h1>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Início</a>
+                <a href="/academico.html">Acadêmico</a>
+                <a href="/constitucional.html" class="active">Constitucional</a>
+                <a href="/sobre.html">Sobre</a>
+                <a href="https://github.com/FabioWlademir" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+        <main class="main-content">
+
+            <h2>⚖️ Criminalização da Misoginia</h2>
+            <p class="subtitle"><strong>Disciplina:</strong> Direito Constitucional II (GR14001-01683-993922) · <strong>Prof.ª:</strong> Dra. Clarissa Tassinari · <strong>Data:</strong> 24 de agosto de 2026</p>
+
+            <!-- 1. O QUE É O PL -->
+            <section class="section">
+                <h3>📌 O que é o PL 896/2023?</h3>
+                <p>O Projeto de Lei nº 896/2023, de autoria da Senadora Ana Paula Lobato (PSB/MA), pretende equiparar a <strong>misoginia</strong> — definida como ódio, desprezo ou aversão às mulheres — ao crime de racismo, tornando-o inafiançável e imprescritível. Altera a Lei nº 7.716/1989 (Lei do Racismo) e o Código Penal.</p>
+                <div class="destaque-box">
+                    <h4>📍 Tramitação</h4>
+                    <p>Aprovado por unanimidade no Senado Federal (67 votos a favor) e remetido à Câmara dos Deputados em 30/03/2026, onde teve regime de urgência aprovado.</p>
+                </div>
+            </section>
+
+            <!-- 2. DEBATE DE CONSTITUCIONALIDADE -->
+            <section class="section">
+                <h3>🧑‍⚖️ Debate: Constitucional ou Inconstitucional?</h3>
+                <p>A discussão ocorreu na <strong>CCJ do Senado</strong> (parecer favorável em out/2025) e no debate doutrinário externo.</p>
+
+                <div class="grid-duas-colunas">
+                    <!-- Tese Contra -->
+                    <div class="card-tese contra">
+                        <h4 style="color:#c0392b;">❌ TESE CONTRA (Inconstitucionalidade)</h4>
+                        <ul>
+                            <li><strong>Princípio da Legalidade Estrita (Art. 5º, XXXIX):</strong> "Misoginia" é conceito subjetivo, viola a taxatividade penal.</li>
+                            <li><strong>Liberdade de Expressão (Art. 5º, IV e IX):</strong> Risco de criminalizar discursos acadêmicos, religiosos ou filosóficos.</li>
+                            <li><strong>Direito Penal do Autor:</strong> Pune a mentalidade, não o fato concreto.</li>
+                        </ul>
+                        <div class="explicacao">
+                            <strong>📖 Explicação em termos leigos:</strong> A lei penal deve ser clara e objetiva — não se pode punir alguém por um sentimento vago como "ódio". Além disso, criminalizar a misoginia poderia censurar opiniões e ideias, mesmo em debates sérios. O Direito Penal deve punir atos, não pensamentos.
+                        </div>
+                    </div>
+
+                    <!-- Tese Favor -->
+                    <div class="card-tese favor">
+                        <h4 style="color:#2980b9;">✅ TESE A FAVOR (Constitucionalidade)</h4>
+                        <ul>
+                            <li><strong>Dever de Criminalização (Art. 5º, XLI):</strong> Dever do Estado de punir discriminações atentatórias aos direitos fundamentais.</li>
+                            <li><strong>Precedente ADO 26 (STF):</strong> Equiparação legítima de condutas de ódio ao racismo (homotransfobia).</li>
+                            <li><strong>Dignidade da Pessoa Humana:</strong> Proteção contra violência estrutural e desumanização sistêmica.</li>
+                        </ul>
+                        <div class="explicacao">
+                            <strong>📖 Explicação em termos leigos:</strong> A Constituição obriga o Estado a combater discriminações graves. O STF já equiparou a homofobia ao racismo, então faz sentido proteger as mulheres da mesma forma. A misoginia não é apenas uma opinião — é uma violência estrutural que fere a dignidade humana.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. VOTAÇÃO APERTADA E REFLEXÃO -->
+            <section class="section">
+                <h3>📊 O Fator Decisivo: Consulta Pública Apertada</h3>
+                <p>A consulta pública no portal e-Cidadania (encerrada em 13/08/2026) mostrou uma sociedade civil profundamente dividida:</p>
+
+                <div class="box-votacao">
+                    <div class="voto-item">
+                        <span class="label">✅ A FAVOR</span>
+                        <span class="numero">6.856</span>
+                        <span class="porcentagem">47,2%</span>
+                    </div>
+                    <div class="voto-divisor">⚖️</div>
+                    <div class="voto-item">
+                        <span class="label">❌ CONTRA</span>
+                        <span class="numero">7.676</span>
+                        <span class="porcentagem">52,8%</span>
+                    </div>
+                </div>
+
+                <div class="reflexao">
+                    <p class="autor">🗣️ Minha Reflexão sobre esse resultado:</p>
+                    <p>"A margem apertada (apenas 5,6% de diferença) não reflete necessariamente a rejeição ao combate à misoginia, mas sim a <strong>profunda polarização política</strong> que atravessa o Brasil. Este resultado é um termômetro social.</p>
+                    <p>Lembro que <strong>matricular um filho na escola é um ato político</strong>. Aos 47 anos, estar aqui, estudando Direito na UNISINOS como bolsista, é um ato político. Esta disciplina, esta apresentação e este debate são exercícios de cidadania ativa. Defendo que o devido processo legislativo é o filtro capaz de equilibrar essa polarização, transformando a vontade popular em lei justa."</p>
+                </div>
+            </section>
+
+            <!-- 4. CRÉDITOS -->
+            <section class="section">
+                <h3>👥 Trabalho em Grupo</h3>
+                <p>Embora eu esteja apresentando, este trabalho foi construído coletivamente. Dados os devidos créditos às minhas colegas:</p>
+                <div class="creditos">
+                    <span><strong>Angela Beatriz Machado</strong></span>
+                    <span><strong>Joana Gonçalves</strong></span>
+                    <span><strong>Juliane Fernandes</strong></span>
+                    <span><strong>Mara Cristina</strong></span>
+                    <span><strong>Susane De Almeida Massena</strong></span>
+                    <span style="color:var(--primary); font-weight:700;">(e Fábio Wlademir)</span>
+                </div>
+            </section>
+
+            <!-- 5. REFERÊNCIAS -->
+            <section class="section">
+                <h3 style="font-size:1.2rem;">📖 Referências</h3>
+                <div class="referencias">
+                    <p>BRASIL. Constituição da República Federativa do Brasil de 1988. Brasília, DF: Presidência da República, 1988.</p>
+                    <p>BRASIL. Congresso Nacional. Senado Federal. Projeto de Lei nº 896, de 2023. Altera a Lei nº 7.716, de 5 de janeiro de 1989.</p>
+                    <p>BRASIL. Senado Federal. Comissão de Constituição, Justiça e Cidadania (CCJ). Parecer nº 53, de 2025 – CCJ. Relatora: Senadora Soraya Thronicke.</p>
+                    <p>BRASIL. Supremo Tribunal Federal. Ação Direta de Inconstitucionalidade por Omissão nº 26/DF (ADO 26). Relator: Min. Celso de Mello, 2019.</p>
+                    <p>BRASIL. Senado Federal. e-Cidadania. Consulta Pública PL 896/2023. Encerrada em 13/08/2026.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== RODAPÉ ===== -->
+        <footer class="footer">
+            <span>© 2026 Fábio Wlademir · UNISINOS · Curso de Direito</span>
+            <div class="social">
+                <a href="https://linkedin.com/in/fabiowlademir" target="_blank">LinkedIn</a>
+                <a href="https://github.com/FabioWlademir" target="_blank">GitHub</a>
+                <a href="https://instagram.com/fabiowlademirrs" target="_blank">Instagram</a>
+                <a href="https://facebook.com/fabiowlademirrs" target="_blank">Facebook</a>
+                <a href="https://youtube.com/@fabiowlademirrs" target="_blank">YouTube</a>
+                <a href="https://wa.me/5551998883187" target="_blank">WhatsApp</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ===== WHATSAPP FLUTUANTE ===== -->
+    <a href="https://wa.me/5551998883187" class="whatsapp-float" target="_blank" aria-label="Fale comigo no WhatsApp">
+        💬
+    </a>
+
+    <!-- ===== JAVASCRIPT (ACESSIBILIDADE + COMANDO DE VOZ) ===== -->
+    <script>
+        // Inicializa VLibras
+        new VLibras.Widget('https://vlibras.gov.br/app');
+
+        function toggleVLibras() {
+            const widget = document.querySelector('vlibras-widget');
+            if (widget) {
+                const button = widget.shadowRoot?.querySelector('.vlibras-button');
+                if (button) button.click();
+            }
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            if (current === 'dark') {
+                html.removeAttribute('data-theme');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        function toggleFont() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-font');
+            if (current === 'dyslexic') {
+                html.removeAttribute('data-font');
+            } else {
+                html.setAttribute('data-font', 'dyslexic');
+            }
+        }
+
+        let currentFontSize = 100;
+
+        function increaseFont() {
+            currentFontSize = Math.min(currentFontSize + 10, 160);
+            document.body.style.fontSize = currentFontSize + '%';
+        }
+
+        function decreaseFont() {
+            currentFontSize = Math.max(currentFontSize - 10, 70);
+            document.body.style.fontSize = currentFontSize + '%';
+        }
+
+        function resetFont() {
+            currentFontSize = 100;
+            document.body.style.fontSize = '100%';
+        }
+
+        // ===== LEITURA EM VOZ ALTA (COMANDO DE VOZ) =====
+        let isSpeaking = false;
+        let currentUtterance = null;
+
+        function startVoice() {
+            if ('speechSynthesis' in window) {
+                // Se já estiver falando, para
+                if (isSpeaking) {
+                    speechSynthesis.cancel();
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    // Muda o texto do botão de volta
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🔊 Ouvir';
+                    return;
+                }
+
+                // Pega o texto principal (ignora cabeçalho, rodapé, barra de acessibilidade)
+                const mainContent = document.querySelector('.main-content');
+                const text = mainContent ? mainContent.innerText : document.body.innerText;
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = 0.9;
+                utterance.pitch = 1;
+
+                utterance.onstart = function() {
+                    isSpeaking = true;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '⏹️ Parar';
+                };
+
+                utterance.onend = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🔊 Ouvir';
+                };
+
+                utterance.onerror = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    const btn = document.querySelector('[onclick="startVoice()"]');
+                    if (btn) btn.innerHTML = '🔊 Ouvir';
+                };
+
+                currentUtterance = utterance;
+                speechSynthesis.speak(utterance);
+            } else {
+                alert('Seu navegador não suporta leitura em voz alta.');
+            }
+        }
+
+        // Para a leitura se o usuário clicar em qualquer lugar (opcional)
+        // Mas mantemos o botão como controle principal
+    </script>
+
+</body>
+</html>
