@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direito Constitucional I – Fábio Wlademir | UNISINOS</title>
+    <meta name="description" content="Página da disciplina Direito Constitucional I (Prof.ª Raquel Von Hohendorff) – UNISINOS. Estudos sobre organização do Estado, direitos fundamentais, competências, PEC da Soberania Alimentar, Imunidade Parlamentar e muito mais." />
+    <meta name="keywords" content="Direito Constitucional I, UNISINOS, Fábio Wlademir, Raquel Von Hohendorff, Direitos Fundamentais, Competência Concorrente, PEC Soberania Alimentar, Imunidade Parlamentar, STF" />
+    <meta name="author" content="Fábio Wlademir Rodrigues da Silva" />
+    <meta property="og:title" content="Direito Constitucional I – Fábio Wlademir | UNISINOS" />
+    <meta property="og:description" content="Percurso completo na disciplina Direito Constitucional I: estudos, trabalhos criativos e análises jurídicas aprofundadas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fabiowlademir.github.io/direito-constitucional-i.html" />
+    <meta property="og:image" content="https://fabiowlademir.github.io/imagens/eu%2007%2006%202026.png" />
+    <link rel="canonical" href="https://fabiowlademir.github.io/direito-constitucional-i.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <style>
+        /* ===== RESET E VARIÁVEIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f4f7fc;
+            --bg-card: #ffffff;
+            --bg-soft: #eef2f8;
+            --text: #1e2a41;
+            --text-secondary: #4a5b7a;
+            --primary: #0a1c3a;
+            --accent: #b31b1b;
+            --accent-hover: #8f1515;
+            --gold: #c9a84c;
+            --gold-light: #e8d5a3;
+            --border: #dee5ef;
+            --shadow: 0 8px 30px rgba(10, 28, 58, 0.06);
+            --radius: 16px;
+            --transition: 0.3s ease;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Merriweather', serif;
+            --whatsapp: #25d366;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0f1724;
+            --bg-card: #1a253a;
+            --bg-soft: #25324a;
+            --text: #e8edf5;
+            --text-secondary: #a0b3cc;
+            --primary: #dce4f0;
+            --border: #2a3a55;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        [data-font="dyslexic"] {
+            --font: 'OpenDyslexic', 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+        }
+
+        [data-contrast="high"] {
+            --bg: #ffffff;
+            --bg-card: #ffffff;
+            --bg-soft: #f0f0f0;
+            --text: #000000;
+            --text-secondary: #1a1a1a;
+            --primary: #000000;
+            --border: #000000;
+            --shadow: none;
+        }
+
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 20px;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== BARRA DE ACESSIBILIDADE ===== */
+        .accessibility-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            align-items: center;
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-bottom: 30px;
+            font-size: 0.8rem;
+        }
+
+        .accessibility-bar button {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.2s;
+            font-family: var(--font);
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .accessibility-bar button:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .accessibility-bar .vlibras-btn {
+            background: #0057a3;
+            border-color: #0057a3;
+            font-weight: 600;
+        }
+
+        .accessibility-bar .vlibras-btn:hover {
+            background: #003f77;
+        }
+
+        .accessibility-bar .voice-btn {
+            background: #2b5797;
+            border-color: #2b5797;
+            font-weight: 600;
+        }
+
+        .accessibility-bar .voice-btn:hover {
+            background: #1a3f6a;
+        }
+
+        .accessibility-bar .voice-btn.active {
+            background: #c0392b;
+            border-color: #c0392b;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding-bottom: 20px;
+            border-bottom: 4px solid var(--gold);
+            margin-bottom: 30px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-avatar img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+        }
+
+        .header-title h1 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .header-title h1 small {
+            font-family: var(--font);
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ===== CONTEÚDO PRINCIPAL ===== */
+        .main-content {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 40px 48px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .main-content h2 {
+            font-family: var(--font-serif);
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: var(--primary);
+            border-left: 6px solid var(--gold);
+            padding-left: 16px;
+            margin-bottom: 8px;
+        }
+
+        .main-content .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            padding-left: 22px;
+        }
+
+        /* ===== SEÇÕES ===== */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h3 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        /* ===== CARDS ===== */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 16px 0;
+        }
+
+        .card-item {
+            background: var(--bg-soft);
+            border-radius: 10px;
+            padding: 18px 20px;
+            border-left: 4px solid var(--accent);
+            transition: 0.2s;
+        }
+
+        .card-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-item .titulo {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .card-item .desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 4px 0 8px 0;
+        }
+
+        /* ===== DESTAQUE PEC ===== */
+        .pec-destaque {
+            background: var(--bg-card);
+            border: 3px solid var(--gold);
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin: 16px 0;
+            position: relative;
+        }
+
+        .pec-destaque::before {
+            content: "⭐ PROJETO CRIATIVO";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 2px 18px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .pec-destaque h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-top: 6px;
+        }
+
+        .pec-destaque p {
+            color: var(--text-secondary);
+        }
+
+        .poema-box {
+            background: #fdf6f0;
+            border-radius: 12px;
+            padding: 20px 24px;
+            border: 2px solid var(--gold);
+            margin: 16px 0;
+            font-family: var(--font-serif);
+            text-align: center;
+        }
+
+        .poema-box p {
+            font-style: italic;
+            color: #4d2f1a;
+            margin-bottom: 4px;
+            line-height: 1.8;
+        }
+
+        .poema-box .autor {
+            font-style: normal;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 8px;
+        }
+
+        /* ===== TAGS ===== */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            padding: 8px 0;
+        }
+
+        .tags-container span {
+            background: var(--bg-soft);
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* ===== RODAPÉ ===== */
+        .footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer .social a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .footer .social a:hover {
+            color: var(--accent);
+        }
+
+        .footer .visitor-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-soft);
+            padding: 4px 14px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            font-size: 0.8rem;
+        }
+
+        .footer .visitor-counter img {
+            height: 18px;
+            border-radius: 4px;
+        }
+
+        /* ===== WHATSAPP FLUTUANTE ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--whatsapp);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
+            text-decoration: none;
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(-4deg);
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-left {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                gap: 14px;
+            }
+            .main-content {
+                padding: 24px 20px;
+            }
+            .pec-destaque {
+                padding: 18px 16px;
+            }
+            .pec-destaque::before {
+                left: 12px;
+                font-size: 0.65rem;
+                padding: 2px 12px;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer .social a {
+                margin: 0 10px;
+            }
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                font-size: 1.8rem;
+                bottom: 18px;
+                right: 18px;
+            }
+            .accessibility-bar {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+                gap: 4px 10px;
+            }
+            .accessibility-bar button {
+                font-size: 0.65rem;
+                padding: 2px 10px;
+                min-height: 36px;
+                min-width: 36px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 18px 14px;
+            }
+            body {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== BARRA DE ACESSIBILIDADE ===== -->
+        <div class="accessibility-bar" role="toolbar" aria-label="Ferramentas de acessibilidade">
+            <span style="opacity:0.6;">♿ Acessibilidade</span>
+            <button onclick="toggleTheme()" id="themeToggle" aria-label="Alternar tema claro/escuro">🌓 Tema</button>
+            <button onclick="toggleContrast()" id="contrastToggle" aria-label="Alternar alto contraste">🔲 Contraste</button>
+            <button onclick="toggleFont()" id="fontToggle" aria-label="Alternar fonte para dislexia">🔤 Dislexia</button>
+            <button onclick="increaseFont()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="decreaseFont()" aria-label="Diminuir fonte">A−</button>
+            <button onclick="resetFont()" aria-label="Resetar fonte">A</button>
+            <button onclick="toggleReducedMotion()" id="motionToggle" aria-label="Reduzir animações">🎬 Animação</button>
+            <button onclick="startSpeechRecognition()" class="voice-btn" id="voiceCommandBtn" aria-label="Comando de voz (microfone)">🎤 Comando</button>
+            <button onclick="startVoice()" id="voiceReadBtn" aria-label="Ler página em voz alta">🔊 Ouvir</button>
+            <button class="vlibras-btn" onclick="toggleVLibras()" aria-label="Abrir tradutor de Libras">🤟 Libras</button>
+        </div>
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="header-left">
+                <div class="header-avatar">
+                    <img src="imagens/eu%2007%2006%202026.png" alt="Fábio Wlademir" />
+                </div>
+                <div class="header-title">
+                    <h1>⚖️ Direito Constitucional I <small>Fábio Wlademir · UNISINOS</small></h1>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="/">Início</a>
+                <a href="/academico.html">Acadêmico</a>
+                <a href="/constitucional.html">Constitucional</a>
+                <a href="/sobre.html">Sobre</a>
+                <a href="https://fabiowlademir.github.io/" target="_blank">Portfólio</a>
+            </div>
+        </header>
+
+        <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+        <main class="main-content">
+
+            <h2>📚 Direito Constitucional I</h2>
+            <p class="subtitle"><strong>Professora:</strong> Prof.ª Dr.ª Raquel Von Hohendorff · <strong>2º Semestre</strong> · UNISINOS</p>
+
+            <!-- ===== APRESENTAÇÃO ===== -->
+            <section class="section">
+                <h3>📖 Sobre a disciplina</h3>
+                <p>
+                    A disciplina <strong>Direito Constitucional I</strong>, ministrada pela Prof.ª Dr.ª Raquel Von Hohendorff, representou a consolidação dos meus estudos sobre a estrutura do Estado Brasileiro. A abordagem da professora, extremamente prática e conectada à realidade, mostrou que a Constituição não é um texto distante, mas um documento vivo que regula situações cotidianas — desde o acesso à saúde até a proteção de dados de crianças e adolescentes no ambiente digital.
+                </p>
+                <p>
+                    O curso percorreu a Constituição Federal a partir do art. 18, abordando a organização do Estado Federal, a repartição de competências (arts. 21-24), os direitos e garantias fundamentais (art. 5º), os direitos sociais (art. 6º), a organização dos Poderes (Legislativo, Executivo e Judiciário), as funções essenciais à justiça, a defesa do Estado e das instituições democráticas, e as ordens econômica e social. O estudo foi enriquecido por trabalhos práticos, como a análise de casos concretos do STF e a elaboração de uma Proposta de Emenda Constitucional (PEC).
+                </p>
+            </section>
+
+            <!-- ===== MATERIAIS DE ESTUDO ===== -->
+            <section class="section">
+                <h3>📂 Materiais de estudo produzidos</h3>
+                <p>
+                    Ao longo da disciplina, elaborei materiais de estudo que sintetizam os principais conceitos, desde a Teoria da Constituição até a Ordem Social. Organizados de forma didática, esses resumos refletem meu compromisso com a <strong>compreensão profunda da estrutura constitucional</strong> e serviram como base para as avaliações e para o desenvolvimento de uma visão crítica da realidade jurídica brasileira.
+                </p>
+
+                <div style="display:flex; flex-direction:column; gap:16px; margin:16px 0;">
+
+                    <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; border-left:4px solid var(--accent);">
+                        <p style="font-weight:700; color:var(--primary); font-size:1rem;">📄 Guia completo de estudos — Direito Constitucional I</p>
+                        <p style="color:var(--text-secondary); font-size:0.95rem; margin:4px 0;">
+                            <strong>Conteúdo:</strong> Material abrangente que cobre todas as unidades da disciplina: Teoria da Constituição e Princípios Fundamentais (arts. 1º a 4º), Organização do Estado Federal (arts. 18-36), Repartição de Competências (arts. 21-24), Direitos e Garantias Fundamentais (art. 5º), Direitos Sociais (arts. 6º-11), Organização dos Poderes (Legislativo, Executivo, Judiciário), Funções Essenciais à Justiça (MP, AGU, OAB, DP), Defesa do Estado e das Instituições Democráticas (arts. 136-141), Ordem Econômica (arts. 170-192), Ordem Social (arts. 193-232) e ADCT.
+                        </p>
+                        <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:4px;">
+                            <strong>📌 Diferencial:</strong> O guia foi construído com uma abordagem prática, relacionando cada dispositivo constitucional a situações concretas da vida cotidiana, conforme a metodologia da professora.
+                        </p>
+                    </div>
+
+                    <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; border-left:4px solid var(--gold);">
+                        <p style="font-weight:700; color:var(--primary); font-size:1rem;">📄 Material de apoio para o Grau B</p>
+                        <p style="color:var(--text-secondary); font-size:0.95rem; margin:4px 0;">
+                            <strong>Conteúdo:</strong> Roteiro de estudos focado nos tópicos cobrados na prova do Grau B: Poder Executivo (arts. 76-91), Poder Judiciário (arts. 92-126), Funções Essenciais à Justiça (arts. 127-135), Defesa do Estado e das Instituições Democráticas (Estado de Defesa e Estado de Sítio — arts. 136-141), Ordem Econômica (art. 170) e Ordem Social (art. 193). Inclui dicas de memorização, exemplos práticos (como o impeachment) e comparações entre institutos.
+                        </p>
+                        <p style="color:var(--text-secondary); font-size:0.85rem; margin-top:4px;">
+                            <strong>📌 Objetivo:</strong> Oferecer um material direto e objetivo para revisão dos pontos mais cobrados em provas dissertativas e objetivas.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin-top:12px; border-left:4px solid var(--primary);">
+                    <p style="font-size:0.9rem; color:var(--text-secondary); margin:0;">
+                        <strong>🧠 Abordagem metodológica:</strong> A produção desses materiais reflete uma <strong>abordagem crítica e sistemática</strong> do Direito Constitucional, conectando a dogmática constitucional à realidade social e jurídica brasileira, com ênfase na efetivação dos direitos fundamentais e na compreensão do federalismo como ferramenta de proteção.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ===== ATIVIDADE PRÁTICA 1 - COMPETÊNCIA CONCORRENTE ===== -->
+            <section class="section">
+                <h3>🏛️ Atividade Prática 1: Competência Concorrente e Direitos Fundamentais</h3>
+                <p>
+                    A primeira atividade prática da disciplina consistiu na análise de incisos do art. 24 da CF/88 que tutelam direitos fundamentais, demonstrando como a <strong>competência concorrente</strong> entre União, Estados e Distrito Federal atua como ferramenta de efetivação desses direitos.
+                </p>
+                <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; margin:12px 0; border-left:4px solid var(--accent);">
+                    <p style="font-weight:700; color:var(--primary);">📌 Incisos analisados:</p>
+                    <ul style="padding-left:20px; color:var(--text-secondary);">
+                        <li><strong>Art. 24, XII (Previdência e Saúde):</strong> Conexão com os direitos sociais à saúde (art. 6º e 196) e à segurança econômica. A União define as diretrizes do SUS; Estados podem criar programas complementares de saúde ou prevenção, respeitando as normas gerais.</li>
+                        <li><strong>Art. 24, XIV (Proteção às Pessoas com Deficiência):</strong> Conexão com os princípios da dignidade humana (art. 5º) e igualdade. A União edita normas gerais (ex: Estatuto da Pessoa com Deficiência — Lei 13.146/15); Estados legislam sobre políticas locais de acessibilidade, educação inclusiva e emprego.</li>
+                        <li><strong>Art. 24, XV (Proteção à Infância e Juventude):</strong> Conexão com o princípio da absoluta prioridade (art. 227). A União estabelece o ECA (Lei 8.069/90) como norma geral; Estados desenvolvem medidas socioeducativas e políticas de combate ao trabalho infantil adequadas às realidades locais.</li>
+                    </ul>
+                </div>
+                <div style="background:#f0f4fa; border-radius:10px; padding:14px 18px; margin:12px 0; border-left:4px solid var(--gold);">
+                    <p style="font-size:0.95rem; color:var(--text-secondary); font-style:italic;">
+                        "A competência concorrente representa muito mais que uma simples repartição técnica de competências. Ela constitui um mecanismo sofisticado de tutela dos direitos fundamentais no federalismo brasileiro, reconhecendo que a proteção efetiva demanda tanto a estabilidade de padrões nacionais quanto a flexibilidade para adaptação às realidades locais."
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); text-align:right; margin-top:4px;">— Trecho da apresentação do grupo (Fábio Wlademir, Ananda, Evandro, Nithaelly e Valdetar)</p>
+                </div>
+                <div class="creditos-box" style="background:var(--bg-soft); border-radius:10px; padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 16px; font-size:0.9rem; margin-top:8px;">
+                    <span><strong>👥 Grupo:</strong></span>
+                    <span>Ananda dos Santos Joaquim</span>
+                    <span>Evandro Henrique Paffrath</span>
+                    <span>Fábio Wlademir</span>
+                    <span>Nithaelly Pozzatto</span>
+                    <span>Valdetar Martins</span>
+                </div>
+                <div class="tags-container">
+                    <span>#CompetênciaConcorrente</span>
+                    <span>#Art24</span>
+                    <span>#DireitosFundamentais</span>
+                    <span>#Federalismo</span>
+                </div>
+            </section>
+
+            <!-- ===== ATIVIDADE PRÁTICA 2 - PEC DA SOBERANIA ALIMENTAR (DESTAQUE) ===== -->
+            <section class="section">
+                <h3>🌱 Atividade Articuladora: PEC da Soberania Alimentar Popular</h3>
+                <p>
+                    O ponto alto da disciplina foi a elaboração de uma <strong>Proposta de Emenda à Constituição (PEC)</strong> para instituir o Programa de Hortas Comunitárias Solidárias. O diferencial deste trabalho foi a <strong>criatividade e a conexão com a realidade local</strong>: a PEC foi fundamentada em casos concretos que já ocorrem em Sapucaia do Sul/RS, antes mesmo de existir qualquer lei.
+                </p>
+
+                <div class="pec-destaque">
+                    <h4>⭐ Por que este trabalho foi criativo e diferenciado?</h4>
+                    <p style="color:var(--text-secondary);">
+                        Em vez de apresentar um projeto abstrato, o grupo trouxe <strong>evidências empíricas</strong> de que a ideia já funciona na prática:
+                    </p>
+                    <ul style="padding-left:20px; color:var(--text-secondary);">
+                        <li><strong>Augusto (80 anos, Lomba da Palmeira):</strong> Cedeu parte do terreno para horta suspensa e já distribui alimentos para vizinhos.</li>
+                        <li><strong>Cláudia (36 anos, Piratini):</strong> Cedeu espaço para horta suspensa e produz semanalmente para doação a famílias carentes.</li>
+                        <li><strong>Fábio (46 anos, São José):</strong> Possui horta suspensa em espaço reduzido e compartilha excedentes com vizinhos.</li>
+                        <li><strong>Sr. Adão (64 anos, São José):</strong> Está limpando o quintal para instalação de horta suspensa (em implantação).</li>
+                    </ul>
+                    <p style="color:var(--text-secondary); margin-top:8px;">
+                        A PEC altera quatro dispositivos constitucionais: inclui a <strong>segurança alimentar no art. 6º</strong> (como direito social autônomo); cria o <strong>art. 23-A</strong> (competência comum para o programa de hortas); vincula percentual mínimo de receitas à agricultura urbana no <strong>art. 218, §6º</strong>; e estabelece prazo de 180 dias para capacitação no <strong>ADCT, art. 130</strong>.
+                    </p>
+                    <p style="color:var(--text-secondary); margin-top:8px;">
+                        <strong>Justificativa constitucional:</strong> A PEC respeita todas as cláusulas pétreas (art. 60, §4º). A cessão do terreno é voluntária e a desapropriação exige indenização prévia e justa. O modelo replica técnicas já consagradas na saúde (EC 29/2000) e na educação (EC 59/2009).
+                    </p>
+                    <p style="color:var(--text-secondary); margin-top:8px;">
+                        <strong>Evidências internacionais:</strong> O programa se inspira nos <em>organopónicos</em> de Cuba (que fornecem 50-60% dos alimentos frescos de Havana) e no projeto <em>Keep Growing Detroit</em> (mais de 1.500 hortas comunitárias nos EUA) — demonstrando que a ideia funciona independentemente do regime político.
+                    </p>
+                </div>
+
+                <!-- Poema da PEC -->
+                <div class="poema-box">
+                    <p>"Pequena semente no chão, brota do quintal a união.</p>
+                    <p>Nem patrão, nem governo mandando, é a comunidade cultivando.</p>
+                    <p>Em Sapucaia já se vê: Cada qual do seu cantão, planta, colhe, doa o pão."</p>
+                    <br />
+                    <p>"Cuba vermelha nos ensinou: horta na cidade, fome acabou.</p>
+                    <p>Detroit capitalista também mostrou: terreno vazio, comida brotou.</p>
+                    <p>Não importa a cor da bandeira, quando a fome aperta, a comida é a primeira."</p>
+                    <br />
+                    <p>"Por isso, PEC da Soberania Alimentar, é a Constituição a aprender a plantar.</p>
+                    <p>50% para doação, 50% para produção, assim o povo deixa de sofrer.</p>
+                    <p>Funcionou no Leste, funcionou no Oeste, vai funcionar aqui — o que presta é o que resta."</p>
+                    <div class="autor">— Fábio Wlademir, 18/05/2026</div>
+                </div>
+
+                <div style="background:var(--bg-soft); border-radius:10px; padding:14px 18px; margin:12px 0; border-left:4px solid var(--gold);">
+                    <p style="font-size:0.95rem; color:var(--text-secondary); font-style:italic;">
+                        "A PEC da Soberania Alimentar Popular é pequena no texto, gigante no impacto. Transforma quintais, terrenos baldios e áreas ociosas em fábricas de comida real, gerando renda para aposentados e desempregados, alimento gratuito para quem passa fome e autonomia para a comunidade."
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); text-align:right; margin-top:4px;">— Trecho da justificativa da PEC</p>
+                </div>
+
+                <div class="creditos-box" style="background:var(--bg-soft); border-radius:10px; padding:12px 16px; display:flex; flex-wrap:wrap; gap:6px 16px; font-size:0.9rem; margin-top:8px;">
+                    <span><strong>👥 Grupo:</strong></span>
+                    <span>Angela Beatriz Machado</span>
+                    <span>Fábio Wlademir Rodrigues da Silva</span>
+                    <span>Susane de Almeida Massena</span>
+                </div>
+
+                <div class="tags-container">
+                    <span>#PEC</span>
+                    <span>#SoberaniaAlimentar</span>
+                    <span>#HortasComunitárias</span>
+                    <span>#SegurançaAlimentar</span>
+                    <span>#Criatividade</span>
+                </div>
+            </section>
+
+            <!-- ===== TRABALHO GB - IMUNIDADE PARLAMENTAR ===== -->
+            <section class="section">
+                <h3>⚖️ Trabalho GB: Imunidade Parlamentar e Fake News</h3>
+                <p>
+                    O trabalho do Grau B analisou o <strong>caso paradigmático</strong> julgado pelo STF em 2023: <strong>Petição 10.001 (Tabata Amaral x Eduardo Bolsonaro)</strong>. O caso discutiu os limites da <strong>imunidade parlamentar material</strong> (art. 53, caput, CF/88) em face da disseminação de <em>fake news</em> e da proteção da honra de parlamentares.
+                </p>
+
+                <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; margin:12px 0; border-left:4px solid var(--accent);">
+                    <p style="font-weight:700; color:var(--primary);">📌 Contexto do caso:</p>
+                    <p style="color:var(--text-secondary);">
+                        Em 10/10/2021, o Deputado Federal Eduardo Bolsonaro (PL) publicou em sua conta no Twitter que o Projeto de Lei da Deputada Tabata Amaral (PSB) sobre absorventes teria sido criado para beneficiar o empresário Jorge Paulo Lemann, suposto financiador de sua campanha e "dono da P&G". A deputada provou que todas as informações eram falsas: Lemann não a financiou, não é sócio da P&G, e o projeto previa licitação — portanto, não favorecia ninguém.
+                    </p>
+                </div>
+
+                <div style="background:#f0f4fa; border-radius:10px; padding:16px 20px; margin:12px 0; border-left:4px solid var(--gold);">
+                    <p style="font-weight:700; color:var(--primary);">🧠 Análise jurídica e criatividade:</p>
+                    <p style="color:var(--text-secondary);">
+                        O relator, Min. Dias Toffoli, rejeitou a queixa-crime, entendendo que a fala estava protegida pela imunidade material por ser "debate político". No entanto, no julgamento do agravo regimental, a maioria dos ministros (6 a 5) acompanhou o voto-vista do Min. Alexandre de Moraes, que <strong>recebeu a queixa-crime</strong>, afastando a imunidade.
+                    </p>
+                    <p style="color:var(--text-secondary); margin-top:8px;">
+                        <strong>Fundamentos do voto vencedor:</strong>
+                    </p>
+                    <ul style="padding-left:20px; color:var(--text-secondary);">
+                        <li><strong>Nexo de causalidade ausente:</strong> A imunidade parlamentar material fora do Congresso exige nexo com o exercício da função. As publicações não guardavam relação com a atividade legislativa.</li>
+                        <li><strong>Liberdade de expressão não é liberdade de agressão:</strong> A CF consagra o binômio "liberdade e responsabilidade". A disseminação de <em>fake news</em> não está protegida pela imunidade.</li>
+                        <li><strong>Proteção à honra:</strong> O direito à honra (art. 5º, X, CF) prevalece quando a manifestação é dolosamente falsa e ofensiva.</li>
+                    </ul>
+                    <p style="color:var(--text-secondary); margin-top:8px; font-style:italic;">
+                        "A Constituição Federal consagra o binômio 'LIBERDADE e RESPONSABILIDADE'; não permitindo de maneira irresponsável a efetivação de abuso no exercício de um direito constitucionalmente consagrado; não permitindo a utilização da 'liberdade de expressão' como escudo protetivo para a prática de discursos mentirosos, de ódio, antidemocráticos, ameaças, agressões, infrações penais e toda a sorte de atividades ilícitas."
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); text-align:right; margin-top:4px;">— Trecho do voto do Min. Alexandre de Moraes</p>
+                </div>
+
+                <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:12px 0; border-left:4px solid var(--primary);">
+                    <p style="font-weight:700; color:var(--primary);">📝 Conclusão do trabalho:</p>
+                    <p style="color:var(--text-secondary);">
+                        O caso ilustra a tensão entre dois direitos fundamentais: a <strong>liberdade de expressão</strong> (art. 5º, IV e IX) e a <strong>proteção à honra</strong> (art. 5º, X). A decisão do STF reforça que a imunidade parlamentar não é absoluta e que o Parlamento não é um "salvo-conduto" para a difusão de informações falsas. O trabalho destacou a importância da <strong>função contramajoritária do Judiciário</strong> na proteção de minorias e da verdade no debate público.
+                    </p>
+                </div>
+
+                <div class="tags-container">
+                    <span>#ImunidadeParlamentar</span>
+                    <span>#Art53</span>
+                    <span>#FakeNews</span>
+                    <span>#STF</span>
+                    <span>#LiberdadeDeExpressão</span>
+                </div>
+            </section>
+
+            <!-- ===== ECA DIGITAL ===== -->
+            <section class="section">
+                <h3>📱 Atualização legislativa: ECA Digital (Lei 15.211/2025)</h3>
+                <p>
+                    Como parte dos estudos sobre proteção à infância (art. 227), analisei a <strong>Lei 15.211/2025</strong>, que atualiza o Estatuto da Criança e do Adolescente (ECA) para o ambiente digital. A lei, em vigor desde março de 2026, estabelece regras rigorosas para plataformas digitais, como a <strong>verificação obrigatória de idade</strong>, a <strong>supervisão parental reforçada</strong>, a <strong>proibição de publicidade direcionada a menores</strong> e a <strong>remoção rápida de conteúdos perigosos</strong> (exploração sexual, cyberbullying, automutilação).
+                </p>
+                <div style="background:var(--bg-soft); border-radius:10px; padding:16px 20px; margin:12px 0; border-left:4px solid var(--gold);">
+                    <p style="font-weight:700; color:var(--primary);">🎯 Relevância constitucional:</p>
+                    <ul style="padding-left:20px; color:var(--text-secondary);">
+                        <li><strong>Princípio da absoluta prioridade (art. 227):</strong> A lei concretiza o dever do Estado e da sociedade de proteger crianças e adolescentes, agora também no ambiente virtual.</li>
+                        <li><strong>Competência concorrente (art. 24, XV):</strong> A União editou as normas gerais (ECA Digital), cabendo aos Estados suplementar a legislação conforme suas realidades.</li>
+                        <li><strong>Direito à privacidade (art. 5º, X):</strong> A lei reforça a proteção de dados pessoais de crianças e adolescentes, alinhando-se à LGPD.</li>
+                    </ul>
+                </div>
+                <div class="tags-container">
+                    <span>#ECADigital</span>
+                    <span>#Lei15211</span>
+                    <span>#ProteçãoInfância</span>
+                    <span>#Art227</span>
+                </div>
+            </section>
+
+            <!-- ===== DECLARAÇÃO DE USO DE IA ===== -->
+            <section class="section">
+                <h3>🤖 Declaração de uso ético de ferramentas de IA</h3>
+                <p>
+                    Assim como nos demais trabalhos, declarei de forma transparente o uso de ferramentas de Inteligência Artificial para fins auxiliares — correção gramatical, sugestões de fluência textual, organização de índices e formatação. Todo o conteúdo substantivo, ideias, argumentos, pesquisa jurídica e estratégia de apresentação são de minha autoria exclusiva.
+                </p>
+                <div style="background:var(--bg-soft); border-radius:10px; padding:14px 18px; border-left:4px solid var(--gold);">
+                    <p style="font-size:0.9rem; color:var(--text-secondary); font-style:italic;">
+                        "Ressalta-se que todo o conteúdo substantivo, as ideias principais, a pesquisa jurídica, a construção dos argumentos, a produção textual, a seleção da jurisprudência e a estratégia processual são de minha autoria exclusiva, fruto do estudo dos materiais indicados e da pesquisa complementar realizada."
+                    </p>
+                    <p style="font-size:0.85rem; color:var(--text-secondary); text-align:right; margin-top:4px;">— Declaração de Fábio Wlademir</p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== RODAPÉ ===== -->
+        <footer class="footer">
+            <span>© 2026 Fábio Wlademir · UNISINOS · Curso de Direito</span>
+            <div class="social">
+                <a href="https://linkedin.com/in/fabiowlademir" target="_blank">LinkedIn</a>
+                <a href="https://fabiowlademir.github.io/" target="_blank">Portfólio</a>
+                <a href="https://instagram.com/fabiowlademirrs" target="_blank">Instagram</a>
+                <a href="https://facebook.com/fabiowlademirrs" target="_blank">Facebook</a>
+                <a href="https://youtube.com/@fabiowlademirrs" target="_blank">YouTube</a>
+                <a href="https://wa.me/5551998883187" target="_blank">WhatsApp</a>
+            </div>
+            <div class="visitor-counter">
+                <span>👁️</span>
+                <span>Visitas ao portal:</span>
+                <img src="https://hits.dwyl.com/fabiowlademir/fabiowlademir.github.io.svg" alt="Contador de Acessos">
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- ===== WHATSAPP FLUTUANTE ===== -->
+    <a href="https://wa.me/5551998883187" class="whatsapp-float" target="_blank" aria-label="Fale comigo no WhatsApp">
+        💬
+    </a>
+
+    <!-- ===== JAVASCRIPT (ACESSIBILIDADE + COMANDO DE VOZ) ===== -->
+    <script>
+        // ============================================================
+        // 1. VLIBRAS
+        // ============================================================
+        let vlibrasWidget = null;
+
+        function initVLibras() {
+            if (!vlibrasWidget) {
+                try {
+                    vlibrasWidget = new VLibras.Widget('https://vlibras.gov.br/app');
+                } catch (e) {
+                    console.warn('VLibras não pôde ser iniciado:', e);
+                }
+            }
+        }
+
+        function toggleVLibras() {
+            initVLibras();
+            const widget = document.querySelector('vlibras-widget');
+            if (widget) {
+                try {
+                    const shadow = widget.shadowRoot;
+                    if (shadow) {
+                        const button = shadow.querySelector('.vlibras-button');
+                        if (button) {
+                            button.click();
+                            return;
+                        }
+                    }
+                } catch (e) {
+                    console.warn('Erro ao acessar shadow DOM:', e);
+                }
+            }
+            const fallbackBtn = document.querySelector('.vlibras-button');
+            if (fallbackBtn) {
+                fallbackBtn.click();
+                return;
+            }
+            alert('Clique no ícone azul do VLibras no canto inferior direito da tela.');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initVLibras();
+            applySavedPreferences();
+        });
+
+        // ============================================================
+        // 2. TEMA
+        // ============================================================
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const newTheme = current === 'dark' ? '' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // ============================================================
+        // 3. CONTRASTE
+        // ============================================================
+        function toggleContrast() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-contrast');
+            const newContrast = current === 'high' ? '' : 'high';
+            html.setAttribute('data-contrast', newContrast);
+            localStorage.setItem('contrast', newContrast);
+        }
+
+        // ============================================================
+        // 4. FONTE DISLEXIA
+        // ============================================================
+        function toggleFont() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-font');
+            const newFont = current === 'dyslexic' ? '' : 'dyslexic';
+            html.setAttribute('data-font', newFont);
+            localStorage.setItem('font', newFont);
+        }
+
+        // ============================================================
+        // 5. TAMANHO DA FONTE
+        // ============================================================
+        let currentFontSize = parseInt(localStorage.getItem('fontSize')) || 100;
+
+        function setFontSize(size) {
+            currentFontSize = Math.min(Math.max(size, 70), 160);
+            document.body.style.fontSize = currentFontSize + '%';
+            localStorage.setItem('fontSize', currentFontSize);
+        }
+
+        function increaseFont() {
+            setFontSize(currentFontSize + 10);
+        }
+
+        function decreaseFont() {
+            setFontSize(currentFontSize - 10);
+        }
+
+        function resetFont() {
+            setFontSize(100);
+        }
+
+        // ============================================================
+        // 6. REDUZIR ANIMAÇÕES
+        // ============================================================
+        function toggleReducedMotion() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-motion');
+            const newMotion = current === 'reduced' ? '' : 'reduced';
+            html.setAttribute('data-motion', newMotion);
+            localStorage.setItem('motion', newMotion);
+            if (newMotion === 'reduced') {
+                document.body.classList.add('reduce-motion');
+            } else {
+                document.body.classList.remove('reduce-motion');
+            }
+        }
+
+        // ============================================================
+        // 7. SALVAR PREFERÊNCIAS
+        // ============================================================
+        function applySavedPreferences() {
+            const theme = localStorage.getItem('theme');
+            if (theme) document.documentElement.setAttribute('data-theme', theme);
+
+            const contrast = localStorage.getItem('contrast');
+            if (contrast) document.documentElement.setAttribute('data-contrast', contrast);
+
+            const font = localStorage.getItem('font');
+            if (font) document.documentElement.setAttribute('data-font', font);
+
+            const fontSize = localStorage.getItem('fontSize');
+            if (fontSize) {
+                currentFontSize = parseInt(fontSize);
+                document.body.style.fontSize = currentFontSize + '%';
+            }
+
+            const motion = localStorage.getItem('motion');
+            if (motion === 'reduced') {
+                document.documentElement.setAttribute('data-motion', 'reduced');
+                document.body.classList.add('reduce-motion');
+            }
+        }
+
+        // ============================================================
+        // 8. LEITURA EM VOZ ALTA
+        // ============================================================
+        let isSpeaking = false;
+        let currentUtterance = null;
+
+        function startVoice() {
+            const btn = document.getElementById('voiceReadBtn');
+            if ('speechSynthesis' in window) {
+                if (isSpeaking) {
+                    speechSynthesis.cancel();
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    btn.innerHTML = '🔊 Ouvir';
+                    return;
+                }
+
+                const mainContent = document.querySelector('.main-content');
+                const text = mainContent ? mainContent.innerText : document.body.innerText;
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = 0.9;
+                utterance.pitch = 1;
+
+                utterance.onstart = function() {
+                    isSpeaking = true;
+                    btn.innerHTML = '⏹️ Parar';
+                };
+
+                utterance.onend = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    btn.innerHTML = '🔊 Ouvir';
+                };
+
+                utterance.onerror = function() {
+                    isSpeaking = false;
+                    currentUtterance = null;
+                    btn.innerHTML = '🔊 Ouvir';
+                };
+
+                currentUtterance = utterance;
+                speechSynthesis.speak(utterance);
+            } else {
+                alert('Seu navegador não suporta leitura em voz alta.');
+            }
+        }
+
+        // ============================================================
+        // 9. COMANDO DE VOZ (MICROFONE)
+        // ============================================================
+        let recognition = null;
+        let isListening = false;
+
+        function startSpeechRecognition() {
+            const btn = document.getElementById('voiceCommandBtn');
+            if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+                alert('Seu navegador não suporta reconhecimento de voz. Use o Chrome ou Edge.');
+                return;
+            }
+
+            if (isListening) {
+                if (recognition) recognition.stop();
+                isListening = false;
+                btn.innerHTML = '🎤 Comando';
+                btn.classList.remove('active');
+                return;
+            }
+
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.lang = 'pt-BR';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.onstart = function() {
+                isListening = true;
+                btn.innerHTML = '⏹️ Parar';
+                btn.classList.add('active');
+            };
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript.trim().toLowerCase();
+                console.log('Comando reconhecido:', transcript);
+                processVoiceCommand(transcript);
+            };
+
+            recognition.onerror = function(event) {
+                console.warn('Erro no reconhecimento:', event.error);
+                isListening = false;
+                btn.innerHTML = '🎤 Comando';
+                btn.classList.remove('active');
+                if (event.error !== 'not-allowed') {
+                    alert('Erro no reconhecimento. Tente novamente.');
+                }
+            };
+
+            recognition.onend = function() {
+                isListening = false;
+                btn.innerHTML = '🎤 Comando';
+                btn.classList.remove('active');
+            };
+
+            recognition.start();
+        }
+
+        function processVoiceCommand(transcript) {
+            const commands = {
+                'início': '/',
+                'inicio': '/',
+                'página inicial': '/',
+                'home': '/',
+                'acadêmico': '/academico.html',
+                'academico': '/academico.html',
+                'constitucional': '/constitucional.html',
+                'constitucional i': '/direito-constitucional-i.html',
+                'sobre': '/sobre.html',
+                'sobre mim': '/sobre.html',
+                'perfil': '/perfil.html',
+                'contato': '#contato',
+                'whatsapp': 'https://wa.me/5551998883187',
+                'linkedin': 'https://linkedin.com/in/fabiowlademir',
+                'github': 'https://fabiowlademir.github.io/',
+                'instagram': 'https://instagram.com/fabiowlademirrs',
+                'facebook': 'https://facebook.com/fabiowlademirrs',
+                'youtube': 'https://youtube.com/@fabiowlademirrs'
+            };
+
+            let found = false;
+            for (const [key, url] of Object.entries(commands)) {
+                if (transcript.includes(key)) {
+                    if (url.startsWith('#')) {
+                        document.querySelector(url)?.scrollIntoView({ behavior: 'smooth' });
+                    } else if (url.startsWith('http')) {
+                        window.open(url, '_blank');
+                    } else {
+                        window.location.href = url;
+                    }
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                if (transcript.startsWith('ir para ')) {
+                    const target = transcript.replace('ir para ', '').trim();
+                    const links = document.querySelectorAll('a');
+                    for (const link of links) {
+                        if (link.textContent.toLowerCase().includes(target)) {
+                            link.click();
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+                if (!found) {
+                    alert('Comando não reconhecido. Tente: "início", "acadêmico", "constitucional", "sobre", "perfil", "contato" ou "ir para [nome da página]".');
+                }
+            }
+        }
+
+        console.log('Página Direito Constitucional I carregada!');
+    </script>
+
+</body>
+</html>
